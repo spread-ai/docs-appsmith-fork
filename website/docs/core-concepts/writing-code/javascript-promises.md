@@ -2,15 +2,19 @@
 
 Previously, the only way to achieve asynchronous workflows in Appsmith was through callbacks, and dealing with callbacks was not easy. Appsmith now supports native [JavaScript promises](https://javascript.info/promise-basics) to make working with asynchronous workflows easier.
 
-{% embed url="https://youtu.be/VuBycqPJVug" %}
+ <figure>
+  <object data="https://www.youtube.com/embed/VuBycqPJVug?autoplay=0" width='860px' height='515px'></object> 
+  <figcaption align="center"><i>How to use JS Promises and Async/Await</i></figcaption>
+</figure>
+
 
 All Appsmith APIs like [`showAlert()`](broken-reference), [`showModal()`](broken-reference), [`storeValue()`](broken-reference), [`navigateTo()`](broken-reference) etc., will return a promise, making asynchronous workflow's implementation easier and readable.
 
 To understand the difference between callbacks and Promise implementation, let's try to implement the logic where we run three APIs each after the success of the previous one and finally show an alert with a message as "done."
 
-{% hint style="info" %}
+:::info
 MockApi is a query created inside Appsmith, which takes a name as a parameter.
-{% endhint %}
+:::
 
 Old Callback implementation looks like this:
 
@@ -71,8 +75,9 @@ In the example above:
 
 If you want only one action/promise to finish for further execution, you can use `Promise.any()` or `Promise.race()` methods.
 
-{% hint style="warning" %}
-Please remember to always return the promise for <mark style="color:red;">`.then`</mark>`or`<mark style="color:red;">`.catch`</mark>`blocks` to work as expected.
+:::caution
+Please remember to always return the promise for `.then`or `.catch` blocks to work as expected.
+:::
 
 ```
 {{
