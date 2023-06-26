@@ -1,9 +1,9 @@
 ---
 description: Guide on how to get container logs for different Appsmith deployments
-sidebar_position: 18
+sidebar_position: 6
 ---
 
-# Get Container Logs For Appsmith Instances
+# Get Container Logs
 
 ## Docker
 

@@ -6,7 +6,7 @@ description: Query a REST API from Appsmith.
 
 This page describes how to connect your application to a REST API and use queries to read and write data in your applications.
 
-Use this datasource to create a single query for an API that doesn't need complex authentication settings. If you plan to create multiple queries for the same API, you may want to use an [Authenticated API](/reference/datasources/rest-api) datasource. Every query created from an Authenticated API datasource shares configuration (root URL, authentication, headers, and so on) to avoid re-entering details.
+Use this datasource to create a single query for an API that doesn't need complex authentication settings. If you plan to create multiple queries for the same API, you may want to use an [Authenticated API](/connect-data/reference/rest-api) datasource. Every query created from an Authenticated API datasource shares configuration (root URL, authentication, headers, and so on) to avoid re-entering details.
 
 ## Query REST API
 
@@ -40,9 +40,11 @@ The following section is a reference guide that provides a description of the pa
 
 <dl>
   <dt><b>Body</b></dt>
+  <dd>Appsmith supports a variety of encoding types for sending data in API queries. The encoding type can be selected via the Body dropdown on the API editor.<br/>
+  </dd>
   <dd><i>Options:</i>
     <ul>
-      <li><b>None:</b> Sends no body.</li>
+      <li><b>None:</b> Omits a body from the request.</li>
       <li><b>JSON:</b> Expects a JSON object to send as the body.</li>
     </ul>
 
@@ -70,7 +72,7 @@ In the example above, values are collected from a [Table widget](/reference/widg
 `}</pre>
 <p>Selecting <b>FORM_URLENCODED</b> (for <code>application/x-www-form-urlencoded</code>) automatically encodes your key/value pairs for sending in the request body.</p></dd>
     <ul>
-      <li><b>MULTIPART_FORM_DATA:</b> Expects key/value pairs with a data type to be encoded into MULTIPART_FORM_DATA format as the body.</li>
+      <li><b>MULTIPART_FORM_DATA:</b> Expects key/value pairs with a data type to be encoded into MULTIPART_FORM_DATA format as the body. Multipart requests can include several different types of data within them, such as a file along with some other related metadata.</li>
     </ul>
 <dd>
 
@@ -97,7 +99,7 @@ When uploading file data, check that your Filepicker widget's **Data Format** pr
 <p>Use <b>RAW</b> if your endpoint can't accept multipart-encoded data and requires raw body binary instead. Above, the <code>data</code> property of the file is passed to the query instead of the file object itself because the endpoint expects only raw binary data.</p>
 
 :::caution tip
-Be sure to turn off **JSON Smart Substitution** for this query in the [query settings](/core-concepts/data-access-and-binding/querying-a-database/query-settings). This option usually helps cast data into correct JSON, but it is problematic when used with RAW binary.
+Be sure to turn off **JSON Smart Substitution** for this query in the [query settings](/connect-data/reference/query-settings). This option usually helps cast data into correct JSON, but it is problematic when used with RAW binary.
 :::
 </dd>
 
