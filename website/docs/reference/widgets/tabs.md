@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Tabs `string`
 
-<dd>
+ 
 
 Allows you to manage tabs within the widget, where each tab is identified by a unique name. You can rearrange the tabs items and configure their visibility by clicking on the gear icon ⚙️.
 
@@ -26,7 +26,7 @@ Allows you to manage tabs within the widget, where each tab is identified by a u
 #### Default Tab `string`	
 
 
-<dd>
+ 
 
 Allows you to specify a default tab by its name, which is automatically displayed when the widget loads. Make sure the Tab name is exactly as specified. 
 
@@ -38,13 +38,13 @@ Allows you to specify a default tab by its name, which is automatically displaye
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility. The default value for the property is `true`.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -54,7 +54,7 @@ For example, if you want to make the widget visible only when the user selects "
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
@@ -64,7 +64,7 @@ This property controls whether the widget is displayed with a loading animation.
 #### Show tabs `boolean`
 
 
-<dd>
+ 
 
 This option enables you to toggle the visibility of tabs. The default value for the property is `true`.
 
@@ -73,7 +73,7 @@ This option enables you to toggle the visibility of tabs. The default value for 
 #### Height `string`
 
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -90,7 +90,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onTabSelected
 
-<dd>
+ 
 
 Specifies the action (Framework functions, queries, or JS functions) to be performed when the user selects a tab.
 
@@ -105,7 +105,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Accent color `string`
 
-<dd>
+ 
 
 Represents the color of the tab, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the color can be programmatically modified using JavaScript functions.
 
@@ -113,7 +113,7 @@ Represents the color of the tab, specified as a [CSS color value](https://develo
 
 #### Background Color `string`
 
-<dd>
+ 
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
@@ -122,7 +122,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 #### Border color `string`
 
 
-<dd>
+ 
 
 Sets a color for the border, specified as a CSS color value. It can also be manipulated programmatically using the JavaScript functions.
 
@@ -131,7 +131,7 @@ Sets a color for the border, specified as a CSS color value. It can also be mani
 
 #### Border Width `number`
 
-<dd>
+ 
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px). The default value is `1`.
 
@@ -139,7 +139,7 @@ Specifies the width of the widget's border, accepting only numerical values in p
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -148,7 +148,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -161,27 +161,27 @@ Reference properties are properties that are not available in the property pane 
 
 #### selectedTab `string`
 
-<dd>
+ 
 
 Contains the name of the tab currently selected.
 
 *Example:*
 
 ```js
-{{Tabs1.selectedTab}}
+{{ '{{Tabs1.selectedTab}}' }}
 ```
 
 </dd>
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{Tabs1.isVisible}}
+{{ '{{Tabs1.isVisible}}' }}
 ```
 
 </dd>
@@ -195,7 +195,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

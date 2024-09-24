@@ -15,7 +15,7 @@ To understand the difference between callbacks and promise implementation, consi
 ```javascript
 
 // Using Callbacks
-{{
+{{ '{{
     MockApi.run(() => {
         MockApi1.run(() => {
             MockApi2.run(() => {
@@ -23,19 +23,19 @@ To understand the difference between callbacks and promise implementation, consi
                 })
         })   
     }) 
-}}
+}}' }}
 
 ```
 
 Using promise for the same example makes the implementation more manageable and readable.
 
 ```javascript
-{{
+{{ '{{
     MockApi.run()
         .then(() => MockApi1.run())
         .then(() => MockApi2.run())
         .then(() => showAlert('done'))
- }}
+ }}' }}
 ```
 
 ### Promise methods
@@ -44,14 +44,14 @@ JavaScript promises have several built-in methods.
 :::tip
 When passing a function to `.then()` or `.catch()` always remember to pass it as a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback\_function) function, as shown below:
 ```javascript
-{{
+{{ '{{
   (function() {
     ❌ MockApi.run().then(showAlert(`Success`))
     //highlight-next-line
     ✅ return MockApi.run().then(() => showAlert(`Success`))
       
    })()
-}}
+}}' }}
 ```
 :::
 
@@ -61,7 +61,7 @@ When passing a function to `.then()` or `.catch()` always remember to pass it as
 **Example**
  
 ```javascript
-{{
+{{ '{{
 (function(){
     
   return Promise.any([
@@ -71,7 +71,7 @@ When passing a function to `.then()` or `.catch()` always remember to pass it as
     showAlert(`Winner: ${res.args.name}`) // Alert Message showns as "Winner: 1" 
   });
 })()
-}}
+}}' }}
 ```
 
 In this example:
@@ -85,7 +85,7 @@ It waits for the first settled promise, fulfilled, or rejected, to get its resul
 **Example**
 
 ```javascript
-{{
+{{ '{{
 (function(){
     return  Promise.race([
             MockApi.run({ name: 1 }),
@@ -94,7 +94,7 @@ It waits for the first settled promise, fulfilled, or rejected, to get its resul
         showAlert(`Winner: ${res.args.name}`)
     });
 })()
-}}
+}}' }}
 ```
 
 In the example:
@@ -109,7 +109,7 @@ It takes an array of promises (technically any iterable but is usually an array)
 **Example**
 
 ```javascript
-{{
+{{ '{{
 (function(){
     let employeeNames = ["Employee 1","Employee 2"];
     // Start a bunch of calls running in parallel and store returned promise
@@ -121,7 +121,7 @@ It takes an array of promises (technically any iterable but is usually an array)
             .catch(() => showAlert('Promise.all - Something went wrong'))
             .finally(() => showAlert('Promise.all - finished'))
 })()
-}}
+}}' }}
 ```
 
 In the example:
@@ -136,7 +136,7 @@ It waits for all the promises to settle, regardless of the result (resolved or r
 **Example**
 
 ```javascript
-{{
+{{ '{{
 (function(){
   let employeeNames = ["Employee 1","Employee 2"];
   // Start a bunch of calls running in parallel and store returned promise
@@ -148,7 +148,7 @@ It waits for all the promises to settle, regardless of the result (resolved or r
         .catch(() => showAlert('Promise.allSettled - Something went wrong'))
         .finally(() => showAlert('Promise.allSettled - finished'))
 })()
-}}
+}}' }}
 ```
 
 In the example:
@@ -165,18 +165,18 @@ Here are some general guidelines for using Promises in Appsmith:
 * Return promise with `.then()` attached to it, as shown below:
 
 ```javascript
-{{
+{{ '{{
   (function() {
         // the .then only runs if a promise is returned
         return MockApi.run()
             .then(() => showAlert('success'))
     })()
-}}
+}}' }}
 ```
 * Parameters are no longer passed in the `.then()` argument of the `action.run()`. Only the response is passed, as shown below:
 
 ```javascript
-{{
+{{ '{{
   (function() {
         // define params on top so that you can use them in the later calls
         const params = { name: "Appsmith" }
@@ -185,7 +185,7 @@ Here are some general guidelines for using Promises in Appsmith:
                 showAlert(`${response.length} users found in `${params.name}`)
             })
     })()
-}}
+}}' }}
 ```
 
 ## Async/Await
@@ -200,13 +200,13 @@ The keyword `await` makes JavaScript wait until that Promise settles and returns
 **Example**
 
 ```javascript
-{{
+{{ '{{
     (async function(){ 
         const response = await MockApi.run({ name: 'Appsmith' }); 
         await storeValue( "name", response.args.name ); 
         await showAlert(appsmith.store.name); 
     })() 
-}}
+}}' }}
 ```
 In the preceding example:
 1. Run `MockApi` query with the parameter `name` as 'Appsmith' and wait for the response.

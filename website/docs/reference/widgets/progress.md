@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Infinite loading `boolean`
 
-<dd>
+ 
 
 Enables the widget to enter an infinite loading state, which is beneficial when the progress values cannot be determined. For instance, this property can be enabled for queries that take a longer time to execute.
 
@@ -27,7 +27,7 @@ Enables the widget to enter an infinite loading state, which is beneficial when 
 
 #### Type `string`
 
-<dd>
+ 
 
 Allows you to select the desired format for the progress bar.
 
@@ -40,9 +40,9 @@ Allows you to select the desired format for the progress bar.
 
 #### Progress `number`
 
-<dd>
+ 
 
-Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{}}`.
+Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{ '{{}}' }}`.
 
 </dd>
 
@@ -51,7 +51,7 @@ Specify the value of the progress indicator (in percentage). You can also use va
 
 #### Number of steps `number`
 
-<dd>
+ 
 
 Specify the number of steps to break down the progress bar into multiple parts with fixed progress percentages. This property only supports positive integers.
 
@@ -60,20 +60,20 @@ Specify the number of steps to break down the progress bar into multiple parts w
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Show result `boolean`
 
-<dd>
+ 
 
 Control the display of the evaluated percentage as a number along with the progress in the widget.
 
@@ -82,7 +82,7 @@ Control the display of the evaluated percentage as a number along with the progr
 
 #### Counterclockwise  `boolean`
 
-<dd>
+ 
 
 Specifies whether the circular progress bar should animate in a counterclockwise direction. This option is only available when the Circular progress **Type** is selected.
 
@@ -94,7 +94,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Fill color `string`
 
-<dd>
+ 
 
 Specify the color of the progress bar. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
@@ -107,28 +107,28 @@ These properties are not available in the property pane, but can be accessed usi
 
 #### progress `number`
 
-<dd>
+ 
 
 Indicates the current progress of the progress bar as a percentage.
 
 *Example:*
 
 ```js
-{{Progress1.progress}}
+{{ '{{Progress1.progress}}' }}
 ```
 
 
 </dd>
 
 #### isVisible `boolean`
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 
 ```js
-{{Progress1.isVisible}}
+{{ '{{Progress1.isVisible}}' }}
 ```
 
 
@@ -144,7 +144,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -159,7 +159,7 @@ Progress1.setVisibility(true)
 
 #### setProgress (param: number): Promise
 
-<dd>
+ 
 
 Sets the progress value of the Progress widget.
 

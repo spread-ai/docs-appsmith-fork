@@ -5,8 +5,8 @@ description: This page shows you how to edit items on List through inline editin
 # Edit List Data
 This page shows you how to edit items on the List widget. You will learn how to edit, delete, and duplicate a List item using action buttons within the widget.
 
-<div style={{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}>
-  <iframe src="https://demo.arcade.software/0wn5llvSYN5A17GQUVKB?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }} title="Appsmith | Connect Data">
+<div style={{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
+  <iframe src="https://demo.arcade.software/0wn5llvSYN5A17GQUVKB?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
   </iframe>
 </div>
 
@@ -23,11 +23,11 @@ To edit a List item using an icon, follow these steps:
    Example:
    ```sql
    UPDATE product
-    SET name = {{inp_addProductTitle.text}},
-    description = {{inp_addProductDescription.text}},
+    SET name = {{ '{{inp_addProductTitle.text}}' }},
+    description = {{ '{{inp_addProductDescription.text}}' }},
     type = 'OTHER',
-		image = {{inp_addImgUrl.text}}
-    WHERE id = {{utils.activeEditProduct ? utils.activeEditProduct.id : ''}};
+		image = {{ '{{inp_addImgUrl.text}}' }}
+    WHERE id = {{ '{{utils.activeEditProduct ? utils.activeEditProduct.id : ''}}' }};
    ```
 4. Create a JS Object to run the update query, close the Modal, and fetch the updated data from the datasource.
 
@@ -53,7 +53,7 @@ To delete a list item using an icon, follow these steps:
    Example:
    ```sql
    DELETE FROM product 
-   WHERE id = {{lst_products.triggeredItem.id}}; 
+   WHERE id = {{ '{{lst_products.triggeredItem.id}}' }}; 
    ```
 5. Add **Execute query** action to the **onClick** event of the `Delete` button to run delete query.
 
@@ -66,9 +66,9 @@ To implement inline editing of list items using a Select widget, follow these st
 
    ```sql 
       UPDATE public."product" 
-      SET state = '{{lst_products.triggeredItem.sel_state.selectedOptionValue}}'
+      SET state = '{{ '{{lst_products.triggeredItem.sel_state.selectedOptionValue}}' }}'
          -- Specify a valid condition here. Removing the condition may update every row in the table!
-      WHERE id = {{lst_products.triggeredItem.id}}; 
+      WHERE id = {{ '{{lst_products.triggeredItem.id}}' }}; 
    ```
 3. Add an action to the **onOptionChange** event of the Select widget to run the update query.
 4. Set the **On success** callback to execute the fetch query for the List widget to reflect the changes.

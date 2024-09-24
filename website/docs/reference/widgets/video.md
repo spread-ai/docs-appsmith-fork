@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### URL `string`
 
-<dd>
+ 
 
 Allows you to set the video source to be played, supporting both URL and IPv4-based addresses:
 
@@ -31,7 +31,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 *Example*:
 
 ```js
-{{Table1.selectedRow.videoURL}}
+{{ '{{Table1.selectedRow.videoURL}}' }}
 ```
 
 </dd>
@@ -40,7 +40,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 
 #### Auto Play `boolean`
 
-<dd>
+ 
 
 Allows you to play the video automatically on page load, without requiring any action from the user. Default value is `false`.
 
@@ -48,14 +48,14 @@ Allows you to play the video automatically on page load, without requiring any a
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility. The default value for the property is `true`.
 
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -66,7 +66,7 @@ For example, if you want to make the widget visible only when the user selects "
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
@@ -79,21 +79,21 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 #### onPlay
 
-<dd>
+ 
 Specifies the action to be executed when the video starts playing.
 
 </dd>
 
 #### onPause
 
-<dd>
+ 
 Specifies the action to be performed when the video is paused.
 
 </dd>
 
 #### onEnd
 
-<dd>
+ 
 
 Specifies the action to be taken when the video playback is completed.
 
@@ -107,7 +107,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background Color `string`
 
-<dd>
+ 
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
@@ -118,7 +118,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. To control the border radius programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -126,7 +126,7 @@ Applies rounded corners to the outer edge of the widget. To control the border r
 
 #### Box Shadow `string`
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. To control the Box Shadow programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -138,20 +138,20 @@ Reference properties are properties that are not available in the property pane 
 
 #### autoPlay `boolean`
 
-<dd>
+ 
 
 Indicates the current state of the widget's **Auto Play** setting.
 
 *Example:*
 ```js
-{{Video1.autoPlay}}
+{{ '{{Video1.autoPlay}}' }}
 ```
 
 </dd>
 
 #### playState `string`
 
-<dd>
+ 
 
 Indicates the current state of the Video widget's playback. It is represented by a string with values:
 
@@ -162,7 +162,7 @@ Indicates the current state of the Video widget's playback. It is represented by
 
 *Example:*
 ```js
-{{Video1.playState}}
+{{ '{{Video1.playState}}' }}
 ```
 
 </dd>
@@ -170,13 +170,13 @@ Indicates the current state of the Video widget's playback. It is represented by
 #### playing `boolean`
 
 
-<dd>
+ 
 
 Indicates the current playing state of the widget. When the value is `true`, it means the video is playing.
 
 *Example:*
 ```js
-{{Video1.playing}}
+{{ '{{Video1.playing}}' }}
 ```
 
 
@@ -192,7 +192,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -207,7 +207,7 @@ Video1.setVisibility(true)
 
 #### setURL (param: string): Promise
 
-<dd>
+ 
 
 Sets the URL of the video to be displayed in the widget.
 
@@ -222,7 +222,7 @@ Video1.setURL('<https://example.com/video.mp4>')
 
 #### setPlaying (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the playing state of the Video widget.
 

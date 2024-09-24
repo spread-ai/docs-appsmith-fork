@@ -11,12 +11,12 @@ Polling is a communication technique used to retrieve real-time data by periodic
 
 1. Configure the fetch query and connect it with a Table widget to display the data.
 
-<dd>
+ 
 
 *Example:* To display real-time delivery status updates from a query, add the following code into the **Table data** property.
 
 ```js
-{{delivery_data.data}}
+{{ '{{delivery_data.data}}' }}
 ```
 </dd>
 
@@ -24,7 +24,7 @@ Polling is a communication technique used to retrieve real-time data by periodic
 
 3. Create a new *JSObject* and configure the function using the [setInterval()](/reference/appsmith-framework/widget-actions/intervals-time-events) function  to implement polling:
 
-<dd>
+ 
 
 *Example:* When the switch is turned on, the query is executed every 5 seconds. If the switch is turned off, use the [clearInterval()](/reference/appsmith-framework/widget-actions/clear-interval) function to stop the polling process:
 

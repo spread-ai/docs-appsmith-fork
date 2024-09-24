@@ -17,20 +17,20 @@ These properties are customizable options present in the property pane of the wi
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects Yes from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Animate Loading `boolean`
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
@@ -39,7 +39,7 @@ This property controls whether the widget is displayed with a loading animation.
 #### Height `string`
 
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -59,7 +59,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background color `string`
 
-<dd>
+ 
 
 Specifies the background color of the Stats Box container.
 
@@ -68,7 +68,7 @@ Specifies the background color of the Stats Box container.
 
 #### Border color `string`
 
-<dd>
+ 
 
 Specifies the color of the widget's border. You can define the color using an HTML color name, HEX, RGB, or RGBA value.
 
@@ -79,14 +79,14 @@ Specifies the color of the widget's border. You can define the color using an HT
 
 #### Border width `number`
 
-<dd>
+ 
 Sets the value for border width.
 
 </dd>
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -95,7 +95,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -108,14 +108,14 @@ These properties are not available in the property pane, but can be accessed usi
 As the Stats Box widget works as a container, you can access the values of other widgets using their respective reference properties. For example, to access the text value of a Text widget, you can use `Text1.text`.
 
 #### isVisible `boolean`
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 
 ```js
-{{Statsbox1.isVisible}}
+{{ '{{Statsbox1.isVisible}}' }}
 ```
 
 
@@ -129,7 +129,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 #### setVisibility `boolean`
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

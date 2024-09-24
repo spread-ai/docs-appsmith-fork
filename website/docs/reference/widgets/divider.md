@@ -14,13 +14,13 @@ These properties are customizable options present in the property pane of the wi
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility. Default value is set to `true`.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -30,7 +30,7 @@ For example, if you want to make the widget visible only when the user selects "
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. Default value is set to `true`.
 
@@ -44,7 +44,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Direction `string` 
 
-<dd>
+ 
 
 Determines the orientation of the widget's line, allowing you to choose between horizontal and vertical alignments. When JavaScript is enabled, accepted values are `horizontal` or `vertical`.
 
@@ -54,7 +54,7 @@ Determines the orientation of the widget's line, allowing you to choose between 
 
 #### Color `string`
 
-<dd>
+ 
 
 Specify the color of the divider. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
@@ -63,7 +63,7 @@ Specify the color of the divider. It accepts [CSS color values](https://develope
 
 #### Style `string`
 
-<dd>
+ 
 
 Sets the type of line used for the divider.
 
@@ -80,7 +80,7 @@ With JS is enabled, accepts strings with value `solid`, `dashed`, or `dotted`.
 #### Thickness `number` 
 
 
-<dd>
+ 
 
 Sets the thickness of the divider line in pixels. 
 
@@ -90,7 +90,7 @@ Sets the thickness of the divider line in pixels.
 
 #### Cap `string`
 
-<dd>
+ 
 
 Sets the design of the cap to be added to the end of the divider line.
 
@@ -103,7 +103,7 @@ Sets the design of the cap to be added to the end of the divider line.
 
 #### Cap position `string`
 
-<dd>
+ 
 
 Determines the placement of caps on the sides of the divider line. 
 
@@ -121,7 +121,7 @@ These properties are not available in the property pane, but can be accessed usi
 
 #### capType `string`
 
-<dd>
+ 
 
 Indicates the widget's Cap style property, shows whether the divider line is capped with a Dot, an Arrow, or No cap. 
 
@@ -129,7 +129,7 @@ Indicates the widget's Cap style property, shows whether the divider line is cap
 *Example:*
 
 ```js
-{{Divider1.capType}}
+{{ '{{Divider1.capType}}' }}
 ```
 
 
@@ -138,7 +138,7 @@ Indicates the widget's Cap style property, shows whether the divider line is cap
 
 #### capSide `number`
 
-<dd>
+ 
 
 Reflects the widget's Cap Position style property, indicating the sides of the divider line where caps are located. Numeric values include:
 
@@ -149,7 +149,7 @@ Reflects the widget's Cap Position style property, indicating the sides of the d
 *Example:*
 
 ```js
-{{Divider1.capSide}}
+{{ '{{Divider1.capSide}}' }}
 ```
 
 
@@ -157,7 +157,7 @@ Reflects the widget's Cap Position style property, indicating the sides of the d
 
 #### dividerColor `string`
 
-<dd>
+ 
 
 Reflects the color value of the divider line, presented in the form of a hexadecimal color code.
 
@@ -165,7 +165,7 @@ Reflects the color value of the divider line, presented in the form of a hexadec
 *Example:*
 
 ```js
-{{Divider1.dividerColor}}
+{{ '{{Divider1.dividerColor}}' }}
 ```
 
 
@@ -174,7 +174,7 @@ Reflects the color value of the divider line, presented in the form of a hexadec
 
 #### orientation `string`
 
-<dd>
+ 
 
 Reflects the **Orientation** of the widget, values are strings either `horizontal` or `vertical`.
 
@@ -182,7 +182,7 @@ Reflects the **Orientation** of the widget, values are strings either `horizonta
 *Example:*
 
 ```js
-{{Divider1.orientation}}
+{{ '{{Divider1.orientation}}' }}
 ```
 
 
@@ -190,7 +190,7 @@ Reflects the **Orientation** of the widget, values are strings either `horizonta
 
 #### strokeStyle `string`
 
-<dd>
+ 
 
 Reflects the widget's **Dash Style** property as a string with value either `solid`, `dashed`, or `dotted`.
 
@@ -198,7 +198,7 @@ Reflects the widget's **Dash Style** property as a string with value either `sol
 *Example:*
 
 ```js
-{{Divider1.strokeStyle}}
+{{ '{{Divider1.strokeStyle}}' }}
 ```
 
 
@@ -207,7 +207,7 @@ Reflects the widget's **Dash Style** property as a string with value either `sol
 
 #### thickness `number`
 
-<dd>
+ 
 
 Reflects the thickness of the divider line as a number of pixels.
 
@@ -215,7 +215,7 @@ Reflects the thickness of the divider line as a number of pixels.
 *Example:*
 
 ```js
-{{Divider1.thickness}}
+{{ '{{Divider1.thickness}}' }}
 ```
 
 
@@ -223,14 +223,14 @@ Reflects the thickness of the divider line as a number of pixels.
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 
 ```js
-{{Divider1.isVisible}}
+{{ '{{Divider1.isVisible}}' }}
 ```
 
 </dd>
@@ -244,7 +244,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

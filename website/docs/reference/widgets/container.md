@@ -15,21 +15,21 @@ These properties are customizable options present in the property pane of the wi
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Container widget:
 
 ```js
-{{Checkbox1.isChecked}}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
 
 #### Animate Loading `boolean`
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -37,7 +37,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Height `string`
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -55,7 +55,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background color `string`
 
-<dd>
+ 
 
 Sets the background color of the widget. If JavaScript is enabled, you can specify a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value to adjust the background color.
 
@@ -63,7 +63,7 @@ Sets the background color of the widget. If JavaScript is enabled, you can speci
 
 #### Border color `string`
 
-<dd>
+ 
 
 Sets the border color of the widget. If JavaScript is enabled, you can specify a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value to adjust the border color.
 
@@ -73,7 +73,7 @@ Sets the border color of the widget. If JavaScript is enabled, you can specify a
 
 #### Border width `string`
 
-<dd>
+ 
 
 Sets the width of the widget's border.
 
@@ -81,7 +81,7 @@ Sets the width of the widget's border.
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -89,7 +89,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 #### Box Shadow `string`
  
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -101,27 +101,27 @@ Reference properties enable you to access the widget's data and state using the 
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{Container1.isVisible}}
+{{ '{{Container1.isVisible}}' }}
 ```
 
 </dd>
 
 #### backgroundColor `string`
 
-<dd>
+ 
 
 Represents the widget's **Background Color** setting as a [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value.
 
 *Example:*
 
 ```js
-{{Container1.backgroundColor}}
+{{ '{{Container1.backgroundColor}}' }}
 ```
 
 </dd>
@@ -135,7 +135,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

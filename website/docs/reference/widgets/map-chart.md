@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Map Type	`string`
 
-<dd>
+ 
 
 Allows you to choose between world maps or individual continent maps for visualizing your data.
 
@@ -42,7 +42,7 @@ If you want to display a different Map type not listed above, like specific loca
 
 #### Chart Data `array<object>`
 
-<dd>
+ 
 
 Allows you to display data in the chart.
 
@@ -70,14 +70,14 @@ Additionally, you can display dynamic data from queries or JS functions by bindi
 
 *Example:*
 ```js
-{{fetchData.data}}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
 *Example:*
 ```js
-{{fetchUserData.data.map( p => ({id: p.label, value: val.count}))}}
+{{ '{{fetchUserData.data.map( p => ({id: p.label, value: val.count}))}}' }}
 ```
 
 
@@ -85,7 +85,7 @@ If the query data is not in the expected format, you can use the `map()` functio
 
 #### Title `string`
 
-<dd>
+ 
 
 Sets the text that appears at the top of the chart as a title.
 
@@ -94,20 +94,20 @@ Sets the text that appears at the top of the chart as a title.
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Show Labels `boolean`	
 
-<dd>
+ 
 
 When enabled, displays labels for each data point featured on the Map chart.
 
@@ -120,7 +120,7 @@ When enabled, displays labels for each data point featured on the Map chart.
 
 #### onDataPointClick
 
-<dd>
+ 
 
 Sets the action (Framework functions, queries, or JS functions) to be executed when a user clicks on a data point in the chart.
 
@@ -135,7 +135,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Color range `array<object>`
 
-<dd>
+ 
 
 Allows you to manage the color of a collection of regions based on the assigned value ranges. It accepts arrays of objects containing the following keys: 
 
@@ -169,7 +169,7 @@ Allows you to manage the color of a collection of regions based on the assigned 
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -178,7 +178,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -192,7 +192,7 @@ Reference properties are properties that are not available in the property pane 
 
 #### selectedDataPoint `object`
 
-<dd>
+ 
 
 Contains an object which represents the data point that the user has most recently clicked.
 
@@ -200,26 +200,26 @@ Contains an object which represents the data point that the user has most recent
 
 ```js
 //To access all the details of the selected data point:
-{{MapChart1.selectedDataPoint}}
+{{ '{{MapChart1.selectedDataPoint}}' }}
 
 //To access the label of the selected data point:
-{{MapChart1.selectedDataPoint.id}}
+{{ '{{MapChart1.selectedDataPoint.id}}' }}
 
 //To access the value of the selected data point:
-{{MapChart1.selectedDataPoint.value}}
+{{ '{{MapChart1.selectedDataPoint.value}}' }}
 ```
 
 </dd>
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{MapChart1.isVisible}}
+{{ '{{MapChart1.isVisible}}' }}
 ```
 
 </dd>
@@ -233,7 +233,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

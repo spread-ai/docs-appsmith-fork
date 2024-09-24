@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Input Type `string`
 
-<dd>
+ 
 
 Allows you to specify the input type for the **Default Value** property in the widget. You can choose:
 
@@ -28,7 +28,7 @@ Allows you to specify the input type for the **Default Value** property in the w
 
 #### Default Value `string`
 
-<dd>
+ 
 
 Allows you to set the initial text content for the widget.
 
@@ -68,7 +68,7 @@ After selecting an input type as **Markdown** or **HTML**, you can populate the 
 #### Text `string`
 
 
-<dd>
+ 
 Sets the label on the widget.
 </dd>
 
@@ -78,7 +78,7 @@ Sets the label on the widget.
 #### Position `string`
 
 
-<dd>
+ 
 
 
 This property allows you to configure the label's placement.
@@ -94,7 +94,7 @@ This property allows you to configure the label's placement.
 
 #### Alignment `string`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
@@ -103,7 +103,7 @@ This property is only available when you select **Left** from the Position prope
 
 #### Width `number`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
@@ -116,7 +116,7 @@ This property is only available when you select **Left** from the Position prope
 #### Required `boolean`
 
 
-<dd>
+ 
 
 When enabled, this property makes the Rich Text Editor a mandatory field, When the Rich Text Editor is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the Rich Text Editor has some value.
 
@@ -126,7 +126,7 @@ When enabled, this property makes the Rich Text Editor a mandatory field, When t
 
 
 #### Tooltip `string`
-<dd>
+ 
 
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
@@ -136,26 +136,26 @@ Enables you to add hints or provide additional information to guide the user reg
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -165,7 +165,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -173,7 +173,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Hide toolbar `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the toolbar on top of the widget.
 
@@ -182,7 +182,7 @@ Controls the visibility of the toolbar on top of the widget.
 #### Height `string`
 
 
-<dd>
+ 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
 
@@ -199,7 +199,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onTextChanged
 
-<dd>
+ 
 
 Enables you to specify [supported actions](/reference/appsmith-framework/widget-actions) that would be triggered whenever the user modifies the text input. 
 
@@ -211,7 +211,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Font color `string`
 
-<dd>
+ 
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
@@ -219,7 +219,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 #### Font size `string`
 
-<dd>
+ 
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
@@ -227,7 +227,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 #### Emphasis `string`
 
-<dd>
+ 
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
@@ -236,7 +236,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -244,7 +244,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 #### Box Shadow `string`
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -257,14 +257,14 @@ These properties are not available in the property pane, but can be accessed usi
 
 #### text `string`
 
-<dd>
+ 
 
 The `text` property retrieves the value entered by the user. If no text is entered by the user, the default value would be displayed. 
 
 *Example:*
 
 ```js
-{{RichTextEditor1.text}}
+{{ '{{RichTextEditor1.text}}' }}
 ```
 
 
@@ -273,28 +273,28 @@ The `text` property retrieves the value entered by the user. If no text is enter
 
 #### isDisabled `boolean`
 
-<dd>
+ 
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
 *Example:*
 
 ```js
-{{RichTextEditor1.isDisabled}}
+{{ '{{RichTextEditor1.isDisabled}}' }}
 ```
 
 
 </dd>
 
 #### isVisible `boolean`
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 
 ```js
-{{RichTextEditor1.isVisible}}
+{{ '{{RichTextEditor1.isVisible}}' }}
 ```
 
 
@@ -310,7 +310,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 #### setVisibility (param: boolean): Promise
 
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -326,7 +326,7 @@ RichTextEditor1.setVisibility(true)
 #### setDisabled (param: boolean): Promise
 
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 
@@ -342,7 +342,7 @@ RichTextEditor1.setDisabled(false)
 #### setRequired (param: boolean): Promise
 
 
-<dd>
+ 
 
 Sets whether the widget is required or not.
 

@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 #### Default Value `string`
 
 
-<dd>
+ 
 
 Allows you to assign an initial value to the widget before user interaction.
 
@@ -25,7 +25,7 @@ Allows you to assign an initial value to the widget before user interaction.
 
 #### Default country code `string`
 
-<dd>
+ 
 
 Allows you to select a country code from a list of countries. Additionally, by clicking on **JS**, you can use custom country dial codes like `+91`.
 
@@ -34,7 +34,7 @@ Allows you to select a country code from a list of countries. Additionally, by c
 
 #### Change country code `boolean`
 
-<dd>
+ 
 
 Enabling this property allows the user to change the country code from the dropdown menu.
 
@@ -48,7 +48,7 @@ Enabling this property allows the user to change the country code from the dropd
 #### Text `string`
 
 
-<dd>
+ 
 Sets the label on the widget.
 </dd>
 
@@ -58,7 +58,7 @@ Sets the label on the widget.
 #### Position `string`
 
 
-<dd>
+ 
 
 
 This property allows you to configure the label's placement.
@@ -73,7 +73,7 @@ This property allows you to configure the label's placement.
 
 #### Alignment `string`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
@@ -82,7 +82,7 @@ This property is only available when you select **Left** from the Position prope
 
 #### Width `number`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
@@ -96,7 +96,7 @@ This property is only available when you select **Left** from the Position prope
 #### Required `boolean`
 
 
-<dd>
+ 
 
 When enabled, this property makes the Phone Input a mandatory field. When the Phone Input is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the Phone Input has some value.
 
@@ -104,7 +104,7 @@ When enabled, this property makes the Phone Input a mandatory field. When the Ph
 
 #### Regex `regExp`
 
-<dd>
+ 
 
 
 The **Regex** property, short for Regular Expression, enables you to apply custom validations on user input by defining specific constraints using regular expressions. If the user enters a value that does not adhere to the specified pattern, the widget displays an error message indicating `"invalid input"`.
@@ -119,7 +119,7 @@ For instance, if you want to validate that a phone number consists of exactly 10
 
 #### Valid `boolean`
 
-<dd>
+ 
 
 Allows you to set an expression to determine the validity of the user's input. When the specified expression evaluates to false, indicating that the input is invalid, the widget displays an error message. This feature enables you to define custom validation rules and provide informative error messages to guide the user when their input does not meet the required criteria.
 
@@ -128,7 +128,7 @@ Allows you to set an expression to determine the validity of the user's input. W
 #### Error Message `string`
 
 
-<dd>
+ 
 
 Allows you to customize the feedback provided to the user when they enter an incorrect value. By default, the input widget displays a generic `"invalid input"` message. 
 
@@ -139,7 +139,7 @@ Allows you to customize the feedback provided to the user when they enter an inc
 
 
 #### Tooltip `string`
-<dd>
+ 
 
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
@@ -148,7 +148,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 #### Placeholder `string`
 
-<dd>
+ 
 
 Allows you to set the placeholder text displayed within the input box. This can be used to provide a hint or example value to the user, guiding them on the expected format or content of the input.
 
@@ -157,26 +157,26 @@ Allows you to set the placeholder text displayed within the input box. This can 
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -185,7 +185,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -193,7 +193,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Auto Focus `boolean`
 
-<dd>
+ 
 
 When enabled, automatically places the user's cursor in the input box upon page load, directing their attention to the input field for immediate interaction.
 
@@ -201,7 +201,7 @@ When enabled, automatically places the user's cursor in the input box upon page 
 
 #### Enable formatting `boolean`
 
-<dd>
+ 
 
 When turned on, the phone number typed into the input gets formatted based on the selected country code.
 
@@ -210,7 +210,7 @@ When turned on, the phone number typed into the input gets formatted based on th
 #### Height `string`
 
 
-<dd>
+ 
 This property determines how the widget's height adjusts to changes in its content. 
 
 *Options:*
@@ -230,7 +230,7 @@ When the event is triggered, these event handlers can run queries, JS code, or o
 
 #### onTextChanged
 
-<dd>
+ 
 
 Specifies the actions to be executed when the input is modified.
 
@@ -240,7 +240,7 @@ Specifies the actions to be executed when the input is modified.
 
 #### onFocus
 
-<dd>
+ 
 
 Specifies the actions to be executed when the input area is focused.
 
@@ -248,7 +248,7 @@ Specifies the actions to be executed when the input area is focused.
 
 #### onBlur
 
-<dd>
+ 
 
 Specifies the actions to be executed when the input area loses focus.
 
@@ -258,7 +258,7 @@ Specifies the actions to be executed when the input area loses focus.
 
 #### onSubmit
 
-<dd>
+ 
 
 Specifies the actions to be executed when the input is submitted with the `ENTER` key.
 
@@ -266,7 +266,7 @@ Specifies the actions to be executed when the input is submitted with the `ENTER
 
 #### Reset on submit
 
-<dd>
+ 
 
 Clears the input value after submission. 
 
@@ -277,7 +277,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Font color `string`
 
-<dd>
+ 
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
@@ -285,7 +285,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 #### Font size `string`
 
-<dd>
+ 
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
@@ -293,7 +293,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 #### Emphasis `string`
 
-<dd>
+ 
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
@@ -303,7 +303,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -312,7 +312,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -326,26 +326,26 @@ Reference properties are properties that are not available in the property pane 
 
 #### countryCode `string`
 
-<dd>
+ 
 
 The `countryCode` property stores the country code associated with the selected country.
 
 *Example:*
 ```js
-{{PhoneInput1.countryCode}}
+{{ '{{PhoneInput1.countryCode}}' }}
 ```
 
 </dd>
 
 #### dialCode `string`
 
-<dd>
+ 
 
 The `dialCode` property retrieves the dialing code of the selected country.
 
 *Example:*
 ```js
-{{PhoneInput1.dialCode}}
+{{ '{{PhoneInput1.dialCode}}' }}
 ```
 
 </dd>
@@ -353,52 +353,52 @@ The `dialCode` property retrieves the dialing code of the selected country.
 
 #### text `string`
 
-<dd>
+ 
 
 The `text` property retrieves the formatted input value of the widget. 
 
 *Example:*
 ```js
-{{PhoneInput1.text}}
+{{ '{{PhoneInput1.text}}' }}
 ```
 
 </dd>
 
 #### value `string`
 
-<dd>
+ 
 
 The `value` property retrieves the unformatted phone number, regardless of whether formatting is enabled or not. 
 
 *Example:*
 ```js
-{{PhoneInput1.value}}
+{{ '{{PhoneInput1.value}}' }}
 ```
 
 </dd>
 
 #### isValid `boolean`
 
-<dd>
+ 
 
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
 *Example:*
 ```js
-{{PhoneInput1.isValid}}
+{{ '{{PhoneInput1.isValid}}' }}
 ```
 
 </dd>
 
 #### isDisabled `boolean`
 
-<dd>
+ 
 
 The `isDisabled` property reflects the state of the widget's **Disabled** setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
 *Example:*
 ```js
-{{PhoneInput1.isDisabled}}
+{{ '{{PhoneInput1.isDisabled}}' }}
 ```
 
 </dd>
@@ -406,13 +406,13 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{PhoneInput1.isVisible}}
+{{ '{{PhoneInput1.isVisible}}' }}
 ```
 
 </dd>
@@ -426,7 +426,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -441,7 +441,7 @@ PhoneInput1.setVisibility(true)
 
 #### setDisabled (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 

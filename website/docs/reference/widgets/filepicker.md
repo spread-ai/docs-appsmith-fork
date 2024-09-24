@@ -14,7 +14,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Allowed file types	`array<string>`
 
-<dd>
+ 
 
 Allows you to control the types of files users can upload with the Filepicker widget. It accepts an array of wildcards, MIME types, or specific file extensions, such as `.jpg`, `.jpeg`, `.png`, and `.gif`. 
 
@@ -52,7 +52,7 @@ _Example_:
 
 #### Data Format `string`
 
-<dd>
+ 
 
 This property allows you to choose the data format of the uploaded files. Appsmith supports various file types and data formats, including:
 
@@ -68,7 +68,7 @@ _Options_:
 
 #### Infer data types from CSV	`boolean`
 
-<dd>
+ 
 
 When enabled, it automatically determines the data types for columns in a CSV file based on content characteristics. This option is only available when the **Array of Object** data format is selected.
 
@@ -81,7 +81,7 @@ When enabled, it automatically determines the data types for columns in a CSV fi
 
 #### Maximum No. of files	`number`
 
-<dd>
+ 
 
 Sets the maximum number of files that a user can select. The default value is `1`.
 </dd>
@@ -90,7 +90,7 @@ Sets the maximum number of files that a user can select. The default value is `1
 
 #### Text `string`
 
-<dd>
+ 
 
 Sets the text on the widget. The default value is `Select Files`.
 
@@ -101,7 +101,7 @@ Sets the text on the widget. The default value is `Select Files`.
 #### Required `boolean`
 
 
-<dd>
+ 
 
 Enabling this property makes the Filepicker widget mandatory, requiring users to select a file. I When the widget is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled untila a file is selected.
 
@@ -109,7 +109,7 @@ Enabling this property makes the Filepicker widget mandatory, requiring users to
 
 #### Maximum File Size	`number`
 
-<dd>
+ 
 
 Sets the maximum allowed size of each file that a user can upload. The default value is set to `5 MB`.
 
@@ -119,13 +119,13 @@ Sets the maximum allowed size of each file that a user can upload. The default v
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility. The default value for the property is `true`.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -134,13 +134,13 @@ For example, if you want to make the widget visible only when the user selects "
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally. The default value for the property is `false`.
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -148,7 +148,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
@@ -158,7 +158,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 #### onFilesSelected	
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user select a file through the widget.
 
@@ -169,7 +169,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 #### Button color `string`
 
-<dd>
+ 
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). When JS is enabled, the font color can be programmatically modified using JavaScript functions.
 
@@ -179,7 +179,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -188,7 +188,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -201,7 +201,7 @@ Reference properties are properties that are not available in the property pane 
 
 #### files `array`
 
-<dd>
+ 
 
 The `files` property stores file objects that the user has selected. Each file object contains the file data, which can be accessed through its `data` property.
 
@@ -209,19 +209,19 @@ The `files` property stores file objects that the user has selected. Each file o
 
 ```js
 // Accessing the file data
-{{ FilePicker1.files[0].data }}
+{{ '{{ FilePicker1.files[0].data }}' }}
 
 // Accessing the data format
-{{FilePicker1.files[0].dataFormat}}
+{{ '{{FilePicker1.files[0].dataFormat}}' }}
 
 // Accessing the file name
-{{FilePicker1.files[0].name}}
+{{ '{{FilePicker1.files[0].name}}' }}
 
 // Accessing multiple files
-{{FilePicker1.files}}
+{{ '{{FilePicker1.files}}' }}
 
 // Accessing metadata and data
-{{FilePicker1.files[0]}} 
+{{ '{{FilePicker1.files[0]}}' }} 
 
 
 //here [0] represents index of the file.
@@ -234,28 +234,28 @@ See how to [Upload Files to S3 using Filepicker](/connect-data/how-to-guides/how
 
 #### isValid `boolean`
 
-<dd>
+ 
 
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
 Example:
 
 ```js
-{{FilePicker1.isValid}}
+{{ '{{FilePicker1.isValid}}' }}
 ```
 
 </dd>
 
 #### isDisabled `boolean`
 
-<dd>
+ 
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
 Example:
 
 ```js
-{{FilePicker1.isDisabled}}
+{{ '{{FilePicker1.isDisabled}}' }}
 ```
 
 </dd>
@@ -263,28 +263,28 @@ Example:
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 Example:
 
 ```js
-{{FilePicker1.isVisible}}
+{{ '{{FilePicker1.isVisible}}' }}
 ```
 
 </dd>
 
 #### isDirty `boolean`
 
-<dd>
+ 
 
 Indicates whether the FilePicker has been used by the end user during the session. It is `true` if the user has interacted with the FilePicker at least once during their session, and `false` if they haven't used it yet.
 
 Example:
 
 ```js
-{{FilePicker1.isDirty}}
+{{ '{{FilePicker1.isDirty}}' }}
 ```
 
 
@@ -301,7 +301,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility(param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -316,7 +316,7 @@ FilePicker1.setVisibility(true)
 
 #### setDisabled(param: boolean): Promise
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 

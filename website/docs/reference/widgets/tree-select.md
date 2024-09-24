@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Options `array`
 
-<dd>
+ 
 
 Use to set options in the list of the TreeSelect widget. Options must be specified as an array of objects with a label and value property. The tree structure can be added to any option by adding the children field that should be an object. For example:
 
@@ -56,7 +56,7 @@ Use to set options in the list of the TreeSelect widget. Options must be specifi
 You can dynamically generate options by fetching data from queries or JS functions by binding the response to the **Options** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
-{{fetchData.data}}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Options** property in the TreeSelect widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
@@ -64,11 +64,11 @@ If the retrieved data is not in the desired format, you can use JavaScript to tr
 *Example*:
 
 ```js
-{{ getdata.data.reduce((acc, cur) => {
+{{ '{{ getdata.data.reduce((acc, cur) => {
   const group = acc.find(item => item.value === cur.type);
   group ? group.children.push({ label: cur.name, value: cur.name }) : acc.push({ label: cur.type, value: cur.type, children: [{ label: cur.name, value: cur.name }] });
   return acc;
-}, []) }}
+}, []) }}' }}
 ```
 This code takes an array of products and creates a nested data structure that groups the products by their type, making it easier to display them in a hierarchical view.
 
@@ -79,7 +79,7 @@ This code takes an array of products and creates a nested data structure that gr
 
 #### Default selected value `string`
 
-<dd>
+ 
 
 Allows you to specify an initial value(s) for the widget when it's first displayed. This is useful for pre-populating the widget or ensuring that specific options are selected by default. 
 
@@ -97,7 +97,7 @@ For example, if you want the default selected value to be `CLOTHING`, you can se
 
 #### Text `string`
 
-<dd>
+ 
 
 Sets the label of the widget.
 
@@ -105,7 +105,7 @@ Sets the label of the widget.
 
 #### Position `string`
 
-<dd>
+ 
 
 Sets the placement of the **Label** in the widget.
 
@@ -118,7 +118,7 @@ Sets the placement of the **Label** in the widget.
 
 #### Alignment `string`
 
-<dd>
+ 
 
 Sets the label alignment of the widget when the position selected is **Left**.
 
@@ -126,7 +126,7 @@ Sets the label alignment of the widget when the position selected is **Left**.
 
 #### Width (in columns) `number`
 
-<dd>
+ 
 
 Sets the width of the label in the widget when the **Left** position is selected.
 
@@ -136,7 +136,7 @@ Sets the width of the label in the widget when the **Left** position is selected
 
 #### Required `boolean`
 
-<dd>
+ 
 
 Enabling this property for a TreeSelect widget makes it a mandatory field, meaning that the user must select a value from the dropdown. When the select widget is placed within a Form widget and the **Required** property is enabled, the Form's submit button remains inactive until a value is selected in the select widget.
 
@@ -146,7 +146,7 @@ Enabling this property for a TreeSelect widget makes it a mandatory field, meani
 
 #### Tooltip `string`
 
-<dd>
+ 
 
 Enables you to add hints or provide additional information to guide the user regarding the selection.
 
@@ -154,7 +154,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 #### Placeholder `string`
 
-<dd>
+ 
 
 Allows you to set the placeholder text displayed within the widget. This can be used to provide a hint or example value to the user, guiding them on the expected format or content of the input.
 
@@ -162,33 +162,33 @@ Allows you to set the placeholder text displayed within the widget. This can be 
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
 
 #### Animate Loading `boolean`
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -196,7 +196,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Allow clearing value `boolean`
 
-<dd>
+ 
 
 Enabling this option allows users to clear the selected value, whether it was the default selection or one they made themselves.
 
@@ -204,7 +204,7 @@ Enabling this option allows users to clear the selected value, whether it was th
 
 #### Expand all by default `boolean`
 
-<dd>
+ 
 
 When enabled, this feature displays the dropdown in an expanded state by default, revealing all the available child options.
 
@@ -213,7 +213,7 @@ When enabled, this feature displays the dropdown in an expanded state by default
 
 #### Height `string`
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content.
 
@@ -229,7 +229,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onOptionChange 
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
@@ -237,7 +237,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 #### onDropdownOpen
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
@@ -246,7 +246,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 #### onDropdownClose 
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
@@ -261,7 +261,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Font color `string`
 
-<dd>
+ 
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). You can also click the **JS** button to programmatically modify the font color using JavaScript functions.
 
@@ -269,7 +269,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 #### Font size `string`
 
-<dd>
+ 
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values. You can also click the **JS** button to programmatically modify the font size using JavaScript functions.
 
@@ -277,7 +277,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 #### Emphasis `string`
 
-<dd>
+ 
 
 Enables you to select a font style for the widget, such as bold or italic. You can click the **JS** button to programmatically modify the font style using JavaScript functions.
 
@@ -287,7 +287,7 @@ Enables you to select a font style for the widget, such as bold or italic. You c
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. To control the border radius programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -295,7 +295,7 @@ Applies rounded corners to the outer edge of the widget. To control the border r
 
 #### Box Shadow `string`
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. To control the Box Shadow programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -307,7 +307,7 @@ This property adds a drop shadow effect to the frame of the widget. To control t
 Reference properties enable you to access the widget's data and state using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to retrieve the visibility status of a select widget, you can use `treeSelect1.isVisible`.
 
 #### options `array`
-<dd>
+ 
 
 The `options` property contains the values available for selection in a TreeSelect widget.
 
@@ -315,35 +315,35 @@ The `options` property contains the values available for selection in a TreeSele
 *Example:*
 
 ```js
-{{TreeSelect1.options}}
+{{ '{{TreeSelect1.options}}' }}
 ```
 
 
 </dd>
 
 #### selectedOptionLabel `string`
-<dd>
+ 
 
 Returns the label of the option selected in the TreeSelect widget. It changes if the default value of the widget changes or the user selects an option.
 
 *Example:*
 
 ```js
-{{TreeSelect1.selectedOptionLabel}}
+{{ '{{TreeSelect1.selectedOptionLabel}}' }}
 ```
 
 
 </dd>
 
 #### selectedOptionValue `string`
-<dd>
+ 
 
 Returns the value of the option selected in the TreeSelect widget. It changes if the default value of the widget changes or the user selects an option.
 
 *Example:*
 
 ```js
-{{TreeSelect1.selectedOptionValue}}
+{{ '{{TreeSelect1.selectedOptionValue}}' }}
 ```
 
 
@@ -351,35 +351,35 @@ Returns the value of the option selected in the TreeSelect widget. It changes if
 
 #### isDisabled `boolean`
 
-<dd>
+ 
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
 *Example:*
 
 ```js
-{{TreeSelect1.isDisabled}}
+{{ '{{TreeSelect1.isDisabled}}' }}
 ```
 
 
 </dd>
 
 #### isVisible `boolean`
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 
 ```js
-{{TreeSelect1.isVisible}}
+{{ '{{TreeSelect1.isVisible}}' }}
 ```
 
 
 </dd>
 
 #### isValid `boolean`
-<dd>
+ 
 
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
@@ -387,7 +387,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 *Example:*
 
 ```js
-{{TreeSelect1.isValid}}
+{{ '{{TreeSelect1.isValid}}' }}
 ```
 
 
@@ -402,7 +402,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setDisabled (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 
@@ -416,7 +416,7 @@ TreeSelect1.setDisabled(false)
 
 #### setRequired (param: boolean): Promise
 
-<dd>
+ 
 
 Sets whether the widget is required or not.
 

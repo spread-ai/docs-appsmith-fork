@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Min Value `number`
 
-<dd>
+ 
 
 Indicates the lowest possible value that the slider can start from. The value can include negative numbers and decimals, but it should always be smaller than the **Maximum** Value. 
 
@@ -29,7 +29,7 @@ Indicates the lowest possible value that the slider can start from. The value ca
 
 #### Max Value `number`
 
-<dd>
+ 
 
 Indicates the highest possible value for the slider. The value can encompass negative numbers and decimals, but it must always surpass the **Minimum** Value.
 
@@ -37,7 +37,7 @@ Indicates the highest possible value for the slider. The value can encompass neg
 
 #### Step Size `number`
 
-<dd>
+ 
 
 Denotes the amount by which the user can modify the slider's value. This value must be at least 0.1 and less than or equal to **Min. Range**.
 
@@ -45,7 +45,7 @@ Denotes the amount by which the user can modify the slider's value. This value m
 
 #### Min. Range `number`
 
-<dd>
+ 
 
 The smallest permissible interval between the selected values. This value must be greater than or equal to **Step Size**.
 
@@ -54,7 +54,7 @@ The smallest permissible interval between the selected values. This value must b
 
 #### Default Start Value `number`
 
-<dd>
+ 
 
 Defines a starting value for the range, which serves as the initial point unless modified by the user. This numeric value should fall within the range of the **Min Value** and **Max Value**, and it should be lower than the **Default End Value**.
 
@@ -62,7 +62,7 @@ Defines a starting value for the range, which serves as the initial point unless
 
 #### Default End Value `number`
 
-<dd>
+ 
 
 Defines a ending value for the range, which serves as the end point unless modified by the user. This numeric value should fall within the range of the **Min Value** and **Max Value**, and it should be higher than the **Default Start Value.**
 
@@ -74,7 +74,7 @@ Defines a ending value for the range, which serves as the end point unless modif
 #### Text `string`
 
 
-<dd>
+ 
 Sets the label on the widget.
 </dd>
 
@@ -84,7 +84,7 @@ Sets the label on the widget.
 #### Position `string`
 
 
-<dd>
+ 
 
 
 This property allows you to configure the label's placement.
@@ -99,7 +99,7 @@ This property allows you to configure the label's placement.
 
 #### Alignment `string`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
@@ -108,7 +108,7 @@ This property is only available when you select **Left** from the Position prope
 
 #### Width (in columns) `number`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
@@ -119,7 +119,7 @@ This property is only available when you select **Left** from the Position prope
 
 
 #### Tooltip `string`
-<dd>
+ 
 
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
@@ -129,7 +129,7 @@ Enables you to add hints or provide additional information to guide the user reg
 #### Show Marks `boolean`
 
 
-<dd>
+ 
 
 When enabled, this property displays the labels below the slider element within the widget.
 
@@ -138,7 +138,7 @@ When enabled, this property displays the labels below the slider element within 
 
 #### Marks `array<object>`
 
-<dd>
+ 
 
 Sets the label and corresponding values for the marks located below the slider.
 
@@ -165,14 +165,14 @@ Additionally, you can display dynamic data from queries or JS functions by bindi
 
 *Example:*
 ```js
-{{fetchData.data}}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
 *Example:*
 ```js
-{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}
+{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
 ```
 
 </dd>
@@ -180,26 +180,26 @@ If the query data is not in the expected format, you can use the `map()` functio
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -208,7 +208,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -218,7 +218,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 #### Show value always `boolean`
 
 
-<dd>
+ 
 
 Maintains the constant visibility of a tooltip containing the current value.
 
@@ -230,7 +230,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 #### onStartValueChange
 
-<dd>
+ 
 
 Specifies one or multiple actions to be triggered when the user changes the start value of the Range Slider.
 
@@ -238,7 +238,7 @@ Specifies one or multiple actions to be triggered when the user changes the star
 
 #### onEndValueChange
 
-<dd>
+ 
 
 Specifies one or multiple actions to be triggered when the user changes the end value of the Range Slider.
 
@@ -252,7 +252,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Size `string`
 
-<dd>
+ 
 
 Defines the size of the slider.
 
@@ -267,7 +267,7 @@ Options:
 
 #### Font color `string`
 
-<dd>
+ 
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
@@ -275,7 +275,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 #### Font size `string`
 
-<dd>
+ 
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
@@ -283,7 +283,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 #### Emphasis `string`
 
-<dd>
+ 
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
@@ -293,7 +293,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 #### Fill color `string`
 
-<dd>
+ 
 
 Represents the color of the slider, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
@@ -306,26 +306,26 @@ Reference properties are properties that are not available in the property pane 
 
 #### start `number`
 
-<dd>
+ 
 
 Enables you to retrieve the start value that has been selected with the slider. 
 
 *Example:*
 ```js
-{{RangeSlider1.start}}
+{{ '{{RangeSlider1.start}}' }}
 ```
 
 </dd>
 
 #### start `number`
 
-<dd>
+ 
 
 Enables you to retrieve the end value that has been selected with the slider. 
 
 *Example:*
 ```js
-{{RangeSlider1.end}}
+{{ '{{RangeSlider1.end}}' }}
 ```
 
 </dd>
@@ -333,13 +333,13 @@ Enables you to retrieve the end value that has been selected with the slider.
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{RangeSlider1.isVisible}}
+{{ '{{RangeSlider1.isVisible}}' }}
 ```
 
 </dd>
@@ -353,7 +353,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setDisabled (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 
@@ -368,7 +368,7 @@ RangeSlider1.setDisabled(false)
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

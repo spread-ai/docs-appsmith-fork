@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### URL `string`
 
-<dd>
+ 
 
 Allows you to specify the URL of the page or application you want to display within the Iframe. For instance, by adding `https://docs.appsmith.com/` to the **URL** property, you can display the Appsmith docs in your Appsmith application.
 
@@ -32,11 +32,11 @@ Allows you to specify the URL of the page or application you want to display wit
 #### srcDoc `string`
 
 
-<dd>
+ 
 
 Allows you to embed HTML and CSS within `<style>` tags to render in the Iframe. When this property has a value, it overrides the URL property.
 
-In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ }}`.
+In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ '{{ }}' }}`.
 
 
 **Example**: suppose you want to create a simple time-picker: 
@@ -106,7 +106,7 @@ See how to [create custom widgets](/build-apps/how-to-guides/Create-Custom-Widge
 
 #### Title `string`
 
-<dd>
+ 
 
 Set a title for the content displayed within the Iframe.
 
@@ -115,7 +115,7 @@ Set a title for the content displayed within the Iframe.
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
@@ -129,7 +129,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 #### onURLChanged
 
-<dd>
+ 
 
 Specifies the action to be performed when the widget's **URL** property is changed.
 
@@ -137,7 +137,7 @@ Specifies the action to be performed when the widget's **URL** property is chang
 
 #### onSrcDocChanged
 
-<dd>
+ 
 
 Specifies the action to be performed when the **srcDoc** property of the widget is changed.
 
@@ -146,7 +146,7 @@ Specifies the action to be performed when the **srcDoc** property of the widget 
 
 #### onMessageReceived
 
-<dd>
+ 
 
 Specifies the action to be performed when a `postMessage` event is received from the embedded page.
 
@@ -161,7 +161,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background Color `string`
 
-<dd>
+ 
 
 Sets a color for the Iframe's border, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
@@ -174,7 +174,7 @@ Sets a color for the Iframe's border, specified as a [CSS color value](https://d
 
 #### Border Width `number`
 
-<dd>
+ 
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px). The default value is `1`.
 
@@ -182,7 +182,7 @@ Specifies the width of the widget's border, accepting only numerical values in p
 
 #### Border Opacity	`number`
 
-<dd>
+ 
 
 This property controls the opacity level of the widget's border. The maximum value is 100, which represents full opacity. Default value is `100`.
 
@@ -192,7 +192,7 @@ This property controls the opacity level of the widget's border. The maximum val
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -201,7 +201,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -215,26 +215,26 @@ Reference properties are properties that are not available in the property pane 
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 Indicates the visibility state of a widget, with `true` indicating it is visible and `false` indicating it is hidden.
 
 *Example:*
 ```js
-{{Iframe1.isVisible}}
+{{ '{{Iframe1.isVisible}}' }}
 ```
 
 </dd>
 
 #### source `string`
 
-<dd>
+ 
 
 Contains the URL of the embedded page. Doesn't reflect the content set in the **srcDoc** property.
 
 *Example:*
 ```js
-{{Iframe1.source}}
+{{ '{{Iframe1.source}}' }}
 ```
 
 
@@ -242,13 +242,13 @@ Contains the URL of the embedded page. Doesn't reflect the content set in the **
 
 #### title `string`
 
-<dd>
+ 
 
 Contains the title of the Iframe as set in the widget's **Title** property.
 
 *Example:*
 ```js
-{{Iframe1.title}}
+{{ '{{Iframe1.title}}' }}
 ```
 
 
@@ -257,13 +257,13 @@ Contains the title of the Iframe as set in the widget's **Title** property.
 #### message `string`
 
 
-<dd>
+ 
 
 The `message` property contains a message received from the embedded page via the JavaScript `postMessage()` method. This message can be of any type and is `undefined` before a message is received. Learn more about [postMessage().](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 
 *Example:*
 ```js
-{{Iframe1.message}}
+{{ '{{Iframe1.message}}' }}
 ```
 
 </dd>
@@ -271,13 +271,13 @@ The `message` property contains a message received from the embedded page via th
 #### messageMetadata `string`
 
 
-<dd>
+ 
 
 The `messageMetadata` property contains metadata related to the message received from the embedded page through the JavaScript `postMessage()` method.
 
 *Example:*
 ```js
-{{Iframe1.messageMetadata}}
+{{ '{{Iframe1.messageMetadata}}' }}
 ```
 </dd>
 
@@ -289,7 +289,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -302,7 +302,7 @@ Iframe1.setVisibility(true)
 
 #### setURL (param: string): Promise
 
-<dd>
+ 
 
 Allows you to dynamically change the content of the iFrame by providing a new URL. 
 

@@ -15,7 +15,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Source Data `json`
 
-<dd>
+ 
 
 Connects the JSON Form to your datasource or widget, allowing you to add new records or edit existing ones. To bind data to the JSON Form, click on **Generate Form** and select either a datasource, query, or widget.
 
@@ -52,7 +52,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 _Example_:
 
 ```
-{{ tbluserData.selectedRow; }}
+{{ '{{ tbluserData.selectedRow; }}' }}
 ```
 
 You can click on an individual row in the Table and update data in the form fields.
@@ -63,7 +63,7 @@ Based on the JSON data provided, the JSON Form automatically identifies the appr
 
 #### Auto Generate Form `boolean`
 
-<dd>
+ 
 
 When enabled, the form layout updates automatically when the field types inside the **Source Data** are changed. With this, the **Field Configuration** property also gets automatically updated to reflect any changes in the **Source Data** property.
 
@@ -73,7 +73,7 @@ However, it's important to note that enabling this feature overrides any custom 
 
 #### Generate Form `string`
 
-<dd>
+ 
 
 When the **Auto Generate Form** property is disabled, this button becomes visible. You can use this button to manually regenerate the form layout. With this, the **Field Configuration** property also gets updated to reflect any changes in the **Source Data** property.
 
@@ -81,7 +81,7 @@ When the **Auto Generate Form** property is disabled, this button becomes visibl
 
 #### Field Configuration `list`
 
-<dd>
+ 
 
 Contains all the generated form fields. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. Alternatively, the eye icon allows you to hide specific fields.
 
@@ -111,7 +111,7 @@ Most of the field properties are similar to those found in widget properties. To
 
 #### Add New Field `string`
 
-<dd>
+ 
 
 Adds a new field in the form. Fields added this way are known as custom fields and you have the flexibility to delete these fields at a later time. It's important to note that custom fields do not update the **Source data** property.
 
@@ -121,7 +121,7 @@ Adds a new field in the form. Fields added this way are known as custom fields a
 
 #### Title `string`
 
-<dd>
+ 
 
 Sets the text that appears at the top of the form as a title.
 
@@ -129,7 +129,7 @@ Sets the text that appears at the top of the form as a title.
 
 #### Hidden Fields in Data `boolean`
 
-<dd>
+ 
 
 Enabling the this option updates the output data to include information from hidden fields in the source data.
 
@@ -139,21 +139,21 @@ For instance, suppose you have a registration form where the `Date of Birth` fie
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in _View Mode_. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects `Yes` from a Select widget, you can use the following JavaScript expression:
 
 ```
-{{ Select1.selectedOptionValue === "Yes" }}
+{{ '{{ Select1.selectedOptionValue === "Yes" }}' }}
 ```
 
 </dd>
 
 #### Animate Loading `boolean`
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
@@ -161,7 +161,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 #### Disable Invalid Forms `boolean`
 
-<dd>
+ 
 
 When turned on, the JSON Form widget checks the validation properties, and the Submit button is automatically disabled if there are failing checks.
 
@@ -169,7 +169,7 @@ When turned on, the JSON Form widget checks the validation properties, and the S
 
 #### Show Reset `boolean`
 
-<dd>
+ 
 
 When the property is enabled, a reset button is added to the form. Clicking this button resets all fields in the form to their default values. This is useful if a user wants to start over with a new entry or if they entered the wrong information and need to clear the form.
 
@@ -177,7 +177,7 @@ When the property is enabled, a reset button is added to the form. Clicking this
 
 #### Submit Button Label `string`
 
-<dd>
+ 
 
 Sets the text for the Submit button.
 
@@ -185,7 +185,7 @@ Sets the text for the Submit button.
 
 #### Reset Button Label `string`
 
-<dd>
+ 
 
 Sets the text for the Reset button.
 
@@ -193,7 +193,7 @@ Sets the text for the Reset button.
 
 #### Height `string`
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -207,7 +207,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onSubmit
 
-<dd>
+ 
 
 Sets an [action](/reference/appsmith-framework/widget-actions) to be executed when the user clicks the Submit button on the form.
 
@@ -221,7 +221,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background Color `string`
 
-<dd>
+ 
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
@@ -229,7 +229,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 
 #### Border Color String `string`
 
-<dd>
+ 
 
 Sets a color for the form's border, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
@@ -239,7 +239,7 @@ Sets a color for the form's border, specified as a [CSS color value](https://dev
 
 #### Border Width `number`
 
-<dd>
+ 
 
 Sets the width of the widget's border. Accepts number values only, in px.
 
@@ -247,7 +247,7 @@ Sets the width of the widget's border. Accepts number values only, in px.
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -255,7 +255,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 #### Box Shadow `string`
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -265,7 +265,7 @@ This property adds a drop shadow effect to the frame of the widget. If JavaScrip
 
 #### Button color `string`
 
-<dd>
+ 
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
@@ -273,7 +273,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 #### Button variant `string`
 
-<dd>
+ 
 
 Specifies the style type of the button to indicate its significance.
 
@@ -289,7 +289,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -297,7 +297,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 #### Box Shadow `string`
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -305,7 +305,7 @@ This property adds a drop shadow effect to the frame of the widget. If JavaScrip
 
 #### Icon `string`
 
-<dd>
+ 
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
@@ -313,7 +313,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 #### Position `string`
 
-<dd>
+ 
 
 This property allows you to configure the **Icon**'s placement.
 
@@ -326,7 +326,7 @@ _Options:_
 
 #### Placement `string`
 
-<dd>
+ 
 
 Determines the spacing between the **Icon** and the **Label**.
 
@@ -344,21 +344,21 @@ Reference properties are properties that are not available in the property pane 
 
 #### formData `object`
 
-<dd>
+ 
 
 Contains a JSON object with the field names and their current values in the form.
 
 _Example:_
 
 ```
-{{ JSONForm1.object }}
+{{ '{{ JSONForm1.object }}' }}
 ```
 
 </dd>
 
 #### fieldState `object`
 
-<dd>
+ 
 
 A JSON object describing the state of each field in the form. State data includes: `isDisabled`, `isRequired`, `isVisible`, and `isValid`.
 
@@ -366,38 +366,38 @@ Example:
 
 ```
 // To access the object:
-{{ JSONForm1.fieldState; }}
+{{ '{{ JSONForm1.fieldState; }}' }}
 
 // To get state for a particular field (e.g., "name"):
-{{ JSONForm1.fieldState.name; }}
+{{ '{{ JSONForm1.fieldState.name; }}' }}
 ```
 
 </dd>
 
 #### isValid `boolean`
 
-<dd>
+ 
 
 Reflects whether the widget's inputs are considered Valid.
 
 Example:
 
 ```
-{{ JSONForm1.isValid; }}
+{{ '{{ JSONForm1.isValid; }}' }}
 ```
 
 </dd>
 
 #### sourceData `object`
 
-<dd>
+ 
 
 Contains a JSON object of the original source data which was bound to the form.
 
 Example:
 
 ```
-{{ JSONForm1.sourceData; }}
+{{ '{{ JSONForm1.sourceData; }}' }}
 ```
 
 </dd>
@@ -410,7 +410,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 #### setVisibility(`:boolean`)
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -424,7 +424,7 @@ JSONForm1.setVisibility(true);
 
 #### setSourceData(`:object`)
 
-<dd>
+ 
 
 Sets the data to be displayed in the widget.
 

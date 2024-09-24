@@ -14,14 +14,14 @@ These properties are customizable options present in the property pane of the wi
 
 #### Label `string`
 
-<dd>
+ 
 Sets the text on the widget.
 
 </dd>
 
 #### Menu items source `string`
 
-<dd>
+ 
 
 Allows you to specify the source of the menu items.
 
@@ -37,18 +37,18 @@ The dynamic menu option supports a maximum of 10 menu items.
 
 #### Menu items `string`
 
-<dd>
+ 
 Displays a list of available menu items. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. See the <a href="/reference/widgets/menu/menu-items">Menu Items</a> reference guide for configuring menu items.
 </dd>
 
 #### Source data `array`
 
-<dd>
+ 
 
 It is used to provide the datasource for dynamic menus. It accepts an array of values, which can be obtained from queries. You can directly reference your query in the **Source Data** property, like: 
 
 ```js
-{{fetchData.data}}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the data retrieved from the query is not in the desired format, you can use JavaScript to **transform** it before passing it to the widget. For instance, if you have a list of product names and you want to display only the unique names in a Menu Button, you can use:
@@ -77,26 +77,26 @@ The code filters the data to create a new array with unique items based on the `
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
 For example, if you want to allow only a specific user to select menu item, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -105,7 +105,7 @@ For example, if you want to allow only a specific user to select menu item, you 
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -113,7 +113,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Compact `boolean`
 
-<dd>
+ 
 When enabled, the widget is displayed in compact mode, occupying less space on the page. Compact mode is ideal for tight layouts where space optimization is necessary.
 </dd>
 
@@ -125,7 +125,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Button variant `string`
 
-<dd>
+ 
 
 Specifies the style type of the button to indicate its significance.
 
@@ -142,7 +142,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 #### Icon `string`
 
-<dd>
+ 
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
@@ -150,7 +150,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 #### Position `string`
 
-<dd>
+ 
 
 This property allows you to configure the **Icon**'s placement.
 
@@ -163,7 +163,7 @@ This property allows you to configure the **Icon**'s placement.
 
 #### Placement `string`
 
-<dd>
+ 
 
 Determines the spacing between the **Icon** and the **Label**.
 
@@ -178,7 +178,7 @@ Determines the spacing between the **Icon** and the **Label**.
 
 #### Button color `string`
 
-<dd>
+ 
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
@@ -188,7 +188,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -197,7 +197,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -210,25 +210,25 @@ Reference properties are properties that are not available in the property pane 
 
 #### Label
 
-<dd>
+ 
 Returns the value of the label associated with the widget.
 
 *Example:*
 ```js
-{{MenuButton1.label}}
+{{ '{{MenuButton1.label}}' }}
 ```
 
 </dd>
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{MenuButton1.isVisible}}
+{{ '{{MenuButton1.isVisible}}' }}
 ```
 
 </dd>
@@ -242,7 +242,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 #### setVisibility `boolean`
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -260,7 +260,7 @@ MenuButton1.setVisibility(true).then(() => {
 
 #### setDisabled `boolean`
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 

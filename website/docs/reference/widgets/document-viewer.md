@@ -14,7 +14,7 @@ These properties are customizable options present in the property pane of the wi
 ### Data
 #### Document Link `URL / Base64`
 
-<dd>
+ 
 
 This property allows you to include a URL or base64-encoded content to view various file formats. The supported file extensions for the widget are:
 
@@ -35,7 +35,7 @@ When using base64-encoded files larger than 1.5MB, the Document Viewer may encou
 
 #### Visible `Boolean`
 
-<dd>
+ 
 
 This property controls the visibility of the widget. If you turn off this property, the widget would not be visible in view mode. Additionally, you can use JavaScript by clicking on `JS` next to the Visible property to conditionally control the widget's visibility.
 
@@ -43,7 +43,7 @@ This property controls the visibility of the widget. If you turn off this proper
 
 #### Animate Loading `Boolean`
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the `JS` next to the property.
 
@@ -54,7 +54,7 @@ These properties are not available in the property pane, but can be accessed usi
 
 
 #### docUrl `String`
-<dd>
+ 
 
 The `docUrl` property contains the URL of the uploaded document and is used to display the link to access the document. 
 
@@ -62,7 +62,7 @@ The `docUrl` property contains the URL of the uploaded document and is used to d
 
 
 #### isVisible `Boolean`
-<dd>
+ 
 
 The `isVisible` property reflects the state of the widget's **Visible** setting. It is represented by a boolean value, where true indicates that the widget is visible, and false indicates that it is hidden or not displayed on the page.
 </dd>
@@ -80,7 +80,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -95,7 +95,7 @@ DocumentViewer1.setVisibility(true)
 
 #### setURL (param: string): Promise
 
-<dd>
+ 
 
 Updates the URL of the document to be displayed in the Document Viewer widget. 
 

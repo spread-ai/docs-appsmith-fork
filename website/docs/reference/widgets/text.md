@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 #### Text `string`
 
 
-<dd>
+ 
 
 Sets the text to be displayed. The text remains unchanged until manually updated or edited. 
 
@@ -26,7 +26,7 @@ You can dynamically change text by fetching data from queries or JS functions an
 *Example:*
 
 ```js
-{{Table1.selectedRow.name}}
+{{ '{{Table1.selectedRow.name}}' }}
 ```
 
 You have the option to use HTML code within the **Text** property to customize the appearance of the displayed text. Note that the Text field supports only inline CSS. If you need to use external CSS, it is recommended to use the [Iframe widget](/reference/widgets/iframe).
@@ -43,13 +43,13 @@ This code displays the text Hello World in blue color.
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -57,7 +57,7 @@ For example, if you want to make the widget visible only when the user selects "
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
@@ -66,7 +66,7 @@ This property controls whether the widget is displayed with a loading animation.
 #### Disable link `boolean`
 
 
-<dd>
+ 
 
 Enabling this option treats any link in the widget as standard text instead of clickable links.
 
@@ -76,7 +76,7 @@ Enabling this option treats any link in the widget as standard text instead of c
 #### Height `string`
 
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -95,7 +95,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Font family `string`
 
-<dd>
+ 
 
 Enables you to choose a font for the text, which can also be programmatically manipulated using JavaScript functions.
 
@@ -103,7 +103,7 @@ Enables you to choose a font for the text, which can also be programmatically ma
 
 #### Font size `string`
 
-<dd>
+ 
 
 Determines the font size of the text. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
@@ -113,7 +113,7 @@ Determines the font size of the text. It accepts [CSS font-size](https://develop
 
 #### Text Color `string`
 
-<dd>
+ 
 
 Sets the color for the text, and when JS is enabled, you can dynamically modify the text color using JavaScript functions.
 
@@ -124,7 +124,7 @@ Sets the color for the text, and when JS is enabled, you can dynamically modify 
 
 #### Alignment `string`
 
-<dd>
+ 
 
 Sets the horizontal alignment of the text within the cells.
 
@@ -137,7 +137,7 @@ Sets the horizontal alignment of the text within the cells.
 
 #### Emphasis `String`
 
-<dd>
+ 
 
 Allows you to choose a font style for the widget, including options like bold or italic. When JS is enabled, you can dynamically modify the font style using JavaScript functions.
 
@@ -148,7 +148,7 @@ Allows you to choose a font style for the widget, including options like bold or
 
 #### Border Width	 `number`
 
-<dd>
+ 
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px).
 
@@ -161,14 +161,14 @@ Reference properties are properties that are not available in the property pane 
 
 #### text `string`
 
-<dd>
+ 
 
 The `text` property retrieves the current text value of the widget.
 
 
 *Example:*
 ```js
-{{Text1.text}}
+{{ '{{Text1.text}}' }}
 ```
 
 </dd>
@@ -177,13 +177,13 @@ The `text` property retrieves the current text value of the widget.
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{Text1.isVisible}}
+{{ '{{Text1.isVisible}}' }}
 ```
 
 </dd>
@@ -198,7 +198,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -214,7 +214,7 @@ Text1.setVisibility(true)
 
 #### setDisabled (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 
@@ -228,7 +228,7 @@ Text1.setDisabled(false)
 
 #### setRequired (param: boolean): Promise
 
-<dd>
+ 
 
 Sets whether the widget is required or not.
 
@@ -243,7 +243,7 @@ Text1.setRequired(true)
 
 #### setText (param: string): Promise
 
-<dd>
+ 
 
 Sets the text value of the widget.
 
@@ -258,7 +258,7 @@ Text1.setText('Hello, world!')
 
 #### setTextColor (param: string): Promise
 
-<dd>
+ 
 
 Sets the selected option of the Select widget.
 

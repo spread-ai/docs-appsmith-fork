@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Edit Source
 
-<dd>
+ 
 
 Allows you to customize the code for the custom widget. When clicked, it opens a dedicated page where you can conveniently modify and update the widget's code to suit your requirements.
 
@@ -26,15 +26,15 @@ Learn more about [Custom Widget Builder](#custom-widget-builder).
 
 #### Default Model
 
-<dd>
+ 
 
-This property allows you to pass object data to the custom widget's code editor. You can use mustache binding `{{}}` to pass data from queries or other widgets.
+This property allows you to pass object data to the custom widget's code editor. You can use mustache binding `{{ '{{}}' }}` to pass data from queries or other widgets.
 
 _Example:_ If you want to pass the name from a Table widget to the custom widget, use the following code:
 
 ```js
 {
-  "name": "{{Table1.selectedRow.name}}"
+  "name": "{{ '{{Table1.selectedRow.name}}' }}"
 }
 ```
 
@@ -48,7 +48,7 @@ _Example:_ If you want to pass the name from a Table widget to the custom widget
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility. The default value for the property is `true`.
 
@@ -66,7 +66,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 #### Height `string`
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -84,7 +84,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 ### Events
 
-<dd>
+ 
 
 Allows you to create multiple events, providing the flexibility to configure various actions tailored to your specific requirements, such as Framework functions, queries, or JavaScript functions.
 
@@ -113,31 +113,31 @@ Reference properties are properties that are not available in the property pane 
 
 #### model `string`
 
-<dd>
+ 
 
 The `model` property retrieves the value from the Custom widget and **Default Model** property.
 
 _Example_:
 
 ```js
-{{Custom1.model}}
+{{ '{{Custom1.model}}' }}
 
 // Accessing a specific property
-{{Custom1.model.signatureImage}}
+{{ '{{Custom1.model.signatureImage}}' }}
 ```
 
 </dd>
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 _Example_:
 
 ```js
-{{ Custom1.isVisible }}
+{{ '{{ Custom1.isVisible }}' }}
 ```
 
 </dd>
@@ -164,7 +164,7 @@ These properties are accessible within the JavaScript editor, providing specific
 
 #### model `object`
 
-<dd>
+ 
 
 The `model` property retrieves the value passed in the **Default Model** property of the Custom widget.
 
@@ -180,7 +180,7 @@ appsmith.model.propertyname;
 
 #### mode `string`
 
-<dd>
+ 
 
 The `mode` property represents the current render context of the Custom widget.
 
@@ -194,7 +194,7 @@ appsmith.mode;
 
 #### theme `object`
 
-<dd>
+ 
 
 The `theme` object reflects the current theme of the Appsmith application.
 
@@ -211,7 +211,7 @@ appsmith.theme;
 
 #### ui `object`
 
-<dd>
+ 
 
 Provides access to the UI elements of the widget, such as width and height, in pixels.
 
@@ -225,7 +225,7 @@ appsmith.ui;
 
 #### updateModel
 
-<dd>
+ 
 
 The `updateModel` property allows you to dynamically update the model properties. This enables real-time synchronization between the Custom widget and the parent application.
 
@@ -239,19 +239,19 @@ document.getElementById("saveBtn").addEventListener("click", function () {
 });
 ```
 
-Once button is clicked, the signature pad data will be available on the custom widget model property. you can use this data in another widget using the `{{}}` binding.
+Once button is clicked, the signature pad data will be available on the custom widget model property. you can use this data in another widget using the `{{ '{{}}' }}` binding.
 
 _Example_: You can bind signature pad data to an image widget by pasting following code on Image widget's `image` property on the property pane.
 
 ```js
-{{ Custom1.model.signatureImage }}
+{{ '{{ Custom1.model.signatureImage }}' }}
 ```
 
 </dd>
 
 #### triggerEvent
 
-<dd>
+ 
 
 You can execute custom events that you created in the property pane of the custom widget by calling this function with the name of the event. You can also pass some optional data by including a second argument.
 
@@ -274,7 +274,7 @@ function onClick() {
 
 #### onModelChange
 
-<dd>
+ 
 
 The `onModelChange` function allows you to register a handler function, which will be called whenever there is a change in the model, either from the platform or from within the custom widget (for example, via the `updateModel` function). This is useful for responding to changes in the widget's state.
 
@@ -310,7 +310,7 @@ When the condition is applied, updates occur only when the selected item changes
 
 #### onUiChange
 
-<dd>
+ 
 
 Allows a handler function to be called whenever the UI changes i.e width, height, providing a useful mechanism for updating components affected by UI changes from the platform.
 
@@ -327,7 +327,7 @@ Allows a handler function to be called whenever the UI changes i.e width, height
 
 #### onReady
 
-<dd>
+ 
 
 The **onReady** event in Appsmith is a mechanism to wait for the parent application to complete its initialization before executing custom widget logic. Use `appsmith.onReady` to pass a handler function. This handler gets called when the parent application is ready, and you should begin rendering your component from this handler.
 
@@ -350,7 +350,7 @@ appsmith.onReady(() => {
 
 #### onThemeChange
 
-<dd>
+ 
 
 Subscribe to theme changes and execute a callback function.
 
@@ -372,7 +372,7 @@ These css variables are accessible within the CSS editor, offer specific functio
 
 #### model
 
-<dd>
+ 
 
 The `model` property retrieves the value passed in the **Default Model** property of the Custom widget. Appsmith automatically generates corresponding CSS variables for each string and number property within your model. This feature is beneficial for transmitting CSS configurations, such as width or color, through your model.
 
@@ -400,7 +400,7 @@ button {
 
 #### UI and theme
 
-<dd>
+ 
 
 These CSS variables, available to control widget size and define the theme:
 

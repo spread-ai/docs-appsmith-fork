@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Source Data `array<object>`
 
-<dd>
+ 
 
 Specify data as an array of objects to display options in the widget. For example:
 
@@ -41,13 +41,13 @@ Specify data as an array of objects to display options in the widget. For exampl
 You can dynamically generate options by fetching data from queries or JS functions and binding the response to the **Source Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
-{{fetchData.data}}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Source Data** property, like:
 
 ```js
-{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}
+{{ '{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -57,14 +57,14 @@ If you are generating options for Select widget using JS code as shown above, ma
 
 #### Label `string`
 
-<dd>
+ 
 
 Defines the key from the **Source Data** property that specifies the labels for each option in the Select widget. To define **Label** using code, click the **JS** button next to the property. 
 
 *Example:* If you prefer the label to be displayed in lowercase, you can achieve this using the following code snippet:
 
 ```js
-{{ item.name.toLowerCase() }}
+{{ '{{ item.name.toLowerCase() }}' }}
 ```
 `item.name` represents the Source Data's property containing the label, and the `toLowerCase()` function is applied to convert the label to lowercase.
 
@@ -72,7 +72,7 @@ Defines the key from the **Source Data** property that specifies the labels for 
 
 #### Value `string`
 
-<dd>
+ 
 
 Defines the key from the **Source Data** property that specifies the values for each option in the Select widget. Value defined for each option must be unique. To define **Value** using code, click the **JS** button next to the property.
 
@@ -80,7 +80,7 @@ Defines the key from the **Source Data** property that specifies the values for 
 
 #### Default selected value `string`
 
-<dd>
+ 
 
 Sets the initial option that is automatically chosen when the widget is loaded. It serves as the default selection unless the user manually selects a different option from the list. For example, if you want the default option to be ```Blue```, set the **Default Selected Value** property to `BLUE`.
 
@@ -91,7 +91,7 @@ Sets the initial option that is automatically chosen when the widget is loaded. 
 
 #### Text `string`
 
-<dd>
+ 
 
 Sets the label of the widget.
 
@@ -100,7 +100,7 @@ Sets the label of the widget.
 
 #### Position `string`
 
-<dd>
+ 
 
 Sets the placement of the **Label** in the widget.
 
@@ -113,7 +113,7 @@ Sets the placement of the **Label** in the widget.
 
 #### Alignment `string`
 
-<dd>
+ 
 
 Sets the label alignment of the widget when the position selected is **left**.
 
@@ -121,7 +121,7 @@ Sets the label alignment of the widget when the position selected is **left**.
 
 #### Width (in columns) `number`
 
-<dd>
+ 
 
 Sets the width of the label in the widget when the **left** position is selected.
 
@@ -131,7 +131,7 @@ Sets the width of the label in the widget when the **left** position is selected
 
 #### Allow searching `boolean`
 
-<dd>
+ 
 
 Enables searching for specific options within the dropdown list. When this option is enabled, a search input field is displayed in the widget. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -139,7 +139,7 @@ Enables searching for specific options within the dropdown list. When this optio
 
 #### Server side filtering `boolean`
 
-<dd>
+ 
 
 Enables server-side filtering via a query request. Use this property when the Select widget's option data is being bound to a query.
 
@@ -147,7 +147,7 @@ Enables server-side filtering via a query request. Use this property when the Se
 
 #### onFilterUpdate
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when you update the filter text. 
 
@@ -157,7 +157,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 #### Required `boolean`
 
-<dd>
+ 
 
 Enabling this property for a Select widget makes it a mandatory field, meaning that the user must select a value from the dropdown. When the Select widget is placed within a Form widget and the **Required** property is enabled, the Form's submit button remains inactive until a value is selected in the Select widget.
 
@@ -167,27 +167,27 @@ Enabling this property for a Select widget makes it a mandatory field, meaning t
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the select widget:
 
 ```js
-{{Checkbox1.isChecked}}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the `Disabled` property to control the widget's disabled state conditionally.
 
 For example, if you want to allow only a specific user to interact with the Select widget, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -195,7 +195,7 @@ For example, if you want to allow only a specific user to interact with the Sele
 
 #### Animate Loading `boolean`
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -203,7 +203,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Height `string`
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -217,7 +217,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onOptionChange 
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response.
 
@@ -225,7 +225,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 #### onDropdownOpen
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user.
 
@@ -234,7 +234,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 #### onDropdownClose 
 
-<dd>
+ 
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state.
 
@@ -248,7 +248,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Font color `string`
 
-<dd>
+ 
 
 Allows you to set text color for the label. Additionally, you can programmatically modify the text color using JavaScript functions.
 
@@ -256,7 +256,7 @@ Allows you to set text color for the label. Additionally, you can programmatical
 
 #### Font size `string`
 
-<dd>
+ 
 
 Allows you to control the size of the label text. Additionally, you can programmatically modify the text size using JavaScript functions.
 
@@ -264,7 +264,7 @@ Allows you to control the size of the label text. Additionally, you can programm
 
 #### Emphasis `string`
 
-<dd>
+ 
 
 Allows you to choose a font style; bold or italic. you can programmatically modify the font style using JavaScript functions.
 
@@ -274,7 +274,7 @@ Allows you to choose a font style; bold or italic. you can programmatically modi
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -283,7 +283,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -295,97 +295,97 @@ Reference properties enable you to access the widget's data and state using the 
 
 #### filterText `string`
 
-<dd>
+ 
 
 Returns the text entered in the search filter for Server side filtering.
 
 *Example:*
 
 ```js
-{{Select1.filterText}}
+{{ '{{Select1.filterText}}' }}
 ```
 
 </dd>
 
 #### isDisabled `boolean`
 
-<dd>
+ 
 
 It reflects the state of the widget's Disabled setting. It is represented by a boolean value, where `true` indicates that the widget is disabled, and `false` indicates that it is enabled for user interaction.
 
 *Example:*
 
 ```js
-{{Select1.isDisabled}}
+{{ '{{Select1.isDisabled}}' }}
 ```
 
 </dd>
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{Select1.isVisible}}
+{{ '{{Select1.isVisible}}' }}
 ```
 
 </dd>
 
 ####  isDirty `boolean`
 
-<dd>
+ 
 
 This property is a boolean value that indicates whether the user has interacted with the widget. If the user selects an option from the dropdown list, the `isDirty` property returns `true`. However, if the user does not make any selection and the initial value remains unchanged, the `isDirty` property returns `false`.
 
 *Example:*
 
 ```js
-{{Select1.isDirty}}
+{{ '{{Select1.isDirty}}' }}
 ```
 
 </dd>
 
 #### options `array`
 
-<dd>
+ 
 
 Returns an array of objects that contain the label and value of the options in the dropdown list.
 
 *Example:*
 
 ```js
-{{Select1.options}}
+{{ '{{Select1.options}}' }}
 ```
 
 </dd>
 
 #### selectedOptionValue `string`
 
-<dd>
+ 
 
 Returns the value of the option displayed in the Select widget. It changes if the default value of the widget changes or the user selects an option.
 
 *Example:*
 
 ```js
-{{Select1.selectedOptionValue}}
+{{ '{{Select1.selectedOptionValue}}' }}
 ```
 
 </dd>
 
 #### selectedOptionLabel `string`
 
-<dd>
+ 
 
 Returns the label of the option displayed in the Select widget. It changes if the default value of the widget changes or the user selects an option.
 
 *Example:*
 
 ```js
-{{Select1.selectedOptionLabel}}
+{{ '{{Select1.selectedOptionLabel}}' }}
 ```
 
 </dd>
@@ -400,7 +400,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -415,7 +415,7 @@ Select1.setVisibility(true)
 
 #### setDisabled (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the `disabled` state of the widget.
 
@@ -429,7 +429,7 @@ Select1.setDisabled(false)
 
 #### setOptions (param: array< object >): Promise
 
-<dd>
+ 
 
 Sets the options to be displayed in the widget.
 
@@ -444,7 +444,7 @@ Select1.setOptions([{ label: 'Option 1', value: 'option1' }, { label: 'Option 2'
 
 #### setRequired (param: boolean): Promise
 
-<dd>
+ 
 
 Sets whether the widget is required or not.
 
@@ -458,7 +458,7 @@ Select1.setRequired(true)
 
 #### setSelectedOption (param: String): Promise
 
-<dd>
+ 
 
 Sets the selected option of the Select widget.
 

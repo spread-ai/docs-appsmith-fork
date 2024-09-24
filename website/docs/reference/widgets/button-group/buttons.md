@@ -13,7 +13,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Button type `string`
 
-<dd>
+ 
 Specifies the type of buttons to be included in the button group.
 
 
@@ -28,7 +28,7 @@ Specifies the type of buttons to be included in the button group.
 
 #### Text `string`
 
-<dd>
+ 
 
 Sets the text label for a item. It can be a static text value or dynamically bound to a datasource. 
 
@@ -38,7 +38,7 @@ Sets the text label for a item. It can be a static text value or dynamically bou
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Allows you to show or hide the menu item based on specific conditions. 
 
@@ -47,7 +47,7 @@ Allows you to show or hide the menu item based on specific conditions.
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Allows you to disable input for a item. This can be beneficial when you want to restrict user interaction with the item in specific situations.
 
@@ -61,7 +61,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Icon `string`
 
-<dd>
+ 
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Appsmith utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
 
@@ -69,7 +69,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 #### Position `string`
 
-<dd>
+ 
 
 This property allows you to configure the **Icon**'s placement.
 
@@ -81,7 +81,7 @@ This property allows you to configure the **Icon**'s placement.
 
 #### Placement `string`
 
-<dd>
+ 
 
 Determines the spacing between the **Icon** and the **Label**.
 
@@ -97,7 +97,7 @@ Determines the spacing between the **Icon** and the **Label**.
 
 #### Button color `string`
 
-<dd>
+ 
 
 Determines the color of the button displayed for each item in the button group. 
 
@@ -109,7 +109,7 @@ Determines the color of the button displayed for each item in the button group.
 
 #### onClick
 
-<dd>
+ 
 
 Allows you to configure [actions](/reference/appsmith-framework/widget-actions) to be executed when the button is clicked. 
 

@@ -20,7 +20,7 @@ These properties are customizable options present in the property pane of the wi
 #### Options `array<object>`
 
 
-<dd>
+ 
 
 
 This property allows you to set the labels and values for the options. Ensure that the values assigned to each option are unique. 
@@ -44,7 +44,7 @@ Additionally, you can dynamically display data from a query using JavaScript. Fo
 
 
 ```js
-{{getCountry.data.map( p => ({label: p.country, value: p.country}))}}
+{{ '{{getCountry.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -53,7 +53,7 @@ Additionally, you can dynamically display data from a query using JavaScript. Fo
 
 #### Default Selected Values `string`
 
-<dd>
+ 
 
 Allows you to set default options in a widget. These options are initially selected when the widget is loaded, representing the user's default input unless modified. Multiple default options can be added by providing them as an array of values. 
 
@@ -75,7 +75,7 @@ Allows you to set default options in a widget. These options are initially selec
 #### Text `string`
 
 
-<dd>
+ 
 Sets the label on the widget.
 </dd>
 
@@ -85,7 +85,7 @@ Sets the label on the widget.
 #### Position `string`
 
 
-<dd>
+ 
 
 
 This property allows you to configure the label's placement.
@@ -100,7 +100,7 @@ This property allows you to configure the label's placement.
 
 #### Alignment `string`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
@@ -109,7 +109,7 @@ This property is only available when you select **Left** from the Position prope
 
 #### Width `number`
 
-<dd>
+ 
 
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
@@ -123,7 +123,7 @@ This property is only available when you select **Left** from the Position prope
 #### Required `boolean`
 
 
-<dd>
+ 
 This validation feature allows you to designate the Switch Group as a mandatory field. For instance, when the widget is placed within a Form widget, enabling the Required property ensures that the Form's submit button remains disabled until the Switch Group is turned on/off.
 
 
@@ -136,7 +136,7 @@ This validation feature allows you to designate the Switch Group as a mandatory 
 
 
 #### Tooltip `string`
-<dd>
+ 
 
 
 This feature enables you to add hints or provide additional information to guide the user regarding the required input.
@@ -145,7 +145,7 @@ This feature enables you to add hints or provide additional information to guide
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 This property controls the visibility of the widget. If you turn off this property, the widget would not be visible in view mode. Additionally, you can use JavaScript by clicking on `JS` next to the **Visible** property to conditionally control the widget's visibility. 
 
@@ -153,7 +153,7 @@ This property controls the visibility of the widget. If you turn off this proper
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 This property prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on `JS` next to the **Disabled** property to control the widget's disable state conditionally.
 
@@ -161,7 +161,7 @@ This property prevents users from selecting the widget. Even though the widget r
 
 #### Inline `boolean`
 
-<dd>
+ 
 
 When the inline property is enabled, the options are displayed horizontally within the widget. When this property is turned off, the options are displayed in a vertical format.
 
@@ -171,7 +171,7 @@ When the inline property is enabled, the options are displayed horizontally with
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
@@ -181,7 +181,7 @@ This property controls whether the widget is displayed with a loading animation.
 #### Height `string`
 
 
-<dd>
+ 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
 
@@ -198,7 +198,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onSelectionChange
 
-<dd>
+ 
 
 This event defines the action that would be executed when the user selects or deselects multiple or single options in the switch group. It allows you to specify a list of [actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the switch state change.
 
@@ -211,7 +211,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Font color `string`
 
-<dd>
+ 
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
@@ -219,7 +219,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 #### Font size `string`
 
-<dd>
+ 
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
@@ -227,7 +227,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 #### Emphasis `string`
 
-<dd>
+ 
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
@@ -237,7 +237,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 #### Alignment 
 
-<dd>
+ 
 
 It allows you to specify how the label should be positioned relative to the switch.
 
@@ -247,7 +247,7 @@ It allows you to specify how the label should be positioned relative to the swit
 
 #### Accent color `string`
 
-<dd>
+ 
 
 Defines the accent color of the widget, which is used as the fill color for the switch when it is turned on. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
@@ -260,14 +260,14 @@ These properties are not available in the property pane, but can be accessed usi
 
 #### selectedValues `array`
 
-<dd>
+ 
 
 The `selectedValues` property holds an array of values that represents the options selected by the user.
 
 *Example:*
 
 ```js
-{{SwitchGroup1.selectedValues}}
+{{ '{{SwitchGroup1.selectedValues}}' }}
 ```
 
 
@@ -286,7 +286,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -302,7 +302,7 @@ SwitchGroup1.setVisibility(true)
 
 #### setDisabled (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 
@@ -317,7 +317,7 @@ SwitchGroup1.setDisabled(false)
 
 #### setRequired (param: boolean): Promise
 
-<dd>
+ 
 
 Sets whether the widget is required or not.
 

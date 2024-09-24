@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Buttons `string`
 
-<dd>
+ 
 
 Specify the buttons available in the group. You can rearrange the buttons and configure them by clicking the gear icon ⚙️. See the [Buttons](/reference/widgets/button-group/buttons) reference guide for configuring individual buttons in the group.
 
@@ -27,26 +27,26 @@ Specify the buttons available in the group. You can rearrange the buttons and co
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
 For example, if you want to allow only a specific user to select menu item, you can use the following JavaScript expression: 
 ```js
-{{appsmith.user.email=="john@appsmith.com"?false:true}}
+{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -55,7 +55,7 @@ For example, if you want to allow only a specific user to select menu item, you 
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -68,7 +68,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Button variant `string`
 
-<dd>
+ 
 
 Specifies the style type of the button to indicate its significance.
 
@@ -83,7 +83,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 #### Orientation `string`
 
-<dd>
+ 
 
 Determines the arrangement of buttons in the button group, either horizontally or vertically.
 
@@ -94,7 +94,7 @@ Determines the arrangement of buttons in the button group, either horizontally o
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -103,7 +103,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -117,13 +117,13 @@ Reference properties are properties that are not available in the property pane 
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{ButtonGroup1.isVisible}}
+{{ '{{ButtonGroup1.isVisible}}' }}
 ```
 
 </dd>
@@ -138,7 +138,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 #### setVisibility `boolean`
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -162,7 +162,7 @@ ButtonGroup1.setVisibility(true).then(() => {
 
 #### setDisabled `boolean`
 
-<dd>
+ 
 
 Sets the disabled state of the widget.
 

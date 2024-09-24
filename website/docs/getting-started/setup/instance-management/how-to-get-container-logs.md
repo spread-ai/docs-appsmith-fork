@@ -19,7 +19,7 @@ The logs directory contains the sub-directories below for each **service**:
 
 If you don’t remember where your `stacks` directory is located, run
 
-`docker inspect -f '{{ (index .Mounts 0).Source }}' <your-appsmith-container-id>`
+`docker inspect -f '{{ '{{ (index .Mounts 0).Source }}' }}' <your-appsmith-container-id>`
 
 Alternatively, you can run the commands below on your shell to create a zip file containing the logs.
 
@@ -27,7 +27,7 @@ Alternatively, you can run the commands below on your shell to create a zip file
 appsmithContainerID=<your appsmith container id>
 targetZipFile=<path to target zip file>
 service=<choose one of: appsmithctl backend cron editor mongodb redis rts | leave blank for all services>
-stacksPath=$(docker inspect -f '{{ (index .Mounts 0).Source }}' $appsmithContainerID)
+stacksPath=$(docker inspect -f '{{ '{{ (index .Mounts 0).Source }}' }}' $appsmithContainerID)
 zip -r $targetZipFile "$stacksPath/logs/$service" 
 ```
 

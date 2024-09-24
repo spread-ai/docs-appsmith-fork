@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
@@ -26,7 +26,7 @@ This property controls whether the widget is displayed with a loading animation.
 #### Quick Dismiss `boolean`
 
 
-<dd>
+ 
 
 Enables quick dismissal or closure of the Modal when the user taps outside the Modal.
 
@@ -35,7 +35,7 @@ Enables quick dismissal or closure of the Modal when the user taps outside the M
 #### Height `string`
 
 
-<dd>
+ 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
@@ -51,7 +51,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onClose
 
-<dd>
+ 
 
 Specifies the action (Framework functions, queries, or JS functions) to be performed when the Modal is closed.
 
@@ -66,7 +66,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background Color `string`
 
-<dd>
+ 
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
@@ -76,7 +76,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -89,26 +89,26 @@ Reference properties are properties that are not available in the property pane 
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{Modal1.isVisible}}
+{{ '{{Modal1.isVisible}}' }}
 ```
 
 </dd>
 
 #### name `string`
 
-<dd>
+ 
 
 Reflects the widget name of the modal.
 
 *Example:*
 ```js
-{{Modal1.name}}
+{{ '{{Modal1.name}}' }}
 ```
 
 </dd>
@@ -123,7 +123,7 @@ The Modal widget can be used to view and edit data in a table. By displaying the
 2. Display the data by binding the query response to the **Table Data** property of the Table widget `tblUserData`, as shown below:
 
 ```js
-{{fetchUserData.data}}
+{{ '{{fetchUserData.data}}' }}
 ```
 
 3.  Set Table's `onRowSelected` event to open a Modal widget, you can create a new Modal widget or select an existing one
@@ -138,8 +138,8 @@ Modal widget remains hidden on the canvas and becomes visible only when an event
 
 ```sql
 UPDATE users
-SET email = {{JSONForm.formData.email}}, dob = {{JSONForm.formData.dob}}
-WHERE id = {{tblUserData.selectedRow.id}};
+SET email = {{ '{{JSONForm.formData.email}}' }}, dob = {{ '{{JSONForm.formData.dob}}' }}
+WHERE id = {{ '{{tblUserData.selectedRow.id}}' }};
 ```
 
 6. Set the JSON form's `onSubmit` event to run the `updateuserdata` query, which updates the `dob` and `email` fields of a specific user in the users' table based on the provided user ID.

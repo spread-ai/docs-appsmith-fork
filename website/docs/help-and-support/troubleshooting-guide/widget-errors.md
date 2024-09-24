@@ -15,7 +15,7 @@ You may see this error when executing an API, Query, JS Object in a widget prope
 
 <Message
 messageContainerClassName="error" 
-messageContent="Found a reference to {{action}} during evaluation. Sync fields cannot execute async framework actions. Please remove any direct/indirect references to {{action}} and try again."></Message>
+messageContent="Found a reference to {{ '{{action}}' }} during evaluation. Sync fields cannot execute async framework actions. Please remove any direct/indirect references to {{ '{{action}}' }} and try again."></Message>
 
 <p align="center">Or </p>
 
@@ -34,7 +34,7 @@ Example: if you are executing a `storeValue()` function in a `TableData` propert
 #### Solution
 Invoke the data property of an API, Query or JS object.
 
-For example, you have a JS Object `getLoggedInUserInfo`, which has a function ```getFullNameOfLoggedInUser```. The function returns the full name of the logged-in user. You wish to add the full name and create a welcome text, `Welcome! <LOGGED_IN_USER_NAME>`. Bind the response of ```getFullNameOfLoggedInUser``` function to a text widget by calling the `.data` property. To bind the response, add the below code snippet in a mustache (`{{}}`) sign.
+For example, you have a JS Object `getLoggedInUserInfo`, which has a function ```getFullNameOfLoggedInUser```. The function returns the full name of the logged-in user. You wish to add the full name and create a welcome text, `Welcome! <LOGGED_IN_USER_NAME>`. Bind the response of ```getFullNameOfLoggedInUser``` function to a text widget by calling the `.data` property. To bind the response, add the below code snippet in a mustache (`{{ '{{}}' }}`) sign.
 
 ```
  getLoggedInUserInfo.getFullNameOfLoggedInUser.data

@@ -12,10 +12,10 @@ This error occurs when an invalid format is passed to the insert or update sheet
 
 ```
 {
-	"rowIndex":{{Table1.selectedRow.rowIndex}},
-	"Name Input": "{{editFund.text}}",
-	"Designation": "{{editDesignation.text}}",
-	"Location": "{{editLocation.text}}"
+	"rowIndex":{{ '{{Table1.selectedRow.rowIndex}}' }},
+	"Name Input": "{{ '{{editFund.text}}' }}",
+	"Designation": "{{ '{{editDesignation.text}}' }}",
+	"Location": "{{ '{{editLocation.text}}' }}"
 }
 ```
 
@@ -33,10 +33,10 @@ To edit these you're `Row Object` should be set to the following:
 
 ```
 {
-	"rowIndex":{{Table1.selectedRow.rowIndex}},
-	"Name Input": "{{editFund.text}}",
-	"Designation": "{{editDesignation.text}}",
-	"Location": "{{editLocation.text}}"
+	"rowIndex":{{ '{{Table1.selectedRow.rowIndex}}' }},
+	"Name Input": "{{ '{{editFund.text}}' }}",
+	"Designation": "{{ '{{editDesignation.text}}' }}",
+	"Location": "{{ '{{editLocation.text}}' }}"
 }
 ```
 
@@ -50,15 +50,15 @@ Here, our goal is to create a new row on Google Sheets, for this we'll be using 
 
 ```
 {
-  "Investment Fund": "{{addFund.text}}",
-  "Location": "{{addLocation.text}}",
-  "Name of Investor": "{{addInvestorInput.text}}",
-  "Designation": "{{addDesignation.text}}",
-  "Interesting Portfolio Companies": "{{addPortifolio.text}}"
+  "Investment Fund": "{{ '{{addFund.text}}' }}",
+  "Location": "{{ '{{addLocation.text}}' }}",
+  "Name of Investor": "{{ '{{addInvestorInput.text}}' }}",
+  "Designation": "{{ '{{addDesignation.text}}' }}",
+  "Interesting Portfolio Companies": "{{ '{{addPortifolio.text}}' }}"
 }
 ```
 
-Here, the keys are usually the column names in the Google Sheets, and the corresponding values are the values evaluated from the input [widgets](../../../reference/widgets/) using the mustache `{{}}` operator.
+Here, the keys are usually the column names in the Google Sheets, and the corresponding values are the values evaluated from the input [widgets](../../../reference/widgets/) using the mustache `{{ '{{}}' }}` operator.
 
 :::tip
 Make sure to remove unnecessary commas at the end of [JSON](https://www.w3schools.com/whatis/whatis\_json.asp)

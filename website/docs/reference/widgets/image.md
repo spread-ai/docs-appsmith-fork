@@ -15,7 +15,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Image `string`
 
-<dd>
+ 
 
 Sets the source from which to render the image. Accepts an image URL, data URI, or base64 encoded image data.
 
@@ -27,21 +27,21 @@ data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height=
 
 You can also display images that dynamically change based on user input or other components, such as widgets or queries.
 
-*Example:* Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{Table1.selectedRow.image}}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
+*Example:* Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
 
 <ZoomImage src="/img/imagetable.gif" alt="Display images on table row selection" caption="Display images on table row selection" />
 
 If you are fetching an image from the [Amazon S3](/connect-data/reference/querying-amazon-s3) bucket, add the following code in the **Image** property to display the image on the widget:
 
 ```js
-{{list_files.data[0].signedUrl}}
+{{ '{{list_files.data[0].signedUrl}}' }}
 ```
 
 </dd>
 
 #### Default image `string`
 
-<dd>
+ 
 
 Sets a default image that would be displayed if no image is rendered via the **Image** property. Accepts an image URL, data URI, or base64 encoded image data.
 
@@ -51,7 +51,7 @@ Sets a default image that would be displayed if no image is rendered via the **I
 
 #### Object fit `string`
 
-<dd>
+ 
 
 Sets how the image should be resized to fit its container.
 
@@ -67,7 +67,7 @@ With **JS** enabled, accepts string values `auto`, `cover`, or `contain`. See CS
 
 #### Max zoom level `number`
 
-<dd>
+ 
 
 Sets the maximum allowable zoom level for the image view. Th available options are **2x**, **4x**, **8x**, **16x**. With **JS** enabled, it accepts a number as the zoom level.
 
@@ -75,21 +75,21 @@ Sets the maximum allowable zoom level for the image view. Th available options a
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Image widget:
 
 ```js
-{{Checkbox1.isChecked}}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
 
 #### Animate Loading `boolean`
 
-<dd>
+ 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
@@ -97,7 +97,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### Enable rotation `boolean`
 
-<dd>
+ 
 
 Enables control over image rotation. When enabled, hover over the image and click the rotate icon.
 
@@ -105,7 +105,7 @@ Enables control over image rotation. When enabled, hover over the image and clic
 
 #### Enable download `boolean`
 
-<dd>
+ 
 
 Enables users to control whether the image is allowed to be downloaded. When enabled, hover over the image and click the download icon. 
 
@@ -113,7 +113,7 @@ Alternatively, you can use the built-in [Download](/reference/appsmith-framework
 
 
 ```js
-{{download(Image1.image,'my-image-name','image/png')}}
+{{ '{{download(Image1.image,'my-image-name','image/png')}}' }}
 ```
 
 
@@ -125,7 +125,7 @@ When the event is triggered, these event handlers can execute queries, JS code, 
 
 #### onClick 
 
-<dd>
+ 
 
 Triggers when the user clicks on the image.
 
@@ -139,7 +139,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -148,7 +148,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -160,27 +160,27 @@ Reference properties enable you to access the widget's data and state using the 
 
 #### image `string`
 
-<dd>
+ 
 
 Contains the URL of the image source.
 
 *Example:*
 
 ```js
-{{Image1.image}}
+{{ '{{Image1.image}}' }}
 ```
 
 </dd>
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
 *Example:*
 ```js
-{{Image1.isVisible}}
+{{ '{{Image1.isVisible}}' }}
 ```
 
 </dd>
@@ -194,7 +194,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 
@@ -209,7 +209,7 @@ Image1.setVisibility(true)
 
 #### setImage (param: string): Promise
 
-<dd>
+ 
 
 Sets the `base64` encoded image in the Image widget.
 

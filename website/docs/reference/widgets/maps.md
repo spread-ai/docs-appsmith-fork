@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Initial location	`object`
 
-<dd>
+ 
 
 Sets the default location that the map focuses on when it is displayed for the first time to the user. 
 
@@ -40,7 +40,7 @@ Sets the default location that the map focuses on when it is displayed for the f
 #### Default markers `array<object>`
 
 
-<dd>
+ 
 
 Allows you to display precise locations or display multiple locations at once. To add markers to the Map widget, define an array of markers with latitude, longitude, title and color keys, and set it in the **Default markers** property. 
 
@@ -63,13 +63,13 @@ You can display dynamic data from queries or JS functions by binding the respons
 *Example*:  suppose you want to display multiple markers on a Map using the locations from the users' database:
 
 ```js
-{{fetchUserData.data.map(loc  => {
+{{ '{{fetchUserData.data.map(loc  => {
 	return {
 		lat: parseFloat(loc.latitude),
 		long: parseFloat(loc.longitude),
 		title: loc.name
 	}
-})}}
+})}}' }}
 ```
 
 This code converts `fetchUserData` into a new array with latitude, longitude, and location name properties.
@@ -78,8 +78,8 @@ If you want to display the live location, you can use the **Default Marker** pro
 
 ```js
 [{
-"lat":{{appsmith.geolocation.currentPosition.coords.latitude || ""}}, 
-"long":{{appsmith.geolocation.currentPosition.coords.longitude || ""}}
+"lat":{{ '{{appsmith.geolocation.currentPosition.coords.latitude || ""}}' }}, 
+"long":{{ '{{appsmith.geolocation.currentPosition.coords.longitude || ""}}' }}
 }]
 ```
 
@@ -94,7 +94,7 @@ To fetch the current location, use `appsmith.geolocation.watchPosition()` action
 
 #### Zoom Level `number`
 
-<dd>
+ 
 
 Sets the zoom level of the map. Default value is set to `50%`.
 
@@ -102,13 +102,13 @@ Sets the zoom level of the map. Default value is set to `50%`.
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility. Default value is set to `true`.
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{Select1.selectedOptionValue === "Yes"}}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -119,7 +119,7 @@ For example, if you want to make the widget visible only when the user selects "
 #### Animate Loading `boolean`
 
 
-<dd>
+ 
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. Default value is set to `true`.
 
@@ -127,7 +127,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 #### Enable pick location	`boolean`
 
-<dd>
+ 
 
 Enabling this option allows users to interactively select a location on the map, and the map marker is moved to the user's current location. The `selectedMarker` field is updated with the information of the marker representing the user's current location.
 
@@ -135,7 +135,7 @@ Enabling this option allows users to interactively select a location on the map,
 
 #### Map & Marker Centring `boolean`
 
-<dd>
+ 
 
 When enabled, this setting controls whether the clicked marker is automatically centered on the map.
 
@@ -143,7 +143,7 @@ When enabled, this setting controls whether the clicked marker is automatically 
 
 #### Enable clustering `boolean`
 
-<dd>
+ 
 
 When enabled, groups nearby markers into a single cluster on the map.
 
@@ -151,7 +151,7 @@ When enabled, groups nearby markers into a single cluster on the map.
 
 #### Enable search location `boolean`
 
-<dd>
+ 
 
 When this property is enabled, a search bar is added to the map, allowing users to easily navigate and search for specific locations. This can be achieved using Google Autocomplete, which suggests potential locations as the user types in the search bar.
 
@@ -159,7 +159,7 @@ To access the searched location, use the ``center`` reference property. This ret
 
 ```js
 [
-  {{Map1.center}}
+  {{ '{{Map1.center}}' }}
 ]
 ```
 
@@ -167,7 +167,7 @@ To access the searched location, use the ``center`` reference property. This ret
 
 #### Enable map types `boolean`
 
-<dd>
+ 
 
 When enabled, this property allows users to switch between the default map view and satellite view.
 
@@ -177,7 +177,7 @@ When enabled, this property allows users to switch between the default map view 
 
 #### Create new marker `boolean`
 
-<dd>
+ 
 
 Allows users to mark locations by adding new markers on the map.
 
@@ -185,7 +185,7 @@ Allows users to mark locations by adding new markers on the map.
 
 #### onMarkerCreated	
 
-<dd>
+ 
 
 This event is available only when the **Create new marker** property is turned on. It specifies the action (Framework functions, queries, or JS functions) to be executed when the user creates a new marker on the map.
 
@@ -195,7 +195,7 @@ This event is available only when the **Create new marker** property is turned o
 
 #### onMarkerClick	
 
-<dd>
+ 
 
 Sets the action (Framework functions, queries, or JS functions) to be executed when the user clicks a marker on the map. 
 
@@ -209,7 +209,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Border radius `string`
 
-<dd>
+ 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -218,7 +218,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+ 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -232,56 +232,56 @@ Reference properties are properties that are not available in the property pane 
 
 #### isVisible `boolean`
 
-<dd>
+ 
 
 Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{Map1.isVisible}}
+{{ '{{Map1.isVisible}}' }}
 ```
 
 </dd>
 
 #### center `object`
 
-<dd>
+ 
 
 Contains title, latitude, and longitude coordinates of the location.
 
 *Example:*
 ```js
-{{Map1.center}}
+{{ '{{Map1.center}}' }}
 ```
 
 </dd>
 
 #### selectedMarker `object`
 
-<dd>
+ 
 
 Contains the marker object that the user has selected.
 
 *Example:*
 ```js
-{{Map1.selectedMarker}}
+{{ '{{Map1.selectedMarker}}' }}
 ```
 
 </dd>
 
 #### markers `array<object>`
 
-<dd>
+ 
 
 This contains the list of markers on the map
 
 *Example:*
 ```js
 // Access the entire array of markers
-{{Map1.markers}}
+{{ '{{Map1.markers}}' }}
 
 // Access the title of the first marker in the array
-{{Map1.markers[0].title}}
+{{ '{{Map1.markers[0].title}}' }}
 
 // here [0] represents the index of the first marker
 ```
@@ -298,7 +298,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 #### setVisibility (param: boolean): Promise
 
-<dd>
+ 
 
 Sets the visibility of the widget.
 

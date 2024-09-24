@@ -13,7 +13,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Label `string`
 
-<dd>
+ 
 
 The Label property is used to set the text label for a menu item. It can be a static text value or dynamically bound to a data source. For instance, you can set the label to be the name of a page or a user.
 
@@ -21,7 +21,7 @@ The Label property is used to set the text label for a menu item. It can be a st
 
 #### onClick
 
-<dd>
+ 
 
 Allows you to configure one or multiple [actions](/reference/appsmith-framework/widget-actions) to be executed when the menu item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
@@ -30,7 +30,7 @@ Allows you to configure one or multiple [actions](/reference/appsmith-framework/
 
 #### Visible `boolean`
 
-<dd>
+ 
 
 Allows you to show or hide the menu item based on specific conditions. 
 
@@ -39,7 +39,7 @@ Allows you to show or hide the menu item based on specific conditions.
 
 #### Disabled `boolean`
 
-<dd>
+ 
 
 Allows you to disable input for a menu item. This can be beneficial when you want to restrict user interaction with the menu item in specific situations.
 
@@ -54,7 +54,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Icon `string`
 
-<dd>
+ 
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Appsmith utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
 
@@ -62,7 +62,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 #### Position `string`
 
-<dd>
+ 
 
 This property allows you to configure the **Icon**'s placement.
 
@@ -78,21 +78,21 @@ This property allows you to configure the **Icon**'s placement.
 
 #### Icon color `string`
 
-<dd>
+ 
 
 Specifies the color of the icon displayed for the menu item. 
 </dd>
 
 #### Text color `string`
 
-<dd>
+ 
 
 Specifies the color of the text displayed for the menu item. This property allows you to customize the text color to enhance visibility or achieve a specific visual effect for the menu item.
 </dd>
 
 #### Background color `string`
 
-<dd>
+ 
 
 Determines the background color of the menu item. 
 </dd>
@@ -105,7 +105,7 @@ Reference properties are specific to the menu configuration pane and are not ava
 #### currentItem `object`
 
 
-<dd>
+ 
 
 The `currentItem` property refers to the currently selected item on the menu button. It allows you to access and read the attributes of the selected menu item. 
 
@@ -114,7 +114,7 @@ The `currentItem` property refers to the currently selected item on the menu but
 
 *Example:*
 
-If you want to dynamically display the label based on the selected item's name, you can use `{{currentItem.Name}}`, where `Name` represents the attribute that stores the name of the menu item. This enables you to show different text for each menu item based on its associated data.
+If you want to dynamically display the label based on the selected item's name, you can use `{{ '{{currentItem.Name}}' }}`, where `Name` represents the attribute that stores the name of the menu item. This enables you to show different text for each menu item based on its associated data.
 
 
 
@@ -123,7 +123,7 @@ If you want to dynamically display the label based on the selected item's name, 
 
 #### currentIndex `number`
 
-<dd>
+ 
 
 The `currentIndex` property is useful when you want to display a numbered list of menu items or apply alternate background colors to the menu items. You can use the `currentIndex` value to determine the index position of the currently selected menu item or to perform conditional styling based on the index value.
 
@@ -135,7 +135,7 @@ The `currentIndex` property is useful when you want to display a numbered list o
 To change the color based on the index, using a different color for even numbers, you can use following code in **Background color** property:
 
 ```js
-{{currentIndex % 2 === 0 ? "#22c55e" : "#facc15"}}
+{{ '{{currentIndex % 2 === 0 ? "#22c55e" : "#facc15"}}' }}
 ```
 
 
