@@ -1,0 +1,63 @@
+edit_uri: edit/develop/docs/
+
+nav:
+     - Studio Overview: studio-overview.md
+     - Creating Studio applications: creating-studio-applications.md
+     - Best practices for creating Studio apps: best-practices-for-creating-studio-apps.md
+     - Tutorials:
+            - Share variables between applications: tutorials/share-variables-between-applications.md
+            - Using Flows in Studio: tutorials/use-flows-in-studio.md
+     - Reference:
+            - Studio widgets: reference/studio-widget-reference.md
+            - Audio: reference/default-widgets/audio.md
+            - Audio Recorder: reference/default-widgets/audio-recorder.md
+            - Button: reference/default-widgets/button.md
+            - Button Group: reference/default-widgets/button-group.md
+            - Buttons for Button Group: reference/default-widgets/buttons.md
+            - Camera: reference/default-widgets/camera.md
+            - Category Slider: reference/default-widgets/category-slider.md
+            - Chart: reference/default-widgets/chart.md
+            - Checkbox Group: reference/default-widgets/checkbox-group.md
+            - Checkbox: reference/default-widgets/checkbox.md
+            - Code Scanner: reference/default-widgets/code-scanner.md
+            - Column Settings: reference/default-widgets/column-settings.md
+            - Container: reference/default-widgets/container.md
+            - Currency Input: reference/default-widgets/currency-input.md
+            - Custom: reference/default-widgets/custom.md
+            - Date Picker: reference/default-widgets/datepicker.md
+            - Divider: reference/default-widgets/divider.md
+            - Document Viewer: reference/default-widgets/document-viewer.md
+            - File Picker: reference/default-widgets/filepicker.md
+            - Form: reference/default-widgets/form.md
+            - Google Recaptcha: reference/default-widgets/google-recaptcha.md
+            - Icon Button: reference/default-widgets/icon-button.md
+            - iFrame: reference/default-widgets/iframe.md
+            - Image: reference/default-widgets/image.md
+            - Inline Editing: reference/default-widgets/inline-editing.md
+            - Input: reference/default-widgets/input.md
+            - JSON Form: reference/default-widgets/json-form.md
+            - List: reference/default-widgets/list.md
+            - Map Chart: reference/default-widgets/map-chart.md
+            - Maps: reference/default-widgets/maps.md
+            - Menu: reference/default-widgets/menu.md
+            - Menu Items: reference/default-widgets/menu-items.md
+            - Modal: reference/default-widgets/modal.md
+            - Multitree Select: reference/default-widgets/multi-tree-select.md
+            - Multiselect: reference/default-widgets/multiselect.md
+            - Number Slider: reference/default-widgets/number-slider.md
+            - Phone Input: reference/default-widgets/phone-input.md
+            - Progress: reference/default-widgets/progress.md
+            - Radio Group: reference/default-widgets/radio-group.md
+            - Range Slider: reference/default-widgets/range-slider.md
+            - Rating: reference/default-widgets/rating.md
+            - Rich Text Editor: reference/default-widgets/rich-text-editor.md
+            - Select: reference/default-widgets/select.md
+            - Stat Box: reference/default-widgets/stat-box.md
+            - Switch Group: reference/default-widgets/switch-group.md
+            - Switch: reference/default-widgets/switch.md
+            - Table: reference/default-widgets/table.md
+            - Table Inline Editing: reference/default-widgets/table-inline-editing.md
+            - Tabs: reference/default-widgets/tabs.md
+            - Text: reference/default-widgets/text.md
+            - Tree Select: reference/default-widgets/tree-select.md
+            - Video: reference/default-widgets/video.md
