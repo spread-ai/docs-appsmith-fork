@@ -42,7 +42,7 @@ Allows you to select the desired format for the progress bar.
 
  
 
-Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{ '{{}}' }}`.
+Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{ '{{ '{{ '{{}}' }}`.
 
 </dd>
 
@@ -66,7 +66,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -114,7 +114,7 @@ Indicates the current progress of the progress bar as a percentage.
 *Example:*
 
 ```js
-{{ '{{Progress1.progress}}' }}
+{{ '{{ '{{ '{{Progress1.progress}}' }}
 ```
 
 
@@ -128,7 +128,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 *Example:*
 
 ```js
-{{ '{{Progress1.isVisible}}' }}
+{{ '{{ '{{ '{{Progress1.isVisible}}' }}
 ```
 
 

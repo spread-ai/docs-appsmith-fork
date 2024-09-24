@@ -44,7 +44,7 @@ Additionally, you can dynamically display data from a query using JavaScript. Fo
 
 
 ```js
-{{ '{{getCountry.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{ '{{ '{{getCountry.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -267,7 +267,7 @@ The `selectedValues` property holds an array of values that represents the optio
 *Example:*
 
 ```js
-{{ '{{SwitchGroup1.selectedValues}}' }}
+{{ '{{ '{{ '{{SwitchGroup1.selectedValues}}' }}
 ```
 
 

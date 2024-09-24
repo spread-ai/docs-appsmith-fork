@@ -25,7 +25,7 @@ You can also use the built-in [**Moment.js**](https://momentjs.com/docs/) librar
 *Example:* If you want to convert the selected date and time to the IST timezone (Asia/Kolkata), click the **JS** button and add the following code:
 
 ```js
-{{ '{{
+{{ '{{ '{{ '{{
   moment(datePickerName.selectedDate).tz("Asia/Kolkata").format()
 }}' }}
 ```
@@ -111,7 +111,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Datepicker widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -124,7 +124,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Datepicker widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -256,7 +256,7 @@ Contains the formatted date value currently selected within the Datepicker widge
 *Example:*
 
 ```js
-{{ '{{Datepicker1.formattedDate}}' }}
+{{ '{{ '{{ '{{Datepicker1.formattedDate}}' }}
 ```
 
 </dd>
@@ -270,7 +270,7 @@ Contains the ISO date string value selected in the Datepicker widget. This value
 *Example:*
 
 ```js
-{{ '{{Datepicker1.selectedDate}}' }}
+{{ '{{ '{{ '{{Datepicker1.selectedDate}}' }}
 ```
 
 </dd>
@@ -284,7 +284,7 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 *Example:*
 
 ```js
-{{ '{{Datepicker1.isDisabled}}' }}
+{{ '{{ '{{ '{{Datepicker1.isDisabled}}' }}
 ```
 
 </dd>
@@ -297,7 +297,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Datepicker1.isVisible}}' }}
+{{ '{{ '{{ '{{Datepicker1.isVisible}}' }}
 ```
 
 </dd>

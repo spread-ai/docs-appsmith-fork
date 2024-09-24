@@ -30,7 +30,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 *Example*:
 
 ```js
-{{ '{{Table1.selectedRow.audioURL}}' }}
+{{ '{{ '{{ '{{Table1.selectedRow.audioURL}}' }}
 ```
 
 
@@ -56,7 +56,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -113,7 +113,7 @@ Indicates the current state of the widget's **Auto Play** setting.
 
 *Example:*
 ```js
-{{ '{{Audio1.autoPlay}}' }}
+{{ '{{ '{{ '{{Audio1.autoPlay}}' }}
 ```
 
 </dd>
@@ -132,7 +132,7 @@ Indicates the current state of the Audio widget's sound playback. It is represen
 
 *Example:*
 ```js
-{{ '{{Audio1.playState}}' }}
+{{ '{{ '{{ '{{Audio1.playState}}' }}
 ```
 
 </dd>
@@ -146,7 +146,7 @@ Indicates the current playing state of the widget. When the value is `true`, it 
 
 *Example:*
 ```js
-{{ '{{Audio1.playing}}' }}
+{{ '{{ '{{ '{{Audio1.playing}}' }}
 ```
 
 

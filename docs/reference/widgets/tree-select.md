@@ -56,7 +56,7 @@ Use to set options in the list of the TreeSelect widget. Options must be specifi
 You can dynamically generate options by fetching data from queries or JS functions by binding the response to the **Options** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Options** property in the TreeSelect widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
@@ -64,7 +64,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to tr
 *Example*:
 
 ```js
-{{ '{{ getdata.data.reduce((acc, cur) => {
+{{ '{{ '{{ '{{ getdata.data.reduce((acc, cur) => {
   const group = acc.find(item => item.value === cur.type);
   group ? group.children.push({ label: cur.name, value: cur.name }) : acc.push({ label: cur.type, value: cur.type, children: [{ label: cur.name, value: cur.name }] });
   return acc;
@@ -168,7 +168,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -181,7 +181,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -315,7 +315,7 @@ The `options` property contains the values available for selection in a TreeSele
 *Example:*
 
 ```js
-{{ '{{TreeSelect1.options}}' }}
+{{ '{{ '{{ '{{TreeSelect1.options}}' }}
 ```
 
 
@@ -329,7 +329,7 @@ Returns the label of the option selected in the TreeSelect widget. It changes if
 *Example:*
 
 ```js
-{{ '{{TreeSelect1.selectedOptionLabel}}' }}
+{{ '{{ '{{ '{{TreeSelect1.selectedOptionLabel}}' }}
 ```
 
 
@@ -343,7 +343,7 @@ Returns the value of the option selected in the TreeSelect widget. It changes if
 *Example:*
 
 ```js
-{{ '{{TreeSelect1.selectedOptionValue}}' }}
+{{ '{{ '{{ '{{TreeSelect1.selectedOptionValue}}' }}
 ```
 
 
@@ -358,7 +358,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 *Example:*
 
 ```js
-{{ '{{TreeSelect1.isDisabled}}' }}
+{{ '{{ '{{ '{{TreeSelect1.isDisabled}}' }}
 ```
 
 
@@ -372,7 +372,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 *Example:*
 
 ```js
-{{ '{{TreeSelect1.isVisible}}' }}
+{{ '{{ '{{ '{{TreeSelect1.isVisible}}' }}
 ```
 
 
@@ -387,7 +387,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 *Example:*
 
 ```js
-{{ '{{TreeSelect1.isValid}}' }}
+{{ '{{ '{{ '{{TreeSelect1.isValid}}' }}
 ```
 
 

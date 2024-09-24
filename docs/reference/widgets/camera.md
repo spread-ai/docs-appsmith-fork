@@ -32,7 +32,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 *Example:*  If you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Camera widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -45,7 +45,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Camera widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -114,7 +114,7 @@ Returns a binary URL that stores the captured image for future use.
 *Example:*
 
 ```js
-{{ '{{Camera1.imageBlobURL}}' }}
+{{ '{{ '{{ '{{Camera1.imageBlobURL}}' }}
 ```
 
 </dd>
@@ -128,7 +128,7 @@ Stores the captured image in Data URL format (Base64). You can use it to embed t
 *Example:*
 
 ```js
-{{ '{{Camera1.imageDataURL}}' }}
+{{ '{{ '{{ '{{Camera1.imageDataURL}}' }}
 ```
 
 You can use this property to upload an image to Amazon S3. For more information, see [Upload Images to and from S3](/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images).
@@ -144,7 +144,7 @@ Returns the image file in binary format, suitable for storing the image for futu
 *Example:*
 
 ```js
-{{ '{{Camera1.imageRawBinary}}' }}
+{{ '{{ '{{ '{{Camera1.imageRawBinary}}' }}
 ```
 
 </dd>
@@ -158,7 +158,7 @@ Returns a binary URL that stores the captured video for future use.
 *Example:*
 
 ```js
-{{ '{{Camera1.videoBlobURL}}' }}
+{{ '{{ '{{ '{{Camera1.videoBlobURL}}' }}
 ```
 
 </dd>
@@ -172,7 +172,7 @@ Stores the recorded video in Data URL format (Base64). You can use it to embed t
 *Example:*
 
 ```js
-{{ '{{Camera1.videoDataURL}}' }}
+{{ '{{ '{{ '{{Camera1.videoDataURL}}' }}
 ```
 
 You can use this property to upload a video to Amazon S3. For more information, see [Upload Images to and from S3](/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images)
@@ -188,7 +188,7 @@ Returns the video file in binary format, suitable for storing the video for futu
 *Example:*
 
 ```js
-{{ '{{Camera1.videoRawBinary}}' }}
+{{ '{{ '{{ '{{Camera1.videoRawBinary}}' }}
 ```
 
 </dd>

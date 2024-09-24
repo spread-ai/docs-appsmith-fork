@@ -28,13 +28,13 @@ Learn more about [Custom Widget Builder](#custom-widget-builder).
 
  
 
-This property allows you to pass object data to the custom widget's code editor. You can use mustache binding `{{ '{{}}' }}` to pass data from queries or other widgets.
+This property allows you to pass object data to the custom widget's code editor. You can use mustache binding `{{ '{{ '{{ '{{}}' }}` to pass data from queries or other widgets.
 
 _Example:_ If you want to pass the name from a Table widget to the custom widget, use the following code:
 
 ```js
 {
-  "name": "{{ '{{Table1.selectedRow.name}}' }}"
+  "name": "{{ '{{ '{{ '{{Table1.selectedRow.name}}' }}"
 }
 ```
 
@@ -120,10 +120,10 @@ The `model` property retrieves the value from the Custom widget and **Default Mo
 _Example_:
 
 ```js
-{{ '{{Custom1.model}}' }}
+{{ '{{ '{{ '{{Custom1.model}}' }}
 
 // Accessing a specific property
-{{ '{{Custom1.model.signatureImage}}' }}
+{{ '{{ '{{ '{{Custom1.model.signatureImage}}' }}
 ```
 
 </dd>
@@ -137,7 +137,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 _Example_:
 
 ```js
-{{ '{{ Custom1.isVisible }}' }}
+{{ '{{ '{{ '{{ Custom1.isVisible }}' }}
 ```
 
 </dd>
@@ -239,12 +239,12 @@ document.getElementById("saveBtn").addEventListener("click", function () {
 });
 ```
 
-Once button is clicked, the signature pad data will be available on the custom widget model property. you can use this data in another widget using the `{{ '{{}}' }}` binding.
+Once button is clicked, the signature pad data will be available on the custom widget model property. you can use this data in another widget using the `{{ '{{ '{{ '{{}}' }}` binding.
 
 _Example_: You can bind signature pad data to an image widget by pasting following code on Image widget's `image` property on the property pane.
 
 ```js
-{{ '{{ Custom1.model.signatureImage }}' }}
+{{ '{{ '{{ '{{ Custom1.model.signatureImage }}' }}
 ```
 
 </dd>

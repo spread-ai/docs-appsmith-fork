@@ -41,13 +41,13 @@ Specify data as an array of objects to display options in the widget. For exampl
 You can dynamically generate options by fetching data from queries or JS functions and binding the response to the **Source Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Source Data** property, like:
 
 ```js
-{{ '{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{ '{{ '{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -64,7 +64,7 @@ Defines the key from the **Source Data** property that specifies the labels for 
 *Example:* If you prefer the label to be displayed in lowercase, you can achieve this using the following code snippet:
 
 ```js
-{{ '{{ item.name.toLowerCase() }}' }}
+{{ '{{ '{{ '{{ item.name.toLowerCase() }}' }}
 ```
 `item.name` represents the Source Data's property containing the label, and the `toLowerCase()` function is applied to convert the label to lowercase.
 
@@ -174,7 +174,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the select widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -187,7 +187,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -302,7 +302,7 @@ Returns the text entered in the search filter for Server side filtering.
 *Example:*
 
 ```js
-{{ '{{Select1.filterText}}' }}
+{{ '{{ '{{ '{{Select1.filterText}}' }}
 ```
 
 </dd>
@@ -316,7 +316,7 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 *Example:*
 
 ```js
-{{ '{{Select1.isDisabled}}' }}
+{{ '{{ '{{ '{{Select1.isDisabled}}' }}
 ```
 
 </dd>
@@ -329,7 +329,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Select1.isVisible}}' }}
+{{ '{{ '{{ '{{Select1.isVisible}}' }}
 ```
 
 </dd>
@@ -343,7 +343,7 @@ This property is a boolean value that indicates whether the user has interacted 
 *Example:*
 
 ```js
-{{ '{{Select1.isDirty}}' }}
+{{ '{{ '{{ '{{Select1.isDirty}}' }}
 ```
 
 </dd>
@@ -357,7 +357,7 @@ Returns an array of objects that contain the label and value of the options in t
 *Example:*
 
 ```js
-{{ '{{Select1.options}}' }}
+{{ '{{ '{{ '{{Select1.options}}' }}
 ```
 
 </dd>
@@ -371,7 +371,7 @@ Returns the value of the option displayed in the Select widget. It changes if th
 *Example:*
 
 ```js
-{{ '{{Select1.selectedOptionValue}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue}}' }}
 ```
 
 </dd>
@@ -385,7 +385,7 @@ Returns the label of the option displayed in the Select widget. It changes if th
 *Example:*
 
 ```js
-{{ '{{Select1.selectedOptionLabel}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionLabel}}' }}
 ```
 
 </dd>

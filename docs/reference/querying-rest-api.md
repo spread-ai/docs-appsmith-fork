@@ -46,9 +46,9 @@ Appsmith supports a variety of encoding types for sending data in API queries. T
   <pre>
     {` 
       {
-        "q": {{ '{{ UsersTable.searchText }}' }},
-        "limit": {{ '{{ UsersTable.pageSize }}' }},
-        "offset": {{ '{{ UsersTable.pageOffset }}' }}
+        "q": {{ '{{ '{{ '{{ UsersTable.searchText }}' }},
+        "limit": {{ '{{ '{{ '{{ UsersTable.pageSize }}' }},
+        "offset": {{ '{{ '{{ '{{ UsersTable.pageOffset }}' }}
       }
     `}
   </pre>
@@ -62,9 +62,9 @@ Appsmith supports a variety of encoding types for sending data in API queries. T
 
   | Key    | Value                         |
   | ------ | ----------------------------- |
-  | query  | `{{ '{{ UsersTable.searchText }}' }}` |
-  | limit  | `{{ '{{ UsersTable.pageSize }}' }}`   |
-  | offset | `{{ '{{ UsersTable.pageOffset }}' }}` |
+  | query  | `{{ '{{ '{{ '{{ UsersTable.searchText }}' }}` |
+  | limit  | `{{ '{{ '{{ '{{ UsersTable.pageSize }}' }}`   |
+  | offset | `{{ '{{ '{{ '{{ UsersTable.pageOffset }}' }}` |
 
   <pre>{`// result
   "query=arjun&limit=10&offset=20"
@@ -78,9 +78,9 @@ Appsmith supports a variety of encoding types for sending data in API queries. T
 
 | Key      | Type | Value                       |
 | -------- | ---- | --------------------------- |
-| user     | Text | `{{ '{{ appsmith.user.email }}' }}` |
-| filename | Text | `{{ '{{ FileNameInput.text }}' }}`  |
-| file     | File | `{{ '{{ Filepicker.files[0] }}' }}` |
+| user     | Text | `{{ '{{ '{{ '{{ appsmith.user.email }}' }}` |
+| filename | Text | `{{ '{{ '{{ '{{ FileNameInput.text }}' }}`  |
+| file     | File | `{{ '{{ '{{ '{{ Filepicker.files[0] }}' }}` |
 
 <pre>{`// result
 "query=arjun&limit=10&offset=20"
@@ -96,14 +96,14 @@ When uploading file data, check that your Filepicker widget's **Data Format** pr
   <li><b>BINARY:</b> For any Base64 upload, including text files, images, videos, and more, ensure that you include the file data in the body. If you're using Binary to upload files, remember to set the [Data Format](/reference/widgets/filepicker#data-format-string) property of the Filepicker widget to `Base64`. This ensures that the file data is encoded correctly before transmission. Moreover, if the API you are connecting with expects additional key/value pairs, you can include them along with file data in the body.</li>
 </ul>
  
-<pre>`{{ '{{ imgFilepicker.files[0].data }}' }}`</pre>
+<pre>`{{ '{{ '{{ '{{ imgFilepicker.files[0].data }}' }}`</pre>
 <p>In the above example, if the API expects to supply only the image data, use the `data` property of the Filepicker widget to send the data of the selected image file.</p>
 
 </dd>
 <ul>
   <li><b>RAW:</b> Expects raw binary file data to be sent as the body.</li>
 </ul>
-   <pre>{`{{ '{{ Filepicker1.files[0]?.data }}' }}
+   <pre>{`{{ '{{ '{{ '{{ Filepicker1.files[0]?.data }}' }}
 `}</pre>
 <p>Use <b>RAW</b> if your endpoint can't accept multipart-encoded data and requires raw body binary instead. Above, the <code>data</code> property of the file is passed to the query instead of the file object itself because the endpoint expects only raw binary data.</p>
 

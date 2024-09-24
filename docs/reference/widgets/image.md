@@ -27,14 +27,14 @@ data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height=
 
 You can also display images that dynamically change based on user input or other components, such as widgets or queries.
 
-*Example:* Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
+*Example:* Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{ '{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
 
 <ZoomImage src="/img/imagetable.gif" alt="Display images on table row selection" caption="Display images on table row selection" />
 
 If you are fetching an image from the [Amazon S3](/connect-data/reference/querying-amazon-s3) bucket, add the following code in the **Image** property to display the image on the widget:
 
 ```js
-{{ '{{list_files.data[0].signedUrl}}' }}
+{{ '{{ '{{ '{{list_files.data[0].signedUrl}}' }}
 ```
 
 </dd>
@@ -82,7 +82,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Image widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -113,7 +113,7 @@ Alternatively, you can use the built-in [Download](/reference/appsmith-framework
 
 
 ```js
-{{ '{{download(Image1.image,'my-image-name','image/png')}}' }}
+{{ '{{ '{{ '{{download(Image1.image,'my-image-name','image/png')}}' }}
 ```
 
 
@@ -167,7 +167,7 @@ Contains the URL of the image source.
 *Example:*
 
 ```js
-{{ '{{Image1.image}}' }}
+{{ '{{ '{{ '{{Image1.image}}' }}
 ```
 
 </dd>
@@ -180,7 +180,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Image1.isVisible}}' }}
+{{ '{{ '{{ '{{Image1.isVisible}}' }}
 ```
 
 </dd>

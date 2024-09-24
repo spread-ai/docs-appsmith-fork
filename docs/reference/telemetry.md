@@ -1,20 +1,25 @@
 ---
-description: This page provides information on the data collected by Appsmith.
+title: Telemetry
+description: This page provides information on the data collected by SPREAD Studio.
 ---
 
-# Telemetry
+<!--
+README
 
-Telemetry in Appsmith refers to the collection of data about how users interact with the platform. This data helps the Appsmith team identify usage patterns, troubleshoot issues, and make informed decisions about new features and improvements.
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
-## Data collected by Appsmith
+Telemetry in Studio refers to the collection of data about how users interact with the platform. This data helps the Studio team identify usage patterns, troubleshoot issues, and make informed decisions about new features and improvements.
 
-Appsmith is a lightweight proxy and **does not capture** any data returned by your APIs, databases, or third-party tools. All data captured from a self-hosted instance is completely anonymised for user information.
+## Data collected by SPREAD Studio
+
+Studio is a lightweight proxy and does not capture any data returned by your APIs, databases, or third-party tools. All data captured from a self-hosted instance is completely anonymised for user information.
 
 ### Keep-alive ping
 
-The Appsmith server sends a keep-alive ping every 2 hours to indicate that it's still running without any errors. This data is collected irrespective of whether telemetry is turned on or off.
+The Studio server sends a keep-alive ping every 2 hours to indicate that it's still running without any errors. This data is collected irrespective of whether telemetry is turned on or off.
 
-```javascript title="sample keep-alive ping"
+```javascript title="Sample keep-alive ping"
 {
     "event": "FETCH_RELEASE_NOTES",
     "properties": {
@@ -42,7 +47,7 @@ The Appsmith server sends a keep-alive ping every 2 hours to indicate that it's 
 ```
 
 ### Server setup ping
-Appsmith server sends a ping first time a new instance is created. This data is collected irrespective of whether telemetry is turned on or off.
+Studio server sends a ping first time a new instance is created. This data is collected irrespective of whether telemetry is turned on or off.
 
 ```javascript title="sample server-setup ping"
 {
@@ -85,7 +90,7 @@ Appsmith server sends a ping first time a new instance is created. This data is 
 
 ### Usage pulse for billing
 
-The Appsmith client triggers a usage pulse whenever a user performs an action on their Appsmith instance. The usage pulse primarily contains information such as the timestamp, a hashed `userId` to map the user, and the app mode in which the action was performed. The data is collected on the server-side and sent to the Appsmith cloud services in batches every hour. These pulses are then processed to present aggregate information to customers on customer portal. This data is collected only for paying customers, regardless of whether telemetry is on or off.
+The Studio client triggers a usage pulse whenever a user performs an action on their Studio instance. The usage pulse primarily contains information such as the timestamp, a hashed `userId` to map the user, and the app mode in which the action was performed. The data is collected on the server-side and sent to the Studio cloud services in batches every hour. These pulses are then processed to present aggregate information to customers on customer portal. This data is collected only for paying customers, regardless of whether telemetry is on or off.
 
 ```javascript title="sample usage-payload billing"
 {
@@ -139,7 +144,7 @@ The client captures anonymous behavioral data around navigation and clicks. This
 }
 ```
 
-### Successful backend calls
+### Successful back-end calls
 The server shares anonymous information about successful query processes, new application creation, user logins, connections to additional plugins, etc. This data is only collected when telemetry is turned on. 
 
 ```javascript title="sample successful backend call"
@@ -205,6 +210,6 @@ You may also choose to turn off telemetry setting using environment variable `AP
 5. Restart the container using the command
 
 ```bash
-sudo docker-compose rm -fsv appsmith && sudo docker-compose up -d
+sudo docker-compose rm -fsv Studio && sudo docker-compose up -d
 ```
-Once the container restarts, Appsmith is up and running, the telemetry is turned off. You can verify that the telemetry is turned off using **Admin Settings**, select **General**, and verify the toggle is off for **Share anonymous usage data** setting.
+Once the container restarts, Studio is up and running, the telemetry is turned off. You can verify that the telemetry is turned off using **Admin Settings**, select **General**, and verify the toggle is off for **Share anonymous usage data** setting.

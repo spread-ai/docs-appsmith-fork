@@ -20,7 +20,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -129,7 +129,7 @@ Indicates the widget's Cap style property, shows whether the divider line is cap
 *Example:*
 
 ```js
-{{ '{{Divider1.capType}}' }}
+{{ '{{ '{{ '{{Divider1.capType}}' }}
 ```
 
 
@@ -149,7 +149,7 @@ Reflects the widget's Cap Position style property, indicating the sides of the d
 *Example:*
 
 ```js
-{{ '{{Divider1.capSide}}' }}
+{{ '{{ '{{ '{{Divider1.capSide}}' }}
 ```
 
 
@@ -165,7 +165,7 @@ Reflects the color value of the divider line, presented in the form of a hexadec
 *Example:*
 
 ```js
-{{ '{{Divider1.dividerColor}}' }}
+{{ '{{ '{{ '{{Divider1.dividerColor}}' }}
 ```
 
 
@@ -182,7 +182,7 @@ Reflects the **Orientation** of the widget, values are strings either `horizonta
 *Example:*
 
 ```js
-{{ '{{Divider1.orientation}}' }}
+{{ '{{ '{{ '{{Divider1.orientation}}' }}
 ```
 
 
@@ -198,7 +198,7 @@ Reflects the widget's **Dash Style** property as a string with value either `sol
 *Example:*
 
 ```js
-{{ '{{Divider1.strokeStyle}}' }}
+{{ '{{ '{{ '{{Divider1.strokeStyle}}' }}
 ```
 
 
@@ -215,7 +215,7 @@ Reflects the thickness of the divider line as a number of pixels.
 *Example:*
 
 ```js
-{{ '{{Divider1.thickness}}' }}
+{{ '{{ '{{ '{{Divider1.thickness}}' }}
 ```
 
 
@@ -230,7 +230,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 *Example:*
 
 ```js
-{{ '{{Divider1.isVisible}}' }}
+{{ '{{ '{{ '{{Divider1.isVisible}}' }}
 ```
 
 </dd>

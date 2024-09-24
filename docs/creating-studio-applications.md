@@ -89,11 +89,11 @@ In the **Editor** view (from the options in the left-hand side panel) you can dr
 
 For example, the **DatePicker** widget has options for setting the date format, the default date, the label position and text, and other settings associated with dates. The **Style** tab is where you can set font, color, and border options. You can delete or copy a widget by selecting the icons at the top of the properties window.
 
-Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ '{{ app1.myVariable }}' }}`. For more on widgets and their options, see the [Widget Reference](reference/studio-widget-reference.md).
+Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ '{{ '{{ '{{ '{{ '{{ '{{ '{{ app1.myVariable }}' }}`. For more on widgets and their options, see the [Widget Reference](reference/studio-widget-reference.md).
 
 ### Write the logic
 
-Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ "{{ app1.myVariable }}" }}`. For more on widgets and their options, see the [Widget Reference](reference/studio-widget-reference.md).
+Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ '{{ '{{ '{{ "{{ '{{ '{{ '{{ app1.myVariable }}" }}`. For more on widgets and their options, see the [Widget Reference](reference/studio-widget-reference.md).
 
 The logic of your application determines what happens when the user enters data, clicks on a button, or performs any action in your application. In many cases the logic will be attached to events that the user may perform on a widget. For example, an **onClick** event for a button could trigger a JavaScript function, execute a query, or change the contents of the screen.
 
@@ -102,7 +102,7 @@ The logic of your application determines what happens when the user enters data,
 	<figcaption>The contextual menu for the onClick event in SPREAD Studio</figcaption>
 </figure>
 
-JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [AppSmith object](https://docs.appsmith.com/reference/appsmith-framework/context-object), and Global Functions, such as [storeValue](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value), are available to use in your code.
+JavaScript code is enclosed with double curly braces. For example: `{{ '{{ '{{ '{{ '{{ '{{ '{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [AppSmith object](https://docs.appsmith.com/reference/appsmith-framework/context-object), and Global Functions, such as [storeValue](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value), are available to use in your code.
 
 !!! info "More Global Objects and Global Functions"
 

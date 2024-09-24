@@ -147,14 +147,14 @@ Additionally, you can display dynamic data from queries or JS functions by bindi
 
 *Example:*
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
 *Example:*
 ```js
-{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
+{{ '{{ '{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
 ```
 
 </dd>
@@ -168,7 +168,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -181,7 +181,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -286,7 +286,7 @@ Allows you to access the value that has been selected with the slider.
 
 *Example:*
 ```js
-{{ '{{NumberSlider1.value}}' }}
+{{ '{{ '{{ '{{NumberSlider1.value}}' }}
 ```
 
 </dd>
@@ -299,7 +299,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{NumberSlider1.isVisible}}' }}
+{{ '{{ '{{ '{{NumberSlider1.isVisible}}' }}
 ```
 
 </dd>

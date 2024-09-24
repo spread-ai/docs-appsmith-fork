@@ -67,7 +67,7 @@ To overcome this, you can bind the user's array of the response instead of the e
 
 
 ```javascript
-{{ '{{ fetch_users.data.users }}' }}
+{{ '{{ '{{ '{{ fetch_users.data.users }}' }}
 ```
 #### Error message
 
@@ -103,7 +103,7 @@ In case the response doesn't contain label and value keys as below, you can map 
 
 ```javascript
 // Transform Response
-{{ '{{
+{{ '{{ '{{ '{{
    fetchColors.data.map((color) =>{
        return {
            label: color,
@@ -136,7 +136,7 @@ In cases like these, you can use JavaScript to transform the data to the correct
 
 
 ```javascript
-{{ '{{
+{{ '{{ '{{ '{{
    _.values(fetch_orders.data.reduce((accumulator, order) => {
        if(accumulator[order.date]) {
            accumulator[order.date].y += order.orderAmount
@@ -169,13 +169,13 @@ To resolve this, you can transform the date string using moment.js.
 
 ```
 // Moment can be used to set the default date to the current date
-{{ '{{moment()}}' }}
+{{ '{{ '{{ '{{moment()}}' }}
 ```
 
 
 ```
 // Moment can parse your date format
-{{ '{{ moment("2021-07-26", "YYYY-MM-DD") }}' }}
+{{ '{{ '{{ '{{ moment("2021-07-26", "YYYY-MM-DD") }}' }}
 ```
 #### Error message
 
@@ -198,7 +198,7 @@ You can solve this by using a comparison operator.
 
 
 ```
-{{ '{{ Dropdown1.selectedOptionValue === "RED" }}' }}
+{{ '{{ '{{ '{{ Dropdown1.selectedOptionValue === "RED" }}' }}
 ```
 
 
@@ -222,11 +222,11 @@ The solution to this issue is to convert the data type of the API response to a 
 
 ```
 To get text,
-{{ '{{Text1.text}}' }}
+{{ '{{ '{{ '{{Text1.text}}' }}
 
 
 To get image,
-{{ '{{Image1.image}}' }}
+{{ '{{ '{{ '{{Image1.image}}' }}
 ```
 
 
@@ -255,7 +255,7 @@ You can also check the EVALUATED VALUE section to make sure that it's returning 
 ## Syntax error
 
 
-This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line ](../../core-concepts/writing-code/#multi-line-javascript)code.
+This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ '{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line ](../../core-concepts/writing-code/#multi-line-javascript)code.
 
 
 In the example below, fetch isn't defined anywhere in the application
@@ -275,7 +275,7 @@ An app gets a cyclic dependency error when a node is directly or indirectly depe
 #### Reactivity and dependency map
 
 
-In Appsmith, all user-editable fields are defined as nodes, and to provide reactivity, a dependency map is created between these nodes to find the optimal evaluation order of these nodes. For example, when you would refer to `{{ '{{Api1.data}}' }}` in a Table1's `tableData` field, there is a dependency created between `Api1.data` and `Table1.tableData`. So every time `Api1.data` updates, `Table1.tableData` needs to be updated.
+In Appsmith, all user-editable fields are defined as nodes, and to provide reactivity, a dependency map is created between these nodes to find the optimal evaluation order of these nodes. For example, when you would refer to `{{ '{{ '{{ '{{Api1.data}}' }}` in a Table1's `tableData` field, there is a dependency created between `Api1.data` and `Table1.tableData`. So every time `Api1.data` updates, `Table1.tableData` needs to be updated.
 
 
 ```

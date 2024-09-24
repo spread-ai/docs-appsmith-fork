@@ -22,7 +22,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Audio Recorder widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 </dd>
 
@@ -34,7 +34,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Audio Recorder widget, you can use the following JavaScript expression in the disabled property: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -119,7 +119,7 @@ Returns a binary URL that stores the audio for future use.
 
 *Example:*
 ```js
-{{ '{{AudioRecorder1.blobURL}}' }}
+{{ '{{ '{{ '{{AudioRecorder1.blobURL}}' }}
 ```
 
 </dd>
@@ -132,7 +132,7 @@ Stores the recorded audio in Data URL format (Base64). You can use it to embed t
 
 *Example:*
 ```js
-{{ '{{AudioRecorder1.dataURL}}' }}
+{{ '{{ '{{ '{{AudioRecorder1.dataURL}}' }}
 ```
 
 </dd>
@@ -145,7 +145,7 @@ Returns the audio file in binary format, suitable for storing the audio for futu
 
 *Example:*
 ```js
-{{ '{{AudioRecorder1.rawBinary}}' }}
+{{ '{{ '{{ '{{AudioRecorder1.rawBinary}}' }}
 ```
 
 </dd>
@@ -158,7 +158,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{AudioRecorder1.isVisible}}' }}
+{{ '{{ '{{ '{{AudioRecorder1.isVisible}}' }}
 ```
 
 </dd>
@@ -210,7 +210,7 @@ To upload recorded audio to [Amazon S3](/connect-data/reference/querying-amazon-
 4. In the content body, add the following:
 
 ```
-{"data": {{ '{{AudioRecorder1.dataURL}}' }}}
+{"data": {{ '{{ '{{ '{{AudioRecorder1.dataURL}}' }}}
 ```
 
 4. Configure the **onRecordingComplete** event to run the query. 

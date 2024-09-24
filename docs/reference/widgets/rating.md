@@ -69,7 +69,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -82,7 +82,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to click the button, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -182,7 +182,7 @@ Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{ '{{Rating1.isVisible}}' }}
+{{ '{{ '{{ '{{Rating1.isVisible}}' }}
 ```
 
 </dd>
@@ -195,7 +195,7 @@ Indicates the total number of stars, as specified in the **Max Rating** property
 
 *Example:*
 ```js
-{{ '{{Rating1.maxCount}}' }}
+{{ '{{ '{{ '{{Rating1.maxCount}}' }}
 ```
 
 </dd>
@@ -208,7 +208,7 @@ Indicates the value selected by the user in the Rating widget.
 
 *Example:*
 ```js
-{{ '{{Rating1.value}}' }}
+{{ '{{ '{{ '{{Rating1.value}}' }}
 ```
 
 </dd>

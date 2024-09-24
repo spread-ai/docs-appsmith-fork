@@ -63,7 +63,7 @@ You can display dynamic data from queries or JS functions by binding the respons
 *Example*:  suppose you want to display multiple markers on a Map using the locations from the users' database:
 
 ```js
-{{ '{{fetchUserData.data.map(loc  => {
+{{ '{{ '{{ '{{fetchUserData.data.map(loc  => {
 	return {
 		lat: parseFloat(loc.latitude),
 		long: parseFloat(loc.longitude),
@@ -78,8 +78,8 @@ If you want to display the live location, you can use the **Default Marker** pro
 
 ```js
 [{
-"lat":{{ '{{appsmith.geolocation.currentPosition.coords.latitude || ""}}' }}, 
-"long":{{ '{{appsmith.geolocation.currentPosition.coords.longitude || ""}}' }}
+"lat":{{ '{{ '{{ '{{appsmith.geolocation.currentPosition.coords.latitude || ""}}' }}, 
+"long":{{ '{{ '{{ '{{appsmith.geolocation.currentPosition.coords.longitude || ""}}' }}
 }]
 ```
 
@@ -108,7 +108,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -159,7 +159,7 @@ To access the searched location, use the ``center`` reference property. This ret
 
 ```js
 [
-  {{ '{{Map1.center}}' }}
+  {{ '{{ '{{ '{{Map1.center}}' }}
 ]
 ```
 
@@ -238,7 +238,7 @@ Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{ '{{Map1.isVisible}}' }}
+{{ '{{ '{{ '{{Map1.isVisible}}' }}
 ```
 
 </dd>
@@ -251,7 +251,7 @@ Contains title, latitude, and longitude coordinates of the location.
 
 *Example:*
 ```js
-{{ '{{Map1.center}}' }}
+{{ '{{ '{{ '{{Map1.center}}' }}
 ```
 
 </dd>
@@ -264,7 +264,7 @@ Contains the marker object that the user has selected.
 
 *Example:*
 ```js
-{{ '{{Map1.selectedMarker}}' }}
+{{ '{{ '{{ '{{Map1.selectedMarker}}' }}
 ```
 
 </dd>
@@ -278,10 +278,10 @@ This contains the list of markers on the map
 *Example:*
 ```js
 // Access the entire array of markers
-{{ '{{Map1.markers}}' }}
+{{ '{{ '{{ '{{Map1.markers}}' }}
 
 // Access the title of the first marker in the array
-{{ '{{Map1.markers[0].title}}' }}
+{{ '{{ '{{ '{{Map1.markers[0].title}}' }}
 
 // here [0] represents the index of the first marker
 ```

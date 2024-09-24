@@ -52,7 +52,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 _Example_:
 
 ```
-{{ '{{ tbluserData.selectedRow; }}' }}
+{{ '{{ '{{ '{{ tbluserData.selectedRow; }}' }}
 ```
 
 You can click on an individual row in the Table and update data in the form fields.
@@ -146,7 +146,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example, if you want to make the widget visible only when the user selects `Yes` from a Select widget, you can use the following JavaScript expression:
 
 ```
-{{ '{{ Select1.selectedOptionValue === "Yes" }}' }}
+{{ '{{ '{{ '{{ Select1.selectedOptionValue === "Yes" }}' }}
 ```
 
 </dd>
@@ -351,7 +351,7 @@ Contains a JSON object with the field names and their current values in the form
 _Example:_
 
 ```
-{{ '{{ JSONForm1.object }}' }}
+{{ '{{ '{{ '{{ JSONForm1.object }}' }}
 ```
 
 </dd>
@@ -366,10 +366,10 @@ Example:
 
 ```
 // To access the object:
-{{ '{{ JSONForm1.fieldState; }}' }}
+{{ '{{ '{{ '{{ JSONForm1.fieldState; }}' }}
 
 // To get state for a particular field (e.g., "name"):
-{{ '{{ JSONForm1.fieldState.name; }}' }}
+{{ '{{ '{{ '{{ JSONForm1.fieldState.name; }}' }}
 ```
 
 </dd>
@@ -383,7 +383,7 @@ Reflects whether the widget's inputs are considered Valid.
 Example:
 
 ```
-{{ '{{ JSONForm1.isValid; }}' }}
+{{ '{{ '{{ '{{ JSONForm1.isValid; }}' }}
 ```
 
 </dd>
@@ -397,7 +397,7 @@ Contains a JSON object of the original source data which was bound to the form.
 Example:
 
 ```
-{{ '{{ JSONForm1.sourceData; }}' }}
+{{ '{{ '{{ '{{ JSONForm1.sourceData; }}' }}
 ```
 
 </dd>

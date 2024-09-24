@@ -56,7 +56,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Code Scanner widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -69,7 +69,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Code Scanner widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -190,7 +190,7 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 *Example:*
 
 ```js
-{{ '{{Select1.isDisabled}}' }}
+{{ '{{ '{{ '{{Select1.isDisabled}}' }}
 ```
 
 </dd>
@@ -203,7 +203,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Select1.isVisible}}' }}
+{{ '{{ '{{ '{{Select1.isVisible}}' }}
 ```
 
 </dd>
@@ -217,7 +217,7 @@ Retrieves the scanned code value from the widget.
 *Example:*
 
 ```js
-{{ '{{CodeScanner1.value}}' }}
+{{ '{{ '{{ '{{CodeScanner1.value}}' }}
 ```
 
 </dd>

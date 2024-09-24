@@ -26,7 +26,7 @@ You can dynamically change text by fetching data from queries or JS functions an
 *Example:*
 
 ```js
-{{ '{{Table1.selectedRow.name}}' }}
+{{ '{{ '{{ '{{Table1.selectedRow.name}}' }}
 ```
 
 You have the option to use HTML code within the **Text** property to customize the appearance of the displayed text. Note that the Text field supports only inline CSS. If you need to use external CSS, it is recommended to use the [Iframe widget](/reference/widgets/iframe).
@@ -49,7 +49,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -168,7 +168,7 @@ The `text` property retrieves the current text value of the widget.
 
 *Example:*
 ```js
-{{ '{{Text1.text}}' }}
+{{ '{{ '{{ '{{Text1.text}}' }}
 ```
 
 </dd>
@@ -183,7 +183,7 @@ Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{ '{{Text1.isVisible}}' }}
+{{ '{{ '{{ '{{Text1.isVisible}}' }}
 ```
 
 </dd>

@@ -49,7 +49,7 @@ Create a query to fetch data from the database/API using `pageSize`, `pageNo`, a
 
 
 ```sql
-SELECT * FROM users LIMIT {{ '{{ Table1.pageSize }}' }} OFFSET {{ '{{ Table1.pageOffset }}' }};
+SELECT * FROM users LIMIT {{ '{{ '{{ '{{ Table1.pageSize }}' }} OFFSET {{ '{{ '{{ '{{ Table1.pageOffset }}' }};
 ```
 
 This SQL query retrieves data from the `users` table with pagination based on the specified [pagesize](/reference/widgets/table#pagesize-number) and [offset values](/reference/widgets/table#pageoffset-number).
@@ -60,7 +60,7 @@ This SQL query retrieves data from the `users` table with pagination based on th
 
 
 ```
-https://mock-api.appsmith.com/users?page={{ '{{Table1.pageNo}}' }}
+https://mock-api.appsmith.com/users?page={{ '{{ '{{ '{{Table1.pageNo}}' }}
 ```
 
 
@@ -89,7 +89,7 @@ Create a query to fetch data from the database/API using `previousPageVisited` a
 
 
 ```sql
-SELECT * FROM users {{ '{{Table1.nextPageVisited ? "WHERE id > "+ " "+ Table1.tableData[Table1.tableData.length-1]["id"] : Table1.previousPageVisited ? "WHERE id <"+ " "+ Table1.tableData[0]["id"] : "" }}' }} ORDER BY id LIMIT {{ '{{Table1.pageSize}}' }} ;
+SELECT * FROM users {{ '{{ '{{ '{{Table1.nextPageVisited ? "WHERE id > "+ " "+ Table1.tableData[Table1.tableData.length-1]["id"] : Table1.previousPageVisited ? "WHERE id <"+ " "+ Table1.tableData[0]["id"] : "" }}' }} ORDER BY id LIMIT {{ '{{ '{{ '{{Table1.pageSize}}' }} ;
 ```
 
 This SQL query selects all columns from the `users` table and applies cursor-based pagination to limit the number of results returned. The `WHERE` clause is dynamically generated based on whether the user has already visited the [next](/reference/widgets/table#nextpagevisited-boolean) or [previous](/reference/widgets/table#previouspagevisited-boolean) page, and orders the results by `ID`.
@@ -101,7 +101,7 @@ Please ensure that you turn off prepared statements in the query editor for this
 * For the REST API, you can make use of the URL's query parameter to retrieve data under specific conditions using `next` and `previous`:
 
 ```js
-https://api.site.com/users/?pageDirection={{ '{{Table1.nextPageVisited ? "next" : Table1.previousPageVisited? "previous":"default"}}' }}
+https://api.site.com/users/?pageDirection={{ '{{ '{{ '{{Table1.nextPageVisited ? "next" : Table1.previousPageVisited? "previous":"default"}}' }}
 
 //The "pageDirection" serves as a query parameter within the API
 ```
@@ -127,7 +127,7 @@ Follow these steps to configure the Table widget to display fetched data, and im
 *Example*: 
 
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 </dd>
@@ -149,7 +149,7 @@ To provide the user with information about the number of records in the table, y
 *PostgreSQL Example*:
 
 ```sql
-SELECT COUNT(*) from users where name ilike '%{{ '{{Table1.searchText}}' }}%';
+SELECT COUNT(*) from users where name ilike '%{{ '{{ '{{ '{{Table1.searchText}}' }}%';
 ```
 
 This SQL query uses the `ilike` condition on the `name` column, pinpointing relevant data rather than performing a blanket count of all records.
@@ -157,7 +157,7 @@ This SQL query uses the `ilike` condition on the `name` column, pinpointing rele
 To display the count, add the following code to the **Total records** property:
 
 ```js
-{{ '{{fetch_users_count.data[0].count}}' }}
+{{ '{{ '{{ '{{fetch_users_count.data[0].count}}' }}
 ```
 </dd>
 

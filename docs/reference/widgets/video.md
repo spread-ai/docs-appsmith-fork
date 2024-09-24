@@ -31,7 +31,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 *Example*:
 
 ```js
-{{ '{{Table1.selectedRow.videoURL}}' }}
+{{ '{{ '{{ '{{Table1.selectedRow.videoURL}}' }}
 ```
 
 </dd>
@@ -55,7 +55,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -144,7 +144,7 @@ Indicates the current state of the widget's **Auto Play** setting.
 
 *Example:*
 ```js
-{{ '{{Video1.autoPlay}}' }}
+{{ '{{ '{{ '{{Video1.autoPlay}}' }}
 ```
 
 </dd>
@@ -162,7 +162,7 @@ Indicates the current state of the Video widget's playback. It is represented by
 
 *Example:*
 ```js
-{{ '{{Video1.playState}}' }}
+{{ '{{ '{{ '{{Video1.playState}}' }}
 ```
 
 </dd>
@@ -176,7 +176,7 @@ Indicates the current playing state of the widget. When the value is `true`, it 
 
 *Example:*
 ```js
-{{ '{{Video1.playing}}' }}
+{{ '{{ '{{ '{{Video1.playing}}' }}
 ```
 
 

@@ -47,7 +47,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the button visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -60,7 +60,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to click the button, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -218,7 +218,7 @@ Returns the value of the button's label property.
 
 *Example:*
 ```js
-{{ '{{Button1.text}}' }}
+{{ '{{ '{{ '{{Button1.text}}' }}
 ```
 </dd>
 
@@ -230,7 +230,7 @@ Indicates the visibility state of a widget, with true indicating it is visible a
 
 *Example:*
 ```js
-{{ '{{Button1.isVisible}}' }}
+{{ '{{ '{{ '{{Button1.isVisible}}' }}
 ```
 
 </dd>
@@ -243,7 +243,7 @@ It reflects the state of the widget's **Disabled** setting. It is represented by
 
 *Example:*
 ```js
-{{ '{{Button1.isDisabled}}' }}
+{{ '{{ '{{ '{{Button1.isDisabled}}' }}
 ```
 
 </dd>

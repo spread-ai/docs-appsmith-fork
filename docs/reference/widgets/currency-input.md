@@ -184,7 +184,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -197,7 +197,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 test
 </dd>
@@ -342,7 +342,7 @@ The `countryCode` property stores the country code associated with the selected 
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.countryCode}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.countryCode}}' }}
 ```
 
 </dd>
@@ -355,7 +355,7 @@ The `currencyCode` property holds the [ISO 4217](https://www.iso.org/iso-4217-cu
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.currencyCode}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.currencyCode}}' }}
 ```
 
 </dd>
@@ -369,7 +369,7 @@ The `text` property stores the input value of the widget.
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.text}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.text}}' }}
 ```
 
 </dd>
@@ -383,7 +383,7 @@ The `value` property stores the input value of the widget as a number.
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.value}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.value}}' }}
 ```
 
 </dd>
@@ -396,7 +396,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.isValid}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.isValid}}' }}
 ```
 
 </dd>
@@ -409,7 +409,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.isDisabled}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.isDisabled}}' }}
 ```
 
 </dd>
@@ -423,7 +423,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{CurrencyInput1.isVisible}}' }}
+{{ '{{ '{{ '{{CurrencyInput1.isVisible}}' }}
 ```
 
 </dd>

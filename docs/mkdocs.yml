@@ -4,6 +4,13 @@ nav:
      - Studio Overview: studio-overview.md
      - Creating Studio applications: creating-studio-applications.md
      - Best practices for creating Studio apps: best-practices-for-creating-studio-apps.md
+     - Writing code in Studio:
+            - Overview: writing-code-in-studio/studio-code-overview.md
+            - Triggering UI actions: writing-code-in-studio/triggering-ui-actions.md
+            - Using dynamic queries: writing-code-in-studio/using-dynamic-queries.md
+            - Using JavaScript Promises: writing-code-in-studio/using-js-promises.md
+            - Using JSObjects: writing-code-in-studio/using-jsobjects.md
+            - Using external libraries: writing-code-in-studio/using-external-js-libraries.md
      - Tutorials:
             - Share variables between applications: tutorials/share-variables-between-applications.md
             - Using Flows in Studio: tutorials/use-flows-in-studio.md

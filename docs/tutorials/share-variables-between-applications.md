@@ -9,8 +9,6 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-# Share variables between Studio applications
-
 ## Synopsis
 
 Sometimes you may want to pass a variable from one Studio application to another. For example, you may have a sending application that receives input from a user and sends it to another application, which uses that information for a separate purpose. In this example we will create a simple dialogue between applications using query parameters.
@@ -59,7 +57,7 @@ Go back to the sending application and inside the widget properties for the subm
 In the **Enter URL** field enter the URL from [Step 2](#2-create-a-receiving-application). In the **Query params** field enter the following:
 
 ``` json title='Query parameters for the sending application' hl_lines='3'
-{{ '{{{ "embed": true, "sharedVariable": valueToShare.text }}}' }}
+{{ '{{ "embed": true, "sharedVariable": valueToShare.text }}' }}
 ```
 
 In the highlighted line, the text of the input field is fetched using JavaScriot and used as the value to the `sharedVariable` key.

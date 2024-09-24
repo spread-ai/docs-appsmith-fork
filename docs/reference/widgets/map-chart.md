@@ -70,14 +70,14 @@ Additionally, you can display dynamic data from queries or JS functions by bindi
 
 *Example:*
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
 *Example:*
 ```js
-{{ '{{fetchUserData.data.map( p => ({id: p.label, value: val.count}))}}' }}
+{{ '{{ '{{ '{{fetchUserData.data.map( p => ({id: p.label, value: val.count}))}}' }}
 ```
 
 
@@ -100,7 +100,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -200,13 +200,13 @@ Contains an object which represents the data point that the user has most recent
 
 ```js
 //To access all the details of the selected data point:
-{{ '{{MapChart1.selectedDataPoint}}' }}
+{{ '{{ '{{ '{{MapChart1.selectedDataPoint}}' }}
 
 //To access the label of the selected data point:
-{{ '{{MapChart1.selectedDataPoint.id}}' }}
+{{ '{{ '{{ '{{MapChart1.selectedDataPoint.id}}' }}
 
 //To access the value of the selected data point:
-{{ '{{MapChart1.selectedDataPoint.value}}' }}
+{{ '{{ '{{ '{{MapChart1.selectedDataPoint.value}}' }}
 ```
 
 </dd>
@@ -219,7 +219,7 @@ Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{ '{{MapChart1.isVisible}}' }}
+{{ '{{ '{{ '{{MapChart1.isVisible}}' }}
 ```
 
 </dd>

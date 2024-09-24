@@ -20,7 +20,7 @@ The Appsmith object contains the following properties:
 This object lets you access any app-level data or temporary state that is stored on the user's browser. You can add or update data using the [storeValue()](/reference/appsmith-framework/widget-actions/store-value) method. You can access saved data by referencing their keys:
 
 ```javascript
-{{ '{{ appsmith.store.KEY_NAME }}' }}
+{{ '{{ '{{ '{{ appsmith.store.KEY_NAME }}' }}
 ```
 
 </dd>
@@ -32,7 +32,7 @@ This object lets you access any app-level data or temporary state that is stored
 This object contains all the attributes of the current URL that the user is on. To access these values from the URL, you can use the following code snippet:
 
 ```javascript
-{{ '{{ appsmith.URL }}' }}
+{{ '{{ '{{ '{{ appsmith.URL }}' }}
 ```
 URL object has the following attributes:
 
@@ -43,7 +43,7 @@ URL object has the following attributes:
 The host property of the URL is a string that consists of the hostname and the URL's port (if available). To access the host value, you can use the following code snippet:
 
 ```js
-{{ '{{appsmith.URL.host}}' }}
+{{ '{{ '{{ '{{appsmith.URL.host}}' }}
 ```
   
 </dd>
@@ -55,7 +55,7 @@ The host property of the URL is a string that consists of the hostname and the U
 The hostname property of the URL is a string that represents the URL's domain. In simpler terms, hostname is the [host](/reference/appsmith-framework/context-object#host) name (without the port number). To access the hostname, you can use the following code snippet:
 
 ```js
-{{ '{{appsmith.URL.host}}' }}
+{{ '{{ '{{ '{{appsmith.URL.host}}' }}
 ```
 
 </dd>
@@ -76,7 +76,7 @@ A full-path URL specifies the exact location of a resource, such as a page, app,
 You can access the fullPath using the following snippet:
 
 ```js
-{{ '{{appsmith.URL.fullPath}}' }}
+{{ '{{ '{{ '{{appsmith.URL.fullPath}}' }}
 ```
 
 </dd>
@@ -88,7 +88,7 @@ You can access the fullPath using the following snippet:
 The pathname is a string that represents the path component of the URL. It consists of a collection of path segments, with each segment prefixed by the `/` character. If the URL does not have any path segments, the value of the pathname property is an empty string. You can access the pathname using the following snippet:
 
 ```js
-{{ '{{appsmith.URL.pathname}}' }}
+{{ '{{ '{{ '{{appsmith.URL.pathname}}' }}
 ```
 
 </dd>
@@ -101,7 +101,7 @@ The pathname is a string that represents the path component of the URL. It consi
 The URL's port property is a string containing the URL's port number. You can access the port using the following snippet:
 
 ```js
-{{ '{{appsmith.URL.port}}' }}
+{{ '{{ '{{ '{{appsmith.URL.port}}' }}
 ```
 
 </dd>
@@ -113,7 +113,7 @@ The URL's port property is a string containing the URL's port number. You can ac
 The protocol property of the URL is a string that represents the protocol scheme of the URL, including the `:`. The protocol identification and the resource name are separated by a colon and two forward slashes (`://`). To access the protocol value, use the following snippet:
 
 ```js
-{{ '{{appsmith.URL.protocol}}' }}
+{{ '{{ '{{ '{{appsmith.URL.protocol}}' }}
 ```
 
 </dd>
@@ -125,7 +125,7 @@ The protocol property of the URL is a string that represents the protocol scheme
 The value of the `appsmith.URL.hash` property is a string that represents the fragment identifier of the URL, including the `#` character. The fragment identifier is the portion of the URL that appears after the hashtag symbol (#), which is the hash property of the URL interface.
 
 ```js
-{{ '{{appsmith.URL.hash}}' }}
+{{ '{{ '{{ '{{appsmith.URL.hash}}' }}
 ```
 
 </dd>
@@ -137,7 +137,7 @@ The value of the `appsmith.URL.hash` property is a string that represents the fr
 The query parameters are a component of a URL that allows for passing data to a web server or application. In a URL, query parameters are appended at the end of the URL with a `?` as a separator. You can access the value of `queryParams` using the following snippet:
 
 ```js
-{{ '{{appsmith.URL.queryParams}}' }}
+{{ '{{ '{{ '{{appsmith.URL.queryParams}}' }}
 ```
 
 The `queryParams` object can be used to [share data across pages](/advanced-concepts/sharing-data-across-pages#sharing-data-via-query-params).
@@ -177,20 +177,20 @@ This object contains the data of the currently authenticated user.
 The `email` property of user contains the email address of the user.
 To access the email, use the following code:
 ```jsx
-{{ '{{appsmith.user.email}}' }}
+{{ '{{ '{{ '{{appsmith.user.email}}' }}
 ```
 
 #### username `string`
 The `username` attribute represents the unique username associated with the user's account.
 To access the username, use the following code:
 ```jsx
-{{ '{{appsmith.user.username}}' }}
+{{ '{{ '{{ '{{appsmith.user.username}}' }}
 ```
 
 #### name `string`
 The `name` attribute holds the full name of the user. To access the name, use the following code:
 ```jsx
-{{ '{{appsmith.user.name}}' }}
+{{ '{{ '{{ '{{appsmith.user.name}}' }}
 ```
 
 #### useCase `string`
@@ -198,13 +198,13 @@ The `name` attribute holds the full name of the user. To access the name, use th
 This attribute describes the use case that the user has specified, giving insight into what they intend to achieve with Appsmith. To access the `useCase`, use the following code:
 
 ```jsx
-{{ '{{appsmith.user.useCase}}' }}
+{{ '{{ '{{ '{{appsmith.user.useCase}}' }}
 ```
 #### enableTelemetry `boolean`
 
 This boolean flag indicates if the user has consented to send telemetry data to Appsmith. Telemetry data typically includes usage statistics and error reports that help improve the platform. To access the `enableTelemetry`, use the following code:
 ```jsx
-{{ '{{appsmith.user.enableTelemetry}}' }}
+{{ '{{ '{{ '{{appsmith.user.enableTelemetry}}' }}
 ```
 
 <div className="tag-wrapper">
@@ -250,7 +250,7 @@ You can use `appsmith.user.roles` object to [programmatically control the access
 *Example:* consider a scenario where you are hiding a Button widget by adding the following code to the **Visible** property of the button -
 
 ```javascript
-{{ '{{appsmith.user.roles.includes("backend engineers")}}' }}
+{{ '{{ '{{ '{{appsmith.user.roles.includes("backend engineers")}}' }}
 ```
 In the above example, the visibility of the button is determined by a role. Only users who have been assigned the "backend engineer" role can see this button.
 
@@ -298,7 +298,7 @@ You can use `appsmith.user.groups` object to [programmatically control the acces
 *Example:* consider a scenario where you are hiding a Button widget by adding the following code to the **Visible** property of the button -
 
 ```javascript
-{{ '{{appsmith.user.groups.includes("managers")}}' }}
+{{ '{{ '{{ '{{appsmith.user.groups.includes("managers")}}' }}
 ```
 In the above example, the visibility of the button is determined by a group. Only users who have been added to the "managers" group can see this button.
 
@@ -307,53 +307,53 @@ In the above example, the visibility of the button is determined by a group. Onl
 #### accountNonExpired `boolean`
 This attribute indicates whether the user's account is still active and has not expired. An expired account may be reactivated or may need subscription renewal. To access the `accountNonExpired`, use the following code:
 ```jsx
-{{ '{{appsmith.user.accountNonExpired}}' }}
+{{ '{{ '{{ '{{appsmith.user.accountNonExpired}}' }}
 ``` 
 
 #### accountNonLocked `boolean`
 The `accountNonLocked` attribute signifies whether the user's account is locked or unlocked. A locked account cannot be accessed until an administrator unlocks it. To access the `accountNonLocked`, use the following code:
 ```jsx
-{{ '{{appsmith.user.accountNonLocked}}' }}s
+{{ '{{ '{{ '{{appsmith.user.accountNonLocked}}' }}s
 ``` 
 #### credentialsNonExpired `boolean`
 This boolean attribute states if the user's credentials (such as their password) are still valid or if they need to be updated. Expired credentials typically require the user to reset their password. To access the `credentialsNonExpired`, use the following code:
 ```jsx
-{{ '{{appsmith.user.credentialsNonExpired}}' }}
+{{ '{{ '{{ '{{appsmith.user.credentialsNonExpired}}' }}
 ``` 
 #### emptyInstance `boolean`
 The `emptyInstance` attribute indicates whether this user object is an empty instance, lacking in actual data. This might occur when no user is logged in or in case of a system-level operation. To access the `emptyInstance`, use the following code:
 ```jsx
-{{ '{{appsmith.user.emptyInstance}}' }}
+{{ '{{ '{{ '{{appsmith.user.emptyInstance}}' }}
 ``` 
 #### isAnonymous `boolean`
 The `isAnonymous` attribute reflects whether the current user is anonymous (not logged in) or identified (logged in). This can affect the presentation and permissions of the user interface. To access the `isAnonymous`, use the following code:
 ```jsx
-{{ '{{appsmith.user.isAnonymous}}' }}
+{{ '{{ '{{ '{{appsmith.user.isAnonymous}}' }}
 ``` 
 #### isEnabled `boolean`
 This attribute indicates if the user's account is currently enabled. An enabled account can log in and interact with Appsmith applications, while disabled ones cannot. To access the `isEnabled`, use the following code:
 ```jsx
-{{ '{{appsmith.user.isEnabled}}' }}
+{{ '{{ '{{ '{{appsmith.user.isEnabled}}' }}
 ``` 
 #### isSuperUser `boolean`
 The `isSuperUser` flag shows whether the user has superuser status. Superusers typically have elevated privileges and access to all parts of the Appsmith application. To access the `isSuperUser`, use the following code:
 ```jsx
-{{ '{{appsmith.user.isSuperUser}}' }}
+{{ '{{ '{{ '{{appsmith.user.isSuperUser}}' }}
 ```
 #### isConfigurable `boolean`
 This attribute denotes whether the user has the ability to configure or alter settings within the Appsmith platform. To access the `isConfigurable`, use the following code:
 ```jsx
-{{ '{{appsmith.user.isConfigurable}}' }}
+{{ '{{ '{{ '{{appsmith.user.isConfigurable}}' }}
 ```
 #### adminSettingsVisible `boolean`
 The `adminSettingsVisible` attribute states if the user is able to see and possibly modify the admin settings area. To access the `adminSettingsVisible`, use the following code:
 ```jsx
-{{ '{{appsmith.user.adminSettingsVisible}}' }}
+{{ '{{ '{{ '{{appsmith.user.adminSettingsVisible}}' }}
 ```
 #### isIntercomConsentGiven `boolean`
 This boolean indicates whether the user has given consent to use Intercom, a messaging tool that might be used in Appsmith for support and communication purposes. To access the `isIntercomConsentGiven`, use the following code:
 ```jsx
-{{ '{{appsmith.user.isIntercomConsentGiven}}' }}
+{{ '{{ '{{ '{{appsmith.user.isIntercomConsentGiven}}' }}
 ```
 #### idToken `object`
 
@@ -361,10 +361,10 @@ This boolean indicates whether the user has given consent to use Intercom, a mes
 
 An ID token serves as a verified confirmation of a user's identity and includes essential information such as their name, picture, email address etc. According to the OpenID Connect (OIDC) specifications, when a user successfully logs in, Appsmith receives an ID token.
 
-Appsmith provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{}}' }}` as shown below:
+Appsmith provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{ '{{ '{{}}' }}` as shown below:
 
 ```js
-{{ '{{appsmith.user.idToken}}' }}
+{{ '{{ '{{ '{{appsmith.user.idToken}}' }}
 ```
 If you have defined custom scopes in your identity provider, the information associated with those scopes can be accessed within the Identity token.
 
@@ -378,7 +378,7 @@ If you have defined custom scopes in your identity provider, the information ass
 This object contains the details of the theme properties applied to the application. You can use this object to set certain properties in widgets to be aligned with the app theme or to write custom logic.
 
 ```js
-{{ '{{appsmith.theme}}' }}
+{{ '{{ '{{ '{{appsmith.theme}}' }}
 ```
 
 The theme object has the following attributes:
@@ -394,7 +394,7 @@ This object contains the color properties of the application. It has the followi
 It refers to the app's primary color set in the theme section of the app settings. To access this value, you can use the following code snippet:
 
 ```js
-{{ '{{appsmith.theme.colors.primaryColor}}' }}
+{{ '{{ '{{ '{{appsmith.theme.colors.primaryColor}}' }}
 ```
 
 #### backgroundColor `string`
@@ -405,7 +405,7 @@ The `backgroundColor` property refers to the background color set in the theme s
 
 
 ```js
-{{ '{{appsmith.theme.colors.backgroundColor}}' }}
+{{ '{{ '{{ '{{appsmith.theme.colors.backgroundColor}}' }}
 ```
 
 </dd>
@@ -422,7 +422,7 @@ This object contains the border properties that enable you to control the curvat
 It refers to the border radius set in the theme section of the app settings. To access its value, you can use the following code snippet:
 
 ```js
-{{ '{{appsmith.theme.borderRadius.appBorderRadius}}' }}
+{{ '{{ '{{ '{{appsmith.theme.borderRadius.appBorderRadius}}' }}
 ```
 </dd>
 
@@ -439,7 +439,7 @@ This object allows you to add a shadow effect to the widgets in your application
 It refers to the box shadow set in the theme section of the app settings. You can access the value of `appBoxShadow` using the following snippet: 
 
 ```js
-{{ '{{appsmith.theme.boxShadow.appBoxShadow}}' }}
+{{ '{{ '{{ '{{appsmith.theme.boxShadow.appBoxShadow}}' }}
 ```
 
 </dd>
@@ -456,7 +456,7 @@ This object contains the font properties of your application.
 It refers to the font family set for the app in the theme section for app settings. You can access the value of `appFont` using the following snippet: 
 
 ```js
-{{ '{{appsmith.theme.fontFamily.appFont}}' }}
+{{ '{{ '{{ '{{appsmith.theme.fontFamily.appFont}}' }}
 ```
 
 </dd>

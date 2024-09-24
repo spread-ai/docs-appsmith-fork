@@ -41,13 +41,13 @@ Specify data as an array of objects to display options in the widget. For exampl
 You can dynamically generate options by fetching data from queries or JS functions and binding the response to the **Source Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Source Data** property, like:
 
 ```js
-{{ '{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{ '{{ '{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -64,7 +64,7 @@ Defines the key from the **Source Data** property that specifies the labels for 
 *Example:* If you prefer the label to be displayed in lowercase, you can achieve this using the following code snippet:
 
 ```js
-{{ '{{ item.name.toLowerCase() }}' }}
+{{ '{{ '{{ '{{ item.name.toLowerCase() }}' }}
 ```
 `item.name` represents the Source Data's property containing the label, and the `toLowerCase()` function is applied to convert the label to lowercase.
 
@@ -198,7 +198,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the MultiSelect widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -211,7 +211,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Multi+-select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -336,7 +336,7 @@ Returns the text entered in the search filter of the MultiSelect widget. For mor
 *Example:*
 
 ```js
-{{ '{{MultiSelect1.filterText}}' }}
+{{ '{{ '{{ '{{MultiSelect1.filterText}}' }}
 ```
 
 </dd>
@@ -350,7 +350,7 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 *Example:*
 
 ```js
-{{ '{{MultiSelect1.isDisabled}}' }}
+{{ '{{ '{{ '{{MultiSelect1.isDisabled}}' }}
 ```
 
 </dd>
@@ -363,7 +363,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{MultiSelect1.isVisible}}' }}
+{{ '{{ '{{ '{{MultiSelect1.isVisible}}' }}
 ```
 
 </dd>
@@ -377,7 +377,7 @@ This property is a boolean value that indicates whether the user has interacted 
 *Example:*
 
 ```js
-{{ '{{MultiSelect1.isDirty}}' }}
+{{ '{{ '{{ '{{MultiSelect1.isDirty}}' }}
 ```
 
 </dd>
@@ -391,7 +391,7 @@ Returns an array of objects that contain the label and value of the options in t
 *Example:*
 
 ```js
-{{ '{{MultiSelect1.options}}' }}
+{{ '{{ '{{ '{{MultiSelect1.options}}' }}
 ```
 
 </dd>
@@ -405,7 +405,7 @@ Returns the value of the option displayed in the MultiSelect widget. It changes 
 *Example:*
 
 ```js
-{{ '{{MultiSelect1.selectedOptionValues}}' }}
+{{ '{{ '{{ '{{MultiSelect1.selectedOptionValues}}' }}
 ```
 
 </dd>
@@ -419,7 +419,7 @@ Returns the label of the option displayed in the MultiSelect widget. It changes 
 *Example:*
 
 ```js
-{{ '{{MultiSelect1.selectedOptionLabels}}' }}
+{{ '{{ '{{ '{{MultiSelect1.selectedOptionLabels}}' }}
 ```
 
 </dd>

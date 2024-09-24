@@ -5,8 +5,8 @@ description: This page shows you how to build a custom navigation bar.
 # Create Custom Navigation Bar
 You can customize and group menu options with a custom navigation bar. This page shows you steps to create a custom navigation bar.
 
-<div style={{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
-  <iframe src="https://demo.arcade.software/suRpjEoLqqohjO3q24ug?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
+<div style={{ '{{ '{{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
+  <iframe src="https://demo.arcade.software/suRpjEoLqqohjO3q24ug?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ '{{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
   </iframe>
 </div>
 

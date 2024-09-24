@@ -163,7 +163,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -176,7 +176,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -332,7 +332,7 @@ The `countryCode` property stores the country code associated with the selected 
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.countryCode}}' }}
+{{ '{{ '{{ '{{PhoneInput1.countryCode}}' }}
 ```
 
 </dd>
@@ -345,7 +345,7 @@ The `dialCode` property retrieves the dialing code of the selected country.
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.dialCode}}' }}
+{{ '{{ '{{ '{{PhoneInput1.dialCode}}' }}
 ```
 
 </dd>
@@ -359,7 +359,7 @@ The `text` property retrieves the formatted input value of the widget.
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.text}}' }}
+{{ '{{ '{{ '{{PhoneInput1.text}}' }}
 ```
 
 </dd>
@@ -372,7 +372,7 @@ The `value` property retrieves the unformatted phone number, regardless of wheth
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.value}}' }}
+{{ '{{ '{{ '{{PhoneInput1.value}}' }}
 ```
 
 </dd>
@@ -385,7 +385,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.isValid}}' }}
+{{ '{{ '{{ '{{PhoneInput1.isValid}}' }}
 ```
 
 </dd>
@@ -398,7 +398,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.isDisabled}}' }}
+{{ '{{ '{{ '{{PhoneInput1.isDisabled}}' }}
 ```
 
 </dd>
@@ -412,7 +412,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{PhoneInput1.isVisible}}' }}
+{{ '{{ '{{ '{{PhoneInput1.isVisible}}' }}
 ```
 
 </dd>

@@ -95,7 +95,7 @@ Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{ '{{Modal1.isVisible}}' }}
+{{ '{{ '{{ '{{Modal1.isVisible}}' }}
 ```
 
 </dd>
@@ -108,7 +108,7 @@ Reflects the widget name of the modal.
 
 *Example:*
 ```js
-{{ '{{Modal1.name}}' }}
+{{ '{{ '{{ '{{Modal1.name}}' }}
 ```
 
 </dd>
@@ -123,7 +123,7 @@ The Modal widget can be used to view and edit data in a table. By displaying the
 2. Display the data by binding the query response to the **Table Data** property of the Table widget `tblUserData`, as shown below:
 
 ```js
-{{ '{{fetchUserData.data}}' }}
+{{ '{{ '{{ '{{fetchUserData.data}}' }}
 ```
 
 3.  Set Table's `onRowSelected` event to open a Modal widget, you can create a new Modal widget or select an existing one
@@ -138,8 +138,8 @@ Modal widget remains hidden on the canvas and becomes visible only when an event
 
 ```sql
 UPDATE users
-SET email = {{ '{{JSONForm.formData.email}}' }}, dob = {{ '{{JSONForm.formData.dob}}' }}
-WHERE id = {{ '{{tblUserData.selectedRow.id}}' }};
+SET email = {{ '{{ '{{ '{{JSONForm.formData.email}}' }}, dob = {{ '{{ '{{ '{{JSONForm.formData.dob}}' }}
+WHERE id = {{ '{{ '{{ '{{tblUserData.selectedRow.id}}' }};
 ```
 
 6. Set the JSON form's `onSubmit` event to run the `updateuserdata` query, which updates the `dob` and `email` fields of a specific user in the users' table based on the provided user ID.

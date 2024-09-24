@@ -21,7 +21,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects _Yes_ from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -109,10 +109,10 @@ The `data` property contains the data of the widgets embedded in the form.
 *Example:*
 ```js
 //Access all data
-{{ '{{Form1.data}}' }}
+{{ '{{ '{{ '{{Form1.data}}' }}
 
 //Access data from a Specific Widget
-{{ '{{Form1.data.<widget_name>}}' }}
+{{ '{{ '{{ '{{Form1.data.<widget_name>}}' }}
 ```
 
 For instance, if you have a Select widget `OrderStatus` inside Form, its value can be accessed as shown:
@@ -126,7 +126,7 @@ For instance, if you have a Select widget `OrderStatus` inside Form, its value c
 ```
 ```js
 //Access the widget values
-{{ '{{Form1.data.OrderStatus}}' }}
+{{ '{{ '{{ '{{Form1.data.OrderStatus}}' }}
 ```
 
 
@@ -140,7 +140,7 @@ The `hasChanges` property indicates whether the user has made any modifications 
 
 *Example:*
 ```js
-{{ '{{Form1.hasChanges}}' }}
+{{ '{{ '{{ '{{Form1.hasChanges}}' }}
 ```
 </dd>
 
@@ -152,7 +152,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Form1.isVisible}}' }}
+{{ '{{ '{{ '{{Form1.isVisible}}' }}
 ```
 </dd>
 

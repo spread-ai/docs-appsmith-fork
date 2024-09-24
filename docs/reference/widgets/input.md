@@ -186,7 +186,7 @@ For instance, you can use this property to validate a Create Password field, mak
 _Example:_
 
 ```js
-{{ '{{
+{{ '{{ '{{ '{{
   !["password", "123", "admin"].some(subStr => {
     return Input1.text.toLowerCase().includes(subStr)
   })
@@ -206,11 +206,11 @@ Allows customization of the error message displayed when the user enters an inco
 
 ```js
 //Valid property
-{{ '{{Input1.text.length > 10 && /\d/.test(Input1.text) ? true : false}}' }}
+{{ '{{ '{{ '{{Input1.text.length > 10 && /\d/.test(Input1.text) ? true : false}}' }}
 
 
 //Error message property
-{{ '{{Input1.text.length > 10 || !/\d/.test(Input1.text) ? "Error: Length should be at least 10 characters and contain at least one digit" : ""}}' }}
+{{ '{{ '{{ '{{Input1.text.length > 10 || !/\d/.test(Input1.text) ? "Error: Length should be at least 10 characters and contain at least one digit" : ""}}' }}
 ```
 
 This code checks the length of Input is exactly 10 characters and if it contains at least one digit. If not, it returns the error message
@@ -262,7 +262,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -277,7 +277,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 
@@ -447,7 +447,7 @@ The `text` property retrieves the input value of the widget.
 
 *Example:*
 ```js
-{{ '{{Input1.text}}' }}
+{{ '{{ '{{ '{{Input1.text}}' }}
 ```
 
 </dd>
@@ -461,7 +461,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 *Example:*
 ```js
-{{ '{{Input1.isValid}}' }}
+{{ '{{ '{{ '{{Input1.isValid}}' }}
 ```
 
 </dd>
@@ -474,7 +474,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 *Example:*
 ```js
-{{ '{{Input1.isDisabled}}' }}
+{{ '{{ '{{ '{{Input1.isDisabled}}' }}
 ```
 
 </dd>
@@ -488,7 +488,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Input1.isVisible}}' }}
+{{ '{{ '{{ '{{Input1.isVisible}}' }}
 ```
 
 </dd>

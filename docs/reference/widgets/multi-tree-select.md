@@ -75,14 +75,14 @@ ORDER BY label;
 In the **Options** property, display the data using:
 
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
 
 *Example:*
 ```js
-{{ '{{ fetchData.data.reduce((acc, cur) => {
+{{ '{{ '{{ '{{ fetchData.data.reduce((acc, cur) => {
   const group = acc.find(item => item.value === cur.type);
   group ? group.children.push({ label: cur.name, value: cur.name }) : acc.push({ label: cur.type, value: cur.type, children: [{ label: cur.name, value: cur.name }] });
   return acc;
@@ -215,7 +215,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 </dd>
@@ -228,7 +228,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
 </dd>
@@ -372,7 +372,7 @@ The `options` property contains the values available for selection in a Multi Tr
 *Example:*
 
 ```js
-{{ '{{MultiTreeSelect1.options}}' }}
+{{ '{{ '{{ '{{MultiTreeSelect1.options}}' }}
 ```
 
 
@@ -386,7 +386,7 @@ The `selectedOptionLabels` property represents an array of labels for the select
 *Example:*
 
 ```js
-{{ '{{MultiTreeSelect1.selectedOptionLabels}}' }}
+{{ '{{ '{{ '{{MultiTreeSelect1.selectedOptionLabels}}' }}
 ```
 
 
@@ -401,7 +401,7 @@ The `selectedOptionValues` property represents an array of values for the select
 *Example:*
 
 ```js
-{{ '{{MultiTreeSelect1.selectedOptionValues}}' }}
+{{ '{{ '{{ '{{MultiTreeSelect1.selectedOptionValues}}' }}
 ```
 
 
@@ -416,7 +416,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 *Example:*
 
 ```js
-{{ '{{MultiTreeSelect1.isDisabled}}' }}
+{{ '{{ '{{ '{{MultiTreeSelect1.isDisabled}}' }}
 ```
 
 
@@ -430,7 +430,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 *Example:*
 
 ```js
-{{ '{{MultiTreeSelect1.isVisible}}' }}
+{{ '{{ '{{ '{{MultiTreeSelect1.isVisible}}' }}
 ```
 
 
@@ -445,7 +445,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 *Example:*
 
 ```js
-{{ '{{MultiTreeSelect1.isValid}}' }}
+{{ '{{ '{{ '{{MultiTreeSelect1.isValid}}' }}
 ```
 
 

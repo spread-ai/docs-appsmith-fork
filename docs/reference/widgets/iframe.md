@@ -36,7 +36,7 @@ Allows you to specify the URL of the page or application you want to display wit
 
 Allows you to embed HTML and CSS within `<style>` tags to render in the Iframe. When this property has a value, it overrides the URL property.
 
-In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ '{{ }}' }}`.
+In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ '{{ '{{ '{{ }}' }}`.
 
 
 **Example**: suppose you want to create a simple time-picker: 
@@ -221,7 +221,7 @@ Indicates the visibility state of a widget, with `true` indicating it is visible
 
 *Example:*
 ```js
-{{ '{{Iframe1.isVisible}}' }}
+{{ '{{ '{{ '{{Iframe1.isVisible}}' }}
 ```
 
 </dd>
@@ -234,7 +234,7 @@ Contains the URL of the embedded page. Doesn't reflect the content set in the **
 
 *Example:*
 ```js
-{{ '{{Iframe1.source}}' }}
+{{ '{{ '{{ '{{Iframe1.source}}' }}
 ```
 
 
@@ -248,7 +248,7 @@ Contains the title of the Iframe as set in the widget's **Title** property.
 
 *Example:*
 ```js
-{{ '{{Iframe1.title}}' }}
+{{ '{{ '{{ '{{Iframe1.title}}' }}
 ```
 
 
@@ -263,7 +263,7 @@ The `message` property contains a message received from the embedded page via th
 
 *Example:*
 ```js
-{{ '{{Iframe1.message}}' }}
+{{ '{{ '{{ '{{Iframe1.message}}' }}
 ```
 
 </dd>
@@ -277,7 +277,7 @@ The `messageMetadata` property contains metadata related to the message received
 
 *Example:*
 ```js
-{{ '{{Iframe1.messageMetadata}}' }}
+{{ '{{ '{{ '{{Iframe1.messageMetadata}}' }}
 ```
 </dd>
 

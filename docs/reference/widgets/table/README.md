@@ -54,13 +54,13 @@ You can **dynamically generate** a table by fetching data from queries or JavaSc
 
 *Example:*
 ```js
-{{ '{{fetchData.data}}' }}
+{{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the Table widget, like:
 
 *Example:*
 ```js
-{{ '{{fetchData.data.users.map((user) => {
+{{ '{{ '{{ '{{fetchData.data.users.map((user) => {
   return {
     name: user.name,
     email: user.email
@@ -146,7 +146,7 @@ For instance, you can create a Count query to retrieve the total number of recor
 
 *Example:*
 ```js
-{{ '{{Total_record_query.data[0].count}}' }}
+{{ '{{ '{{ '{{Total_record_query.data[0].count}}' }}
 ```
 
 </dd>
@@ -224,7 +224,7 @@ Sets which rows are selected in the table by default. When **Enable multi-row se
 
  
 
-Enables the selection of multiple rows in a table simultaneously. When enabled, the selected rows can be accessed through the `{{ '{{Table1.selectedRows}}' }}` reference property.
+Enables the selection of multiple rows in a table simultaneously. When enabled, the selected rows can be accessed through the `{{ '{{ '{{ '{{Table1.selectedRows}}' }}` reference property.
 
 </dd>
 
@@ -299,7 +299,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -409,7 +409,7 @@ Sets the background color of the table cells. Additionally, the cell color can b
 For example, lets say you have a column named `status` that reflects `approved` and `pending` values. You can set the color for these values using the following expression in the **Cell Background** property:
 
 ```js
-{{ '{{currentRow.status === "approved" ? "#22c55e" : "#facc15"}}' }}
+{{ '{{ '{{ '{{currentRow.status === "approved" ? "#22c55e" : "#facc15"}}' }}
 ```
 
 If you want to keep the same background color for an entire row, you can use the same custom style expression in each column **Cell Background** property.
@@ -503,10 +503,10 @@ Contains the data of the row selected by the user. It's an empty object if no ro
 *Example*:
 ```js
 //To access the entire selected row:
-{{ '{{Table1.selectedRow}}' }}
+{{ '{{ '{{ '{{Table1.selectedRow}}' }}
 
 //To access a specific cell value, such as the email field:
-{{ '{{Table1.selectedRow.email}}' }}
+{{ '{{ '{{ '{{Table1.selectedRow.email}}' }}
 ```
 </dd>
 
@@ -520,10 +520,10 @@ Contains an array of rows selected by the user when multi-select is enabled. It'
 
 ```js
 //To access the array of selected rows:
-{{ '{{Table1.selectedRows}}' }}
+{{ '{{ '{{ '{{Table1.selectedRows}}' }}
 
 //To access a specific cell value in the selected rows, such as the email field of the first selected row:
-{{ '{{Table1.selectedRows[0].email}}' }}
+{{ '{{ '{{ '{{Table1.selectedRows[0].email}}' }}
 ```
 
 </dd>
@@ -538,10 +538,10 @@ When a user interacts with an actionable item *(like a button)* in a row, `trigg
 
 ```js
 //To access the entire triggered row:
-{{ '{{Table1.triggeredRow}}' }}
+{{ '{{ '{{ '{{Table1.triggeredRow}}' }}
 
 //To access a specific cell value, such as the email field:
-{{ '{{Table1.triggeredRow.email}}' }}
+{{ '{{ '{{ '{{Table1.triggeredRow.email}}' }}
 ```
 
 
@@ -558,7 +558,7 @@ Reflects whether the widget is visible or not.
 
 *Example:*
 ```js
-{{ '{{Table1.isVisible}}' }}
+{{ '{{ '{{ '{{Table1.isVisible}}' }}
 ```
 
 </dd>
@@ -573,7 +573,7 @@ Reflects the current column sort criteria. For example, if table rows are being 
 
 *Example:*
 ```js
-{{ '{{Table1.sortOrder}}' }}
+{{ '{{ '{{ '{{Table1.sortOrder}}' }}
 ```
 
 </dd>
@@ -586,7 +586,7 @@ Contains all the table data in JSON format.
 
 *Example:*
 ```js
-{{ '{{Table1.tableData}}' }}
+{{ '{{ '{{ '{{Table1.tableData}}' }}
 ```
 
 </dd>
@@ -599,7 +599,7 @@ Contains the index of the row selected by the user. Not applicable when multiple
 
 *Example:*
 ```js
-{{ '{{Table1.selectedRowIndex}}' }}
+{{ '{{ '{{ '{{Table1.selectedRowIndex}}' }}
 ```
 
 </dd>
@@ -612,7 +612,7 @@ Contains an array of the index of the rows selected by the user. Not applicable 
 
 *Example:*
 ```js
-{{ '{{Table1.selectedRowIndices}}' }}
+{{ '{{ '{{ '{{Table1.selectedRowIndices}}' }}
 ```
 
 </dd>
@@ -625,7 +625,7 @@ Contains the data of the rows left after applying any selected filters, sort rul
 
 *Example:*
 ```js
-{{ '{{Table1.filteredTableData}}' }}
+{{ '{{ '{{ '{{Table1.filteredTableData}}' }}
 ```
 
 </dd>
@@ -638,7 +638,7 @@ Contains the current page number that the user is on. APIs can use it for pagina
 
 *Example:*
 ```js
-{{ '{{Table1.pageNo}}' }}
+{{ '{{ '{{ '{{Table1.pageNo}}' }}
 ```
 
 </dd>
@@ -651,7 +651,7 @@ Contains a calculated value to represent how many records to skip when using Ser
 
 *Example:*
 ```js
-{{ '{{Table1.pageOffset}}' }}
+{{ '{{ '{{ '{{Table1.pageOffset}}' }}
 ```
 
 </dd>
@@ -664,7 +664,7 @@ Contains the number of rows that can fit inside a page of the table. Changes alo
 
 *Example:*
 ```js
-{{ '{{Table1.pageSize}}' }}
+{{ '{{ '{{ '{{Table1.pageSize}}' }}
 ```
 
 </dd>
@@ -677,7 +677,7 @@ Contains the search text entered by the user in the Table.
 
 *Example:*
 ```js
-{{ '{{Table1.searchText}}' }}
+{{ '{{ '{{ '{{Table1.searchText}}' }}
 ```
 
 </dd>
@@ -690,7 +690,7 @@ Indicates whether a new row is currently being added to the table.
 
 *Example:*
 ```js
-{{ '{{Table1.isAddRowInProgress}}' }}
+{{ '{{ '{{ '{{Table1.isAddRowInProgress}}' }}
 ```
 
 </dd>
@@ -704,7 +704,7 @@ Contains data related to the newly added row.
 
 *Example:*
 ```js
-{{ '{{Table1.newRow}}' }}
+{{ '{{ '{{ '{{Table1.newRow}}' }}
 ```
 </dd>
 
@@ -716,7 +716,7 @@ Indicates whether the next page of data has been visited by the user.
 
 *Example:*
 ```js
-{{ '{{Table1.nextPageVisited}}' }}
+{{ '{{ '{{ '{{Table1.nextPageVisited}}' }}
 ```
 
 </dd>
@@ -730,7 +730,7 @@ Indicates whether the previous page of data has been visited by the user.
 
 *Example:*
 ```js
-{{ '{{Table1.previousPageVisited}}' }}
+{{ '{{ '{{ '{{Table1.previousPageVisited}}' }}
 ```
 
 </dd>
@@ -745,7 +745,7 @@ Indicates whether the table headers are visible.
 
 *Example:*
 ```js
-{{ '{{Table1.tableHeaders}}' }}
+{{ '{{ '{{ '{{Table1.tableHeaders}}' }}
 ```
 </dd>
 
@@ -759,7 +759,7 @@ Indicates the number of pages in server-side pagination.
 
 
 ```js
-{{ '{{Table1.totalRecordsCount}}' }}
+{{ '{{ '{{ '{{Table1.totalRecordsCount}}' }}
 ```
 </dd>
 
@@ -771,7 +771,7 @@ Contains data related to the recently updated added row.
 
 *Example:*
 ```js
-{{ '{{Table1.updatedRow}}' }}
+{{ '{{ '{{ '{{Table1.updatedRow}}' }}
 ```
 </dd>
 
@@ -783,7 +783,7 @@ Contains data related to updated rows.
 
 *Example:*
 ```js
-{{ '{{Table1.updatedRows}}' }}
+{{ '{{ '{{ '{{Table1.updatedRows}}' }}
 ```
 </dd>
 
@@ -795,7 +795,7 @@ An index property that indicates the row index of the table that has been trigge
 
 *Example:*
 ```js
-{{ '{{Table1.triggeredRowIndex}}' }}
+{{ '{{ '{{ '{{Table1.triggeredRowIndex}}' }}
 ```
 </dd>
 
@@ -809,7 +809,7 @@ Refers to an array of indices corresponding to the rows that have been updated.
 
 
 ```js
-{{ '{{Table1.updatedRowIndices}}' }}
+{{ '{{ '{{ '{{Table1.updatedRowIndices}}' }}
 ```
 </dd>
 
@@ -876,7 +876,7 @@ This method allows you to programmatically select multiple rows in the Table. It
 *Example*:
 
 ```js
-{{ '{{Table1.setSelectedRowIndices([1,2,5,8])}}' }}
+{{ '{{ '{{ '{{Table1.setSelectedRowIndices([1,2,5,8])}}' }}
 ```
 
 </dd>

@@ -16,7 +16,7 @@ Polling is a communication technique used to retrieve real-time data by periodic
 *Example:* To display real-time delivery status updates from a query, add the following code into the **Table data** property.
 
 ```js
-{{ '{{delivery_data.data}}' }}
+{{ '{{ '{{ '{{delivery_data.data}}' }}
 ```
 </dd>
 

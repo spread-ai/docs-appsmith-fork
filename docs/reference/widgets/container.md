@@ -22,7 +22,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Container widget:
 
 ```js
-{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 </dd>
@@ -107,7 +107,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{Container1.isVisible}}' }}
+{{ '{{ '{{ '{{Container1.isVisible}}' }}
 ```
 
 </dd>
@@ -121,7 +121,7 @@ Represents the widget's **Background Color** setting as a [CSS color](https://de
 *Example:*
 
 ```js
-{{ '{{Container1.backgroundColor}}' }}
+{{ '{{ '{{ '{{Container1.backgroundColor}}' }}
 ```
 
 </dd>

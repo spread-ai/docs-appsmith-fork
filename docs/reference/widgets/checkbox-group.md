@@ -42,7 +42,7 @@ Ensure that the values assigned to each option are unique. Additionally, you can
 
 
 ```js
-{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{ '{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 

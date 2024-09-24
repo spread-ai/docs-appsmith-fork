@@ -38,7 +38,7 @@ You can also dynamically display data by using JavaScript. For instance, you can
 *Example*:
 
 ```js
-{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{ '{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 </dd>
 
@@ -238,7 +238,7 @@ The `options` property is an array that contains the values of all the available
 
 *Example:*
 ```js
-{{ '{{RadioGroup1.options}}' }}
+{{ '{{ '{{ '{{RadioGroup1.options}}' }}
 ```
 </dd>
 
@@ -250,7 +250,7 @@ The `selectedValues` property holds an array of values that represents the optio
 
 *Example:*
 ```js
-{{ '{{RadioGroup1.selectedOptionValue}}' }}
+{{ '{{ '{{ '{{RadioGroup1.selectedOptionValue}}' }}
 ```
 
 </dd>
@@ -263,7 +263,7 @@ This property indicates whether the widget is required or not.
 
 *Example:*
 ```js
-{{ '{{RadioGroup1.isRequired}}' }}
+{{ '{{ '{{ '{{RadioGroup1.isRequired}}' }}
 ```
 
 </dd>
@@ -275,7 +275,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 *Example:*
 ```js
-{{ '{{RadioGroup1.isVisible}}' }}
+{{ '{{ '{{ '{{RadioGroup1.isVisible}}' }}
 ```
 
 </dd>
