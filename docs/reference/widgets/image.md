@@ -27,7 +27,7 @@ data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height=
 
 You can also display images that dynamically change based on user input or other components, such as widgets or queries.
 
-*Example:* Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{ '{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
+For example, Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{ '{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
 
 <ZoomImage src="/img/imagetable.gif" alt="Display images on table row selection" caption="Display images on table row selection" />
 
@@ -37,7 +37,7 @@ If you are fetching an image from the [Amazon S3](/connect-data/reference/queryi
 {{ '{{ '{{ '{{list_files.data[0].signedUrl}}' }}
 ```
 
-</dd>
+
 
 #### Default image `string`
 
@@ -45,7 +45,7 @@ If you are fetching an image from the [Amazon S3](/connect-data/reference/queryi
 
 Sets a default image that would be displayed if no image is rendered via the **Image** property. Accepts an image URL, data URI, or base64 encoded image data.
 
-</dd>
+
 
 ### General
 
@@ -63,7 +63,7 @@ Sets how the image should be resized to fit its container.
 
 With **JS** enabled, accepts string values `auto`, `cover`, or `contain`. See CSS [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) for reference on these behaviors.
 
-</dd>
+
 
 #### Max zoom level `number`
 
@@ -71,7 +71,7 @@ With **JS** enabled, accepts string values `auto`, `cover`, or `contain`. See CS
 
 Sets the maximum allowable zoom level for the image view. Th available options are **2x**, **4x**, **8x**, **16x**. With **JS** enabled, it accepts a number as the zoom level.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -85,7 +85,7 @@ For example,  if you want to make the widget visible only when the user checks a
 {{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -93,7 +93,7 @@ For example,  if you want to make the widget visible only when the user checks a
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Enable rotation `boolean`
 
@@ -101,7 +101,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Enables control over image rotation. When enabled, hover over the image and click the rotate icon.
 
-</dd>
+
 
 #### Enable download `boolean`
 
@@ -117,7 +117,7 @@ Alternatively, you can use the built-in [Download](/reference/appsmith-framework
 ```
 
 
-</dd>
+
 
 ### Events 
 
@@ -129,7 +129,7 @@ When the event is triggered, these event handlers can execute queries, JS code, 
 
 Triggers when the user clicks on the image.
 
-</dd>
+
 
 ## Style properties
 
@@ -143,7 +143,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -152,7 +152,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ## Reference properties
 
@@ -170,7 +170,7 @@ Contains the URL of the image source.
 {{ '{{ '{{ '{{Image1.image}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -183,7 +183,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{Image1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -204,7 +204,7 @@ Sets the visibility of the widget.
 Image1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setImage (param: string): Promise
@@ -219,4 +219,3 @@ Sets the `base64` encoded image in the Image widget.
 Image1.setImage('data:image/png;base64,iVBORw0KG...')
 ```
 
-</dd>

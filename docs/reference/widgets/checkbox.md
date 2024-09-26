@@ -15,7 +15,7 @@ These properties are customizable options present in the property pane of the wi
   
  Sets the label of the Checkbox. 
  
- </dd>
+ 
 
 #### Position `String`
  
@@ -24,13 +24,13 @@ These properties are customizable options present in the property pane of the wi
  * <b>Left</b> - Aligns the text to the left of the Checkbox.
  * <b>Right</b> - Aligns the text to the right of the Checkbox.
 
-</dd>
+
 
 #### Alignment `String`
 
  
 Alignment refers to how a label is positioned relative to a widget. By adjusting this property, you can control the visual alignment of the label within the widget's layout
-</dd>
+
 
 ### Validations
 
@@ -41,7 +41,7 @@ Alignment refers to how a label is positioned relative to a widget. By adjusting
 
 This validation feature allows you to designate the Checkbox as a mandatory field. For instance, when the Checkbox is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the checkbox is checked. 
 
-</dd>
+
 
 ### General
 
@@ -50,14 +50,14 @@ This validation feature allows you to designate the Checkbox as a mandatory fiel
  
 Determines the default state of the checkbox, whether it is checked or unchecked.
 
-</dd>
+
 
 #### Visible `Boolean`
  
 
 This property controls the visibility of the widget. If you turn off this property, the widget would not be visible in view mode. Additionally, you can use JavaScript by clicking on `JS` next to the **Visible** property to conditionally control the widget's visibility. 
 
-</dd>
+
 
 
 #### Disabled `Boolean`
@@ -65,7 +65,7 @@ This property controls the visibility of the widget. If you turn off this proper
  
 
 This property prevents users from selecting the Checkbox widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on `JS` next to the **Disabled** property to control the widget's disable state conditionally. 
-</dd>
+
 
 #### Animate Loading `Boolean`
 
@@ -73,7 +73,7 @@ This property prevents users from selecting the Checkbox widget. Even though the
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 #### Height `String`
 
@@ -85,7 +85,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height**: The widget's height adjusts dynamically in response to changes in its content.
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
-</dd>
+
 
 ### Events
 
@@ -103,7 +103,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 #### Font size `String`
 
@@ -111,12 +111,12 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `String`
  
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions
-</dd>
+
 
 #### Accent color `String`
 
@@ -124,7 +124,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Defines the accent color of the widget, which is used as the fill color for the checkbox when it is checked. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Border radius `String`
 
@@ -132,7 +132,7 @@ Defines the accent color of the widget, which is used as the fill color for the 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `Checkbox1.isVisible`.
@@ -142,20 +142,20 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `isChecked` property indicates whether the checkbox is currently checked or not. It is represented by a boolean value, where true signifies that the checkbox is checked, and false signifies that it is unchecked. 
 
-</dd>
+
 
 #### isDisabled `Boolean`
 
  
 
 The `isDisabled` property reflects the state of the widget's **Disabled** setting. It is represented by a boolean value, where true indicates that the widget is disabled, and false indicates that it is enabled for user interaction.
-</dd>
+
 
 #### isVisible `Boolean`
  
 
 The `isVisible` property reflects the state of the widget's **Visible** setting. It is represented by a boolean value, where true indicates that the widget is visible, and false indicates that it is hidden or not displayed on the page.
-</dd>
+
 
 
 ## Methods
@@ -178,7 +178,7 @@ Sets the visibility of the widget.
 Checkbox1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -193,7 +193,7 @@ Sets the disabled state of the widget.
 Checkbox1.setDisabled(false)
 ```
 
-</dd>
+
 
 #### setValue (param: boolean): Promise
 
@@ -207,7 +207,7 @@ Allows you to dynamically set the value of the Checkbox widget.
 Checkbox1.setValue(true)
 ```
 
-</dd>
+
 
 
 #### setRequired (param: boolean): Promise
@@ -221,4 +221,3 @@ Sets whether the widget is required or not.
 Checkbox1.setRequired(true)
 ```
 
-</dd>

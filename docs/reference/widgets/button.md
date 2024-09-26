@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 Sets the text that appears on the button.
 
-</dd>
+
 
 #### onClick
 
@@ -27,7 +27,7 @@ Sets the text that appears on the button.
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the button is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
-</dd>
+
 
 ### General
 
@@ -37,7 +37,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 Sets a tooltip that appears when the user hovers over the widget. It enables you to add hints or provide additional information for the button.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -50,7 +50,7 @@ For example, if you want to make the button visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -63,7 +63,7 @@ For example, if you want to allow only a specific user to click the button, you 
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -72,7 +72,7 @@ For example, if you want to allow only a specific user to click the button, you 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 ### Validation
 
@@ -82,7 +82,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Add a Google reCAPTCHA [site key](https://cloud.google.com/recaptcha-enterprise/docs/create-key) here to enable Google reCAPTCHA check to the button. The token is accessible from the API pane with the `recaptchaToken` key (see the [Google reCAPTCHA](https://www.google.com/recaptcha/about/) docs). Read more about using [Google reCAPTCHA Keys in Appsmith](/reference/widgets/button/google-recaptcha/).
 
-</dd>
+
 
 #### Google reCAPTCHA version
 
@@ -90,7 +90,7 @@ Add a Google reCAPTCHA [site key](https://cloud.google.com/recaptcha-enterprise/
 
 Sets the Google reCAPTCHA version to use for the button, either v2 or v3.
 
-</dd>
+
 
 ### Form settings
 
@@ -104,7 +104,7 @@ When this button property is turned on, the button remains disabled if the assoc
 
 For example, if you have a form with an Input widget whose **Required** property is turned on. If that input field hasn't been completed by the user, then the button won't be usable.
 
-</dd>
+
 
 #### Reset form on success
 
@@ -112,7 +112,7 @@ For example, if you have a form with an Input widget whose **Required** property
 
 When this button property is turned on, the button can be used to reset all fields present in the form's area to their default state. This is useful for clearing inputs after the form is submitted.
 
-</dd>
+
 
 ## Style properties
 
@@ -134,7 +134,7 @@ Specifies the style type of the button to indicate its significance.
 
 This property can be dynamically set using JavaScript by providing a string value of `PRIMARY`, `SECONDARY`, or `TERTIARY`.
 
-</dd>
+
 
 ### Icon
 
@@ -144,7 +144,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
-</dd>
+
 
 #### Position `string`
 
@@ -157,7 +157,7 @@ This property allows you to configure the **Icon**'s placement.
 * **Right**: Aligns the icon to the right side of the Label.
 
 
-</dd>
+
 
 #### Placement `string`
 
@@ -172,7 +172,7 @@ Determines the spacing between the **Icon** and the **Label**.
 
 This property can be dynamically set using JavaScript by providing a string value of `START`, `CENTER`, or `BETWEEN`.
 
-</dd>
+
 
 ### Color
 
@@ -182,7 +182,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -192,7 +192,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -202,7 +202,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 
@@ -220,7 +220,7 @@ Returns the value of the button's label property.
 ```js
 {{ '{{ '{{ '{{Button1.text}}' }}
 ```
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -233,7 +233,7 @@ Indicates the visibility state of a widget, with true indicating it is visible a
 {{ '{{ '{{ '{{Button1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### isDisabled `boolean`
 
@@ -246,7 +246,7 @@ It reflects the state of the widget's **Disabled** setting. It is represented by
 {{ '{{ '{{ '{{Button1.isDisabled}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -269,7 +269,7 @@ Button1..setVisibility(true)
 
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -285,7 +285,7 @@ Button1.setDisabled(false)
 
 ```
 
-</dd>
+
 
 #### setColor (param: string): Promise
 
@@ -299,7 +299,7 @@ Sets the background color of the button widget.
 Button1.setColor('#FF0000')
 ```
 
-</dd>
+
 
 #### setLabel (param: string): Promise
 
@@ -312,4 +312,3 @@ Sets the label of the button widget.
 ```js
 Button1.setLabel('Click me!')
 ```
-</dd>

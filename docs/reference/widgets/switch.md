@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
   
  Sets the label on the widget. 
  
- </dd>
+ 
 
 #### Position `string`
  
@@ -25,7 +25,7 @@ These properties are customizable options present in the property pane of the wi
  * <b>Left</b> - Aligns the text to the left of the Switch.
  * <b>Right</b> - Aligns the text to the right of the Switch.
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -33,7 +33,7 @@ These properties are customizable options present in the property pane of the wi
 
 Alignment refers to how a label is positioned relative to a widget. By adjusting this property, you can bring the label closer to the switch within the widget's layout.
 
-</dd>
+
 
 
 ### General
@@ -44,7 +44,7 @@ Alignment refers to how a label is positioned relative to a widget. By adjusting
 
 Determines whether the Switch is initially set to on or off.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -57,7 +57,7 @@ For example, if you want to make the widget visible only when the user selects Y
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -70,7 +70,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -78,7 +78,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 #### Height `string`
 
@@ -93,7 +93,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ### Events
 
@@ -111,7 +111,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -119,12 +119,12 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
  
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions
-</dd>
+
 
 #### Accent color `string`
 
@@ -132,7 +132,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 The accent color property specifies the color used to highlight the switch when it is turned on. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 
 
@@ -152,7 +152,7 @@ The `isSwitchedOn` property retrieves a boolean value that indicates whether the
 ```
 
 
-</dd>
+
 
 
 #### isDisabled `boolean`
@@ -168,7 +168,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 ```
 
 
-</dd>
+
 
 #### isVisible `boolean`
  
@@ -182,7 +182,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```
 
 
-</dd>
+
 
 ## Methods
 
@@ -203,7 +203,7 @@ Sets the visibility of the widget.
 Switch1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -220,7 +220,7 @@ Switch1.setDisabled(false)
 
 
 
-</dd>
+
 
 
 #### setRequired (param: boolean): Promise
@@ -235,7 +235,7 @@ Sets whether the widget is required or not.
 Switch1.setRequired(true)
 ```
 
-</dd>
+
 
 #### setValue (param: boolean): Promise
 
@@ -250,7 +250,7 @@ Switch1.setValue(true)
 ```
 
 
-</dd>
+
 
 
 #### setColor (param: string): Promise
@@ -266,4 +266,4 @@ Switch1.setColor('#FF0000')
 ```
 
 
-</dd>
+

@@ -25,7 +25,7 @@ Allows you to specify the URL of the page or application you want to display wit
 
 <ZoomImage src="/img/iframe-website.png" alt="Display external website" caption="Display external website" />
 
-</dd>
+
 
 
 
@@ -36,7 +36,7 @@ Allows you to specify the URL of the page or application you want to display wit
 
 Allows you to embed HTML and CSS within `<style>` tags to render in the Iframe. When this property has a value, it overrides the URL property.
 
-In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ '{{ '{{ '{{ }}' }}`.
+In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ '{{ }}' }}`.
 
 
 **Example**: suppose you want to create a simple time-picker: 
@@ -92,7 +92,7 @@ In addition to static HTML, you can display data generated dynamically from quer
 
 <ZoomImage src="/img/iframe-time-pick.png" alt="Custom Time-picker" caption="Custom Time-picker" />
 
-</dd>
+
 
 :::info
 * If the Iframe widget has a value in the **srcDoc** property, it overrides the **URL** property.
@@ -110,7 +110,7 @@ See how to [create custom widgets](/build-apps/how-to-guides/Create-Custom-Widge
 
 Set a title for the content displayed within the Iframe.
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -119,7 +119,7 @@ Set a title for the content displayed within the Iframe.
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 ### Events
 
@@ -133,7 +133,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 Specifies the action to be performed when the widget's **URL** property is changed.
 
-</dd>
+
 
 #### onSrcDocChanged
 
@@ -142,7 +142,7 @@ Specifies the action to be performed when the widget's **URL** property is chang
 Specifies the action to be performed when the **srcDoc** property of the widget is changed.
 
 
-</dd>
+
 
 #### onMessageReceived
 
@@ -150,7 +150,7 @@ Specifies the action to be performed when the **srcDoc** property of the widget 
 
 Specifies the action to be performed when a `postMessage` event is received from the embedded page.
 
-</dd>
+
 
 
 ## Style properties
@@ -165,7 +165,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Sets a color for the Iframe's border, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 
 ### Border and shadow
@@ -178,7 +178,7 @@ Sets a color for the Iframe's border, specified as a [CSS color value](https://d
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px). The default value is `1`.
 
-</dd>
+
 
 #### Border Opacity	`number`
 
@@ -187,7 +187,7 @@ Specifies the width of the widget's border, accepting only numerical values in p
 This property controls the opacity level of the widget's border. The maximum value is 100, which represents full opacity. Default value is `100`.
 
 
-</dd>
+
 
 
 #### Border radius `string`
@@ -196,7 +196,7 @@ This property controls the opacity level of the widget's border. The maximum val
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -206,7 +206,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 ## Reference properties
@@ -224,7 +224,7 @@ Indicates the visibility state of a widget, with `true` indicating it is visible
 {{ '{{ '{{ '{{Iframe1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### source `string`
 
@@ -238,7 +238,7 @@ Contains the URL of the embedded page. Doesn't reflect the content set in the **
 ```
 
 
-</dd>
+
 
 #### title `string`
 
@@ -252,7 +252,7 @@ Contains the title of the Iframe as set in the widget's **Title** property.
 ```
 
 
-</dd>
+
 
 #### message `string`
 
@@ -266,7 +266,7 @@ The `message` property contains a message received from the embedded page via th
 {{ '{{ '{{ '{{Iframe1.message}}' }}
 ```
 
-</dd>
+
 
 #### messageMetadata `string`
 
@@ -279,7 +279,7 @@ The `messageMetadata` property contains metadata related to the message received
 ```js
 {{ '{{ '{{ '{{Iframe1.messageMetadata}}' }}
 ```
-</dd>
+
 
 ## Methods
 
@@ -298,7 +298,7 @@ Sets the visibility of the widget.
 Iframe1.setVisibility(true)
 ```
 
-</dd>
+
 
 #### setURL (param: string): Promise
 
@@ -312,7 +312,7 @@ Iframe1.setURL('<https://example.com>')
 ```
 
 
-</dd>
+
 
 
 Learn how to [Communicate Between an App and Iframe](/build-apps/how-to-guides/Communicate-Between-an-App-and-Iframe)

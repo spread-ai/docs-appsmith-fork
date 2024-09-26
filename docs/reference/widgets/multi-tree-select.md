@@ -82,7 +82,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to **
 
 *Example:*
 ```js
-{{ '{{ '{{ '{{ fetchData.data.reduce((acc, cur) => {
+{{ '{{ fetchData.data.reduce((acc, cur) => {
   const group = acc.find(item => item.value === cur.type);
   group ? group.children.push({ label: cur.name, value: cur.name }) : acc.push({ label: cur.type, value: cur.type, children: [{ label: cur.name, value: cur.name }] });
   return acc;
@@ -91,7 +91,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to **
 
 <ZoomImage src="/img/multi-tree.png" alt="Transform data" caption="Transform data" />
 
-</dd>
+
 
 
 
@@ -112,7 +112,7 @@ For example, if you want the default selected values to be `CLOTHING` and `LAPTO
 ]
 ```
 
-</dd>
+
 
 ### Label
 
@@ -121,7 +121,7 @@ For example, if you want the default selected values to be `CLOTHING` and `LAPTO
 
  
 Sets the label on the widget.
-</dd>
+
 
 
 
@@ -141,7 +141,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -150,7 +150,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width `number`
 
@@ -159,7 +159,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
 
-</dd>
+
 
 ### Validations
 
@@ -171,7 +171,7 @@ This property is only available when you select **Left** from the Position prope
 
 When enabled, this property makes the MultiTreeSelect a mandatory field, When the MultiTreeSelect is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the MultiTreeSelect has some value selected.
 
-</dd>
+
 
 ### General
 
@@ -181,7 +181,7 @@ When enabled, this property makes the MultiTreeSelect a mandatory field, When th
 
 
 Enables you to add hints or provide additional information to guide the user regarding the selection.
-</dd>
+
 
 #### Mode `string`
 
@@ -197,7 +197,7 @@ Displays the item on the widget, there are three options:
 
 * **Display all items:** This option displays both the parent and the child items on the widget.
 
-</dd>
+
 
 #### Placeholder `string`
 
@@ -205,7 +205,7 @@ Displays the item on the widget, there are three options:
 
 Allows you to set the placeholder text displayed within the widget. This can be used to provide a hint or example value to the user, guiding them on the expected format or content of the input.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -218,7 +218,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -231,7 +231,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 
@@ -242,7 +242,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Allow clearing value `boolean`
 
@@ -251,7 +251,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 Enabling this option allows users to clear the selected value, whether it was the default selection or one they made themselves.
 
 
-</dd>
+
 
 #### Expand all by default `boolean`
 
@@ -259,7 +259,7 @@ Enabling this option allows users to clear the selected value, whether it was th
 
 When enabled, this feature displays the dropdown in an expanded state by default, revealing all the available child options.
 
-</dd>
+
 
 
 #### Height `string`
@@ -274,7 +274,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 
 ### Events
@@ -290,7 +290,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 Defines the actions to be executed when the user selects or deselects an option.
 
 
-</dd>
+
 
 #### onDropdownOpen
 
@@ -299,7 +299,7 @@ Defines the actions to be executed when the user selects or deselects an option.
 Defines the action to be performed when the user opens the dropdown.
 
 
-</dd>
+
 
 #### onDropdownClose
 
@@ -307,7 +307,7 @@ Defines the action to be performed when the user opens the dropdown.
 
 Defines the action to be performed when the user closes the dropdown.
 
-</dd>
+
 
 
 ## Style properties
@@ -321,7 +321,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -329,7 +329,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -337,7 +337,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -347,7 +347,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
 
@@ -355,7 +355,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 
 ## Reference properties
@@ -376,7 +376,7 @@ The `options` property contains the values available for selection in a Multi Tr
 ```
 
 
-</dd>
+
 
 #### selectedOptionLabels `array`
  
@@ -390,7 +390,7 @@ The `selectedOptionLabels` property represents an array of labels for the select
 ```
 
 
-</dd>
+
 
 #### selectedOptionValues `array`
  
@@ -405,7 +405,7 @@ The `selectedOptionValues` property represents an array of values for the select
 ```
 
 
-</dd>
+
 
 #### isDisabled `boolean`
 
@@ -420,7 +420,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 ```
 
 
-</dd>
+
 
 #### isVisible `boolean`
  
@@ -434,7 +434,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```
 
 
-</dd>
+
 
 #### isValid `boolean`
  
@@ -449,5 +449,5 @@ The `isValid` property indicates the validation status of a widget, providing in
 ```
 
 
-</dd>
+
 

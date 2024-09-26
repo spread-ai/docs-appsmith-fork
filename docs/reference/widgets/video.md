@@ -34,7 +34,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 {{ '{{ '{{ '{{Table1.selectedRow.videoURL}}' }}
 ```
 
-</dd>
+
 
 ### General
 
@@ -44,7 +44,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 
 Allows you to play the video automatically on page load, without requiring any action from the user. Default value is `false`.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -60,7 +60,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -70,7 +70,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 ### Events
 
@@ -82,14 +82,14 @@ When the event is triggered, these event handlers can execute queries, JS functi
  
 Specifies the action to be executed when the video starts playing.
 
-</dd>
+
 
 #### onPause
 
  
 Specifies the action to be performed when the video is paused.
 
-</dd>
+
 
 #### onEnd
 
@@ -97,7 +97,7 @@ Specifies the action to be performed when the video is paused.
 
 Specifies the action to be taken when the video playback is completed.
 
-</dd>
+
 
 ## Style properties
 
@@ -111,7 +111,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 
 ### Border and shadow
@@ -122,7 +122,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 
 Applies rounded corners to the outer edge of the widget. To control the border radius programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
 
@@ -130,7 +130,7 @@ Applies rounded corners to the outer edge of the widget. To control the border r
 
 This property adds a drop shadow effect to the frame of the widget. To control the Box Shadow programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ## Reference properties
 
@@ -147,7 +147,7 @@ Indicates the current state of the widget's **Auto Play** setting.
 {{ '{{ '{{ '{{Video1.autoPlay}}' }}
 ```
 
-</dd>
+
 
 #### playState `string`
 
@@ -165,7 +165,7 @@ Indicates the current state of the Video widget's playback. It is represented by
 {{ '{{ '{{ '{{Video1.playState}}' }}
 ```
 
-</dd>
+
 
 #### playing `boolean`
 
@@ -180,7 +180,7 @@ Indicates the current playing state of the widget. When the value is `true`, it 
 ```
 
 
-</dd>
+
 
 
 ## Methods
@@ -202,7 +202,7 @@ Sets the visibility of the widget.
 Video1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setURL (param: string): Promise
@@ -217,7 +217,7 @@ Sets the URL of the video to be displayed in the widget.
 Video1.setURL('<https://example.com/video.mp4>')
 ```
 
-</dd>
+
 
 
 #### setPlaying (param: boolean): Promise
@@ -231,4 +231,3 @@ Sets the playing state of the Video widget.
 Video1.setPlaying(true)
 ```
 
-</dd>

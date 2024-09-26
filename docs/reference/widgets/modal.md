@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 #### Quick Dismiss `boolean`
 
@@ -30,7 +30,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 Enables quick dismissal or closure of the Modal when the user taps outside the Modal.
 
-</dd>
+
 
 #### Height `string`
 
@@ -45,7 +45,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ### Events
 
@@ -56,7 +56,7 @@ This property determines how the widget's height adjusts to changes in its conte
 Specifies the action (Framework functions, queries, or JS functions) to be performed when the Modal is closed.
 
 
-</dd>
+
 
 ## Style properties
 
@@ -70,7 +70,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -80,7 +80,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 ## Reference properties
 
@@ -98,7 +98,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{Modal1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### name `string`
 
@@ -111,7 +111,7 @@ Reflects the widget name of the modal.
 {{ '{{ '{{ '{{Modal1.name}}' }}
 ```
 
-</dd>
+
 
 
 ## Update data with Modal

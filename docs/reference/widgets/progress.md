@@ -23,7 +23,7 @@ These properties are customizable options present in the property pane of the wi
 
 Enables the widget to enter an infinite loading state, which is beneficial when the progress values cannot be determined. For instance, this property can be enabled for queries that take a longer time to execute.
 
-</dd>
+
 
 #### Type `string`
 
@@ -36,7 +36,7 @@ Allows you to select the desired format for the progress bar.
 * Linear
 
 
-</dd>
+
 
 #### Progress `number`
 
@@ -44,7 +44,7 @@ Allows you to select the desired format for the progress bar.
 
 Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{ '{{ '{{ '{{}}' }}`.
 
-</dd>
+
 
 
 ### General
@@ -56,7 +56,7 @@ Specify the value of the progress indicator (in percentage). You can also use va
 Specify the number of steps to break down the progress bar into multiple parts with fixed progress percentages. This property only supports positive integers.
 
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -69,7 +69,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Show result `boolean`
 
@@ -78,7 +78,7 @@ For example, if you want to make the widget visible only when the user selects "
 Control the display of the evaluated percentage as a number along with the progress in the widget.
 
 
-</dd>
+
 
 #### Counterclockwise  `boolean`
 
@@ -87,7 +87,7 @@ Control the display of the evaluated percentage as a number along with the progr
 Specifies whether the circular progress bar should animate in a counterclockwise direction. This option is only available when the Circular progress **Type** is selected.
 
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -99,7 +99,7 @@ Style properties allow you to change the look and feel of the widget.
 Specify the color of the progress bar. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -118,7 +118,7 @@ Indicates the current progress of the progress bar as a percentage.
 ```
 
 
-</dd>
+
 
 #### isVisible `boolean`
  
@@ -132,7 +132,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```
 
 
-</dd>
+
 
 ## Methods
 
@@ -154,7 +154,7 @@ Sets the visibility of the widget.
 Progress1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setProgress (param: number): Promise
@@ -169,4 +169,3 @@ Sets the progress value of the Progress widget.
 Progress1.setProgress(50)
 ```
 
-</dd>

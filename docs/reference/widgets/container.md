@@ -25,7 +25,7 @@ For example, if you want to make the widget visible only when the user checks an
 {{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -33,7 +33,7 @@ For example, if you want to make the widget visible only when the user checks an
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Height `string`
 
@@ -45,7 +45,7 @@ This property determines how the widget's height adjusts to changes in its conte
 - **Auto Height:** The widget's height adjusts dynamically in response to changes in its content.
 - **Auto Height with limits:** Same as Auto height, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
-</dd>
+
 
 ## Style properties
 
@@ -59,7 +59,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Sets the background color of the widget. If JavaScript is enabled, you can specify a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value to adjust the background color.
 
-</dd>
+
 
 #### Border color `string`
 
@@ -67,7 +67,7 @@ Sets the background color of the widget. If JavaScript is enabled, you can speci
 
 Sets the border color of the widget. If JavaScript is enabled, you can specify a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value to adjust the border color.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -77,7 +77,7 @@ Sets the border color of the widget. If JavaScript is enabled, you can specify a
 
 Sets the width of the widget's border.
 
-</dd>
+
 
 #### Border radius `string`
 
@@ -85,7 +85,7 @@ Sets the width of the widget's border.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -93,7 +93,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ## Reference properties
 
@@ -110,7 +110,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{Container1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### backgroundColor `string`
 
@@ -124,7 +124,7 @@ Represents the widget's **Background Color** setting as a [CSS color](https://de
 {{ '{{ '{{ '{{Container1.backgroundColor}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -145,4 +145,3 @@ Sets the visibility of the widget.
 Container1.setVisibility(true)
 ```
 
-</dd>

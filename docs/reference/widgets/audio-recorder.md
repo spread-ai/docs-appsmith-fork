@@ -24,7 +24,7 @@ For example,  if you want to make the widget visible only when the user checks a
 ```js
 {{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -37,7 +37,7 @@ For example, if you want to allow only a specific user to interact with the Audi
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -45,7 +45,7 @@ For example, if you want to allow only a specific user to interact with the Audi
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 ### Events
 
@@ -55,7 +55,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the recording starts.
 
-</dd>
+
 
 #### onRecordingComplete
 
@@ -63,7 +63,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the recording ends.
 
-</dd>
+
 
 ## Style properties
 
@@ -77,7 +77,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Sets the color of the mic icon in the Audio Recorder. If JavaScript is enabled, you can specify valid CSS-syntax [`color` ](https://developer.mozilla.org/en-US/docs/Web/CSS/color) values to set the color of the icon.
 
-</dd>
+
 
 #### Button color `string`
 
@@ -85,7 +85,7 @@ Sets the color of the mic icon in the Audio Recorder. If JavaScript is enabled, 
 
 Sets the color of the widget's button. If JavaScript is enabled, you can specify valid CSS-syntax [`color` ](https://developer.mozilla.org/en-US/docs/Web/CSS/color) values to set the color of the button.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -95,7 +95,7 @@ Sets the color of the widget's button. If JavaScript is enabled, you can specify
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -104,7 +104,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ## Reference properties
 
@@ -122,7 +122,7 @@ Returns a binary URL that stores the audio for future use.
 {{ '{{ '{{ '{{AudioRecorder1.blobURL}}' }}
 ```
 
-</dd>
+
 
 #### dataURL `string`
 
@@ -135,7 +135,7 @@ Stores the recorded audio in Data URL format (Base64). You can use it to embed t
 {{ '{{ '{{ '{{AudioRecorder1.dataURL}}' }}
 ```
 
-</dd>
+
 
 #### rawBinary `string`
 
@@ -148,7 +148,7 @@ Returns the audio file in binary format, suitable for storing the audio for futu
 {{ '{{ '{{ '{{AudioRecorder1.rawBinary}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -161,7 +161,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{AudioRecorder1.isVisible}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -183,7 +183,7 @@ AudioRecorder1.setVisibility(true)
 ```
 
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -198,7 +198,7 @@ Sets the disabled state of the widget.
 AudioRecorder1.setDisabled(false)
 ```
 
-</dd>
+
 
 ## Upload audio to S3
 

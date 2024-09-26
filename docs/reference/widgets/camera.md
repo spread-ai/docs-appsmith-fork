@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 Toggles the camera between Image and Video mode.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -29,13 +29,13 @@ Toggles the camera between Image and Video mode.
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
-*Example:*  If you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Camera widget:
+For example,  If you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Camera widget:
 
 ```js
 {{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -48,7 +48,7 @@ For example, if you want to allow only a specific user to interact with the Came
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Mirrored `boolean`
 
@@ -56,7 +56,7 @@ For example, if you want to allow only a specific user to interact with the Came
 
 Enabling this property mirrors the camera preview and the resulting captured image or video. Additionally, you can use JavaScript by clicking on **JS** next to the `Mirrored` property to control the mirroring conditionally.
 
-</dd>
+
 
 ### Events 
 
@@ -68,7 +68,7 @@ When an event is triggered, these event handlers can execute queries, JS code, o
 
 Triggered when the user captures an image. This event is only available when the camera widget is in Image mode.
 
-</dd>
+
 
 #### onVideoSave
 
@@ -76,7 +76,7 @@ Triggered when the user captures an image. This event is only available when the
 
 Triggered when the user saves a video. This event is only available when the camera widget is in Video mode.
 
-</dd>
+
 
 ### Style properties
 
@@ -90,7 +90,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -99,7 +99,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ### Reference properties 
 
@@ -117,7 +117,7 @@ Returns a binary URL that stores the captured image for future use.
 {{ '{{ '{{ '{{Camera1.imageBlobURL}}' }}
 ```
 
-</dd>
+
 
 #### imageDataURL `string`
 
@@ -133,7 +133,7 @@ Stores the captured image in Data URL format (Base64). You can use it to embed t
 
 You can use this property to upload an image to Amazon S3. For more information, see [Upload Images to and from S3](/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images).
 
-</dd>
+
 
 #### imageRawBinary `string`
 
@@ -147,7 +147,7 @@ Returns the image file in binary format, suitable for storing the image for futu
 {{ '{{ '{{ '{{Camera1.imageRawBinary}}' }}
 ```
 
-</dd>
+
 
 #### videoBlobURL `string`
 
@@ -161,7 +161,7 @@ Returns a binary URL that stores the captured video for future use.
 {{ '{{ '{{ '{{Camera1.videoBlobURL}}' }}
 ```
 
-</dd>
+
 
 #### videoDataURL `string`
 
@@ -177,7 +177,7 @@ Stores the recorded video in Data URL format (Base64). You can use it to embed t
 
 You can use this property to upload a video to Amazon S3. For more information, see [Upload Images to and from S3](/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images)
 
-</dd>
+
 
 #### videoRawBinary `string`
 
@@ -191,7 +191,7 @@ Returns the video file in binary format, suitable for storing the video for futu
 {{ '{{ '{{ '{{Camera1.videoRawBinary}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -212,7 +212,7 @@ Sets the visibility of the widget.
 Camera1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -227,4 +227,3 @@ Sets the disabled state of the widget.
 Camera1.setDisabled(false)
 ```
 
-</dd>

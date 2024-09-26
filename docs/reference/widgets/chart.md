@@ -30,7 +30,7 @@ Allows you to choose from a variety of built-in chart types to visualize your da
 * Custom ECharts
 * Custom Fusion Chart
 
-</dd>
+
 
 #### Series title `string`
 
@@ -38,7 +38,7 @@ Allows you to choose from a variety of built-in chart types to visualize your da
 
 Sets the title of the current **Chart series**. This property is not available for Custom charts.
 
-</dd>
+
 
 #### Series color `string`
 
@@ -46,7 +46,7 @@ Sets the title of the current **Chart series**. This property is not available f
 
 Sets the color of the current **Chart series**. This property is not available for Custom charts.
 
-</dd>
+
 
 #### Series data `array<object>`
 
@@ -85,7 +85,7 @@ If the query fails and there is no default data specified, the chart doesn't ren
 :::
 
 
-</dd>
+
 
 #### Add Series `string`
 
@@ -95,7 +95,7 @@ Allows you to add multiple chart series. With this you can populate the chart wi
 
   <ZoomImage src="/img/bar-voter.png" alt="Bar voter image" caption="" />  
 
-</dd>
+
 
 ### Custom EChart Configuration
 
@@ -137,7 +137,7 @@ To display an ECharts in Appsmith, you can integrate it by embedding the ECharts
 
 See how to create a [Custom EChart](/build-apps/how-to-guides/create-custom-charts). 
 
-</dd>
+
 
 ### Custom Fusion Chart 
 
@@ -170,7 +170,7 @@ Each chart type has different configurations and options. To learn more about th
 
 
 
-</dd>
+
 
 
 ### General
@@ -183,7 +183,7 @@ Each chart type has different configurations and options. To learn more about th
 Sets the text that appears at the top of the chart as a title.
 
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -198,7 +198,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -208,7 +208,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 
 ### Axis
@@ -222,7 +222,7 @@ Determines the scaling behavior of the y-axis.
 * OFF: The y-axis begins at zero and spans to an upper limit based on the data points; 
 * ON: The y-axis starting and ending values are both determined based upon the data points.
 
-</dd>
+
 
 ### Events
 
@@ -232,7 +232,7 @@ Determines the scaling behavior of the y-axis.
 
 Specifies an [action](/reference/appsmith-framework/widget-actions) to be performed when a user clicks on a data point in the chart.
 
-</dd>
+
 
 ## Style properties
 
@@ -246,7 +246,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -256,7 +256,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 ## Reference properties
@@ -274,7 +274,7 @@ Contains the text of the x-axis Label setting of the chart.
 ```js
 {{Chart1.xAxisName}}
 ```
-</dd>
+
 
 
 #### yAxisName `string`
@@ -288,7 +288,7 @@ Contains the text of the y-axis Label setting of the chart.
 ```js
 {{Chart1.yAxisName}}
 ```
-</dd>
+
 
 #### chartData `array<object>`
 
@@ -301,7 +301,7 @@ Displays all the data related to the chart.
 ```js
 {{Chart1.chartData}}
 ```
-</dd>
+
 
 #### selectedDataPoint `object: x, y, seriesTitle`
 
@@ -321,7 +321,7 @@ Contains an object which represents the data point that the user has most recent
 //To access the value of the selected data point:
 {{Chart1.selectedDataPoint.y}}
 ```
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -334,7 +334,7 @@ Reflects whether the widget is visible or not.
 {{Chart1.isVisible}}
 ```
 
-</dd>
+
 
 ## See also
 - [Plot Chart With Filters](/build-apps/how-to-guides/Display-and-filter-chart-data)

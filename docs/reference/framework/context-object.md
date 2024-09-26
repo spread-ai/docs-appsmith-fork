@@ -1,264 +1,215 @@
 ---
-sidebar_position: 1
-description: >-
-  This is a context object that provides information around the current state of
-  the application
+title: Context object
+description: The Context object provides information about the current state of the application.
 ---
 
-# appsmith
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
 The `appsmith` object is a global object that provides access to information and functionalities within an application through objects and utility functions.
 
 ## Properties
 
-The Appsmith object contains the following properties:
+The `appsmith` object contains the following properties.
 
-### store `object`
-
- 
+### Store `object`
 
 This object lets you access any app-level data or temporary state that is stored on the user's browser. You can add or update data using the [storeValue()](/reference/appsmith-framework/widget-actions/store-value) method. You can access saved data by referencing their keys:
 
 ```javascript
-{{ '{{ '{{ '{{ appsmith.store.KEY_NAME }}' }}
+{{ '{{ appsmith.store.KEY_NAME }}' }}
 ```
 
-</dd>
-
-### URL `object`
-
- 
+### URL
 
 This object contains all the attributes of the current URL that the user is on. To access these values from the URL, you can use the following code snippet:
 
 ```javascript
-{{ '{{ '{{ '{{ appsmith.URL }}' }}
+{{ '{{ appsmith.URL }}' }}
 ```
-URL object has the following attributes:
+
+The URL object has the following attributes:
 
 #### host `string`
-
- 
 
 The host property of the URL is a string that consists of the hostname and the URL's port (if available). To access the host value, you can use the following code snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.host}}' }}
+{{ '{{appsmith.URL.host}}' }}
 ```
   
-</dd>
-
 #### hostname `string`
-
- 
 
 The hostname property of the URL is a string that represents the URL's domain. In simpler terms, hostname is the [host](/reference/appsmith-framework/context-object#host) name (without the port number). To access the hostname, you can use the following code snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.host}}' }}
+{{ '{{appsmith.URL.host}}' }}
 ```
 
-</dd>
-
 #### fullPath `string`
-
- 
 
 A full-path URL specifies the exact location of a resource, such as a page, app, file, or any other specific entity. A full-path URL includes the following components:
 
 * Protocol
 * Subdomain
 * Domain Name
-* Top Level Domain (TLD)
+* Top-Level Domain (TLD)
 * Path
 * Parameters
 
-You can access the fullPath using the following snippet:
+You can access the `fullPath` using the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.fullPath}}' }}
+{{ '{{appsmith.URL.fullPath}}' }}
 ```
 
-</dd>
-
 #### pathname `string`
-
- 
 
 The pathname is a string that represents the path component of the URL. It consists of a collection of path segments, with each segment prefixed by the `/` character. If the URL does not have any path segments, the value of the pathname property is an empty string. You can access the pathname using the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.pathname}}' }}
+{{ '{{appsmith.URL.pathname}}' }}
 ```
 
-</dd>
-
-
 #### port `string`
-
- 
 
 The URL's port property is a string containing the URL's port number. You can access the port using the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.port}}' }}
+{{ '{{appsmith.URL.port}}' }}
 ```
 
-</dd>
-
 #### protocol `string`
-
- 
 
 The protocol property of the URL is a string that represents the protocol scheme of the URL, including the `:`. The protocol identification and the resource name are separated by a colon and two forward slashes (`://`). To access the protocol value, use the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.protocol}}' }}
+{{ '{{appsmith.URL.protocol}}' }}
 ```
 
-</dd>
-
 #### hash `string`
-
- 
 
 The value of the `appsmith.URL.hash` property is a string that represents the fragment identifier of the URL, including the `#` character. The fragment identifier is the portion of the URL that appears after the hashtag symbol (#), which is the hash property of the URL interface.
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.hash}}' }}
+{{ '{{appsmith.URL.hash}}' }}
 ```
 
-</dd>
-
 #### queryParams `object`
-
- 
 
 The query parameters are a component of a URL that allows for passing data to a web server or application. In a URL, query parameters are appended at the end of the URL with a `?` as a separator. You can access the value of `queryParams` using the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.URL.queryParams}}' }}
+{{ '{{appsmith.URL.queryParams}}' }}
 ```
 
 The `queryParams` object can be used to [share data across pages](/advanced-concepts/sharing-data-across-pages#sharing-data-via-query-params).
 
-</dd>
-</dd>
-
 ### user `object`
-
- 
 
 This object contains the data of the currently authenticated user.
 
 ```javascript
 {
-  "email": string,
-  "username": string,
-  "name": string,
-  "useCase": string,
-  "enableTelemetry": boolean,
-  "roles": object,
-  "groups": object,
-  "accountNonExpired": boolean,
-  "accountNonLocked": boolean,
-  "credentialsNonExpired": boolean,
-  "emptyInstance": boolean,
-  "isAnonymous": boolean,
-  "isEnabled": boolean,
-  "isSuperUser": boolean,
-  "isConfigurable": boolean,
-  "adminSettingsVisible": boolean,
-  "isIntercomConsentGiven": boolean
+     "email": string,
+     "username": string,
+     "name": string,
+     "useCase": string,
+     "enableTelemetry": boolean,
+     "roles": object,
+     "groups": object,
+     "accountNonExpired": boolean,
+     "accountNonLocked": boolean,
+     "credentialsNonExpired": boolean,
+     "emptyInstance": boolean,
+     "isAnonymous": boolean,
+     "isEnabled": boolean,
+     "isSuperUser": boolean,
+     "isConfigurable": boolean,
+     "adminSettingsVisible": boolean,
+     "isIntercomConsentGiven": boolean
 }
 ```
 
 #### email `string`
+
 The `email` property of user contains the email address of the user.
 To access the email, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.email}}' }}
+
+```javascript
+{{ '{{appsmith.user.email}}' }}
 ```
 
 #### username `string`
+
 The `username` attribute represents the unique username associated with the user's account.
 To access the username, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.username}}' }}
+
+```javascript
+{{ '{{appsmith.user.username}}' }}
 ```
 
 #### name `string`
+
 The `name` attribute holds the full name of the user. To access the name, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.name}}' }}
+
+```javascript
+{{ '{{appsmith.user.name}}' }}
 ```
 
 #### useCase `string`
 
 This attribute describes the use case that the user has specified, giving insight into what they intend to achieve with Appsmith. To access the `useCase`, use the following code:
 
-```jsx
-{{ '{{ '{{ '{{appsmith.user.useCase}}' }}
+```javascript
+{{ '{{appsmith.user.useCase}}' }}
 ```
+
 #### enableTelemetry `boolean`
 
 This boolean flag indicates if the user has consented to send telemetry data to Appsmith. Telemetry data typically includes usage statistics and error reports that help improve the platform. To access the `enableTelemetry`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.enableTelemetry}}' }}
+
+```javascript
+{{ '{{appsmith.user.enableTelemetry}}' }}
 ```
 
-<div className="tag-wrapper">
 
-#### roles `object` 
-
-<Tags
-  tags={[
-    {
-      name: "Business",
-      link: "https://www.appsmith.com/pricing",
-      additionalClass: "business",
-    }
-  ]}
-/>
-
-</div>
-
-<!-- vale on -->
-
- 
+#### roles `object`
 
 This object contains an array of strings of the roles assigned to the currently authenticated user. You can access the value of roles using the snippet given below:
 
 ```js
 appsmith.user.roles
 ```
+
 It returns an array of all the roles in your instance. For example:
 
 ```javascript
-
 [
-  "Instance Administrator Role",
-  "Default Role For All Users",
-  "Administrator",
-  "Custom Role-1",
-  "Custom Role-2"
+     "Instance Administrator Role",
+     "Default Role For All Users",
+     "Administrator",
+     "Custom Role-1",
+     "Custom Role-2"
 ]
-
 ```
+
 You can use `appsmith.user.roles` object to [programmatically control the access](/advanced-concepts/granular-access-control) to your application entities.
 
-*Example:* consider a scenario where you are hiding a Button widget by adding the following code to the **Visible** property of the button -
+For example, consider a scenario where you are hiding a **Button** widget by adding the following code to the **Visible** property of the button:
 
 ```javascript
-{{ '{{ '{{ '{{appsmith.user.roles.includes("backend engineers")}}' }}
+{{ '{{appsmith.user.roles.includes("back-end engineers")}}' }}
 ```
-In the above example, the visibility of the button is determined by a role. Only users who have been assigned the "backend engineer" role can see this button.
 
-</dd>
+In the above example, the visibility of the button is determined by a role. Only users who have been assigned the "back-end engineer" role can see this button.
 
-<!-- vale off -->
 
-<div className="tag-wrapper">
+
+
 
 #### groups `object`
 
@@ -276,13 +227,12 @@ In the above example, the visibility of the button is determined by a role. Only
 
 <!-- vale on -->
 
- 
-
 This object contains an array of strings of the groups assigned to the currently authenticated user. You can access the value of groups using the snippet given below:
 
 ```js
 appsmith.user.groups
 ```
+
 It returns an array of all the groups in your instance. For example:
 
 ```javascript
@@ -293,99 +243,120 @@ It returns an array of all the groups in your instance. For example:
 ]
 
 ```
+
 You can use `appsmith.user.groups` object to [programmatically control the access](/advanced-concepts/granular-access-control) to your application entities.
 
-*Example:* consider a scenario where you are hiding a Button widget by adding the following code to the **Visible** property of the button -
+For example, consider a scenario where you are hiding a Button widget by adding the following code to the **Visible** property of the button -
 
 ```javascript
-{{ '{{ '{{ '{{appsmith.user.groups.includes("managers")}}' }}
+{{ '{{appsmith.user.groups.includes("managers")}}' }}
 ```
+
 In the above example, the visibility of the button is determined by a group. Only users who have been added to the "managers" group can see this button.
 
-</dd>
-
 #### accountNonExpired `boolean`
+
 This attribute indicates whether the user's account is still active and has not expired. An expired account may be reactivated or may need subscription renewal. To access the `accountNonExpired`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.accountNonExpired}}' }}
-``` 
+
+```javascript
+{{ '{{appsmith.user.accountNonExpired}}' }}
+```
 
 #### accountNonLocked `boolean`
-The `accountNonLocked` attribute signifies whether the user's account is locked or unlocked. A locked account cannot be accessed until an administrator unlocks it. To access the `accountNonLocked`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.accountNonLocked}}' }}s
-``` 
-#### credentialsNonExpired `boolean`
-This boolean attribute states if the user's credentials (such as their password) are still valid or if they need to be updated. Expired credentials typically require the user to reset their password. To access the `credentialsNonExpired`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.credentialsNonExpired}}' }}
-``` 
-#### emptyInstance `boolean`
-The `emptyInstance` attribute indicates whether this user object is an empty instance, lacking in actual data. This might occur when no user is logged in or in case of a system-level operation. To access the `emptyInstance`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.emptyInstance}}' }}
-``` 
-#### isAnonymous `boolean`
-The `isAnonymous` attribute reflects whether the current user is anonymous (not logged in) or identified (logged in). This can affect the presentation and permissions of the user interface. To access the `isAnonymous`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.isAnonymous}}' }}
-``` 
-#### isEnabled `boolean`
-This attribute indicates if the user's account is currently enabled. An enabled account can log in and interact with Appsmith applications, while disabled ones cannot. To access the `isEnabled`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.isEnabled}}' }}
-``` 
-#### isSuperUser `boolean`
-The `isSuperUser` flag shows whether the user has superuser status. Superusers typically have elevated privileges and access to all parts of the Appsmith application. To access the `isSuperUser`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.isSuperUser}}' }}
-```
-#### isConfigurable `boolean`
-This attribute denotes whether the user has the ability to configure or alter settings within the Appsmith platform. To access the `isConfigurable`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.isConfigurable}}' }}
-```
-#### adminSettingsVisible `boolean`
-The `adminSettingsVisible` attribute states if the user is able to see and possibly modify the admin settings area. To access the `adminSettingsVisible`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.adminSettingsVisible}}' }}
-```
-#### isIntercomConsentGiven `boolean`
-This boolean indicates whether the user has given consent to use Intercom, a messaging tool that might be used in Appsmith for support and communication purposes. To access the `isIntercomConsentGiven`, use the following code:
-```jsx
-{{ '{{ '{{ '{{appsmith.user.isIntercomConsentGiven}}' }}
-```
-#### idToken `object`
 
- 
+The `accountNonLocked` attribute signifies whether the user's account is locked or unlocked. A locked account cannot be accessed until an administrator unlocks it. To access the `accountNonLocked`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.accountNonLocked}}' }}s
+```
+
+#### credentialsNonExpired `boolean`
+
+This boolean attribute states if the user's credentials (such as their password) are still valid or if they need to be updated. Expired credentials typically require the user to reset their password. To access the `credentialsNonExpired`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.credentialsNonExpired}}' }}
+```
+
+#### emptyInstance `boolean`
+
+The `emptyInstance` attribute indicates whether this user object is an empty instance, lacking in actual data. This might occur when no user is logged in or in case of a system-level operation. To access the `emptyInstance`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.emptyInstance}}' }}
+```
+
+#### isAnonymous `boolean`
+
+The `isAnonymous` attribute reflects whether the current user is anonymous (not logged in) or identified (logged in). This can affect the presentation and permissions of the user interface. To access the `isAnonymous`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.isAnonymous}}' }}
+```
+
+#### isEnabled `boolean`
+
+This attribute indicates if the user's account is currently enabled. An enabled account can log in and interact with Appsmith applications, while disabled ones cannot. To access the `isEnabled`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.isEnabled}}' }}
+```
+
+#### isSuperUser `boolean`
+
+The `isSuperUser` flag shows whether the user has superuser status. Superusers typically have elevated privileges and access to all parts of the Appsmith application. To access the `isSuperUser`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.isSuperUser}}' }}
+```
+
+#### isConfigurable `boolean`
+
+This attribute denotes whether the user has the ability to configure or alter settings within the Appsmith platform. To access the `isConfigurable`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.isConfigurable}}' }}
+```
+
+#### adminSettingsVisible `boolean`
+
+The `adminSettingsVisible` attribute states if the user is able to see and possibly modify the admin settings area. To access the `adminSettingsVisible`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.adminSettingsVisible}}' }}
+```
+
+#### isIntercomConsentGiven `boolean`
+
+This boolean indicates whether the user has given consent to use Intercom, a messaging tool that might be used in Appsmith for support and communication purposes. To access the `isIntercomConsentGiven`, use the following code:
+
+```javascript
+{{ '{{appsmith.user.isIntercomConsentGiven}}' }}
+```
+
+#### idToken `object`
 
 An ID token serves as a verified confirmation of a user's identity and includes essential information such as their name, picture, email address etc. According to the OpenID Connect (OIDC) specifications, when a user successfully logs in, Appsmith receives an ID token.
 
-Appsmith provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{ '{{ '{{}}' }}` as shown below:
+Appsmith provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{}}' }}` as shown below:
 
 ```js
-{{ '{{ '{{ '{{appsmith.user.idToken}}' }}
+{{ '{{appsmith.user.idToken}}' }}
 ```
+
 If you have defined custom scopes in your identity provider, the information associated with those scopes can be accessed within the Identity token.
 
-</dd>
-</dd>
-
 ### theme `object`
-
- 
 
 This object contains the details of the theme properties applied to the application. You can use this object to set certain properties in widgets to be aligned with the app theme or to write custom logic.
 
 ```js
-{{ '{{ '{{ '{{appsmith.theme}}' }}
+{{ '{{appsmith.theme}}' }}
 ```
 
 The theme object has the following attributes:
 
 #### colors `object`
-
- 
 
 This object contains the color properties of the application. It has the following properties:
 
@@ -394,77 +365,54 @@ This object contains the color properties of the application. It has the followi
 It refers to the app's primary color set in the theme section of the app settings. To access this value, you can use the following code snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.theme.colors.primaryColor}}' }}
+{{ '{{appsmith.theme.colors.primaryColor}}' }}
 ```
 
 #### backgroundColor `string`
 
-
-
 The `backgroundColor` property refers to the background color set in the theme section of the app settings. To access the value of the background color, you can use the following code snippet:
 
-
 ```js
-{{ '{{ '{{ '{{appsmith.theme.colors.backgroundColor}}' }}
+{{ '{{appsmith.theme.colors.backgroundColor}}' }}
 ```
 
-</dd>
-
 #### borderRadius `object`
-
- 
 
 This object contains the border properties that enable you to control the curvature or roundness of the corners of the widgets in the application.
 
 #### appBorderRadius `string`
 
-
 It refers to the border radius set in the theme section of the app settings. To access its value, you can use the following code snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.theme.borderRadius.appBorderRadius}}' }}
+{{ '{{appsmith.theme.borderRadius.appBorderRadius}}' }}
 ```
-</dd>
 
 #### boxShadow `object`
-
- 
 
 This object allows you to add a shadow effect to the widgets in your application.
 
 #### appBoxShadow `string`
 
-
-
-It refers to the box shadow set in the theme section of the app settings. You can access the value of `appBoxShadow` using the following snippet: 
+It refers to the box shadow set in the theme section of the app settings. You can access the value of `appBoxShadow` using the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.theme.boxShadow.appBoxShadow}}' }}
+{{ '{{appsmith.theme.boxShadow.appBoxShadow}}' }}
 ```
 
-</dd>
-
 #### fontFamily `object`
-
- 
 
 This object contains the font properties of your application.
 
 #### appFont `string`
 
-
-It refers to the font family set for the app in the theme section for app settings. You can access the value of `appFont` using the following snippet: 
+It refers to the font family set for the app in the theme section for app settings. You can access the value of `appFont` using the following snippet:
 
 ```js
-{{ '{{ '{{ '{{appsmith.theme.fontFamily.appFont}}' }}
+{{ '{{appsmith.theme.fontFamily.appFont}}' }}
 ```
 
-</dd>
-</dd>
-
 ### geolocation `object`
-
- 
 
 This object contains functions that allow you to retrieve the current user's location and the coordinates received from the user's device using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API).
 
@@ -491,8 +439,6 @@ This object contains functions that allow you to retrieve the current user's loc
 
 #### geolocation.getCurrentPosition()
 
- 
-
 Signature:
 
 ```javascript
@@ -505,11 +451,7 @@ Signature:
 
 Similar to the original browser API, the `getCurrentPosition` function retrieves the current user's location. However, unlike the original browser API, you don't need to pass a success callback function. On success, the location information is automatically stored at `appsmith.geolocation.currentPosition.coords`. If you provide an `onSuccessCallback` function, it is called with the received location information as a parameter.
 
-</dd>
-
 #### geolocation.watchPosition()
-
- 
 
 Signature:
 
@@ -523,23 +465,12 @@ Signature:
 
 Similar to the original browser API, the `getCurrentPosition` retrieves periodic updates about the current geographic location of the device, with the difference being that you don't need to pass a success callback explicitly. On success, the location is automatically stored at `appsmith.geolocation.currentPosition.coords` and `appsmith.geolocation.currentPosition.timestamp` is also updated to indicate the time of the last position update. If you provide callbacks, they are automatically executed when the location has changed. Unlike the browser API, no `watchId` is returned, as the platform only allows for a single `watchPosition` at a time.
 
-</dd>
-
 #### geolocation.clearWatch()
-
- 
 
 Signature: `() -> Promise`
 
 It is similar to the original browser API, with the difference being that you don't have to explicitly pass the `watchId`. Instead, if a watch is currently active, you must clear it before starting a new one.
 
-</dd>
-</dd>
-
 ### mode `enum`
 
- 
-
 This field is an enum that contains whether the app runs in view or edit mode. It takes the values `VIEW` or `EDIT`.
-
-</dd>

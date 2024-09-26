@@ -37,7 +37,7 @@ If you want to display a different Map type not listed above, like specific loca
 :::
 
 
-</dd>
+
 
 
 #### Chart Data `array<object>`
@@ -81,7 +81,7 @@ If the query data is not in the expected format, you can use the `map()` functio
 ```
 
 
-</dd>
+
 
 #### Title `string`
 
@@ -90,7 +90,7 @@ If the query data is not in the expected format, you can use the `map()` functio
 Sets the text that appears at the top of the chart as a title.
 
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -103,7 +103,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Show Labels `boolean`	
 
@@ -111,7 +111,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 When enabled, displays labels for each data point featured on the Map chart.
 
-</dd>
+
 
 
 
@@ -124,7 +124,7 @@ When enabled, displays labels for each data point featured on the Map chart.
 
 Sets the action (Framework functions, queries, or JS functions) to be executed when a user clicks on a data point in the chart.
 
-</dd>
+
 
 
 ## Style properties
@@ -163,7 +163,7 @@ Allows you to manage the color of a collection of regions based on the assigned 
 ]
 ```
 
-</dd>
+
 
 ### Border and shadow
 
@@ -173,7 +173,7 @@ Allows you to manage the color of a collection of regions based on the assigned 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -183,7 +183,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 ## Reference properties
@@ -209,7 +209,7 @@ Contains an object which represents the data point that the user has most recent
 {{ '{{ '{{ '{{MapChart1.selectedDataPoint.value}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -222,7 +222,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{MapChart1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -243,7 +243,7 @@ Sets the visibility of the widget.
 MapChart1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 ## Region and country codes

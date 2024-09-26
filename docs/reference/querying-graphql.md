@@ -40,9 +40,9 @@ In the **Query variables** window:
 
 ```javascript
 {
-  "name": {{ '{{ '{{ '{{ UsersTable.searchText }}' }},
-  "limit": {{ '{{ '{{ '{{ UsersTable.pageSize }}' }},
-  "offset": {{ '{{ '{{ '{{ UsersTable.pageOffset }}' }}
+  "name": {{ '{{ UsersTable.searchText }}' }},
+  "limit": {{ '{{ UsersTable.pageSize }}' }},
+  "offset": {{ '{{ UsersTable.pageOffset }}' }}
 }
 ```
 
@@ -69,9 +69,9 @@ In the **Query variables** window:
 
 ```javascript
 {
-  "name": {{ '{{ '{{ '{{ CreateUserForm.data.name }}' }},
-  "email": {{ '{{ '{{ '{{ CreateUserForm.data.email }}' }},
-  "date_of_birth": {{ '{{ '{{ '{{ CreateUserForm.data.date_of_birth }}' }}
+  "name": {{ '{{ CreateUserForm.data.name }}' }},
+  "email": {{ '{{ CreateUserForm.data.email }}' }},
+  "date_of_birth": {{ '{{ CreateUserForm.data.date_of_birth }}' }}
 }
 ```
 
@@ -98,10 +98,10 @@ In the **Query variables** window:
 
 ```javascript
 {
-  "id": {{ '{{ '{{ '{{ UpdateUserForm.data.id }}' }}
-  "name": {{ '{{ '{{ '{{ UpdateUserForm.data.name }}' }},
-  "email": {{ '{{ '{{ '{{ UpdateUserForm.data.email }}' }},
-  "date_of_birth": {{ '{{ '{{ '{{ UpdateUserForm.data.date_of_birth }}' }}
+  "id": {{ '{{ UpdateUserForm.data.id }}' }}
+  "name": {{ '{{ UpdateUserForm.data.name }}' }},
+  "email": {{ '{{ UpdateUserForm.data.email }}' }},
+  "date_of_birth": {{ '{{ UpdateUserForm.data.date_of_birth }}' }}
 }
 ```
 
@@ -128,7 +128,7 @@ In the **Query variables** window:
 
 ```javascript
 {
-  "id": {{ '{{ '{{ '{{ UpdateUserForm.data.id }}' }}
+  "id": {{ '{{ UpdateUserForm.data.id }}' }}
 }
 ```
 

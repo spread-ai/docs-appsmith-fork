@@ -22,7 +22,7 @@ Allows you to customize the code for the custom widget. When clicked, it opens a
 
 Learn more about [Custom Widget Builder](#custom-widget-builder).
 
-</dd>
+
 
 #### Default Model
 
@@ -42,7 +42,7 @@ _Example:_ If you want to pass the name from a Table widget to the custom widget
 
 - To access data in CSS Editor in Custom widget builder page, use `var(--appsmith-model-{property-name}`
 
-</dd>
+
 
 ### General
 
@@ -62,7 +62,7 @@ For example, if you want to make the widget visible only when the user selects "
 }
 ```
 
-</dd>
+
 
 #### Height `string`
 
@@ -74,7 +74,7 @@ This property determines how the widget's height adjusts to changes in its conte
 - **Auto Height**: The widget's height adjusts dynamically in response to changes in its content.
 - **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
-</dd>
+
 
 :::warning
 
@@ -105,7 +105,7 @@ const handleReset = () => {
   caption="Left: Custom Widget Builder | Right: Widget Events"
 />
 
-</dd>
+
 
 ## Reference properties
 
@@ -126,7 +126,7 @@ _Example_:
 {{ '{{ '{{ '{{Custom1.model.signatureImage}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -137,10 +137,10 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 _Example_:
 
 ```js
-{{ '{{ '{{ '{{ Custom1.isVisible }}' }}
+{{ '{{ Custom1.isVisible }}' }}
 ```
 
-</dd>
+
 
 ## Custom Widget Builder
 
@@ -176,7 +176,7 @@ appsmith.model;
 appsmith.model.propertyname;
 ```
 
-</dd>
+
 
 #### mode `string`
 
@@ -190,7 +190,7 @@ appsmith.mode;
 // Value: EDITOR | BUILDER | DEPLOYED
 ```
 
-</dd>
+
 
 #### theme `object`
 
@@ -207,7 +207,7 @@ The `theme` object reflects the current theme of the Appsmith application.
 appsmith.theme;
 ```
 
-</dd>
+
 
 #### ui `object`
 
@@ -219,7 +219,7 @@ Provides access to the UI elements of the widget, such as width and height, in p
 appsmith.ui;
 ```
 
-</dd>
+
 
 ### Methods
 
@@ -244,10 +244,10 @@ Once button is clicked, the signature pad data will be available on the custom w
 _Example_: You can bind signature pad data to an image widget by pasting following code on Image widget's `image` property on the property pane.
 
 ```js
-{{ '{{ '{{ '{{ Custom1.model.signatureImage }}' }}
+{{ '{{ Custom1.model.signatureImage }}' }}
 ```
 
-</dd>
+
 
 #### triggerEvent
 
@@ -270,7 +270,7 @@ function onClick() {
   caption="Custom Widget custom event: onClick"
 />
 
-</dd>
+
 
 #### onModelChange
 
@@ -306,7 +306,7 @@ unlisten();
 
 When the condition is applied, updates occur only when the selected item changes, preventing unnecessary updates and avoiding infinite loops. When you're no longer interested in listening to the model change , call the return value of the `appsmith.onModelChange` function.
 
-</dd>
+
 
 #### onUiChange
 
@@ -323,7 +323,7 @@ Allows a handler function to be called whenever the UI changes i.e width, height
   unlisten();
 ```
 
-</dd>
+
 
 #### onReady
 
@@ -346,7 +346,7 @@ appsmith.onReady(() => {
   communicate with your custom component before initialization.
   :::
 
-</dd>
+
 
 #### onThemeChange
 
@@ -364,7 +364,7 @@ const unlisten = appsmith.onThemeChange((theme, oldTheme) => {
 unlisten();
 ```
 
-</dd>
+
 
 ### CSS API
 
@@ -396,7 +396,7 @@ button {
 }
 ```
 
-</dd>
+
 
 #### UI and theme
 
@@ -425,4 +425,4 @@ These CSS variables, available to control widget size and define the theme:
 `calc(var(--appsmith-ui-width) * 1px)`
 :::
 
-</dd>
+

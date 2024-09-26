@@ -49,7 +49,7 @@ Create a query to fetch data from the database/API using `pageSize`, `pageNo`, a
 
 
 ```sql
-SELECT * FROM users LIMIT {{ '{{ '{{ '{{ Table1.pageSize }}' }} OFFSET {{ '{{ '{{ '{{ Table1.pageOffset }}' }};
+SELECT * FROM users LIMIT {{ '{{ Table1.pageSize }}' }} OFFSET {{ '{{ Table1.pageOffset }}' }};
 ```
 
 This SQL query retrieves data from the `users` table with pagination based on the specified [pagesize](/reference/widgets/table#pagesize-number) and [offset values](/reference/widgets/table#pageoffset-number).
@@ -67,7 +67,7 @@ https://mock-api.appsmith.com/users?page={{ '{{ '{{ '{{Table1.pageNo}}' }}
 You can refer to the [datasource reference](/connect-data/reference) for specific instructions on setting up pagination for your selected datasource.
 
 
-</dd>
+
 
 </TabItem>
 
@@ -109,7 +109,7 @@ https://api.site.com/users/?pageDirection={{ '{{ '{{ '{{Table1.nextPageVisited ?
 You can refer to the [datasource reference](/connect-data/reference) for specific instructions on setting up pagination for your selected datasource.
 
 
-</dd>
+
 
 
 </TabItem>
@@ -130,7 +130,7 @@ Follow these steps to configure the Table widget to display fetched data, and im
 {{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
-</dd>
+
 
 2. Enable the [**Server-side pagination**](/reference/widgets/table#server-side-pagination-boolean) property in the table.
 
@@ -159,7 +159,7 @@ To display the count, add the following code to the **Total records** property:
 ```js
 {{ '{{ '{{ '{{fetch_users_count.data[0].count}}' }}
 ```
-</dd>
+
 
 
 

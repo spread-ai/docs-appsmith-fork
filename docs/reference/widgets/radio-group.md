@@ -40,7 +40,7 @@ You can also dynamically display data by using JavaScript. For instance, you can
 ```js
 {{ '{{ '{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
-</dd>
+
 
 #### Default selected value `string`
 
@@ -48,7 +48,7 @@ You can also dynamically display data by using JavaScript. For instance, you can
 
 This option allows you to set a default value in a widget, which is initially selected unless the user changes it.
 
-</dd>
+
 
 
 ### Label
@@ -61,7 +61,7 @@ This option allows you to set a default value in a widget, which is initially se
 
 Sets the label on the widget.
 
-</dd>
+
 
 
 
@@ -79,7 +79,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -88,7 +88,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width `number`
 
@@ -97,7 +97,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
 
-</dd>
+
 
 
 ### Validations
@@ -110,7 +110,7 @@ This property is only available when you select **Left** from the Position prope
 
 When enabled, this property makes the Radio Group a mandatory field. When the Radio Group is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the Radio Group has some value.
 
-</dd>
+
 
 
 ### General
@@ -121,7 +121,7 @@ When enabled, this property makes the Radio Group a mandatory field. When the Ra
 
 
 This feature enables you to add hints or provide additional information to guide the user regarding the required input.
-</dd>
+
 
 
 #### Visible `Boolean`
@@ -130,7 +130,7 @@ This feature enables you to add hints or provide additional information to guide
 
 This property controls the visibility of the widget. If you turn off this property, the widget would not be visible in view mode. Additionally, you can use JavaScript by clicking on `JS` next to the **Visible** property to conditionally control the widget's visibility. 
 
-</dd>
+
 
 #### Disabled `Boolean`
 
@@ -138,13 +138,13 @@ This property controls the visibility of the widget. If you turn off this proper
 
 This property prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on `JS` next to the **Disabled** property to control the widget's disable state conditionally.
 
-</dd>
+
 
 #### Inline `Boolean`
 
  
 When this property is turned on, the radio items are displayed horizontally. However, when the property is turned off, the radio items are displayed in a vertical line.
-</dd>
+
 
 
 #### Animate Loading `Boolean`
@@ -154,7 +154,7 @@ When this property is turned on, the radio items are displayed horizontally. How
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 
 #### Height `String`
@@ -169,7 +169,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ### Events
 
@@ -180,7 +180,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 This event defines the action that would be executed when the user selects or deselects item in the Radio Group. It allows you to specify a list of [actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the widget state change.
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -191,7 +191,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 #### Font size `String`
 
@@ -199,7 +199,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `String`
 
@@ -207,7 +207,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Alignment 
 
@@ -215,7 +215,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Allows you to specify the alignment of the label. 
 
-</dd>
+
 
 #### Accent color `String`
 
@@ -223,7 +223,7 @@ Allows you to specify the alignment of the label.
 
 Defines the accent color of the widget, which is used as the fill color for the radio when it is selected. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `RadioGroup1.isVisible`.
@@ -240,7 +240,7 @@ The `options` property is an array that contains the values of all the available
 ```js
 {{ '{{ '{{ '{{RadioGroup1.options}}' }}
 ```
-</dd>
+
 
 #### selectedOptionValue `string`
 
@@ -253,7 +253,7 @@ The `selectedValues` property holds an array of values that represents the optio
 {{ '{{ '{{ '{{RadioGroup1.selectedOptionValue}}' }}
 ```
 
-</dd>
+
 
 #### isRequired `boolean`
 
@@ -266,7 +266,7 @@ This property indicates whether the widget is required or not.
 {{ '{{ '{{ '{{RadioGroup1.isRequired}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `Boolean`
  
@@ -278,7 +278,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{RadioGroup1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -300,7 +300,7 @@ Sets the visibility of the widget.
 RadioGroup1.setVisibility(true)
 ```
 
-</dd>
+
 
 #### setDisabled (param: boolean): Promise
 
@@ -314,7 +314,7 @@ Sets the disabled state of the widget.
 RadioGroup1.setDisabled(false)
 ```
 
-</dd>
+
 
 #### setData (param: array< object >): Promise
 
@@ -328,4 +328,3 @@ Allows you to dynamically set the data of the widget.
 RadioGroup1.setData([{ label: 'Option 1', value: 'option1' }, { label: 'Option 2', value: 'option2' }])
 ```
 
-</dd>

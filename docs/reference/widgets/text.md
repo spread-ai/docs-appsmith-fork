@@ -39,7 +39,7 @@ You have the option to use HTML code within the **Text** property to customize t
 
 This code displays the text Hello World in blue color.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -52,7 +52,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -61,7 +61,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 #### Disable link `boolean`
 
@@ -70,7 +70,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 Enabling this option treats any link in the widget as standard text instead of clickable links.
 
-</dd>
+
 
 
 #### Height `string`
@@ -86,7 +86,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -99,7 +99,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Enables you to choose a font for the text, which can also be programmatically manipulated using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -107,7 +107,7 @@ Enables you to choose a font for the text, which can also be programmatically ma
 
 Determines the font size of the text. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Color
 
@@ -117,7 +117,7 @@ Determines the font size of the text. It accepts [CSS font-size](https://develop
 
 Sets the color for the text, and when JS is enabled, you can dynamically modify the text color using JavaScript functions.
 
-</dd>
+
 
 ### Text formatting
 
@@ -133,7 +133,7 @@ Sets the horizontal alignment of the text within the cells.
 * Center
 * Right
 
-</dd>
+
 
 #### Emphasis `String`
 
@@ -141,7 +141,7 @@ Sets the horizontal alignment of the text within the cells.
 
 Allows you to choose a font style for the widget, including options like bold or italic. When JS is enabled, you can dynamically modify the font style using JavaScript functions.
 
-</dd>
+
 
 
 ### Border and shadow
@@ -152,7 +152,7 @@ Allows you to choose a font style for the widget, including options like bold or
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px).
 
-</dd>
+
 
 
 ## Reference properties
@@ -171,7 +171,7 @@ The `text` property retrieves the current text value of the widget.
 {{ '{{ '{{ '{{Text1.text}}' }}
 ```
 
-</dd>
+
 
 
 
@@ -186,7 +186,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{Text1.isVisible}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -209,7 +209,7 @@ Text1.setVisibility(true)
 ```
 
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -224,7 +224,7 @@ Sets the disabled state of the widget.
 Text1.setDisabled(false)
 ```
 
-</dd>
+
 
 #### setRequired (param: boolean): Promise
 
@@ -239,7 +239,7 @@ Text1.setRequired(true)
 ```
 
 
-</dd>
+
 
 #### setText (param: string): Promise
 
@@ -253,7 +253,7 @@ Sets the text value of the widget.
 Text1.setText('Hello, world!')
 ```
 
-</dd>
+
 
 
 #### setTextColor (param: string): Promise
@@ -270,4 +270,3 @@ Text1.setTextColor('#FF0000')
 
 
 
-</dd>

@@ -61,7 +61,7 @@ If the query data is not in the expected format, you can use the `map()` functio
 {{ '{{ '{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
 ```
 
-</dd>
+
 
 
 #### Default value `string`
@@ -72,7 +72,7 @@ Enables you to set a default option. This option is initially selected when the 
 
 To set this property, assign it a value that corresponds to the value attribute of the desired option from the **Options** property.
 
-</dd>
+
 
 
 ### Label
@@ -83,7 +83,7 @@ To set this property, assign it a value that corresponds to the value attribute 
 
  
 Sets the label on the widget.
-</dd>
+
 
 
 
@@ -101,7 +101,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -110,7 +110,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width (in columns)`number`
 
@@ -119,7 +119,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
 
-</dd>
+
 
 ### General
 
@@ -130,7 +130,7 @@ This property is only available when you select **Left** from the Position prope
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
 
-</dd>
+
 
 #### Show marks `boolean`
 
@@ -138,7 +138,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 When enabled, this property displays the labels below the slider element within the widget.
 
-</dd>
+
 
 
 #### Visible `boolean`
@@ -152,7 +152,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -165,7 +165,7 @@ For example, if you want to allow only a specific user to select the option, you
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -175,7 +175,7 @@ For example, if you want to allow only a specific user to select the option, you
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 ### Events
 
@@ -187,7 +187,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 Specifies one or multiple actions to be triggered when the user changes the value of the Number Slider.
 
-</dd>
+
 
 ## Style properties
 
@@ -206,7 +206,7 @@ Options:
 * Medium
 * Large
 
-</dd>
+
 
 ### Label styles
 
@@ -216,7 +216,7 @@ Options:
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -224,7 +224,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -232,7 +232,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Color
 
@@ -242,7 +242,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Represents the color of the slider, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ## Reference properties
 
@@ -259,7 +259,7 @@ Allows you to access the value that has been selected with the slider.
 {{ '{{ '{{ '{{CategorySlider1.value}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -272,7 +272,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{CategorySlider1.isVisible}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -293,7 +293,7 @@ Sets the disabled state of the widget.
 CategorySlider1.setDisabled(false)
 ```
 
-</dd>
+
 
 
 #### setVisibility (param: boolean): Promise
@@ -310,7 +310,7 @@ CategorySlider1.setVisibility(true)
 
 
 
-</dd>
+
 
 
 #### setValue (param: string): Promise
@@ -326,4 +326,3 @@ CategorySlider1.setValue('xl')
 ```
 
 
-</dd>

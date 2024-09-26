@@ -24,7 +24,7 @@ Allows you to specify the input type for the **Default Value** property in the w
 * **Markdown**: This format enables you to use Markdown syntax for styling and formatting the text within the input.
 * **HTML**: This format enables you to use HTML markup to structure and style the text within the input.
 
-</dd>
+
 
 #### Default Value `string`
 
@@ -61,7 +61,7 @@ After selecting an input type as **Markdown** or **HTML**, you can populate the 
 <p>For more information, please <a href="https://appsmith.com">visit our website</a>.</p>
 
 ```
-</dd>
+
 
 ### Label
 
@@ -70,7 +70,7 @@ After selecting an input type as **Markdown** or **HTML**, you can populate the 
 
  
 Sets the label on the widget.
-</dd>
+
 
 
 
@@ -90,7 +90,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -99,7 +99,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width `number`
 
@@ -108,7 +108,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
 
-</dd>
+
 
 ### Validations
 
@@ -120,7 +120,7 @@ This property is only available when you select **Left** from the Position prope
 
 When enabled, this property makes the Rich Text Editor a mandatory field, When the Rich Text Editor is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the Rich Text Editor has some value.
 
-</dd>
+
 
 ### General
 
@@ -130,7 +130,7 @@ When enabled, this property makes the Rich Text Editor a mandatory field, When t
 
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
-</dd>
+
 
 
 
@@ -145,7 +145,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -158,7 +158,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 
@@ -169,7 +169,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Hide toolbar `boolean`
 
@@ -177,7 +177,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Controls the visibility of the toolbar on top of the widget.
 
-</dd>
+
 
 #### Height `string`
 
@@ -191,7 +191,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 
 ### Events
@@ -204,7 +204,7 @@ This property determines how the widget's height adjusts to changes in its conte
 Enables you to specify [supported actions](/reference/appsmith-framework/widget-actions) that would be triggered whenever the user modifies the text input. 
 
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -215,7 +215,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -223,7 +223,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -231,7 +231,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 
 #### Border radius `string`
@@ -240,7 +240,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
 
@@ -248,7 +248,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `RichTextEditor1.isVisible`.
@@ -268,7 +268,7 @@ The `text` property retrieves the value entered by the user. If no text is enter
 ```
 
 
-</dd>
+
 
 
 #### isDisabled `boolean`
@@ -284,7 +284,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 ```
 
 
-</dd>
+
 
 #### isVisible `boolean`
  
@@ -298,7 +298,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```
 
 
-</dd>
+
 
 ## Methods
 
@@ -320,7 +320,7 @@ Sets the visibility of the widget.
 RichTextEditor1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -336,7 +336,7 @@ Sets the disabled state of the widget.
 RichTextEditor1.setDisabled(false)
 ```
 
-</dd>
+
 
 
 #### setRequired (param: boolean): Promise
@@ -352,4 +352,3 @@ Sets whether the widget is required or not.
 RichTextEditor1.setRequired(true)
 ```
 
-</dd>

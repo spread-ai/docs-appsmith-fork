@@ -70,7 +70,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to **
 ```
 
 
-</dd>
+
 
 
 #### Columns `array`
@@ -83,7 +83,7 @@ The **Columns** property is automatically populated based on the **Table Data**.
 Learn more about [Column](/reference/widgets/table/column-settings).
 
 
-</dd>
+
 
 #### Editable `boolean`
 
@@ -93,7 +93,7 @@ The **Editable** property, available within the **Columns** property, is a check
 
 Learn more about [Inline editing](/reference/widgets/table/inline-editing).
 
-</dd>
+
 
 #### Update mode `string`
 
@@ -105,7 +105,7 @@ Determines how edited cells are saved in the table.
 * **Single row**: Cells can be saved using the **Save/Discard** column buttons.
 * **Multi row**: Cells can be saved by using an **onSubmit** event of the column or through an external button widget.
  
-</dd>
+
 
 #### Primary key column `string`
 
@@ -113,7 +113,7 @@ Determines how edited cells are saved in the table.
 
 Allows you to assign a unique column that helps maintain `selectedRows` and `triggeredRows` based on its value. This property also affects the performance of caching the dataset for quicker loading and access.
 
-</dd>
+
 
 ### Pagination
 
@@ -122,7 +122,7 @@ Allows you to assign a unique column that helps maintain `selectedRows` and `tri
  
 
 Determines whether the pagination feature is displayed in the table header, allowing users to navigate through different pages of the table.
-</dd>
+
 
 #### Server side pagination `boolean`
 
@@ -134,7 +134,7 @@ Appsmith can handle query responses of up to 5 MB. To display large datasets and
 
 See how to guide on [Server-side Pagination](/build-apps/how-to-guides/Server-side-pagination-in-table).
 
-</dd>
+
 
 #### Total Records `number`
 
@@ -149,7 +149,7 @@ For instance, you can create a Count query to retrieve the total number of recor
 {{ '{{ '{{ '{{Total_record_query.data[0].count}}' }}
 ```
 
-</dd>
+
 
 #### onPageChange
 
@@ -157,7 +157,7 @@ For instance, you can create a Count query to retrieve the total number of recor
 
 Sets the [actions](/reference/appsmith-framework/widget-actions) that would be triggered whenever the user navigates to a different page of the table, either by clicking on the pagination buttons.
 
-</dd>
+
 
 #### onPageSizeChange
 
@@ -165,7 +165,7 @@ Sets the [actions](/reference/appsmith-framework/widget-actions) that would be t
 
 Sets the [actions](/reference/appsmith-framework/widget-actions) to be executed when the height of the table is changed. This event is typically triggered by developers working on the app and not by end users. It can be useful, for example, to dynamically set a limit in your query based on the new table height.
 
-</dd>
+
 
 ### Search & filters
 
@@ -174,7 +174,7 @@ Sets the [actions](/reference/appsmith-framework/widget-actions) to be executed 
  
 
 When enabled, the search bar is displayed, allowing users to search for specific data within the table.
-</dd>
+
 
 #### Client side search `boolean`
 
@@ -182,7 +182,7 @@ When enabled, the search bar is displayed, allowing users to search for specific
 
 Determines the search behavior of the search bar in the table header. When enabled, the search bar would only search within the data that is currently loaded in the table. If disabled, the search bar would search across the entire data set.
 
-</dd>
+
 
 #### Default search text `string`
 
@@ -190,7 +190,7 @@ Determines the search behavior of the search bar in the table header. When enabl
 
 Allows you to set the default search query for the search bar in the table header.
 
-</dd>
+
 
 #### onSearchTextChanged
 
@@ -199,7 +199,7 @@ Allows you to set the default search query for the search bar in the table heade
 Allows you to specify the action to be executed when the user enters a search text in the table's search bar. Learn more about [Server-side searching](/build-apps/how-to-guides/search-and-filter-table-data#using-search-text).
 
 
-</dd>
+
 
 #### Allow filtering `boolean`
 
@@ -208,7 +208,7 @@ Allows you to specify the action to be executed when the user enters a search te
 Controls the visibility of the **Filters** button, which is located in the table header. The button allows users to apply filters to the table data when enabled.
 
 
-</dd>
+
 
 ### Row selection
 
@@ -218,7 +218,7 @@ Controls the visibility of the **Filters** button, which is located in the table
 
 Sets which rows are selected in the table by default. When **Enable multi-row selection** is turned on, this setting expects an array of numbers corresponding to the indices of the selected rows. Otherwise, it expects a single number.
 
-</dd>
+
 
 #### Enable multi-row selection `boolean`
 
@@ -226,7 +226,7 @@ Sets which rows are selected in the table by default. When **Enable multi-row se
 
 Enables the selection of multiple rows in a table simultaneously. When enabled, the selected rows can be accessed through the `{{ '{{ '{{ '{{Table1.selectedRows}}' }}` reference property.
 
-</dd>
+
 
 #### onRowSelected
 
@@ -235,7 +235,7 @@ Enables the selection of multiple rows in a table simultaneously. When enabled, 
 Sets the [action](/reference/appsmith-framework/widget-actions) to be executed when the user selects one or more rows in the table.
 
 
-</dd>
+
 
 
 ### Sorting
@@ -246,7 +246,7 @@ Sets the [action](/reference/appsmith-framework/widget-actions) to be executed w
 
 Controls whether the columns in the table can be sorted by the user. When enabled, users can click on the column headers to sort the table rows based on the values in that column. This feature is only available in *View mode*.
 
-</dd>
+
 
 #### onSort
 
@@ -254,7 +254,7 @@ Controls whether the columns in the table can be sorted by the user. When enable
 
 Allows you to specify the [action](/reference/appsmith-framework/widget-actions) to be executed when the user sorts the data in the table.
 
-</dd>
+
 
 ### Adding a row
 
@@ -265,7 +265,7 @@ Allows you to specify the [action](/reference/appsmith-framework/widget-actions)
 Adds a button to the table that allows users to add new rows of data. Users can input data in editable columns, and you can use the onSave event to update the table's data source and save the changes made by the user.
 
 Learn more about [Inline editing](/reference/widgets/table/inline-editing).
-</dd>
+
 
 #### onSave
 
@@ -273,21 +273,21 @@ Learn more about [Inline editing](/reference/widgets/table/inline-editing).
 
 Triggered when the user clicks the save button for a new or existing row in the table. 
 
-</dd>
+
 
 #### onDiscard
 
  
 
 Triggered when the user clicks the discard button for a new or existing row in the table. 
-</dd>
+
 
 #### Default values `string`
 
  
 
 Allows you to specify the values that would be automatically populated in a new row when a user starts creating it. It expects an object with the same keys as the columns in the existing table data.
-</dd>
+
 
 ### General
 
@@ -304,7 +304,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -314,7 +314,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 
 #### Allow download `boolean`
@@ -322,13 +322,13 @@ This property controls whether the widget is displayed with a loading animation.
  
 
 Controls the visibility of the **Download** button in the table header. When enabled, users can download the table data as a `.csv` file or `Excel` file by clicking on the button.
-</dd>
+
 
 #### Allow column freeze `boolean`
 
  
 When enabled, a dropdown is displayed in the header cells of the columns, allowing users to freeze or unfreeze columns as needed.
-</dd>
+
 
 #### CSV separator `string`
 
@@ -336,7 +336,7 @@ When enabled, a dropdown is displayed in the header cells of the columns, allowi
 
 Allows you to specify the separator character to use for formatting the downloaded `.csv` file. This property is applicable only when the **Allow Download** property is enabled. By default, the separator character is set to `,` *(comma)*.
 
-</dd>
+
 
 
 
@@ -357,21 +357,21 @@ Sets the height of the row in the table.
 * Default
 * Tall
 
-</dd>
+
 
 ### Text formatting
 
 #### Text Size `string`
  
 Sets the size of the text. Additionally, the text size can be programmatically modified using JavaScript functions.
-</dd>
+
 
 
 #### Emphasis `string`
  
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 
 #### Text Align `string`
@@ -383,7 +383,7 @@ Sets the horizontal alignment of the text within the cells.
 * Center
 * Right
 
-</dd>
+
 
 #### Vertical alignment `string`
 
@@ -396,7 +396,7 @@ Sets the vertical alignment of the cell contents within the cells.
 * Center
 * Bottom
 
-</dd>
+
 
 ### Color
 
@@ -415,14 +415,14 @@ For example, lets say you have a column named `status` that reflects `approved` 
 If you want to keep the same background color for an entire row, you can use the same custom style expression in each column **Cell Background** property.
 
 
-</dd>
+
 
 #### Text Color `string`
 
  
 
 Sets the color for the text in the table. Additionally, the text color can be programmatically modified using JavaScript functions.
-</dd>
+
 
 #### Background Color `string`
 
@@ -430,7 +430,7 @@ Sets the color for the text in the table. Additionally, the text color can be pr
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 #### Border color `string`
 
@@ -440,7 +440,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 Sets a color for the border, specified as a CSS color value. It can also be manipulated programmatically using the JavaScript functions.
 
 
-</dd>
+
 
 ### Border and shadow
 
@@ -453,7 +453,7 @@ Sets the border configuration for the cells of the table.
 * No borders
 * Horizontal borders only
 
-</dd>
+
 
 #### Border radius `string`
 
@@ -461,7 +461,7 @@ Sets the border configuration for the cells of the table.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -471,7 +471,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 
@@ -482,13 +482,13 @@ This property adds a drop shadow effect to the frame of the widget. If JavaScrip
  
 
 Sets the color of the widget's borders, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the border color  can be programmatically modified using JavaScript functions.
-</dd>
+
 
 #### Border Width `number`
  
 Sets the thickness of the borders of the widget.
 
-</dd>
+
 
 ## Reference properties
 
@@ -508,7 +508,7 @@ Contains the data of the row selected by the user. It's an empty object if no ro
 //To access a specific cell value, such as the email field:
 {{ '{{ '{{ '{{Table1.selectedRow.email}}' }}
 ```
-</dd>
+
 
 #### selectedRows `array<object>`
 
@@ -526,7 +526,7 @@ Contains an array of rows selected by the user when multi-select is enabled. It'
 {{ '{{ '{{ '{{Table1.selectedRows[0].email}}' }}
 ```
 
-</dd>
+
 
 #### triggeredRow `object`
 
@@ -548,7 +548,7 @@ When a user interacts with an actionable item *(like a button)* in a row, `trigg
 For example, when using Datepicker if the date is in `ISO` format and you want to display it in `DD/MM/YYYY` format, then you can achieve this by binding the Table data to the **Default date** and changing the display format through the **Date format** property.
 
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -561,7 +561,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{Table1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### sortOrder `object`
 
@@ -576,7 +576,7 @@ Reflects the current column sort criteria. For example, if table rows are being 
 {{ '{{ '{{ '{{Table1.sortOrder}}' }}
 ```
 
-</dd>
+
 
 #### tableData `array<object>`
 
@@ -589,7 +589,7 @@ Contains all the table data in JSON format.
 {{ '{{ '{{ '{{Table1.tableData}}' }}
 ```
 
-</dd>
+
 
 #### selectedRowIndex `number`
 
@@ -602,7 +602,7 @@ Contains the index of the row selected by the user. Not applicable when multiple
 {{ '{{ '{{ '{{Table1.selectedRowIndex}}' }}
 ```
 
-</dd>
+
 
 #### selectedRowIndices `array`
 
@@ -615,7 +615,7 @@ Contains an array of the index of the rows selected by the user. Not applicable 
 {{ '{{ '{{ '{{Table1.selectedRowIndices}}' }}
 ```
 
-</dd>
+
 
 #### filteredTableData `array<object>`
 
@@ -628,7 +628,7 @@ Contains the data of the rows left after applying any selected filters, sort rul
 {{ '{{ '{{ '{{Table1.filteredTableData}}' }}
 ```
 
-</dd>
+
 
 #### pageNo `number`
 
@@ -641,7 +641,7 @@ Contains the current page number that the user is on. APIs can use it for pagina
 {{ '{{ '{{ '{{Table1.pageNo}}' }}
 ```
 
-</dd>
+
 
 #### pageOffset `number`
 
@@ -654,7 +654,7 @@ Contains a calculated value to represent how many records to skip when using Ser
 {{ '{{ '{{ '{{Table1.pageOffset}}' }}
 ```
 
-</dd>
+
 
 #### pageSize `number`
 
@@ -667,7 +667,7 @@ Contains the number of rows that can fit inside a page of the table. Changes alo
 {{ '{{ '{{ '{{Table1.pageSize}}' }}
 ```
 
-</dd>
+
 
 #### searchText `string`
 
@@ -680,7 +680,7 @@ Contains the search text entered by the user in the Table.
 {{ '{{ '{{ '{{Table1.searchText}}' }}
 ```
 
-</dd>
+
 
 #### isAddRowInProgress `boolean`
 
@@ -693,7 +693,7 @@ Indicates whether a new row is currently being added to the table.
 {{ '{{ '{{ '{{Table1.isAddRowInProgress}}' }}
 ```
 
-</dd>
+
 
 #### newRow `object`
 
@@ -706,7 +706,7 @@ Contains data related to the newly added row.
 ```js
 {{ '{{ '{{ '{{Table1.newRow}}' }}
 ```
-</dd>
+
 
 #### nextPageVisited `boolean`
 
@@ -719,7 +719,7 @@ Indicates whether the next page of data has been visited by the user.
 {{ '{{ '{{ '{{Table1.nextPageVisited}}' }}
 ```
 
-</dd>
+
 
 #### previousPageVisited `boolean`
 
@@ -733,7 +733,7 @@ Indicates whether the previous page of data has been visited by the user.
 {{ '{{ '{{ '{{Table1.previousPageVisited}}' }}
 ```
 
-</dd>
+
 
 #### tableHeaders `array<object>`
 
@@ -747,7 +747,7 @@ Indicates whether the table headers are visible.
 ```js
 {{ '{{ '{{ '{{Table1.tableHeaders}}' }}
 ```
-</dd>
+
 
 #### totalRecordsCount `number`
 
@@ -761,7 +761,7 @@ Indicates the number of pages in server-side pagination.
 ```js
 {{ '{{ '{{ '{{Table1.totalRecordsCount}}' }}
 ```
-</dd>
+
 
 #### updatedRow `object`
 
@@ -773,7 +773,7 @@ Contains data related to the recently updated added row.
 ```js
 {{ '{{ '{{ '{{Table1.updatedRow}}' }}
 ```
-</dd>
+
 
 #### updatedRows `array<object>`
 
@@ -785,7 +785,7 @@ Contains data related to updated rows.
 ```js
 {{ '{{ '{{ '{{Table1.updatedRows}}' }}
 ```
-</dd>
+
 
 #### triggeredRowIndex `number`
 
@@ -797,7 +797,7 @@ An index property that indicates the row index of the table that has been trigge
 ```js
 {{ '{{ '{{ '{{Table1.triggeredRowIndex}}' }}
 ```
-</dd>
+
 
 #### updatedRowIndices `array`
 
@@ -811,7 +811,7 @@ Refers to an array of indices corresponding to the rows that have been updated.
 ```js
 {{ '{{ '{{ '{{Table1.updatedRowIndices}}' }}
 ```
-</dd>
+
 
 ## Methods
 
@@ -834,7 +834,7 @@ Table1.setVisibility(true)
 ```
 
 
-</dd>
+
 
 #### setData (param: array< object >): Promise
 
@@ -848,7 +848,7 @@ Sets the data to be displayed in the Table widget.
 Table1.setData([{ name: 'John', age: 36 }, { name: 'Jane', age: 28 }])
 ```
 
-</dd>
+
 
 
 
@@ -865,7 +865,7 @@ This method allows you to programmatically select a single row in the Table.
 Table1.setSelectedRowIndex(2)
 ```
 
-</dd>
+
 
 #### setSelectedRowIndices (param: [?]): Promise
 
@@ -879,7 +879,7 @@ This method allows you to programmatically select multiple rows in the Table. It
 {{ '{{ '{{ '{{Table1.setSelectedRowIndices([1,2,5,8])}}' }}
 ```
 
-</dd>
+
 
 
 

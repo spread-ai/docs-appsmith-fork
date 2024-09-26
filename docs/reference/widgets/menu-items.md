@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 
 The Label property is used to set the text label for a menu item. It can be a static text value or dynamically bound to a data source. For instance, you can set the label to be the name of a page or a user.
 
-</dd>
+
 
 #### onClick
 
@@ -26,7 +26,7 @@ The Label property is used to set the text label for a menu item. It can be a st
 Allows you to configure one or multiple [actions](/reference/appsmith-framework/widget-actions) to be executed when the menu item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -35,7 +35,7 @@ Allows you to configure one or multiple [actions](/reference/appsmith-framework/
 Allows you to show or hide the menu item based on specific conditions. 
 
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -44,7 +44,7 @@ Allows you to show or hide the menu item based on specific conditions.
 Allows you to disable input for a menu item. This can be beneficial when you want to restrict user interaction with the menu item in specific situations.
 
 
-</dd>
+
 
 
 ## Style properties
@@ -58,7 +58,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Appsmith utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
 
-</dd>
+
 
 #### Position `string`
 
@@ -71,7 +71,7 @@ This property allows you to configure the **Icon**'s placement.
 * **Right**: Aligns the Icon to the right side of the Label.
 
 
-</dd>
+
 
 ### Color
 
@@ -81,21 +81,21 @@ This property allows you to configure the **Icon**'s placement.
  
 
 Specifies the color of the icon displayed for the menu item. 
-</dd>
+
 
 #### Text color `string`
 
  
 
 Specifies the color of the text displayed for the menu item. This property allows you to customize the text color to enhance visibility or achieve a specific visual effect for the menu item.
-</dd>
+
 
 #### Background color `string`
 
  
 
 Determines the background color of the menu item. 
-</dd>
+
 
 
 ## Reference properties
@@ -118,7 +118,7 @@ If you want to dynamically display the label based on the selected item's name, 
 
 
 
-</dd>
+
 
 
 #### currentIndex `number`
@@ -140,5 +140,5 @@ To change the color based on the index, using a different color for even numbers
 
 
 
-</dd>
+
 

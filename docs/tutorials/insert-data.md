@@ -7,8 +7,8 @@ description: This page shows you how to insert data in Appsmith.
 
 This guide shows you how to insert data into a datasource using the Form widget on a new page and a Modal. It explains the steps to bind data to widgets, validate user input, and configure queries.
 
-<div style={{ '{{ '{{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
-  <iframe src="https://demo.arcade.software/4HdgmwDfdpgGly9XxIsz?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ '{{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
+<div style={{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
+  <iframe src="https://demo.arcade.software/4HdgmwDfdpgGly9XxIsz?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
   </iframe>
 </div>
 
@@ -74,8 +74,8 @@ To insert the ID value, choose a UUID generator or let your data source auto-gen
 
 ## Use Table
 
-<div style={{ '{{ '{{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
-  <iframe src="https://demo.arcade.software/dEZaROvMJIEhkPBmNe82?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ '{{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
+<div style={{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
+  <iframe src="https://demo.arcade.software/dEZaROvMJIEhkPBmNe82?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
   </iframe>
 </div>
 
@@ -94,16 +94,16 @@ To dynamically add new rows to the table, follow these steps:
    (id, phone, name, gender, latitude, longitude, dob, email, image, country) 
    VALUES 
    (
-      {{ '{{ '{{ '{{ Table1.newRow.id }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.phone }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.name }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.gender }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.latitude }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.longitude }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.dob }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.email }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.image }}' }}, 
-      {{ '{{ '{{ '{{ Table1.newRow.country }}' }}
+      {{ '{{ Table1.newRow.id }}' }}, 
+      {{ '{{ Table1.newRow.phone }}' }}, 
+      {{ '{{ Table1.newRow.name }}' }}, 
+      {{ '{{ Table1.newRow.gender }}' }}, 
+      {{ '{{ Table1.newRow.latitude }}' }}, 
+      {{ '{{ Table1.newRow.longitude }}' }}, 
+      {{ '{{ Table1.newRow.dob }}' }}, 
+      {{ '{{ Table1.newRow.email }}' }}, 
+      {{ '{{ Table1.newRow.image }}' }}, 
+      {{ '{{ Table1.newRow.country }}' }}
    );
    ```
 4. Set the Table widget's **onSave** event to run the query, and the **onSuccess** callback to trigger the fetch query that refreshes the table data with the updated information.

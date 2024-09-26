@@ -67,7 +67,7 @@ To overcome this, you can bind the user's array of the response instead of the e
 
 
 ```javascript
-{{ '{{ '{{ '{{ fetch_users.data.users }}' }}
+{{ '{{ fetch_users.data.users }}' }}
 ```
 #### Error message
 
@@ -175,7 +175,7 @@ To resolve this, you can transform the date string using moment.js.
 
 ```
 // Moment can parse your date format
-{{ '{{ '{{ '{{ moment("2021-07-26", "YYYY-MM-DD") }}' }}
+{{ '{{ moment("2021-07-26", "YYYY-MM-DD") }}' }}
 ```
 #### Error message
 
@@ -198,7 +198,7 @@ You can solve this by using a comparison operator.
 
 
 ```
-{{ '{{ '{{ '{{ Dropdown1.selectedOptionValue === "RED" }}' }}
+{{ '{{ Dropdown1.selectedOptionValue === "RED" }}' }}
 ```
 
 
@@ -255,7 +255,7 @@ You can also check the EVALUATED VALUE section to make sure that it's returning 
 ## Syntax error
 
 
-This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ '{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line ](../../core-concepts/writing-code/#multi-line-javascript)code.
+This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line ](../../core-concepts/writing-code/#multi-line-javascript)code.
 
 
 In the example below, fetch isn't defined anywhere in the application

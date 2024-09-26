@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 Specify the buttons available in the group. You can rearrange the buttons and configure them by clicking the gear icon ⚙️. See the [Buttons](/reference/widgets/button-group/buttons) reference guide for configuring individual buttons in the group.
 
-</dd>
+
 
 ### General
 
@@ -36,7 +36,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -49,7 +49,7 @@ For example, if you want to allow only a specific user to select menu item, you 
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -59,7 +59,7 @@ For example, if you want to allow only a specific user to select menu item, you 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -79,7 +79,7 @@ Specifies the style type of the button to indicate its significance.
 * **Tertiary**: This option does not apply any specific styling changes to the button.
 
 This property can be dynamically set using JavaScript by providing a string value of `PRIMARY`, `SECONDARY`, or `TERTIARY`.
-</dd>
+
 
 #### Orientation `string`
 
@@ -87,7 +87,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 Determines the arrangement of buttons in the button group, either horizontally or vertically.
 
-</dd>
+
 
 
 ### Border and shadow
@@ -98,7 +98,7 @@ Determines the arrangement of buttons in the button group, either horizontally o
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -108,7 +108,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -126,7 +126,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{ButtonGroup1.isVisible}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -157,7 +157,7 @@ ButtonGroup1.setVisibility(true).then(() => {
 
 ```
 
-</dd>
+
 
 
 #### setDisabled `boolean`
@@ -180,7 +180,7 @@ ButtonGroup1.setDisabled(false).then(() => {
 })
 ```
 
-</dd>
+
 
 ## See also
 - [Create Custom Navigation Bar](/build-apps/how-to-guides/create-custom-nav-bar)

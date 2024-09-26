@@ -35,7 +35,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 
 
 
-</dd>
+
 
 ### General
 
@@ -45,7 +45,7 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 
 Enables the audio to play automatically on page load, without requiring any action from the user. Default value is `false`.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -61,7 +61,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -71,7 +71,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 ### Events
 
@@ -83,14 +83,14 @@ When the event is triggered, these event handlers can execute queries, JS functi
  
 Specifies the action to be executed when the audio starts playing.
 
-</dd>
+
 
 #### onPause
 
  
 Specifies the action to be performed when the audio is paused.
 
-</dd>
+
 
 #### onEnd
 
@@ -98,7 +98,7 @@ Specifies the action to be performed when the audio is paused.
 
 Specifies the action to be taken when the audio playback is completed.
 
-</dd>
+
 
 
 ## Reference properties
@@ -116,7 +116,7 @@ Indicates the current state of the widget's **Auto Play** setting.
 {{ '{{ '{{ '{{Audio1.autoPlay}}' }}
 ```
 
-</dd>
+
 
 
 #### playState `string`
@@ -135,7 +135,7 @@ Indicates the current state of the Audio widget's sound playback. It is represen
 {{ '{{ '{{ '{{Audio1.playState}}' }}
 ```
 
-</dd>
+
 
 #### playing `boolean`
 
@@ -150,7 +150,7 @@ Indicates the current playing state of the widget. When the value is `true`, it 
 ```
 
 
-</dd>
+
  
 
 ## Methods
@@ -175,7 +175,7 @@ Audio1.setPlaying(true)
 
 
 
-</dd>
+
 
 
 #### setURL (param: string): Promise
@@ -191,7 +191,7 @@ Audio1.setURL('<https://example.com/audio.mp3>')
 ```
 
 
-</dd>
+
 
 
 #### setVisibility (param: boolean): Promise
@@ -207,4 +207,3 @@ Audio1.setVisibility(true)
 ```
 
 
-</dd>

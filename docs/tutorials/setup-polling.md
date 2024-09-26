@@ -18,7 +18,7 @@ Polling is a communication technique used to retrieve real-time data by periodic
 ```js
 {{ '{{ '{{ '{{delivery_data.data}}' }}
 ```
-</dd>
+
 
 2. Drop a Switch widget to enable the toggling of updates at regular intervals.
 
@@ -40,7 +40,7 @@ export default {
 }
 ```
 
-</dd>
+
 
 3. Set the **onChange** event of the Switch widget to execute the JS function.
 

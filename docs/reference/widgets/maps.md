@@ -35,7 +35,7 @@ Sets the default location that the map focuses on when it is displayed for the f
 }
 ```
 
-</dd>
+
 
 #### Default markers `array<object>`
 
@@ -86,7 +86,7 @@ If you want to display the live location, you can use the **Default Marker** pro
 To fetch the current location, use `appsmith.geolocation.watchPosition()` action triggered by a Button widget's **onClick** event. 
 
 
-</dd>
+
 
 
 ### General
@@ -98,7 +98,7 @@ To fetch the current location, use `appsmith.geolocation.watchPosition()` action
 
 Sets the zoom level of the map. Default value is set to `50%`.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -113,7 +113,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -123,7 +123,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. Default value is set to `true`.
 
-</dd>
+
 
 #### Enable pick location	`boolean`
 
@@ -131,7 +131,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 Enabling this option allows users to interactively select a location on the map, and the map marker is moved to the user's current location. The `selectedMarker` field is updated with the information of the marker representing the user's current location.
 
-</dd>
+
 
 #### Map & Marker Centring `boolean`
 
@@ -139,7 +139,7 @@ Enabling this option allows users to interactively select a location on the map,
 
 When enabled, this setting controls whether the clicked marker is automatically centered on the map.
 
-</dd>
+
 
 #### Enable clustering `boolean`
 
@@ -147,7 +147,7 @@ When enabled, this setting controls whether the clicked marker is automatically 
 
 When enabled, groups nearby markers into a single cluster on the map.
 
-</dd>
+
 
 #### Enable search location `boolean`
 
@@ -163,7 +163,7 @@ To access the searched location, use the ``center`` reference property. This ret
 ]
 ```
 
-</dd>
+
 
 #### Enable map types `boolean`
 
@@ -171,7 +171,7 @@ To access the searched location, use the ``center`` reference property. This ret
 
 When enabled, this property allows users to switch between the default map view and satellite view.
 
-</dd>
+
 
 ### Create marker
 
@@ -181,7 +181,7 @@ When enabled, this property allows users to switch between the default map view 
 
 Allows users to mark locations by adding new markers on the map.
 
-</dd>
+
 
 #### onMarkerCreated	
 
@@ -189,7 +189,7 @@ Allows users to mark locations by adding new markers on the map.
 
 This event is available only when the **Create new marker** property is turned on. It specifies the action (Framework functions, queries, or JS functions) to be executed when the user creates a new marker on the map.
 
-</dd>
+
 
 ### Events
 
@@ -199,7 +199,7 @@ This event is available only when the **Create new marker** property is turned o
 
 Sets the action (Framework functions, queries, or JS functions) to be executed when the user clicks a marker on the map. 
 
-</dd>
+
 
 ## Style properties
 
@@ -213,7 +213,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -223,7 +223,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 ## Reference properties
@@ -241,7 +241,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{Map1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### center `object`
 
@@ -254,7 +254,7 @@ Contains title, latitude, and longitude coordinates of the location.
 {{ '{{ '{{ '{{Map1.center}}' }}
 ```
 
-</dd>
+
 
 #### selectedMarker `object`
 
@@ -267,7 +267,7 @@ Contains the marker object that the user has selected.
 {{ '{{ '{{ '{{Map1.selectedMarker}}' }}
 ```
 
-</dd>
+
 
 #### markers `array<object>`
 
@@ -286,7 +286,7 @@ This contains the list of markers on the map
 // here [0] represents the index of the first marker
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -308,7 +308,7 @@ Sets the visibility of the widget.
 MapChart1.setVisibility(true)
 ```
 
-</dd>
+
 
 ## See also
 - [Display Map Markers](/build-apps/how-to-guides/display-map-markers)

@@ -22,7 +22,7 @@ These properties are customizable options present in the property pane of the wi
 
 Allows you to assign an initial numeric value to the widget before user interaction.
 
-</dd>
+
 
 #### Currency `string`
 
@@ -32,7 +32,7 @@ Allows you to specify the currency type for the widget. You can choose from a li
 
 
 
-</dd>
+
 
 
 #### Allow Currency Change `boolean`
@@ -43,7 +43,7 @@ Allows you to specify the currency type for the widget. You can choose from a li
 Enables users to select a different currency by displaying a dropdown next to the input field.
 
 
-</dd>
+
 
 #### Decimals Allowed `number`
 
@@ -51,7 +51,7 @@ Enables users to select a different currency by displaying a dropdown next to th
 
 Specifies the maximum number of decimal digits allowed. It can be set to either `0`, `1`, or `2`, indicating the desired level of precision for the numeric value.
 
-</dd>
+
 
 ### Label
 
@@ -61,7 +61,7 @@ Specifies the maximum number of decimal digits allowed. It can be set to either 
 
  
 Sets the label on the widget.
-</dd>
+
 
 
 
@@ -80,7 +80,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -89,7 +89,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width `number`
 
@@ -98,7 +98,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
 
-</dd>
+
 
 
 ### Validations
@@ -111,7 +111,7 @@ This property is only available when you select **Left** from the Position prope
 
 When enabled, this property makes the Currency Input a mandatory field. When the Currency Input is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled until the Currency Input has some value.
 
-</dd>
+
 
 #### Regex `regExp`
 
@@ -127,7 +127,7 @@ For instance, if you want to validate that the user enters a price in multiples 
 
 
 
-</dd>
+
 
 #### Valid `boolean`
 
@@ -135,7 +135,7 @@ For instance, if you want to validate that the user enters a price in multiples 
 
 Allows you to set an expression to determine the validity of the user's input. When the specified expression evaluates to false, indicating that the input is invalid, the widget displays an error message. This feature enables you to define custom validation rules and provide informative error messages to guide the user when their input does not meet the required criteria.
 
-</dd>
+
 
 #### Error Message `string`
 
@@ -145,7 +145,7 @@ Allows you to set an expression to determine the validity of the user's input. W
 Allows customization of the error message displayed when the user enters an incorrect value. By default, the input widget shows a generic "invalid input" message.
 
 
-</dd>
+
 
 
 ### General
@@ -157,7 +157,7 @@ Allows customization of the error message displayed when the user enters an inco
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
 
-</dd>
+
 
 #### Placeholder `string`
 
@@ -165,7 +165,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 Allows you to set the placeholder text displayed within the input box. This can be used to provide a hint or example value to the user, guiding them on the expected format or content of the input.
 
-</dd>
+
 
 #### Show Step Arrows `boolean`
 
@@ -173,7 +173,7 @@ Allows you to set the placeholder text displayed within the input box. This can 
 
 This property determines whether the step arrows, used to increment or decrement values in the widget, should be visible or hidden. 
 
-</dd>
+
 
 
 #### Visible `boolean`
@@ -187,7 +187,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -200,7 +200,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 test
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -210,7 +210,7 @@ test
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Auto Focus `boolean`
 
@@ -218,7 +218,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 When enabled, automatically places the user's cursor in the input box upon page load, directing their attention to the input field for immediate interaction.
 
-</dd>
+
 
 #### Height `string`
 
@@ -232,7 +232,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 
 
@@ -246,7 +246,7 @@ When the event is triggered, these event handlers can run queries, JS code, or o
 
 Specifies the actions to be executed when the user modifies the input in the currency widget.
 
-</dd>
+
 
 
 
@@ -256,7 +256,7 @@ Specifies the actions to be executed when the user modifies the input in the cur
 
 Specifies the actions to be executed when the input area in the currency widget is focused.
 
-</dd>
+
 
 #### onBlur
 
@@ -264,7 +264,7 @@ Specifies the actions to be executed when the input area in the currency widget 
 
 Specifies the actions to be executed when the input area in the currency widget loses focus.
 
-</dd>
+
 
 #### onSubmit
 
@@ -272,7 +272,7 @@ Specifies the actions to be executed when the input area in the currency widget 
 
 Specifies the actions to be executed when the input is submitted with the `ENTER` key.
 
-</dd>
+
 
 #### Reset on submit
 
@@ -280,7 +280,7 @@ Specifies the actions to be executed when the input is submitted with the `ENTER
 
 Clears the input value after submission. 
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -291,7 +291,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -299,7 +299,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -307,7 +307,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -317,7 +317,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 
@@ -327,7 +327,7 @@ This property adds a drop shadow effect to the frame of the widget. If JavaScrip
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 ## Reference properties
 
@@ -345,7 +345,7 @@ The `countryCode` property stores the country code associated with the selected 
 {{ '{{ '{{ '{{CurrencyInput1.countryCode}}' }}
 ```
 
-</dd>
+
 
 #### currencyCode `string`
 
@@ -358,7 +358,7 @@ The `currencyCode` property holds the [ISO 4217](https://www.iso.org/iso-4217-cu
 {{ '{{ '{{ '{{CurrencyInput1.currencyCode}}' }}
 ```
 
-</dd>
+
 
 
 #### text `string`
@@ -372,7 +372,7 @@ The `text` property stores the input value of the widget.
 {{ '{{ '{{ '{{CurrencyInput1.text}}' }}
 ```
 
-</dd>
+
 
 #### value `number`
 
@@ -386,7 +386,7 @@ The `value` property stores the input value of the widget as a number.
 {{ '{{ '{{ '{{CurrencyInput1.value}}' }}
 ```
 
-</dd>
+
 
 #### isValid `boolean`
 
@@ -399,7 +399,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 {{ '{{ '{{ '{{CurrencyInput1.isValid}}' }}
 ```
 
-</dd>
+
 
 #### isDisabled `boolean`
 
@@ -412,7 +412,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 {{ '{{ '{{ '{{CurrencyInput1.isDisabled}}' }}
 ```
 
-</dd>
+
 
 
 #### isVisible `boolean`
@@ -426,7 +426,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{CurrencyInput1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -449,7 +449,7 @@ CurrencyInput1.setVisibility(true)
 ```
 
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -464,7 +464,7 @@ Sets the disabled state of the widget.
 CurrencyInput1.setDisabled(false)
 ```
 
-</dd>
+
 
 #### setValue (param: number): Promise
 
@@ -480,7 +480,7 @@ CurrencyInput1.setValue(123)
 To perform sequential actions, use the `.then()` block for execution.
 
 
-</dd>
+
 
 
 #### setRequired (param: boolean): Promise
@@ -495,4 +495,4 @@ Sets whether the widget is required or not.
 CurrencyInput1.setRequired(true)
 ```
 
-</dd>
+

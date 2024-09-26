@@ -58,7 +58,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to **
 }}' }}
 ```
 
-</dd>
+
 
 #### Data identifier
 
@@ -66,7 +66,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to **
 
 Like `keys` in React, you need to select a data identifier from your dataset, which helps uniquely identify each item. This helps the List widget identify which items are added, have changed, or are removed. You can also combine two columns or data identifiers by enabling the `JS` mode.
 
-</dd>
+
 
 ### Pagination
 
@@ -76,7 +76,7 @@ Like `keys` in React, you need to select a data identifier from your dataset, wh
 
 Enables you to implement [server side pagination](#server-side-pagination) on the List widget.
 
-</dd>
+
 
 #### Total records `number`
 
@@ -84,7 +84,7 @@ Enables you to implement [server side pagination](#server-side-pagination) on th
 
 This field displays the number of records in the source data for a list. This value is used to calculate the number of pages to be displayed when using server-side pagination. Note that this field is only visible when **Server Side Pagination** is enabled.
 
-</dd>
+
 
 #### onPageChange
 
@@ -93,7 +93,7 @@ This field displays the number of records in the source data for a list. This va
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the List's page changes. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 
-</dd>
+
 
 ### Item selection
 
@@ -103,7 +103,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 Allows you to specify which item should be selected by default when a user first opens the List widget. To set the **Default Selected Item**, enter a valid data identifier for the item you want to select.
 
-</dd>
+
 
 #### onitemClick 
 
@@ -111,7 +111,7 @@ Allows you to specify which item should be selected by default when a user first
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when a list item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
-</dd>
+
 
 ### General
 
@@ -126,7 +126,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -134,7 +134,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 
 ## Style properties
@@ -149,7 +149,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Adds padding to the list cells. It accepts Pixels(px) as a unit for the gap width between list item cards.
 
-</dd>
+
 
 ### Color
 
@@ -159,7 +159,7 @@ Adds padding to the list cells. It accepts Pixels(px) as a unit for the gap widt
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, it can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -169,7 +169,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -178,7 +178,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 
 ## Reference properties
@@ -198,7 +198,7 @@ Represents the widget's Background Color setting as a CSS color value.
 {{ '{{ '{{ '{{List1.backgroundColor}}' }}
 ```
 
-</dd>
+
 
 #### currentItemsView `array`
 
@@ -212,7 +212,7 @@ Contains an array of objects where each object represents a widget within the li
 {{ '{{ '{{ '{{List1.currentItemsView}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -225,7 +225,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{List1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### itemSpacing `number`
 
@@ -239,7 +239,7 @@ Reflects the vertical spacing between each item. The value can range between 0 a
 {{ '{{ '{{ '{{List1.itemSpacing}}' }}
 ```
 
-</dd>
+
 
 #### listData `array`
 
@@ -253,7 +253,7 @@ Contains an array of objects that each represents a list item and its data.
 {{ '{{ '{{ '{{List1.listData}}' }}
 ```
 
-</dd>
+
 
 #### pageNo `number`
 
@@ -267,7 +267,7 @@ Contains a number representing which page of the List is currently displayed.
 {{ '{{ '{{ '{{List1.pageNo}}' }}
 ```
 
-</dd>
+
 
 #### pageSize `number`
 
@@ -281,7 +281,7 @@ Contains a number representing the number of list items that can fit on one page
 {{ '{{ '{{ '{{List1.pageSize}}' }}
 ```
 
-</dd>
+
 
 #### selectedItem `object`
 
@@ -295,7 +295,7 @@ Returns an object that contains the data of the selected list item.
 {{ '{{ '{{ '{{List1.selectedItem}}' }}
 ```
 
-</dd>
+
 
 #### selectedItemView `object`
 
@@ -309,7 +309,7 @@ Contains an object representing the state of the widgets inside a list item when
 {{ '{{ '{{ '{{List1.selectedItemView}}' }}
 ```
 
-</dd>
+
 
 #### triggeredItem `object`
 
@@ -323,7 +323,7 @@ Contains an object representing the data of the list item that's selected when y
 {{ '{{ '{{ '{{List1.triggeredItem}}' }}
 ```
 
-</dd>
+
 
 #### triggeredItemView `object`
 
@@ -337,7 +337,7 @@ Contains an object representing the state of the widgets inside a list item that
 {{ '{{ '{{ '{{List1.triggeredItemView}}' }}
 ```
 
-</dd>
+
 
 ## Internal reference properties
 
@@ -350,7 +350,7 @@ These properties are available only to the widgets placed inside the List widget
 Represents the data for a particular item.
 
 
-</dd>
+
 
 #### currentIndex `number`
 
@@ -358,7 +358,7 @@ Represents the data for a particular item.
 
 Returns the index of the current item.
 
-</dd>
+
 
 #### currentView `object`
 
@@ -366,7 +366,7 @@ Returns the index of the current item.
 
 Returns the data and state of the widgets present in the current list item. This property can be used to access all sibling widgets present inside a List item card.
 
-</dd>
+
 
 #### level_* `object`
 
@@ -380,7 +380,7 @@ This property is only available for nested lists where \* represents the level n
 {{ '{{ '{{ '{{level_1.currentItem.name}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -401,7 +401,7 @@ Sets the visibility of the widget.
 List1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 ##  Display data in list items
@@ -442,7 +442,7 @@ Similarly, you can bind `bookName`, `bookId`, and `price` to the Text widgets in
 
 ### Dynamic data mapping
 
-If you want to bind the response from a query or a JS function, then you can use mustache syntax `{{ '{{ '{{ '{{ }}' }}`. Use the format of `{{ '{{ '{{ '{{QUERY_NAME.data}}' }}` to bind the data returned by the query. For example, You a query `GetAllEmployees`, bind the response in the **Items** property as shown below:
+If you want to bind the response from a query or a JS function, then you can use mustache syntax `{{ '{{ }}' }}`. Use the format of `{{ '{{ '{{ '{{QUERY_NAME.data}}' }}` to bind the data returned by the query. For example, You a query `GetAllEmployees`, bind the response in the **Items** property as shown below:
 
 ```javascript
 {{ '{{ '{{ '{{GetAllEmployees.data}}' }}

@@ -26,7 +26,7 @@ For example, if you want to make the widget visible only when the user selects _
 
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -36,7 +36,7 @@ For example, if you want to make the widget visible only when the user selects _
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 #### Height `string`
 
@@ -51,7 +51,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 
 ## Style properties
@@ -66,7 +66,7 @@ Style properties allow you to change the look and feel of the widget.
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
 
-</dd>
+
 
 #### Border color `String`
 
@@ -75,7 +75,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 Sets a color for the form's border, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
 
-</dd>
+
 
 ### Border and shadow
 
@@ -85,7 +85,7 @@ Sets a color for the form's border, specified as a [CSS color value](https://dev
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
 
@@ -93,7 +93,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `Form1.isVisible`.
@@ -130,7 +130,7 @@ For instance, if you have a Select widget `OrderStatus` inside Form, its value c
 ```
 
 
-</dd>
+
 
 #### hasChanges `boolean`
 
@@ -142,7 +142,7 @@ The `hasChanges` property indicates whether the user has made any modifications 
 ```js
 {{ '{{ '{{ '{{Form1.hasChanges}}' }}
 ```
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -154,7 +154,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```js
 {{ '{{ '{{ '{{Form1.isVisible}}' }}
 ```
-</dd>
+
 
 
 ## Methods
@@ -175,7 +175,7 @@ Sets the visibility of the widget.
 Form1.setVisibility(true)
 ```
 
-</dd>
+
 
 ## See also
 - [Insert Data](/build-apps/how-to-guides/insert-data)

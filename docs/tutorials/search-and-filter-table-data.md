@@ -10,7 +10,7 @@ To filter data using the built-in search feature, follow these steps:
 2. Modify the `fetch_trip_details` query to fetch data corresponding to the search text using the following code:
 
    ```jsx
-   SELECT * FROM trip_details a WHERE route_id LIKE {{ '{{ '{{ '{{ "%" + trip_details_table.searchText + "%"}}' }};
+   SELECT * FROM trip_details a WHERE route_id LIKE {{ '{{ "%" + trip_details_table.searchText + "%"}}' }};
    ```
    If you are using a REST API, refer to the following example to send the request:
    ```

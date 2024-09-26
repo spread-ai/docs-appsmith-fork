@@ -25,7 +25,7 @@ These properties are customizable options present in the property pane of the wi
 
 Indicates the lowest possible value that the slider can start from. The value can include negative numbers and decimals, but it should always be smaller than the **Maximum** Value. 
 
-</dd>
+
 
 #### Max Value `number`
 
@@ -33,7 +33,7 @@ Indicates the lowest possible value that the slider can start from. The value ca
 
 Indicates the highest possible value for the slider. The value can encompass negative numbers and decimals, but it must always surpass the **Minimum** Value.
 
-</dd>
+
 
 #### Step Size `number`
 
@@ -41,7 +41,7 @@ Indicates the highest possible value for the slider. The value can encompass neg
 
 Denotes the amount by which the user can modify the slider's value. This value must be at least 0.1 and less than or equal to **Min. Range**.
 
-</dd>
+
 
 #### Min. Range `number`
 
@@ -49,7 +49,7 @@ Denotes the amount by which the user can modify the slider's value. This value m
 
 The smallest permissible interval between the selected values. This value must be greater than or equal to **Step Size**.
 
-</dd>
+
 
 
 #### Default Start Value `number`
@@ -58,7 +58,7 @@ The smallest permissible interval between the selected values. This value must b
 
 Defines a starting value for the range, which serves as the initial point unless modified by the user. This numeric value should fall within the range of the **Min Value** and **Max Value**, and it should be lower than the **Default End Value**.
 
-</dd>
+
 
 #### Default End Value `number`
 
@@ -66,7 +66,7 @@ Defines a starting value for the range, which serves as the initial point unless
 
 Defines a ending value for the range, which serves as the end point unless modified by the user. This numeric value should fall within the range of the **Min Value** and **Max Value**, and it should be higher than the **Default Start Value.**
 
-</dd>
+
 
 ### Label
 
@@ -76,7 +76,7 @@ Defines a ending value for the range, which serves as the end point unless modif
 
  
 Sets the label on the widget.
-</dd>
+
 
 
 
@@ -95,7 +95,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -104,7 +104,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width (in columns) `number`
 
@@ -113,7 +113,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned.
 
 
-</dd>
+
 
 ### General
 
@@ -124,7 +124,7 @@ This property is only available when you select **Left** from the Position prope
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
 
-</dd>
+
 
 #### Show Marks `boolean`
 
@@ -133,7 +133,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 When enabled, this property displays the labels below the slider element within the widget.
 
-</dd>
+
 
 
 #### Marks `array<object>`
@@ -175,7 +175,7 @@ If the query data is not in the expected format, you can use the `map()` functio
 {{ '{{ '{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
 ```
 
-</dd>
+
 
 
 #### Visible `boolean`
@@ -189,7 +189,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -202,7 +202,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -212,7 +212,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 
 #### Show value always `boolean`
@@ -222,7 +222,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Maintains the constant visibility of a tooltip containing the current value.
 
-</dd>
+
 
 ### Events
 
@@ -234,7 +234,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 Specifies one or multiple actions to be triggered when the user changes the start value of the Range Slider.
 
-</dd>
+
 
 #### onEndValueChange
 
@@ -242,7 +242,7 @@ Specifies one or multiple actions to be triggered when the user changes the star
 
 Specifies one or multiple actions to be triggered when the user changes the end value of the Range Slider.
 
-</dd>
+
 
 ## Style properties
 
@@ -261,7 +261,7 @@ Options:
 * Medium
 * Large
 
-</dd>
+
 
 ### Label styles
 
@@ -271,7 +271,7 @@ Options:
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -279,7 +279,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -287,7 +287,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Color
 
@@ -297,7 +297,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Represents the color of the slider, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 
 ## Reference properties
@@ -315,7 +315,7 @@ Enables you to retrieve the start value that has been selected with the slider.
 {{ '{{ '{{ '{{RangeSlider1.start}}' }}
 ```
 
-</dd>
+
 
 #### start `number`
 
@@ -328,7 +328,7 @@ Enables you to retrieve the end value that has been selected with the slider.
 {{ '{{ '{{ '{{RangeSlider1.end}}' }}
 ```
 
-</dd>
+
 
 
 #### isVisible `boolean`
@@ -342,7 +342,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{RangeSlider1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -363,7 +363,7 @@ Sets the disabled state of the widget.
 RangeSlider1.setDisabled(false)
 ```
 
-</dd>
+
 
 
 #### setVisibility (param: boolean): Promise
@@ -378,4 +378,3 @@ Sets the visibility of the widget.
 RangeSlider1.setVisibility(true)
 ```
 
-</dd>

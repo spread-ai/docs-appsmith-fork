@@ -26,7 +26,7 @@ For example, if you want to make the widget visible only when the user selects Y
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -34,7 +34,7 @@ For example, if you want to make the widget visible only when the user selects Y
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 #### Height `string`
 
@@ -49,7 +49,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ## Style properties
 
@@ -64,7 +64,7 @@ Style properties allow you to change the look and feel of the widget.
 Specifies the background color of the Stats Box container.
 
 
-</dd>
+
 
 #### Border color `string`
 
@@ -73,7 +73,7 @@ Specifies the background color of the Stats Box container.
 Specifies the color of the widget's border. You can define the color using an HTML color name, HEX, RGB, or RGBA value.
 
 
-</dd>
+
 
 ### Border and shadow
 
@@ -82,7 +82,7 @@ Specifies the color of the widget's border. You can define the color using an HT
  
 Sets the value for border width.
 
-</dd>
+
 
 #### Border radius `string`
 
@@ -90,7 +90,7 @@ Sets the value for border width.
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -100,7 +100,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `Statsbox1.isVisible`.
@@ -119,7 +119,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```
 
 
-</dd>
+
 
 ## Methods
 
@@ -148,4 +148,3 @@ Statbox1.setVisibility(true).then(() => {
 
 ```
 
-</dd>

@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 Allows you to manage tabs within the widget, where each tab is identified by a unique name. You can rearrange the tabs items and configure their visibility by clicking on the gear icon ⚙️.
 
-</dd>
+
 
 #### Default Tab `string`	
 
@@ -30,7 +30,7 @@ Allows you to manage tabs within the widget, where each tab is identified by a u
 
 Allows you to specify a default tab by its name, which is automatically displayed when the widget loads. Make sure the Tab name is exactly as specified. 
 
-</dd>
+
 
 ### General
 
@@ -49,7 +49,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -58,7 +58,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 
 #### Show tabs `boolean`
@@ -68,7 +68,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 This option enables you to toggle the visibility of tabs. The default value for the property is `true`.
 
-</dd>
+
 
 #### Height `string`
 
@@ -83,7 +83,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ### Events
 
@@ -94,7 +94,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 Specifies the action (Framework functions, queries, or JS functions) to be performed when the user selects a tab.
 
-</dd>
+
 
 ## Style properties
 
@@ -109,7 +109,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the color of the tab, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Background Color `string`
 
@@ -117,7 +117,7 @@ Represents the color of the tab, specified as a [CSS color value](https://develo
 
 Sets the background color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 #### Border color `string`
 
@@ -127,7 +127,7 @@ Sets the background color of the widget, specified as a [CSS color value](https:
 Sets a color for the border, specified as a CSS color value. It can also be manipulated programmatically using the JavaScript functions.
 
 
-</dd>
+
 
 #### Border Width `number`
 
@@ -135,7 +135,7 @@ Sets a color for the border, specified as a CSS color value. It can also be mani
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px). The default value is `1`.
 
-</dd>
+
 
 #### Border radius `string`
 
@@ -143,7 +143,7 @@ Specifies the width of the widget's border, accepting only numerical values in p
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -153,7 +153,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -171,7 +171,7 @@ Contains the name of the tab currently selected.
 {{ '{{ '{{ '{{Tabs1.selectedTab}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -184,7 +184,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{Tabs1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -205,7 +205,7 @@ Sets the visibility of the widget.
 Tabs1.setVisibility(true)
 ```
 
-</dd>
+
 
 ## See also
 - [Browse and Display Documents](/build-apps/how-to-guides/browse-and-display-documents)

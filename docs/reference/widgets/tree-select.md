@@ -64,7 +64,7 @@ If the retrieved data is not in the desired format, you can use JavaScript to tr
 *Example*:
 
 ```js
-{{ '{{ '{{ '{{ getdata.data.reduce((acc, cur) => {
+{{ '{{ getdata.data.reduce((acc, cur) => {
   const group = acc.find(item => item.value === cur.type);
   group ? group.children.push({ label: cur.name, value: cur.name }) : acc.push({ label: cur.type, value: cur.type, children: [{ label: cur.name, value: cur.name }] });
   return acc;
@@ -74,7 +74,7 @@ This code takes an array of products and creates a nested data structure that gr
 
 <ZoomImage src="/img/tree-js-3.png" alt="Display options dynamically" caption="Transform data using JavaScript" />
 
-</dd>
+
 
 
 #### Default selected value `string`
@@ -91,7 +91,7 @@ For example, if you want the default selected value to be `CLOTHING`, you can se
 ]
 ```
 
-</dd>
+
 
 ### Label
 
@@ -101,7 +101,7 @@ For example, if you want the default selected value to be `CLOTHING`, you can se
 
 Sets the label of the widget.
 
-</dd>
+
 
 #### Position `string`
 
@@ -114,7 +114,7 @@ Sets the placement of the **Label** in the widget.
 - **Top**: The label gets placed at the top of the widget.
 - **Auto**: The label position is determined based on the height of the widget itself. 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -122,7 +122,7 @@ Sets the placement of the **Label** in the widget.
 
 Sets the label alignment of the widget when the position selected is **Left**.
 
-</dd>
+
 
 #### Width (in columns) `number`
 
@@ -130,7 +130,7 @@ Sets the label alignment of the widget when the position selected is **Left**.
 
 Sets the width of the label in the widget when the **Left** position is selected.
 
-</dd>
+
 
 ### Validations
 
@@ -140,7 +140,7 @@ Sets the width of the label in the widget when the **Left** position is selected
 
 Enabling this property for a TreeSelect widget makes it a mandatory field, meaning that the user must select a value from the dropdown. When the select widget is placed within a Form widget and the **Required** property is enabled, the Form's submit button remains inactive until a value is selected in the select widget.
 
-</dd>
+
 
 ### General
 
@@ -150,7 +150,7 @@ Enabling this property for a TreeSelect widget makes it a mandatory field, meani
 
 Enables you to add hints or provide additional information to guide the user regarding the selection.
 
-</dd>
+
 
 #### Placeholder `string`
 
@@ -158,7 +158,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 Allows you to set the placeholder text displayed within the widget. This can be used to provide a hint or example value to the user, guiding them on the expected format or content of the input.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -171,7 +171,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -184,7 +184,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -192,7 +192,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Allow clearing value `boolean`
 
@@ -200,7 +200,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Enabling this option allows users to clear the selected value, whether it was the default selection or one they made themselves.
 
-</dd>
+
 
 #### Expand all by default `boolean`
 
@@ -208,7 +208,7 @@ Enabling this option allows users to clear the selected value, whether it was th
 
 When enabled, this feature displays the dropdown in an expanded state by default, revealing all the available child options.
 
-</dd>
+
 
 
 #### Height `string`
@@ -223,7 +223,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height**: The widget's height adjusts dynamically in response to changes in its content.
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
-</dd>
+
 
 ### Events
 
@@ -233,7 +233,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
-</dd>
+
 
 #### onDropdownOpen
 
@@ -241,7 +241,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
-</dd>
+
 
 
 #### onDropdownClose 
@@ -250,7 +250,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
-</dd>
+
 
 
 ## Style properties
@@ -265,7 +265,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). You can also click the **JS** button to programmatically modify the font color using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -273,7 +273,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values. You can also click the **JS** button to programmatically modify the font size using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -281,7 +281,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. You can click the **JS** button to programmatically modify the font style using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -291,7 +291,7 @@ Enables you to select a font style for the widget, such as bold or italic. You c
 
 Applies rounded corners to the outer edge of the widget. To control the border radius programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
 
@@ -299,7 +299,7 @@ Applies rounded corners to the outer edge of the widget. To control the border r
 
 This property adds a drop shadow effect to the frame of the widget. To control the Box Shadow programmatically, click the **JS** button to enable JavaScript and specify a valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-</dd>
+
 
 
 ## Reference properties
@@ -319,7 +319,7 @@ The `options` property contains the values available for selection in a TreeSele
 ```
 
 
-</dd>
+
 
 #### selectedOptionLabel `string`
  
@@ -333,7 +333,7 @@ Returns the label of the option selected in the TreeSelect widget. It changes if
 ```
 
 
-</dd>
+
 
 #### selectedOptionValue `string`
  
@@ -347,7 +347,7 @@ Returns the value of the option selected in the TreeSelect widget. It changes if
 ```
 
 
-</dd>
+
 
 #### isDisabled `boolean`
 
@@ -362,7 +362,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 ```
 
 
-</dd>
+
 
 #### isVisible `boolean`
  
@@ -376,7 +376,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 ```
 
 
-</dd>
+
 
 #### isValid `boolean`
  
@@ -391,7 +391,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 ```
 
 
-</dd>
+
 
 ## Methods
 
@@ -412,7 +412,7 @@ Sets the disabled state of the widget.
 TreeSelect1.setDisabled(false)
 ```
 
-</dd>
+
 
 #### setRequired (param: boolean): Promise
 
@@ -426,6 +426,6 @@ Sets whether the widget is required or not.
 TreeSelect1.setRequired(true)
 ```
 
-</dd>
+
 
 

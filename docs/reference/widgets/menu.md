@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
  
 Sets the text on the widget.
 
-</dd>
+
 
 #### Menu items source `string`
 
@@ -33,13 +33,13 @@ Allows you to specify the source of the menu items.
 The dynamic menu option supports a maximum of 10 menu items. 
 :::
 
-</dd>
+
 
 #### Menu items `string`
 
  
 Displays a list of available menu items. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. See the <a href="/reference/widgets/menu/menu-items">Menu Items</a> reference guide for configuring menu items.
-</dd>
+
 
 #### Source data `array`
 
@@ -70,7 +70,7 @@ If the data retrieved from the query is not in the desired format, you can use J
 
 The code filters the data to create a new array with unique items based on the `type` property.
 
-</dd>
+
 
 
 ### General
@@ -86,7 +86,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -99,7 +99,7 @@ For example, if you want to allow only a specific user to select menu item, you 
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -109,13 +109,13 @@ For example, if you want to allow only a specific user to select menu item, you 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Compact `boolean`
 
  
 When enabled, the widget is displayed in compact mode, occupying less space on the page. Compact mode is ideal for tight layouts where space optimization is necessary.
-</dd>
+
 
 
 ## Style properties
@@ -136,7 +136,7 @@ Specifies the style type of the button to indicate its significance.
 * **Tertiary**: This option does not apply any specific styling changes to the button.
 
 This property can be dynamically set using JavaScript by providing a string value of `PRIMARY`, `SECONDARY`, or `TERTIARY`.
-</dd>
+
 
 ### Icon
 
@@ -146,7 +146,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
-</dd>
+
 
 #### Position `string`
 
@@ -159,7 +159,7 @@ This property allows you to configure the **Icon**'s placement.
 * **Right**: Aligns the Icon to the right side of the Label.
 
 
-</dd>
+
 
 #### Placement `string`
 
@@ -172,7 +172,7 @@ Determines the spacing between the **Icon** and the **Label**.
 * Center
 * Between
 
-</dd>
+
 
 ### Color
 
@@ -182,7 +182,7 @@ Determines the spacing between the **Icon** and the **Label**.
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -192,7 +192,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -202,7 +202,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -218,7 +218,7 @@ Returns the value of the label associated with the widget.
 {{ '{{ '{{ '{{MenuButton1.label}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -231,7 +231,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{MenuButton1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -255,7 +255,7 @@ MenuButton1.setVisibility(true).then(() => {
 
 ```
 
-</dd>
+
 
 
 #### setDisabled `boolean`
@@ -272,4 +272,3 @@ MenuButton1.setDisabled(false).then(() => {
 })
 ```
 
-</dd>

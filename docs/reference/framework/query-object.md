@@ -26,7 +26,7 @@ The query object has the following properties that you can use to reference the 
 
 If this property is referenced in a widget's property field, the query is automatically run on page load. You can manually enable a query to run on page load from the [query settings](/connect-data/reference/query-settings).
 
-</dd>
+
 
 ### responseMeta `object`
 
@@ -38,7 +38,7 @@ The `responseMeta` object contains details about the response, such as the statu
 {{Query1.responseMeta}}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -73,7 +73,7 @@ run(params: Object): Promise<data>
 
 In certain scenarios, such as when running a query inside a loop, it may be necessary to pass parameters to the query with values that are contextual to the execution. For more information, see [Pass Parameters to Queries](/connect-data/how-to-guides/how-to-pass-params-to-an-api).
 
-</dd>
+
 
 ### query.clear()
 
@@ -85,7 +85,7 @@ This function clears all data from the query's `data` property.
 {{Query1.clear()}}
 ```
 
-</dd>
+
 
 ## See also
 - [Pass Runtime Parameters to Queries](/connect-data/how-to-guides/how-to-pass-params-to-an-api)

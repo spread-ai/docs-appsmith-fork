@@ -31,7 +31,7 @@ Additionally, you can populate the document by retrieving data from a source suc
 When using base64-encoded files larger than 1.5MB, the Document Viewer may encounter rendering issues. It is recommended to use direct URLs or reduce the file size for optimal performance.
 :::
 
-</dd>
+
 
 #### Visible `Boolean`
 
@@ -39,7 +39,7 @@ When using base64-encoded files larger than 1.5MB, the Document Viewer may encou
 
 This property controls the visibility of the widget. If you turn off this property, the widget would not be visible in view mode. Additionally, you can use JavaScript by clicking on `JS` next to the Visible property to conditionally control the widget's visibility.
 
-</dd>
+
 
 #### Animate Loading `Boolean`
 
@@ -47,7 +47,7 @@ This property controls the visibility of the widget. If you turn off this proper
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the `JS` next to the property.
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `DocumentViewer1.isVisible`.
@@ -58,14 +58,14 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `docUrl` property contains the URL of the uploaded document and is used to display the link to access the document. 
 
-</dd>
+
 
 
 #### isVisible `Boolean`
  
 
 The `isVisible` property reflects the state of the widget's **Visible** setting. It is represented by a boolean value, where true indicates that the widget is visible, and false indicates that it is hidden or not displayed on the page.
-</dd>
+
 
 
 Watch the following videos to learn how to generate PDF reports using [Apitemplate.io](https://www.youtube.com/watch?v=8j6Z9bZvLqA) and [Carbone.io](https://www.youtube.com/watch?v=xlthDth2S6Q).
@@ -90,7 +90,7 @@ Sets the visibility of the widget.
 DocumentViewer1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setURL (param: string): Promise
@@ -105,7 +105,7 @@ Updates the URL of the document to be displayed in the Document Viewer widget.
 DocumentViewer1.setURL('<https://example.com/file.txt>')
 ```
 
-</dd>
+
 
 
 

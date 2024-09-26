@@ -35,7 +35,7 @@ Determines the visual appearance and behavior of the code scanner widget.
 - **Always On**:  The code scanner widget is always active and ready for scanning.
 - **Click to Scan**: The code scanner widget acts as a button that is activated only when clicked by the user.
 
-</dd>
+
 
 #### Text `string`
 
@@ -43,7 +43,7 @@ Determines the visual appearance and behavior of the code scanner widget.
 
 Specifies the label text displayed alongside the scanning widget. This property is only available when the Scanner layout is selected as **Click to Scan**.
 
-</dd>
+
 
 ### General 
 
@@ -59,7 +59,7 @@ For example,  if you want to make the widget visible only when the user checks a
 {{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -72,7 +72,7 @@ For example, if you want to allow only a specific user to interact with the Code
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -81,7 +81,7 @@ For example, if you want to allow only a specific user to interact with the Code
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 #### Tooltip `string`
 
@@ -89,7 +89,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 Sets a tooltip that appears when the user hovers over the widget. It enables you to add hints or provide additional information for the button. The icon properties are only available for the **Click to Scan** Scanner layout option.
 
-</dd>
+
 
 ### Events
 
@@ -101,7 +101,7 @@ When an event is triggered, these event handlers can execute queries, JS code, o
 
 Triggered when a valid code is detected.
 
-</dd>
+
 
 ## Style properties
 
@@ -117,7 +117,7 @@ The icon properties are only accessible for the **Click to Scan** Scanner layout
 
 Specifies the icon to be displayed on the widget. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
-</dd>
+
 
 #### Position `string`
 
@@ -130,7 +130,7 @@ This property allows you to configure the **Icon**'s placement.
 * **Right**: Aligns the icon to the right side of the Text.
 
 
-</dd>
+
 
 #### Placement `string`
 
@@ -145,7 +145,7 @@ Determines the spacing between the **Icon** and the **Text**.
 
 This property can be dynamically set using JavaScript by providing a string value of `START`, `CENTER`, or `BETWEEN`.
 
-</dd>
+
 
 ### Color
 
@@ -155,7 +155,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -165,7 +165,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify a valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -175,7 +175,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -193,7 +193,7 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 {{ '{{ '{{ '{{Select1.isDisabled}}' }}
 ```
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -206,7 +206,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{Select1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### value `string`
 
@@ -220,7 +220,7 @@ Retrieves the scanned code value from the widget.
 {{ '{{ '{{ '{{CodeScanner1.value}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -242,7 +242,7 @@ Sets the visibility of the widget.
 CodeScanner1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -257,4 +257,3 @@ Sets the disabled state of the widget.
 CodeScanner1.setDisabled(false)
 ```
 
-</dd>

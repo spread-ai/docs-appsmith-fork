@@ -25,13 +25,13 @@ SELECT * FROM public."users"
 LIMIT {{ '{{ '{{ '{{this.params.limit}}' }} 
 OFFSET {{ '{{ '{{ '{{this.params.offset}}' }}
 ```
-</dd>
+
 
 *Example 2:* Using API
 
  
 
-* Create backend code in your API to handle dynamic `limits` and `offsets`, like:
+* Create back-end code in your API to handle dynamic `limits` and `offsets`, like:
 
 ```js
 // Backend code to fetch data with limit and offset
@@ -48,9 +48,9 @@ const fetchData = async (limit = 50, offset = 0) => {
 GET https://mock-api.appsmith.com/users?limit={{ '{{ '{{ '{{this.params.limit}}' }}&offset={{ '{{ '{{ '{{this.params.offset}}' }}
 ```
 
-</dd>
 
-</dd>
+
+
 
 
 2. Create a new JSObject and add a function to fetch the data in chunks to handle large datasets efficiently.
@@ -112,7 +112,7 @@ export default {
 The code may vary based on your datasource, so update the query and parameters accordingly to fit your specific data structure and requirements.
 
 
-</dd>
+
 
 3. Execute the defined JS function either directly from the JS editor or by triggering the function through widget events.
 
@@ -123,7 +123,7 @@ The code may vary based on your datasource, so update the query and parameters a
 To directly download a file from the datasource instead of fetching data in chunks, follow these steps:
 
 
-1. Create a backend API that uses built-in functions provided by your datasource to convert data into a file format. Ensure that the output is either the file content or a URL that provides access to the file.
+1. Create a back-end API that uses built-in functions provided by your datasource to convert data into a file format. Ensure that the output is either the file content or a URL that provides access to the file.
 
 
 
@@ -134,10 +134,10 @@ To directly download a file from the datasource instead of fetching data in chun
 
 
 
-</dd>
 
 
-2. In Appsmith, create a new query to connect with the backend API and access the file.
+
+2. In Appsmith, create a new query to connect with the back-end API and access the file.
 
  
 
@@ -148,7 +148,7 @@ To directly download a file from the datasource instead of fetching data in chun
 http://api.example.com/export-data-to-file
 ```
 
-</dd>
+
 
 
 3. Create a new JSObject and add a function to fetch and download the file:
@@ -174,7 +174,7 @@ await download(data, fileName, fileType);
 
 The code fetches the file content from this URL, and then triggers `download()` function to download the file.
 
-</dd>
+
 
 ## See also
 

@@ -43,7 +43,7 @@ _Example_:
 ]
 ```
 
-</dd>
+
 
 :::caution
 * Any file exceeding 5 MB is saved as a blob URL, and the upper limit for file size is 100 MB.
@@ -64,7 +64,7 @@ _Options_:
 * **Array of Object(CSV, XLS, JSON, TSV)**: This data format accommodates various file formats, including CSV, XLS, JSON, and TSV, enabling versatile handling of tabular data. Using large files directly in widgets may lead to a slowdown in the application.
 
 
-</dd>
+
 
 #### Infer data types from CSV	`boolean`
 
@@ -72,7 +72,7 @@ _Options_:
 
 When enabled, it automatically determines the data types for columns in a CSV file based on content characteristics. This option is only available when the **Array of Object** data format is selected.
 
-</dd>
+
 
 
 
@@ -84,7 +84,7 @@ When enabled, it automatically determines the data types for columns in a CSV fi
  
 
 Sets the maximum number of files that a user can select. The default value is `1`.
-</dd>
+
 
 ### Label
 
@@ -94,7 +94,7 @@ Sets the maximum number of files that a user can select. The default value is `1
 
 Sets the text on the widget. The default value is `Select Files`.
 
-</dd>
+
 
 ### Validation
 
@@ -105,7 +105,7 @@ Sets the text on the widget. The default value is `Select Files`.
 
 Enabling this property makes the Filepicker widget mandatory, requiring users to select a file. I When the widget is placed within a Form widget, enabling the **Required** property ensures that the Form's submit button remains disabled untila a file is selected.
 
-</dd>
+
 
 #### Maximum File Size	`number`
 
@@ -113,7 +113,7 @@ Enabling this property makes the Filepicker widget mandatory, requiring users to
 
 Sets the maximum allowed size of each file that a user can upload. The default value is set to `5 MB`.
 
-</dd>
+
 
 ### General
 
@@ -130,7 +130,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -143,7 +143,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -152,7 +152,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 ### Events
 
@@ -162,7 +162,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user select a file through the widget.
 
-</dd>
+
 
 
 ### Color
@@ -173,7 +173,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). When JS is enabled, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -183,7 +183,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -193,7 +193,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -209,7 +209,7 @@ The `files` property stores file objects that the user has selected. Each file o
 
 ```js
 // Accessing the file data
-{{ '{{ '{{ '{{ FilePicker1.files[0].data }}' }}
+{{ '{{ FilePicker1.files[0].data }}' }}
 
 // Accessing the data format
 {{ '{{ '{{ '{{FilePicker1.files[0].dataFormat}}' }}
@@ -230,7 +230,7 @@ The `files` property stores file objects that the user has selected. Each file o
 
 See how to [Upload Files to S3 using Filepicker](/connect-data/how-to-guides/how-to-upload-to-s3)
 
-</dd>
+
 
 #### isValid `boolean`
 
@@ -244,7 +244,7 @@ Example:
 {{ '{{ '{{ '{{FilePicker1.isValid}}' }}
 ```
 
-</dd>
+
 
 #### isDisabled `boolean`
 
@@ -258,7 +258,7 @@ Example:
 {{ '{{ '{{ '{{FilePicker1.isDisabled}}' }}
 ```
 
-</dd>
+
 
 
 #### isVisible `boolean`
@@ -273,7 +273,7 @@ Example:
 {{ '{{ '{{ '{{FilePicker1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### isDirty `boolean`
 
@@ -288,7 +288,7 @@ Example:
 ```
 
 
-</dd>
+
 
 
 
@@ -311,7 +311,7 @@ Sets the visibility of the widget.
 FilePicker1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled(param: boolean): Promise
@@ -326,7 +326,7 @@ Sets the disabled state of the widget.
 FilePicker1.setDisabled(false)
 ```
 
-</dd>
+
 
 See how to guide on [Upload CSV data in Table using Filepicker](/build-apps/how-to-guides/Upload-CSV-Data-to-Table)
 

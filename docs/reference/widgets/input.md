@@ -29,7 +29,7 @@ Allows you to set the type of data you want to capture in the user input, enabli
 * **Password:** Masks the user's input to hide sensitive information like passwords or PINs.
 * **Email:** Validates and accepts email addresses, ensuring they match the required format.
 
-</dd>
+
 
 #### Default value `string`
 
@@ -37,7 +37,7 @@ Allows you to set the type of data you want to capture in the user input, enabli
 
 Allows you to specify an initial value for the widget when it's first displayed.
 
-</dd>
+
 
 ### Label
 
@@ -47,7 +47,7 @@ Allows you to specify an initial value for the widget when it's first displayed.
 
 Allows you to define the label on the widget.
 
-</dd>
+
 
 #### Position `string`
 
@@ -63,7 +63,7 @@ This property allows you to configure the label's placement.
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 #### Alignment `string`
 
@@ -72,7 +72,7 @@ This property allows you to configure the label's placement.
 This property is only available when you select **Left** from the Position property. It allows you to align the text to the left boundary or adjust it closer to the widget using the Right alignment option.
 
 
-</dd>
+
 
 #### Width `number`
 
@@ -81,7 +81,7 @@ This property is only available when you select **Left** from the Position prope
 This property is only available when you select **Left** from the Position property. It allows you to control the proximity of the text to the widget, determining how close or far it can be positioned. Default value of **Width** is `5`.
 
 
-</dd>
+
 
 ### Validation
 
@@ -91,7 +91,7 @@ This property is only available when you select **Left** from the Position prope
 
 This validation feature allows you to designate the Input as a mandatory field. For instance, when the Input is placed within a Form widget, enabling the Required property ensures that the Form's submit button remains disabled until the Input has some value.
 
-</dd>
+
 
 #### Max characters	`number`
 
@@ -100,7 +100,7 @@ This validation feature allows you to designate the Input as a mandatory field. 
 
 Sets a maximum length allowed for user input. Only appears when **Data Type** is set to a Text type.
 
-</dd>
+
 
 #### Regex `string`
 
@@ -131,7 +131,7 @@ To validate whether an entered email is correct, use the following regular expre
 
 To get phone number in a specific format or length, you can use the following codes:
 
-*Example:* if you want to validate international phone numbers starting with a plus sign (+) and a total length between 6 and 14 digits, use the following code inside the **Regex** property:
+For example, if you want to validate international phone numbers starting with a plus sign (+) and a total length between 6 and 14 digits, use the following code inside the **Regex** property:
 
 
 ```js
@@ -173,7 +173,7 @@ This validation is used to ensure that URLs provided by users for files or image
 
 
 
-</dd>
+
 
 #### Valid `boolean`
 
@@ -194,7 +194,7 @@ _Example:_
 ```
 
 
-</dd>
+
 
 #### Error Message `string`
 
@@ -202,7 +202,7 @@ _Example:_
 
 Allows customization of the error message displayed when the user enters an incorrect value. By default, the input widget shows a generic `"invalid input"` message.
 
-*Example:*  If you want to add password validation, ensuring it is greater than 10 characters and contains at least one digit, you can use the following code in the **Error message** property.
+For example,  If you want to add password validation, ensuring it is greater than 10 characters and contains at least one digit, you can use the following code in the **Error message** property.
 
 ```js
 //Valid property
@@ -216,7 +216,7 @@ Allows customization of the error message displayed when the user enters an inco
 This code checks the length of Input is exactly 10 characters and if it contains at least one digit. If not, it returns the error message
 
 
-</dd>
+
 
 #### Min `number`
 
@@ -224,7 +224,7 @@ This code checks the length of Input is exactly 10 characters and if it contains
 
 Sets a minimum value allowed for user input. Only appears when **Data Type** is set to Number.
 
-</dd>
+
 
 #### Max `number`
 
@@ -232,7 +232,7 @@ Sets a minimum value allowed for user input. Only appears when **Data Type** is 
 
 Sets a maximum value allowed for user input. Only appears when **Data Type** is set to Number.
 
-</dd>
+
 
 ### General
 
@@ -243,7 +243,7 @@ Sets a maximum value allowed for user input. Only appears when **Data Type** is 
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
 
-</dd>
+
 
 #### Placeholder `string`
 
@@ -251,7 +251,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 Allows you to set the placeholder text displayed within the input box. This can be used to provide a hint or example value to the user, guiding them on the expected format or content of the input.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -267,7 +267,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -281,7 +281,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 ```
 
 
-</dd>
+
 
 
 #### Animate Loading `boolean`
@@ -291,7 +291,7 @@ For example, if you want to allow only a specific user to fill the input, you ca
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. The default value for the property is `true`.
 
-</dd>
+
 
 
 #### Auto Focus `boolean`
@@ -300,7 +300,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 When enabled, automatically places the user's cursor in the input box upon page load, directing their attention to the input field for immediate interaction.
 
-</dd>
+
 
 #### Allow autofill `boolean`
 
@@ -308,7 +308,7 @@ When enabled, automatically places the user's cursor in the input box upon page 
 
 When enabled, allows users to autofill input values using their web browser's saved data.
 
-</dd>
+
 
 #### Height `string`
 
@@ -322,7 +322,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ### Events
 
@@ -337,7 +337,7 @@ When the event is triggered, these event handlers can execute queries, JS functi
 
 Specifies the actions to be executed when the input is modified.
 
-</dd>
+
 
 
 
@@ -347,7 +347,7 @@ Specifies the actions to be executed when the input is modified.
 
 Specifies the actions to be executed when the input area is focused.
 
-</dd>
+
 
 #### onBlur
 
@@ -357,7 +357,7 @@ Specifies the actions to be executed when the input area loses focus.
 
 
 
-</dd>
+
 
 #### onSubmit
 
@@ -365,7 +365,7 @@ Specifies the actions to be executed when the input area loses focus.
 
 Specifies the actions to be executed when the input is submitted with the `ENTER` key.
 
-</dd>
+
 
 #### Reset on submit
 
@@ -373,7 +373,7 @@ Specifies the actions to be executed when the input is submitted with the `ENTER
 
 Clears the input value after submission. 
 
-</dd>
+
 
 ## Style properties
 
@@ -387,7 +387,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Specifies the icon to be displayed on the widget. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
-</dd>
+
 
 ### Label styles
 
@@ -397,7 +397,7 @@ Specifies the icon to be displayed on the widget. Additionally, you can use **JS
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Font size `string`
 
@@ -405,7 +405,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `string`
 
@@ -413,7 +413,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -423,7 +423,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -433,7 +433,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -450,7 +450,7 @@ The `text` property retrieves the input value of the widget.
 {{ '{{ '{{ '{{Input1.text}}' }}
 ```
 
-</dd>
+
 
 
 #### isValid `boolean`
@@ -464,7 +464,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 {{ '{{ '{{ '{{Input1.isValid}}' }}
 ```
 
-</dd>
+
 
 #### isDisabled `boolean`
 
@@ -477,7 +477,7 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 {{ '{{ '{{ '{{Input1.isDisabled}}' }}
 ```
 
-</dd>
+
 
 
 #### isVisible `boolean`
@@ -491,7 +491,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{Input1.isVisible}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -514,7 +514,7 @@ Input1.setVisibility(true)
 ```
 
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -530,7 +530,7 @@ Input1.setDisabled(false)
 ```
 
 
-</dd>
+
 
 #### setValue (param: string): Promise
 
@@ -544,7 +544,7 @@ Allows you to dynamically set the value of the widget.
 Input1.setValue("Hello123")
 ```
 
-</dd>
+
 
 
 #### setRequired (param: boolean): Promise
@@ -560,5 +560,5 @@ Input1.setRequired(true)
 ```
 
 
-</dd>
+
 

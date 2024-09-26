@@ -46,7 +46,7 @@ Ensure that the values assigned to each option are unique. Additionally, you can
 ```
 
 
-</dd>
+
 
 
 #### Default Selected Values `String`
@@ -61,7 +61,7 @@ Allows you to set default options in a widget. These options are initially selec
 ```
 
 
-</dd>
+
 
 
 ### Label
@@ -72,7 +72,7 @@ Allows you to set default options in a widget. These options are initially selec
 
  
 Sets the label of the Checkbox.
-</dd>
+
 
 
 
@@ -93,7 +93,7 @@ This property allows you to configure the label's placement in three ways:
 * **Top**: Positions the label above the widget.
 
 
-</dd>
+
 
 
 ### Validations
@@ -108,7 +108,7 @@ This validation feature allows you to designate the Checkbox Group as a mandator
 
 
 
-</dd>
+
 
 
 ### General
@@ -119,7 +119,7 @@ This validation feature allows you to designate the Checkbox Group as a mandator
 
 
 This feature enables you to add hints or provide additional information to guide the user regarding the required input.
-</dd>
+
 
 
 #### Visible `Boolean`
@@ -128,7 +128,7 @@ This feature enables you to add hints or provide additional information to guide
 
 This property controls the visibility of the widget. If you turn off this property, the widget would not be visible in view mode. Additionally, you can use JavaScript by clicking on `JS` next to the **Visible** property to conditionally control the widget's visibility. 
 
-</dd>
+
 
 #### Disabled `Boolean`
 
@@ -136,13 +136,13 @@ This property controls the visibility of the widget. If you turn off this proper
 
 This property prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on `JS` next to the **Disabled** property to control the widget's disable state conditionally.
 
-</dd>
+
 
 #### Inline `Boolean`
 
  
 When this property is turned on, the checkbox items are displayed horizontally. However, when the property is turned off, the checkbox items are displayed in a vertical line.
-</dd>
+
 
 #### Select All Options `Boolean`
 
@@ -150,7 +150,7 @@ When this property is turned on, the checkbox items are displayed horizontally. 
 
 When the property is turned on, a **Select All** item is displayed, allowing the user to select all available options with a single click.
 
-</dd>
+
 
 #### Animate Loading `Boolean`
 
@@ -159,7 +159,7 @@ When the property is turned on, a **Select All** item is displayed, allowing the
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
-</dd>
+
 
 
 #### Height `String`
@@ -174,7 +174,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 
 ### Events
@@ -186,7 +186,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 This event defines the action that would be executed when the user selects or deselects multiple or single items in the checkbox group. It allows you to specify a list of [supported actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the checkbox state change.
 
-</dd>
+
 
 
 
@@ -199,7 +199,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Represents the text color of the widget, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color).  It can also be manipulated programmatically using the JavaScript functions.
 
-</dd>
+
 
 #### Font size `String`
 
@@ -207,7 +207,7 @@ Represents the text color of the widget, specified as a [CSS color value](https:
 
 Determines the font size of the label. It accepts [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) values and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Emphasis `String`
 
@@ -215,7 +215,7 @@ Determines the font size of the label. It accepts [CSS font-size](https://develo
 
 Enables you to select a font style for the widget, such as bold or italic. Additionally, the font style can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Alignment 
 
@@ -223,7 +223,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
 
 Allows you to specify the alignment between options. This property provides options such as **None**, **Start**, **End**, **Center**, **Between**, and **Around**, which determine the spacing and arrangement of the options within the designated area. 
 
-</dd>
+
 
 #### Accent color `String`
 
@@ -231,7 +231,7 @@ Allows you to specify the alignment between options. This property provides opti
 
 Defines the accent color of the widget, which is used as the fill color for the checkbox when it is checked. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 #### Border radius `String`
 
@@ -239,7 +239,7 @@ Defines the accent color of the widget, which is used as the fill color for the 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 ## Reference properties
 These properties are not available in the property pane, but can be accessed using the dot operator in other widgets or JavaScript functions. For instance, to get the visibility status, you can use `CheckboxGroup1.isVisible`.
@@ -252,7 +252,7 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `options` property is an array that contains the values of all the available options.
 
-</dd>
+
 
 #### selectedValues `Array`
 
@@ -260,7 +260,7 @@ The `options` property is an array that contains the values of all the available
 
 The `selectedValues` property holds an array of values that represents the options selected by the user.
 
-</dd>
+
 
 #### isValid `Boolean`
 
@@ -268,7 +268,7 @@ The `selectedValues` property holds an array of values that represents the optio
 
 The valid property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
-</dd>
+
 
 #### isDisabled `Boolean`
 
@@ -276,14 +276,14 @@ The valid property indicates the validation status of a widget, providing inform
 
 The `isDisabled` property indicates the disabled status of a widget. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-</dd>
+
 
 #### isVisible `Boolean`
  
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-</dd>
+
 
 ## Methods
 
@@ -304,7 +304,7 @@ Sets the visibility of the widget.
 CheckboxGroup1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -320,7 +320,7 @@ CheckboxGroup1.setDisabled(false)
 ```
 
 
-</dd>
+
 
 #### setValue (param: object): Promise
 
@@ -334,7 +334,7 @@ Allows you to dynamically set the value of the widget.
 CheckboxGroup1.setValue({ label: 'Option 2', value: 'option2' })
 ```
 
-</dd>
+
 
 
 #### setRequired (param: boolean): Promise
@@ -350,4 +350,3 @@ CheckboxGroup1.setRequired(true)
 ```
 
 
-</dd>

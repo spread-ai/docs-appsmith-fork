@@ -22,10 +22,10 @@ description: >-
 
 ![Click to expand](/img/button-recaptcha-config.png)
 
-**5. Configure the server-side integration on your backend**
+**5. Configure the server-side integration on your back-end**
 
 :::note
-The exact steps depend on your backend - see [Google's reference](https://developers.google.com/recaptcha/docs/verify) for detailed instructions.
+The exact steps depend on your back-end - see [Google's reference](https://developers.google.com/recaptcha/docs/verify) for detailed instructions.
 :::
 
 The user's reCAPTCHA response can be obtained in the API Pane with the `recaptchaToken` key.

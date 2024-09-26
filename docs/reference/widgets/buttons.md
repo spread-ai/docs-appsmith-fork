@@ -21,7 +21,7 @@ Specifies the type of buttons to be included in the button group.
 * **Simple**: You can add text buttons to the group. Each button can be customized with different labels, colors, and actions.
 * **Menu**: You can add menu items to a button in the group. This allows you to create a dropdown menu with multiple items. For information on configuring menu items in the button group, refer to [Menu Items](/reference/widgets/menu/menu-items).
 
-</dd>
+
 
 ### Label
 
@@ -32,7 +32,7 @@ Specifies the type of buttons to be included in the button group.
 
 Sets the text label for a item. It can be a static text value or dynamically bound to a datasource. 
 
-</dd>
+
 
 ### General
 
@@ -43,7 +43,7 @@ Sets the text label for a item. It can be a static text value or dynamically bou
 Allows you to show or hide the menu item based on specific conditions. 
 
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -52,7 +52,7 @@ Allows you to show or hide the menu item based on specific conditions.
 Allows you to disable input for a item. This can be beneficial when you want to restrict user interaction with the item in specific situations.
 
 
-</dd>
+
 
 ## Style properties
 Style properties allow you to change the look and feel of the widget.
@@ -65,7 +65,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Appsmith utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
 
-</dd>
+
 
 #### Position `string`
 
@@ -77,7 +77,7 @@ This property allows you to configure the **Icon**'s placement.
 * **Left**: Aligns the Icon to the left side of the Label.
 * **Right**: Aligns the Icon to the right side of the Label.
 
-</dd>
+
 
 #### Placement `string`
 
@@ -90,7 +90,7 @@ Determines the spacing between the **Icon** and the **Label**.
 * Center
 * Between
 
-</dd>
+
 
 
 ### Color
@@ -101,7 +101,7 @@ Determines the spacing between the **Icon** and the **Label**.
 
 Determines the color of the button displayed for each item in the button group. 
 
-</dd>
+
 
 
 
@@ -114,5 +114,5 @@ Determines the color of the button displayed for each item in the button group.
 Allows you to configure [actions](/reference/appsmith-framework/widget-actions) to be executed when the button is clicked. 
 
 
-</dd>
+
 

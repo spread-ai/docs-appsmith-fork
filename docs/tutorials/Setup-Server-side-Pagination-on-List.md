@@ -7,8 +7,8 @@ description: This page shows you how to set up server-side pagination on a List 
 This page shows you how to set up server-side pagination on the List widget, which allows you to manage and display large datasets within your application. It involves fetching and displaying only a portion of data from the server at a time, enhancing performance.
 
 
-<div style={{ '{{ '{{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
-  <iframe src="https://demo.arcade.software/V6vWLj9CgB3IgOjZmWlf?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ '{{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
+<div style={{ '{{ position: "relative", paddingBottom: "calc(50.520833333333336% + 41px)", height: "0", width: "100%" }}' }}>
+  <iframe src="https://demo.arcade.software/V6vWLj9CgB3IgOjZmWlf?embed" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{ '{{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", colorScheme: "light" }}' }} title="Appsmith | Connect Data">
   </iframe>
 </div>
 
@@ -29,8 +29,8 @@ Example:
 ```sql
 SELECT * FROM users
 ORDER BY id
-LIMIT {{ '{{ '{{ '{{ List1.pageSize }}' }}
-OFFSET {{ '{{ '{{ '{{ (List1.pageNo - 1) * List1.pageSize }}' }}
+LIMIT {{ '{{ List1.pageSize }}' }}
+OFFSET {{ '{{ (List1.pageNo - 1) * List1.pageSize }}' }}
 ```
 
 * For the REST API, the page number can be passed as a query parameter to retrieve the corresponding subset of data, like:
@@ -42,7 +42,7 @@ https://mock-api.appsmith.com/users?page={{ '{{ '{{ '{{List1.pageNo}}' }}
 You can refer to the [datasource reference](https://appsmith-docs-9z74fyp29-get-appsmith.vercel.app/connect-data/reference) for specific instructions on setting up pagination for your selected datasource.
 
 
-</dd>
+
 
 
 ## Configure List widget
@@ -59,7 +59,7 @@ Follow these steps to configure the List widget to display fetched data, and imp
 {{ '{{ '{{ '{{fetchData.data}}' }}
 ```
 
-</dd>
+
 
 2. Enable the [**Server-side pagination**](/reference/widgets/list#server-side-pagination) property.
 
@@ -85,7 +85,7 @@ SELECT COUNT(*) FROM users;
 
 This SQL query counts and returns the total number of records (rows) in the `users` table.
 
-</dd>
+
 
 2. To display the count, add the following code to the **Total records** property:
 
@@ -94,4 +94,4 @@ This SQL query counts and returns the total number of records (rows) in the `use
 ```js
 {{ '{{ '{{ '{{fetch_users_count.data[0].count}}' }}
 ```
-</dd>
+

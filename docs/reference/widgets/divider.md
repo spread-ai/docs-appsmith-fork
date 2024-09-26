@@ -25,7 +25,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -34,7 +34,7 @@ For example, if you want to make the widget visible only when the user selects "
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. Default value is set to `true`.
 
-</dd>
+
 
 ## Style properties
 
@@ -48,7 +48,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Determines the orientation of the widget's line, allowing you to choose between horizontal and vertical alignments. When JavaScript is enabled, accepted values are `horizontal` or `vertical`.
 
-</dd>
+
 
 ### Stroke
 
@@ -59,7 +59,7 @@ Determines the orientation of the widget's line, allowing you to choose between 
 Specify the color of the divider. It accepts [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and can also be programmatically modified using JavaScript functions.
 
 
-</dd>
+
 
 #### Style `string`
 
@@ -75,7 +75,7 @@ Sets the type of line used for the divider.
 With JS is enabled, accepts strings with value `solid`, `dashed`, or `dotted`.
 
 
-</dd>
+
 
 #### Thickness `number` 
 
@@ -84,7 +84,7 @@ With JS is enabled, accepts strings with value `solid`, `dashed`, or `dotted`.
 
 Sets the thickness of the divider line in pixels. 
 
-</dd>
+
 
 ### Cap
 
@@ -99,7 +99,7 @@ Sets the design of the cap to be added to the end of the divider line.
 * Arrow
 * Dot
 
-</dd>
+
 
 #### Cap position `string`
 
@@ -113,7 +113,7 @@ Determines the placement of caps on the sides of the divider line.
 * Both
 * Right
 
-</dd>
+
 
 ## Reference properties
 
@@ -133,7 +133,7 @@ Indicates the widget's Cap style property, shows whether the divider line is cap
 ```
 
 
-</dd>
+
 
 
 #### capSide `number`
@@ -153,7 +153,7 @@ Reflects the widget's Cap Position style property, indicating the sides of the d
 ```
 
 
-</dd>
+
 
 #### dividerColor `string`
 
@@ -169,7 +169,7 @@ Reflects the color value of the divider line, presented in the form of a hexadec
 ```
 
 
-</dd>
+
 
 
 #### orientation `string`
@@ -186,7 +186,7 @@ Reflects the **Orientation** of the widget, values are strings either `horizonta
 ```
 
 
-</dd>
+
 
 #### strokeStyle `string`
 
@@ -202,7 +202,7 @@ Reflects the widget's **Dash Style** property as a string with value either `sol
 ```
 
 
-</dd>
+
 
 
 #### thickness `number`
@@ -219,7 +219,7 @@ Reflects the thickness of the divider line as a number of pixels.
 ```
 
 
-</dd>
+
 
 #### isVisible `boolean`
 
@@ -233,7 +233,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{Divider1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -254,4 +254,3 @@ Sets the visibility of the widget.
 Divider1.setVisibility(true)
 ```
 
-</dd>

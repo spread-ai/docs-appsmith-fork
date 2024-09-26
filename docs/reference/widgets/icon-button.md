@@ -18,7 +18,7 @@ These properties are customizable options present in the property pane of the wi
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Appsmith utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
 
 
-</dd>
+
 
 
 #### onClick
@@ -26,7 +26,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
  
 
 Specifies the [action](/reference/appsmith-framework/widget-actions) to be performed when the user clicks on the widget. 
-</dd>
+
 
 ### General
 
@@ -36,7 +36,7 @@ Specifies the [action](/reference/appsmith-framework/widget-actions) to be perfo
 
 Enables you to add hints or provide additional information to guide the user regarding the required input.
 
-</dd>
+
 
 #### Visible `boolean`
 
@@ -49,7 +49,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -62,7 +62,7 @@ For example, if you want to allow only a specific user to click on the Icon Butt
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -71,7 +71,7 @@ For example, if you want to allow only a specific user to click on the Icon Butt
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-</dd>
+
 
 
 ## Style properties
@@ -91,7 +91,7 @@ Specifies the style type of the button to indicate its significance.
 
 This property can be dynamically set using JavaScript by providing a string value of `PRIMARY`, `SECONDARY`, or `TERTIARY`.
 
-</dd>
+
 
 ### Color 
 
@@ -101,7 +101,7 @@ This property can be dynamically set using JavaScript by providing a string valu
 
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
 
-</dd>
+
 
 ### Border and shadow
 
@@ -112,7 +112,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-</dd>
+
 
 #### Box Shadow `string`
  
@@ -122,7 +122,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 Adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
 
-</dd>
+
 
 ## Reference properties
 Reference properties are properties that are not available in the property pane but can be accessed using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to get the visibility status, you can use `IconButton1.isVisible`.
@@ -139,7 +139,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 {{ '{{ '{{ '{{IconButton1.isVisible}}' }}
 ```
 
-</dd>
+
 
 ## Methods
 
@@ -160,7 +160,7 @@ Sets the visibility of the widget.
 IconButton1.setVisibility(true)
 ```
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -175,7 +175,7 @@ Sets the disabled state of the widget.
 IconButton1.setDisabled(false)
 ```
 
-</dd>
+
 
 ## See also
 - [Edit List Data](/build-apps/how-to-guides/update-list-data)

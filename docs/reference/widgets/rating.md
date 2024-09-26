@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 Specify the total number of stars you want to use for rating the information. The default value is set to `5`.
 
-</dd>
+
 
 #### Default Rating	`number`
 
@@ -27,7 +27,7 @@ Specify the total number of stars you want to use for rating the information. Th
 
 Sets the default value of the widget when users see it for the first time. The default value is set to `3`.
 
-</dd>
+
 
 #### Tooltips `array<string>`
 
@@ -47,7 +47,7 @@ Sets the tooltip content for the stars by providing an array of strings that des
 ]
 ```
 
-</dd>
+
 
 ### General
 
@@ -58,7 +58,7 @@ Sets the tooltip content for the stars by providing an array of strings that des
 Enable this option to accept half star ratings, providing users with more precise rating capabilities.
 
 
-</dd>
+
 
 
 #### Visible `boolean`
@@ -72,7 +72,7 @@ For example, if you want to make the widget visible only when the user selects "
 {{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-</dd>
+
 
 #### Disabled `boolean`
 
@@ -85,7 +85,7 @@ For example, if you want to allow only a specific user to click the button, you 
 {{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
 ```
 
-</dd>
+
 
 #### Read Only	 `boolean`
 
@@ -93,7 +93,7 @@ For example, if you want to allow only a specific user to click the button, you 
 
 When enabled, user input is disabled, but the stars retain their regular styling, and the tooltips remain visible when the user hovers with the mouse cursor. However, when the **Disabled** setting is turned on, the **Read Only** mode is disregarded.
 
-</dd>
+
 
 #### Animate Loading `boolean`
 
@@ -102,7 +102,7 @@ When enabled, user input is disabled, but the stars retain their regular styling
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.  Default value is set to `true`.
 
-</dd>
+
 
 #### Height `string`
 
@@ -117,7 +117,7 @@ This property determines how the widget's height adjusts to changes in its conte
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
 
 
-</dd>
+
 
 ### Events
 
@@ -127,7 +127,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 Sets the action (Framework functions, queries, or JS functions) to be executed when the rate is changed.
 
-</dd>
+
 
 ## Style properties
 
@@ -148,7 +148,7 @@ Allows you to control the size of the star icons.
 * Large
 
 
-</dd>
+
 
 ### Color
 
@@ -159,7 +159,7 @@ Allows you to control the size of the star icons.
 Sets the color of the stars that are displayed for the default rate. Additionally, the active color can be programmatically modified using JavaScript functions.
 
 
-</dd>
+
 
 #### Inactive color `string`	
 
@@ -168,7 +168,7 @@ Sets the color of the stars that are displayed for the default rate. Additionall
 Sets the color of inactive stars displayed in the rating widget. Additionally, the inactive color can be programmatically modified using JavaScript functions.
 
 
-</dd>
+
 
 ## Reference properties
 
@@ -185,7 +185,7 @@ Reflects whether the widget is visible or not.
 {{ '{{ '{{ '{{Rating1.isVisible}}' }}
 ```
 
-</dd>
+
 
 #### maxCount `number`
 
@@ -198,7 +198,7 @@ Indicates the total number of stars, as specified in the **Max Rating** property
 {{ '{{ '{{ '{{Rating1.maxCount}}' }}
 ```
 
-</dd>
+
 
 #### value `number`
 
@@ -211,7 +211,7 @@ Indicates the value selected by the user in the Rating widget.
 {{ '{{ '{{ '{{Rating1.value}}' }}
 ```
 
-</dd>
+
 
 
 ## Methods
@@ -234,7 +234,7 @@ Rating1.setVisibility(true)
 ```
 
 
-</dd>
+
 
 
 #### setDisabled (param: boolean): Promise
@@ -250,7 +250,7 @@ Rating1.setDisabled(false)
 ```
 
 
-</dd>
+
 
 #### setValue (param: number): Promise
 
@@ -264,4 +264,3 @@ Allows you to dynamically set the value of the widget.
 Rating1.setValue(3)
 ```
 
-</dd>
