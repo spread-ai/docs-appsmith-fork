@@ -29,6 +29,7 @@ Drop an **Icon** button on the **List** widget and select **edit** in **Icon** f
 Drop a **Modal** widget on to the canvas and add the required widgets to display specific details from the List item. Rename the buttons on the Modal to `Reset` and `Update`.
 
 ### 3. Add a query
+
 Add a new query to update the List data, for example:
 
    ```sql
@@ -53,14 +54,14 @@ Create a JS Object to run the update query, close the Modal, and fetch the updat
 	}
    ```
 
-### 5. Add execution action 
+### 5. Add execution action
 
 Add **Execute a JS function** action to the **onClick** event of the `Update` button on the modal. and then add a **Show modal** action to the **onClick** event of the icon. Select the Modal created in Step 2.
 
 ### 5.1 Delete list item
 
 To delete a list item using an icon, follow these steps add a query to delete the list item based on the [triggeredItem](/reference/widgets/list#triggereditem-object) property.
-   
+
    ```sql
    DELETE FROM product 
    WHERE id = {{ '{{ '{{ '{{lst_products.triggeredItem.id}}' }}; 
@@ -71,10 +72,11 @@ Add **Execute query** action to the **onClick** event of the `Delete` button to 
 ### 5.2 Edit list item inline
 
 To implement inline editing of list items using a Select widget, follow these steps:
+
 1. Drop a Select widget to the List widget. Bind data to the widget to populate values from a specific column.
 2. Create a new query to update the column value for the triggered row.
 
-   ```sql 
+   ```sql
       UPDATE public."product" 
       SET state = '{{ '{{lst_products.triggeredItem.sel_state.selectedOptionValue}}' }}'
          -- Specify a valid condition here. Removing the condition may update every row in the table!

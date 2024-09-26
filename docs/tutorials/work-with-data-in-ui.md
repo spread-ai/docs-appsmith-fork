@@ -29,16 +29,16 @@ On the **UI** tab inside the Studio workspace, select **+ New UI element** and d
 #### 2. Add widgets to view details
 
 Now add widgets on the form to view user details:
-    * For the user's name, drop an **Input** widget inside the Form. 
-    * On the property pane to the right, select on the default name **Input1** and rename it to `nameInput`. 
-    * In the **Text** property box, enter `Name`. 
+    * For the user's name, drop an **Input** widget inside the Form.
+    * On the property pane to the right, select on the default name **Input1** and rename it to `nameInput`.
+    * In the **Text** property box, enter `Name`.
     * In the **Default Value** property box, type `{{ '{{usersTable.selectedRow.name}}' }}`. This displays the user's name of the selected row on the **usersTable** Table widget.
 
-You also need to view the user's date of birth: 
-    * Drop a **Datepicker** widget inside the Form. 
+You also need to view the user's date of birth:
+    * Drop a **Datepicker** widget inside the Form.
     * Rename the widget to `dobInput`.
     * In the **Text** property box, enter `DOB`.
-    * select the **JS** button next to the **Default Date** property to connect the Datepicker widget to the user's date of birth on the Table. 
+    * select the **JS** button next to the **Default Date** property to connect the Datepicker widget to the user's date of birth on the Table.
     * Type `{{ '{{usersTable.selectedRow.dob}}' }}` in the **Default Date** property box.
     * In the **Date format** property, select the **LL** date format.
 
@@ -50,14 +50,14 @@ You've completed binding the data to the widgets on the Form. Select the rows on
 
 #### 3. Select the Queries tab
 
-Select the **Queries** tab on the **Entity Explorer** to the screen's left. 
+Select the **Queries** tab on the **Entity Explorer** to the screen's left.
 
 #### 4. Create a new query
 
 Select the **+ New Query / API** button.
 
 #### 5. Select the tutorial query
- 
+
 Select **usersTutorialDB query** from the list of options. Rename the query to `updateUsers`. Delete the default fetch query template.
 
 !!! warning "Test database"
@@ -84,12 +84,12 @@ Paste the  SQL update command into the query editor to update the `users` table 
 
 To connect the **updateUsers** query to a button, select the default **Submit** button on the Form:
     * On the property pane to the right of the screen, in the **Label** property box, change the label to `Update`.
-    * Select the **+** icon next to the **onClick** event. 
+    * Select the **+** icon next to the **onClick** event.
     * In the **Action** list, select **Execute a query > updateUsers** to run the query on button click.
-    * Select the **+** icon next to the **onSuccess** callback. 
-    * Select **Execute a query > getUsers**. 
+    * Select the **+** icon next to the **onSuccess** callback.
+    * Select **Execute a query > getUsers**.
 
-The button is now configured to execute the **updateUsers** query to save any modified user details on the Form and to refresh the Table widget with the updated information. 
+The button is now configured to execute the **updateUsers** query to save any modified user details on the Form and to refresh the Table widget with the updated information.
 
 #### 9. Test the update button
 

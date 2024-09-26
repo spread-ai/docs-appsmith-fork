@@ -48,6 +48,7 @@ You can export query data to a file, such as CSV or TXT file, using the `downloa
    ```javascript
    download(UserData.data, 'UserData.csv', 'text/csv');
    ```
+
 ### 2. Downloading data from a URL
 
 To download data from a URL, you can download the file by passing the URL to the function:
@@ -67,6 +68,7 @@ If you need to transform your data before exporting, you can use JavaScript to f
    ```
 
 ### 4. Downloading data as a Blob
+
 You can also download binary data using Blobs, for example, to download a PDF:
 
    ```javascript

@@ -23,7 +23,7 @@ Sometimes you may want to pass a variable from one Studio application to another
 ## Instructions
 
 ### 1. Create a simple sending application
- 
+
 Start by creating a simple Studio application with an input field and button.
 
 <figure markdown="span">
@@ -36,7 +36,7 @@ Start by creating a simple Studio application with an input field and button.
 1. You can set the name at the top of the property window of the input box, next to the Copy and Trash icons.
 
 ### 2. Create a receiving application
- 
+
 Create a receiving application with just an input field and publish it. Got to the launcher page and run the receiving application. Get the URL of the application and save it for the next step. The URL should look something like this:
 
 `https://studio.stage.stage.spread.ai/app/receiving-application/page1-65fa6160dc4fa21cdb10c113`
@@ -46,7 +46,7 @@ Create a receiving application with just an input field and publish it. Got to t
     You may have `...?embed=true` at the end of the copied URL. Anything after the `?` is a query parameter and should be removed from the saved URL. We will add query parameters in the next step.
 
 ### 3. Set the query parameter in the sending application
- 
+
 Go back to the sending application and inside the widget properties for the submit button add an **onClick** action and select **Navigate to** > **URL**.
 
 <figure markdown="span">
@@ -63,7 +63,7 @@ In the **Enter URL** field enter the URL from [Step 2](#2-create-a-receiving-app
 In the highlighted line, the text of the input field is fetched using JavaScriot and used as the value to the `sharedVariable` key.
 
 ### 4. Set the input field to the query parameter
- 
+
 Go to the receiving application. In the property window of the input field, set the **Default Value** to:
 
 ``` json title='Query parameters for the sending application' hl_lines='3'
@@ -80,12 +80,12 @@ Now you can run the sending application, enter a value, submit, and see it refle
 
 <br>
 
-[Download the sending application (3kb) :material-download: ](../src/sending-app.json.zip){ .md-button .md-button--primary }
+[Download the sending application (3kb) :material-download:](../src/sending-app.json.zip){ .md-button .md-button--primary }
 
 <figcaption style='text-align: left; max-width: none'>Unzip the file, and import the JSON inside the Studio application: <b>Create New</b> > <b>Import</b> from the Studio landing page. Change the URL of the receiving application.</figcaption>
 
 <br>
 
-[Download the receiving application (2kb) :material-download: ](../src/receiving-app.json.zip){ .md-button .md-button--primary }
+[Download the receiving application (2kb) :material-download:](../src/receiving-app.json.zip){ .md-button .md-button--primary }
 
 <figcaption style='text-align: left; max-width: none'>Unzip the file, and import the JSON inside the Studio application: <b>Create New</b> > <b>Import</b> from the Studio landing page.</figcaption>

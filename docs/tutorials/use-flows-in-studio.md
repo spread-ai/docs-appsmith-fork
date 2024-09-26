@@ -9,8 +9,6 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-# Use Flows in Studio applications
-
 ## Synopsis
 
 Flows is a low-code data orchestrator which can perform extract, transform, and load operations on data and shape it to be more useful for Studio applications, amongst other things. For some implementations you may want to use this output of a Flow for a Studio application. For more on Flows, see [Flows Overview](../../using-flows/using-flows-overview.md). For the purposes of this demonstration we will work with an already complete Flow.  

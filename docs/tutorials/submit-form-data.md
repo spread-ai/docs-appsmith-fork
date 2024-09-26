@@ -64,12 +64,13 @@ SET
   image = {{ '{{ Form1.data.InputImageURL }}' }} -- To add image from Filepicker widget use: {FilePicker1.files[0].data}}' }}
 WHERE id = {{ '{{Table1.triggeredRow.id}}' }};
 ```
+
 Set the Submit Button's **onClick** event to execute the update query.
 
 ### 7.  Refresh Table and close Modal
 
 Set the Submit Button's **onSuccess** callback to trigger the fetch query, which retrieves the updated data and displays it in the Table.
- 
+
 ### 8. Create a new **onSuccess** callback by clicking the **+** icon and set it to close the Modal
 
 ### 9. Create a new **onSuccess** callback to show the success alert
