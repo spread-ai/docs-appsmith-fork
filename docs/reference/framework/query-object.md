@@ -1,14 +1,15 @@
 ---
-sidebar_position: 3
+Title: Query object
+Description: A primer on the global query object in Studio.
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import CodeBlock from "@theme/CodeBlock";
+<!--
+README
 
-# query
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
-The `query` object contains the parameters required to run queries and access the query data.
+The `query` object has the parameters required to run queries and access the query data.
 
 ## Properties
 
@@ -16,37 +17,27 @@ The query object has the following properties that you can use to reference the 
 
 ### data `Array`
 
-<dd>
-
-`data` is a read-only property that contains the response body from the last successful execution of this query.
+`data` is a read-only property that has the response body from the last successful execution of this query.
 
 ```
 {{Query1.data}}
 ```
 
-If this property is referenced in a widget's property field, the query is automatically run on page load. You can manually enable a query to run on page load from the [query settings](/connect-data/reference/query-settings).
-
-
+If this property is referenced in a widget's property field, the query is automatically run on page load. You can manually enable a query to run on page load from the query settings.
 
 ### responseMeta `object`
 
-<dd>
-
-The `responseMeta` object contains details about the response, such as the status code, headers, and other relevant information related to the query's execution and the server's response.
+The `responseMeta` object has details about the response, such as the status code, headers, and other relevant information related to the query's execution and the server's response.
 
 ```
 {{Query1.responseMeta}}
 ```
-
-
 
 ## Methods
 
 Query object has the following methods that enable you to run a query or clear a query response.
 
 ### query.run()
-
-<dd>
 
 When you call the `run()` function of a query, it executes the query.
 
@@ -56,36 +47,29 @@ When you call the `run()` function of a query, it executes the query.
 run(params: Object): Promise<data>
 ```
 
-| Argument   | Description                                                                                                                  |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **params** | An object containing key-value pairs to pass into the query. You can access it using the key - `{{ this.params.KEY_NAME }}`. |
+| Argument | Description |
+| --- | --- |
+| **params** | An object containing key-value pairs to pass into the query. You can access it using the key: `{{ this.params.KEY_NAME }}`. |
 
-`run()` is an asynchronous function that returns a promise and thus sequential code may not have the updated response of the query. Sequential code can be executed using the `.then()` and `.catch()` methods or the `async/await` syntax. The run function can't be invoked inside widget data properties but can be invoked from event handlers such as onClick.
+The `run()` function is an asynchronous function that returns a promise and thus sequential code may not have the updated response of the query. Sequential code can be executed using the `.then()` and `.catch()` methods or the `async/await` syntax. The run function can't be invoked inside widget data properties but can be invoked from event handlers such as onClick.
 
-```javascript
-// Using promise syntax to chain actions in sequence
+```javascript title="Using promise syntax to chain actions in sequence"
 {{
     Query1.run(params)
-        .then((response) => {...}) // run after the query is successful
-        .catch(() => {...}) // run if the query encounters any errors
+        .then((response) => {...}) // (1)!
+        .catch(() => {...}) // (2)!
 }}
 ```
 
-In certain scenarios, such as when running a query inside a loop, it may be necessary to pass parameters to the query with values that are contextual to the execution. For more information, see [Pass Parameters to Queries](/connect-data/how-to-guides/how-to-pass-params-to-an-api).
+1. Run after the query is successful.
+2. Run when the query is succesful.
 
-
+In certain scenarios, such as when running a query inside a loop, it may be necessary to pass parameters to the query with values that are contextual to the execution.
 
 ### query.clear()
-
-<dd>
 
 This function clears all data from the query's `data` property.
 
 ```
 {{Query1.clear()}}
 ```
-
-
-
-## See also
-- [Pass Runtime Parameters to Queries](/connect-data/how-to-guides/how-to-pass-params-to-an-api)

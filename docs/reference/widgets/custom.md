@@ -30,7 +30,7 @@ Learn more about [Custom Widget Builder](#custom-widget-builder).
 
 This property allows you to pass object data to the custom widget's code editor. You can use mustache binding `{{ '{{ '{{ '{{}}' }}` to pass data from queries or other widgets.
 
-_Example:_ If you want to pass the name from a Table widget to the custom widget, use the following code:
+ If you want to pass the name from a Table widget to the custom widget, use the following code:
 
 ```js
 {

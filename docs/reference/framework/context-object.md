@@ -13,7 +13,7 @@ The `appsmith` object is a global object that provides access to information and
 
 ## Properties
 
-The `appsmith` object contains the following properties.
+The `appsmith` object has the following properties.
 
 ### Store `object`
 
@@ -25,7 +25,7 @@ This object lets you access any app-level data or temporary state that is stored
 
 ### URL
 
-This object contains all the attributes of the current URL that the user is on. To access these values from the URL, you can use the following code snippet:
+This object has all the attributes of the current URL that the user is on. To access these values from the URL, you can use the following code snippet:
 
 ```javascript
 {{ '{{ appsmith.URL }}' }}
@@ -110,7 +110,7 @@ The `queryParams` object can be used to [share data across pages](/advanced-conc
 
 ### user `object`
 
-This object contains the data of the currently authenticated user.
+This object has the data of the currently authenticated user.
 
 ```javascript
 {
@@ -136,7 +136,7 @@ This object contains the data of the currently authenticated user.
 
 #### email `string`
 
-The `email` property of user contains the email address of the user.
+The `email` property of user has the email address of the user.
 To access the email, use the following code:
 
 ```javascript
@@ -176,10 +176,9 @@ This boolean flag indicates if the user has consented to send telemetry data to 
 {{ '{{appsmith.user.enableTelemetry}}' }}
 ```
 
-
 #### roles `object`
 
-This object contains an array of strings of the roles assigned to the currently authenticated user. You can access the value of roles using the snippet given below:
+This object has an array of strings of the roles assigned to the currently authenticated user. You can access the value of roles using the snippet given below:
 
 ```js
 appsmith.user.roles
@@ -197,7 +196,7 @@ It returns an array of all the roles in your instance. For example:
 ]
 ```
 
-You can use `appsmith.user.roles` object to [programmatically control the access](/advanced-concepts/granular-access-control) to your application entities.
+You can use `appsmith.user.roles` object to programmatically control the access to your application entities.
 
 For example, consider a scenario where you are hiding a **Button** widget by adding the following code to the **Visible** property of the button:
 
@@ -207,27 +206,9 @@ For example, consider a scenario where you are hiding a **Button** widget by add
 
 In the above example, the visibility of the button is determined by a role. Only users who have been assigned the "back-end engineer" role can see this button.
 
-
-
-
-
 #### groups `object`
 
-<Tags
-  tags={[
-    {
-      name: "Business",
-      link: "https://www.appsmith.com/pricing",
-      additionalClass: "business",
-    }
-  ]}
-/>
-
-</div>
-
-<!-- vale on -->
-
-This object contains an array of strings of the groups assigned to the currently authenticated user. You can access the value of groups using the snippet given below:
+This object has an array of strings of the groups assigned to the currently authenticated user. You can access the value of groups using the snippet given below:
 
 ```js
 appsmith.user.groups
@@ -237,14 +218,14 @@ It returns an array of all the groups in your instance. For example:
 
 ```javascript
 [
-  "Administrators",
-  "Managers",
-  "End Users" 
+     "Administrators",
+     "Managers",
+     "End Users" 
 ]
 
 ```
 
-You can use `appsmith.user.groups` object to [programmatically control the access](/advanced-concepts/granular-access-control) to your application entities.
+You can use `appsmith.user.groups` object to programmatically control the access to your application entities.
 
 For example, consider a scenario where you are hiding a Button widget by adding the following code to the **Visible** property of the button -
 
@@ -348,7 +329,7 @@ If you have defined custom scopes in your identity provider, the information ass
 
 ### theme `object`
 
-This object contains the details of the theme properties applied to the application. You can use this object to set certain properties in widgets to be aligned with the app theme or to write custom logic.
+This object has the details of the theme properties applied to the application. You can use this object to set certain properties in widgets to be aligned with the app theme or to write custom logic.
 
 ```js
 {{ '{{appsmith.theme}}' }}
@@ -358,7 +339,7 @@ The theme object has the following attributes:
 
 #### colors `object`
 
-This object contains the color properties of the application. It has the following properties:
+This object has the color properties of the application. It has the following properties:
 
 #### primaryColor `string`
 
@@ -378,7 +359,7 @@ The `backgroundColor` property refers to the background color set in the theme s
 
 #### borderRadius `object`
 
-This object contains the border properties that enable you to control the curvature or roundness of the corners of the widgets in the application.
+This object has the border properties that enable you to control the curvature or roundness of the corners of the widgets in the application.
 
 #### appBorderRadius `string`
 
@@ -402,7 +383,7 @@ It refers to the box shadow set in the theme section of the app settings. You ca
 
 #### fontFamily `object`
 
-This object contains the font properties of your application.
+This object has the font properties of your application.
 
 #### appFont `string`
 
@@ -414,26 +395,26 @@ It refers to the font family set for the app in the theme section for app settin
 
 ### geolocation `object`
 
-This object contains functions that allow you to retrieve the current user's location and the coordinates received from the user's device using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API).
+This object has functions that allow you to retrieve the current user's location and the coordinates received from the user's device using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API).
 
 ```javascript
 {
- canBeRequested: boolean,
- getCurrentPosition: Function,
- watchPosition: Function,
- clearWatch: Function,
- currentPosition: {
-   coords: {
-      accuracy: number,
-      altitude: number | null,
-      altitudeAccuracy: number | null,
-      heading: number | null,
-      latitude: number,
-      longitude: number,
-      speed: number | mull,
-   },
-   timestamp: number,
- }
+     canBeRequested: boolean,
+     getCurrentPosition: Function,
+     watchPosition: Function,
+     clearWatch: Function,
+     currentPosition: {
+     coords: {
+          accuracy: number,
+          altitude: number | null,
+          altitudeAccuracy: number | null,
+          heading: number | null,
+          latitude: number,
+          longitude: number,
+          speed: number | mull,
+     },
+     timestamp: number,
+     }
 }
 ```
 
@@ -443,9 +424,9 @@ Signature:
 
 ```javascript
 (
- onSuccessCallback?,
- onErrorCallback?,
- options?: { maximumAge?: number, timeout?: number, enableHighAccuracy?: boolean } 
+     onSuccessCallback?,
+     onErrorCallback?,
+     options?: { maximumAge?: number, timeout?: number, enableHighAccuracy?: boolean } 
 ) -> void
 ```
 
@@ -457,9 +438,9 @@ Signature:
 
 ```javascript
 (
-  onSuccessCallback?,
-  onErrorCallback?,
-  options?: { maximumAge?: number, timeout?: number, enableHighAccuracy?: boolean } 
+     onSuccessCallback?,
+     onErrorCallback?,
+     options?: { maximumAge?: number, timeout?: number, enableHighAccuracy?: boolean } 
 ) -> void
 ```
 
@@ -473,4 +454,4 @@ It is similar to the original browser API, with the difference being that you do
 
 ### mode `enum`
 
-This field is an enum that contains whether the app runs in view or edit mode. It takes the values `VIEW` or `EDIT`.
+This field is an enum that signals whether the app runs in view or edit mode. It takes the values `VIEW` or `EDIT`.

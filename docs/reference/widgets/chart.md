@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Chart Type `string`
 
-<dd>
+
 
 
 Allows you to choose from a variety of built-in chart types to visualize your data. Each chart type has its own unique way of representing data, allowing you to choose the most suitable visualization for your specific needs. Here are the available chart types:
@@ -34,7 +34,7 @@ Allows you to choose from a variety of built-in chart types to visualize your da
 
 #### Series title `string`
 
-<dd>
+
 
 Sets the title of the current **Chart series**. This property is not available for Custom charts.
 
@@ -42,7 +42,7 @@ Sets the title of the current **Chart series**. This property is not available f
 
 #### Series color `string`
 
-<dd>
+
 
 Sets the color of the current **Chart series**. This property is not available for Custom charts.
 
@@ -50,7 +50,7 @@ Sets the color of the current **Chart series**. This property is not available f
 
 #### Series data `array<object>`
 
-<dd>
+
 
 Allows you to display data in the built-in charts, provide the data in the following structure: 
 
@@ -89,7 +89,7 @@ If the query fails and there is no default data specified, the chart doesn't ren
 
 #### Add Series `string`
 
-<dd>
+
 
 Allows you to add multiple chart series. With this you can populate the chart with different sets of data and customize various aspects of its appearance, such as colors and labels.
 
@@ -99,7 +99,7 @@ Allows you to add multiple chart series. With this you can populate the chart wi
 
 ### Custom EChart Configuration
 
-<dd>
+
 
 [ECharts](https://echarts.apache.org/handbook/en/get-started/) is a JavaScript chart library by Apache that provides a wide range of chart types. 
 
@@ -141,7 +141,7 @@ See how to create a [Custom EChart](/build-apps/how-to-guides/create-custom-char
 
 ### Custom Fusion Chart 
 
-<dd>
+
 
 :::caution
 Effective from March 1st, 2024, Custom Fusion Charts will display a watermark as the license will not be renewed. It is recommended to start using [Custom ECharts](#custom-echarts).
@@ -178,7 +178,7 @@ Each chart type has different configurations and options. To learn more about th
 
 #### Title `string`
 
-<dd>
+
 
 Sets the text that appears at the top of the chart as a title.
 
@@ -187,7 +187,7 @@ Sets the text that appears at the top of the chart as a title.
 
 #### Visible `boolean`
 
-<dd>
+
 
 Controls the visibility of the widget. If you turn off this property, the widget would not be visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
@@ -204,7 +204,7 @@ For example, if you want to make the widget visible only when the user selects "
 #### Animate Loading `boolean`
 
 
-<dd>
+
 
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
 
@@ -215,7 +215,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 #### Adaptive Axis `boolean`
 
-<dd>
+
 
 Determines the scaling behavior of the y-axis. 
 
@@ -228,7 +228,7 @@ Determines the scaling behavior of the y-axis.
 
 #### onDataPointClick
 
-<dd>
+
 
 Specifies an [action](/reference/appsmith-framework/widget-actions) to be performed when a user clicks on a data point in the chart.
 
@@ -242,7 +242,7 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Border radius `string`
 
-<dd>
+
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
@@ -251,7 +251,7 @@ Applies rounded corners to the outer edge of the widget. If JavaScript is enable
 #### Box Shadow `string`
  
 
-<dd>
+
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
@@ -265,7 +265,7 @@ Reference properties are properties that are not available in the property pane 
 
 #### xAxisName `string`
 
-<dd>
+
 
 Contains the text of the x-axis Label setting of the chart.
 
@@ -279,7 +279,7 @@ Contains the text of the x-axis Label setting of the chart.
 
 #### yAxisName `string`
 
-<dd>
+
 
 Contains the text of the y-axis Label setting of the chart.
 
@@ -292,7 +292,7 @@ Contains the text of the y-axis Label setting of the chart.
 
 #### chartData `array<object>`
 
-<dd>
+
 
 Displays all the data related to the chart.
 
@@ -305,7 +305,7 @@ Displays all the data related to the chart.
 
 #### selectedDataPoint `object: x, y, seriesTitle`
 
-<dd>
+
 
 Contains an object which represents the data point that the user has most recently clicked `(object containing: x, y, seriesTitle)`.
 
@@ -325,7 +325,7 @@ Contains an object which represents the data point that the user has most recent
 
 #### isVisible `boolean`
 
-<dd>
+
 
 Reflects whether the widget is visible or not.
 

@@ -183,7 +183,7 @@ Allows you to define custom validation rules and error messages to guide users w
 
 For instance, you can use this property to validate a Create Password field, making sure it doesn't contain certain strings like `password` or `123`.
 
-_Example:_
+
 
 ```js
 {{ '{{ '{{ '{{

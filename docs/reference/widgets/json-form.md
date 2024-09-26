@@ -348,7 +348,7 @@ Reference properties are properties that are not available in the property pane 
 
 Contains a JSON object with the field names and their current values in the form.
 
-_Example:_
+
 
 ```
 {{ '{{ JSONForm1.object }}' }}
