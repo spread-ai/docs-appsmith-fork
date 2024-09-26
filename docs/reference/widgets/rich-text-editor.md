@@ -35,7 +35,7 @@ Allows you to set the initial text content for the widget.
 After selecting an input type as **Markdown** or **HTML**, you can populate the default text section with corresponding content. 
 
 
-*Example:*
+
 
 ```markdown
 // Markdown: 
@@ -142,7 +142,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -155,7 +155,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -201,7 +201,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-Enables you to specify [supported actions](/reference/appsmith-framework/widget-actions) that would be triggered whenever the user modifies the text input. 
+Enables you to specify [supported actions](/reference/framework/global-functions.md) that would be triggered whenever the user modifies the text input. 
 
 
 
@@ -261,10 +261,10 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `text` property retrieves the value entered by the user. If no text is entered by the user, the default value would be displayed. 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{RichTextEditor1.text}}' }}
+{{ '{{RichTextEditor1.text}}' }}
 ```
 
 
@@ -277,10 +277,10 @@ The `text` property retrieves the value entered by the user. If no text is enter
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{RichTextEditor1.isDisabled}}' }}
+{{ '{{RichTextEditor1.isDisabled}}' }}
 ```
 
 
@@ -291,10 +291,10 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{RichTextEditor1.isVisible}}' }}
+{{ '{{RichTextEditor1.isVisible}}' }}
 ```
 
 
@@ -304,7 +304,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 The methods provided by the widget allow users to dynamically update and manipulate its properties, facilitating the creation of dynamic and interactive applications without the need for manual property modifications. 
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -314,7 +314,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 RichTextEditor1.setVisibility(true)
@@ -330,7 +330,7 @@ RichTextEditor1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 RichTextEditor1.setDisabled(false)
@@ -346,7 +346,7 @@ RichTextEditor1.setDisabled(false)
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 RichTextEditor1.setRequired(true)

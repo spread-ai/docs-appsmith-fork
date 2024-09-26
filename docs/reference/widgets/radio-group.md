@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 This property allows you to set the labels and values for the items. You can add these labels and values directly from the user interface. Ensure that the values assigned to each option are unique. Additionally, you can turn on **JS** and provide options in JSON format, like:
 
-*Example*:
+
 ```js
 [
   {
@@ -35,10 +35,10 @@ This property allows you to set the labels and values for the items. You can add
 
 You can also dynamically display data by using JavaScript. For instance, you can use the `.map()` function to transform the data to the desired format, like:
 
-*Example*:
+
 
 ```js
-{{ '{{ '{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -178,7 +178,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-This event defines the action that would be executed when the user selects or deselects item in the Radio Group. It allows you to specify a list of [actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the widget state change.
+This event defines the action that would be executed when the user selects or deselects item in the Radio Group. It allows you to specify a list of [actions](/reference/framework/global-functions.md) that can be triggered in response to the widget state change.
 
 
 
@@ -236,9 +236,9 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `options` property is an array that contains the values of all the available options.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{RadioGroup1.options}}' }}
+{{ '{{RadioGroup1.options}}' }}
 ```
 
 
@@ -248,9 +248,9 @@ The `options` property is an array that contains the values of all the available
 
 The `selectedValues` property holds an array of values that represents the options selected by the user.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{RadioGroup1.selectedOptionValue}}' }}
+{{ '{{RadioGroup1.selectedOptionValue}}' }}
 ```
 
 
@@ -261,9 +261,9 @@ The `selectedValues` property holds an array of values that represents the optio
 
 This property indicates whether the widget is required or not.	
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{RadioGroup1.isRequired}}' }}
+{{ '{{RadioGroup1.isRequired}}' }}
 ```
 
 
@@ -273,9 +273,9 @@ This property indicates whether the widget is required or not.
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{RadioGroup1.isVisible}}' }}
+{{ '{{RadioGroup1.isVisible}}' }}
 ```
 
 
@@ -284,7 +284,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 
@@ -294,7 +294,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 RadioGroup1.setVisibility(true)
@@ -308,7 +308,7 @@ RadioGroup1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 RadioGroup1.setDisabled(false)
@@ -322,7 +322,7 @@ RadioGroup1.setDisabled(false)
 
 Allows you to dynamically set the data of the widget.
 
-*Example*:
+
 
 ```js
 RadioGroup1.setData([{ label: 'Option 1', value: 'option1' }, { label: 'Option 2', value: 'option2' }])

@@ -163,7 +163,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -176,7 +176,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -224,7 +224,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 
 ### Events
-When the event is triggered, these event handlers can run queries, JS code, or other [supported actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can run queries, JS code, or other [supported actions](/reference/framework/global-functions.md).
 
 
 
@@ -330,9 +330,9 @@ Reference properties are properties that are not available in the property pane 
 
 The `countryCode` property stores the country code associated with the selected country.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.countryCode}}' }}
+{{ '{{PhoneInput1.countryCode}}' }}
 ```
 
 
@@ -343,9 +343,9 @@ The `countryCode` property stores the country code associated with the selected 
 
 The `dialCode` property retrieves the dialing code of the selected country.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.dialCode}}' }}
+{{ '{{PhoneInput1.dialCode}}' }}
 ```
 
 
@@ -357,9 +357,9 @@ The `dialCode` property retrieves the dialing code of the selected country.
 
 The `text` property retrieves the formatted input value of the widget. 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.text}}' }}
+{{ '{{PhoneInput1.text}}' }}
 ```
 
 
@@ -370,9 +370,9 @@ The `text` property retrieves the formatted input value of the widget.
 
 The `value` property retrieves the unformatted phone number, regardless of whether formatting is enabled or not. 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.value}}' }}
+{{ '{{PhoneInput1.value}}' }}
 ```
 
 
@@ -383,9 +383,9 @@ The `value` property retrieves the unformatted phone number, regardless of wheth
 
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.isValid}}' }}
+{{ '{{PhoneInput1.isValid}}' }}
 ```
 
 
@@ -396,9 +396,9 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 The `isDisabled` property reflects the state of the widget's **Disabled** setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.isDisabled}}' }}
+{{ '{{PhoneInput1.isDisabled}}' }}
 ```
 
 
@@ -410,9 +410,9 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{PhoneInput1.isVisible}}' }}
+{{ '{{PhoneInput1.isVisible}}' }}
 ```
 
 
@@ -421,7 +421,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -430,7 +430,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 PhoneInput1.setVisibility(true)
@@ -445,7 +445,7 @@ PhoneInput1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 ```js
 PhoneInput1.setDisabled(false)
 ```

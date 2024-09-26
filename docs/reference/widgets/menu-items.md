@@ -23,7 +23,7 @@ The Label property is used to set the text label for a menu item. It can be a st
 
  
 
-Allows you to configure one or multiple [actions](/reference/appsmith-framework/widget-actions) to be executed when the menu item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
+Allows you to configure one or multiple [actions](/reference/framework/global-functions.md) to be executed when the menu item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 
 
@@ -112,9 +112,9 @@ The `currentItem` property refers to the currently selected item on the menu but
 
 <ZoomImage src="/img/MenuButton-Dynamic-Menu-Label-CurrentItem.png" alt="Display images on table row selection" caption="Display menu items using currentItem" />
 
-*Example:*
 
-If you want to dynamically display the label based on the selected item's name, you can use `{{ '{{ '{{ '{{currentItem.Name}}' }}`, where `Name` represents the attribute that stores the name of the menu item. This enables you to show different text for each menu item based on its associated data.
+
+If you want to dynamically display the label based on the selected item's name, you can use `{{ '{{currentItem.Name}}' }}`, where `Name` represents the attribute that stores the name of the menu item. This enables you to show different text for each menu item based on its associated data.
 
 
 
@@ -130,12 +130,12 @@ The `currentIndex` property is useful when you want to display a numbered list o
 <ZoomImage src="/img/MenuButton-dynamic-Menu-Label-NumberedList-CurrentIndex.png" alt="Display images on table row selection" caption="Display menu items using currentIndex" />
 
 
-*Example:*
+
 
 To change the color based on the index, using a different color for even numbers, you can use following code in **Background color** property:
 
 ```js
-{{ '{{ '{{ '{{currentIndex % 2 === 0 ? "#22c55e" : "#facc15"}}' }}
+{{ '{{currentIndex % 2 === 0 ? "#22c55e" : "#facc15"}}' }}
 ```
 
 

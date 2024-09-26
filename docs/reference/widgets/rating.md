@@ -69,7 +69,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -82,7 +82,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to click the button, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -180,9 +180,9 @@ Reference properties are properties that are not available in the property pane 
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Rating1.isVisible}}' }}
+{{ '{{Rating1.isVisible}}' }}
 ```
 
 
@@ -193,9 +193,9 @@ Reflects whether the widget is visible or not.
 
 Indicates the total number of stars, as specified in the **Max Rating** property.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Rating1.maxCount}}' }}
+{{ '{{Rating1.maxCount}}' }}
 ```
 
 
@@ -206,9 +206,9 @@ Indicates the total number of stars, as specified in the **Max Rating** property
 
 Indicates the value selected by the user in the Rating widget.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Rating1.value}}' }}
+{{ '{{Rating1.value}}' }}
 ```
 
 
@@ -218,7 +218,7 @@ Indicates the value selected by the user in the Rating widget.
 
 The methods provided by the widget allow users to dynamically update and manipulate its properties, facilitating the creation of dynamic and interactive applications without the need for manual property modifications. 
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -227,7 +227,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Rating1.setVisibility(true)
@@ -243,7 +243,7 @@ Rating1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 Rating1.setDisabled(false)
@@ -258,7 +258,7 @@ Rating1.setDisabled(false)
 
 Allows you to dynamically set the value of the widget.
 
-*Example*:
+
 
 ```js
 Rating1.setValue(3)

@@ -91,7 +91,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onCheckChange
 
-This event defines the action that would be executed when the user checks or unchecks a checkbox. It allows you to specify a list of [supported actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the checkbox state change.
+This event defines the action that would be executed when the user checks or unchecks a checkbox. It allows you to specify a list of [supported actions](/reference/framework/global-functions.md) that can be triggered in response to the checkbox state change.
 
 
 ## Style properties
@@ -162,7 +162,7 @@ The `isVisible` property reflects the state of the widget's **Visible** setting.
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 
@@ -172,7 +172,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Checkbox1.setVisibility(true)
@@ -187,7 +187,7 @@ Checkbox1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 Checkbox1.setDisabled(false)
@@ -201,7 +201,7 @@ Checkbox1.setDisabled(false)
 
 Allows you to dynamically set the value of the Checkbox widget.
 
-*Example*:
+
 
 ```js
 Checkbox1.setValue(true)
@@ -215,7 +215,7 @@ Checkbox1.setValue(true)
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 Checkbox1.setRequired(true)

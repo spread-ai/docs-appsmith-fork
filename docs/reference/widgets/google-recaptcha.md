@@ -63,7 +63,7 @@ Navigate to [Google reCAPTCHA v3 Admin Console](https://www.google.com/recaptcha
 
 * Select **Body** tab >> Add details as below:
   * Select `MULTIPART_FORM`_`_`_`DATA`.
-  * Add key as **response** and bind the button's recaptchaToken property by using `{{ '{{ '{{ '{{<<BUTTON_NAME.recaptchaToken>>}}' }}`.
+  * Add key as **response** and bind the button's recaptchaToken property by using `{{ '{{<<BUTTON_NAME.recaptchaToken>>}}' }}`.
   * Add key as **secret** and add your site's **Recaptcha secret key**.
 
 :::info

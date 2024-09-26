@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 Sets the source from which to render the image. Accepts an image URL, data URI, or base64 encoded image data.
 
-*Example*: If you want to display inline SVG, paste your SVG content in the Image property and escape the special characters with the UTF-8 equivalents.
+ If you want to display inline SVG, paste your SVG content in the Image property and escape the special characters with the UTF-8 equivalents.
 
 ```js
 data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='green' stroke-width='4' fill='yellow' /%3E%3C/svg%3E
@@ -27,14 +27,14 @@ data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height=
 
 You can also display images that dynamically change based on user input or other components, such as widgets or queries.
 
-For example, Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{ '{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
+For example, Suppose you have a Table widget displaying a list of users with their respective image URLs stored in a column. To bind the images, use `{{ '{{Table1.selectedRow.image}}' }}` in the Image property, where "Table1" is the name of your table widget, and "image" is the column name containing the image URL.
 
 <ZoomImage src="/img/imagetable.gif" alt="Display images on table row selection" caption="Display images on table row selection" />
 
 If you are fetching an image from the [Amazon S3](/connect-data/reference/querying-amazon-s3) bucket, add the following code in the **Image** property to display the image on the widget:
 
 ```js
-{{ '{{ '{{ '{{list_files.data[0].signedUrl}}' }}
+{{ '{{list_files.data[0].signedUrl}}' }}
 ```
 
 
@@ -82,7 +82,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Image widget:
 
 ```js
-{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 
@@ -109,11 +109,11 @@ Enables control over image rotation. When enabled, hover over the image and clic
 
 Enables users to control whether the image is allowed to be downloaded. When enabled, hover over the image and click the download icon. 
 
-Alternatively, you can use the built-in [Download](/reference/appsmith-framework/widget-actions/download) function and set it to run on the [**onClick**](#onclick) event of the Image widget as shown below:
+Alternatively, you can use the built-in [Download](/reference/framework/global-functions.md/download) function and set it to run on the [**onClick**](#onclick) event of the Image widget as shown below:
 
 
 ```js
-{{ '{{ '{{ '{{download(Image1.image,'my-image-name','image/png')}}' }}
+{{ '{{download(Image1.image,'my-image-name','image/png')}}' }}
 ```
 
 
@@ -121,7 +121,7 @@ Alternatively, you can use the built-in [Download](/reference/appsmith-framework
 
 ### Events 
 
-When the event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onClick 
 
@@ -164,10 +164,10 @@ Reference properties enable you to access the widget's data and state using the 
 
 Contains the URL of the image source.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Image1.image}}' }}
+{{ '{{Image1.image}}' }}
 ```
 
 
@@ -178,9 +178,9 @@ Contains the URL of the image source.
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Image1.isVisible}}' }}
+{{ '{{Image1.isVisible}}' }}
 ```
 
 
@@ -189,7 +189,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -198,7 +198,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Image1.setVisibility(true)
@@ -213,7 +213,7 @@ Image1.setVisibility(true)
 
 Sets the `base64` encoded image in the Image widget.
 
-*Example*:
+
 
 ```js
 Image1.setImage('data:image/png;base64,iVBORw0KG...')

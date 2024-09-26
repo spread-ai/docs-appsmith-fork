@@ -21,7 +21,7 @@ In the reference below:
 * **Event** properties denote the events that you can attach actions and logic to.
 * **Style** properties denote the styling that you can set for the widget.
 * **Reference** properties return the values of a widget property.
-* **Methods** modify the values of widget properties at runtime using JavaScript [promises](https://docs.appsmith.com/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith).
+* **Methods** modify the values of widget properties at runtime using JavaScript [promises](https://docs.appsmith.com/writing-code-in-studio/using-js-promises.md).
 
 
 ### Badge

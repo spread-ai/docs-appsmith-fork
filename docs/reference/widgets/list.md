@@ -43,13 +43,13 @@ Enables you to bind static or dynamic data as an array of objects to the widget.
 You can add dynamic data to your list by fetching data from queries or JS functions and binding the response to the **Items** property. For example, if you have a query named `fetchData`, you can bind its response to the list by adding the following snippet in the Items property:
 
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the List widget.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchData.data.users.map((user) => {
+{{ '{{fetchData.data.users.map((user) => {
   return {
     name: user.name,
     email: user.email
@@ -123,7 +123,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -191,11 +191,11 @@ Reference properties enable you to access the widget's data and state using the 
 
 Represents the widget's Background Color setting as a CSS color value.
 
-*Example*:
+
 
 ```js
 
-{{ '{{ '{{ '{{List1.backgroundColor}}' }}
+{{ '{{List1.backgroundColor}}' }}
 ```
 
 
@@ -206,10 +206,10 @@ Represents the widget's Background Color setting as a CSS color value.
 
 Contains an array of objects where each object represents a widget within the list items and holds information about the widgets' state.
 
-*Example*:
+
 
 ```js
-{{ '{{ '{{ '{{List1.currentItemsView}}' }}
+{{ '{{List1.currentItemsView}}' }}
 ```
 
 
@@ -220,9 +220,9 @@ Contains an array of objects where each object represents a widget within the li
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{List1.isVisible}}' }}
+{{ '{{List1.isVisible}}' }}
 ```
 
 
@@ -233,10 +233,10 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Reflects the vertical spacing between each item. The value can range between 0 and 16.
 
-*Example*:
+
 
 ```js
-{{ '{{ '{{ '{{List1.itemSpacing}}' }}
+{{ '{{List1.itemSpacing}}' }}
 ```
 
 
@@ -247,10 +247,10 @@ Reflects the vertical spacing between each item. The value can range between 0 a
 
 Contains an array of objects that each represents a list item and its data.
 
-*Example*:
+
 
 ```js
-{{ '{{ '{{ '{{List1.listData}}' }}
+{{ '{{List1.listData}}' }}
 ```
 
 
@@ -261,10 +261,10 @@ Contains an array of objects that each represents a list item and its data.
 
 Contains a number representing which page of the List is currently displayed.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{List1.pageNo}}' }}
+{{ '{{List1.pageNo}}' }}
 ```
 
 
@@ -278,7 +278,7 @@ Contains a number representing the number of list items that can fit on one page
 *For example:*
 
 ```js
-{{ '{{ '{{ '{{List1.pageSize}}' }}
+{{ '{{List1.pageSize}}' }}
 ```
 
 
@@ -289,10 +289,10 @@ Contains a number representing the number of list items that can fit on one page
 
 Returns an object that contains the data of the selected list item.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{List1.selectedItem}}' }}
+{{ '{{List1.selectedItem}}' }}
 ```
 
 
@@ -303,10 +303,10 @@ Returns an object that contains the data of the selected list item.
 
 Contains an object representing the state of the widgets inside a list item when it's selected.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{List1.selectedItemView}}' }}
+{{ '{{List1.selectedItemView}}' }}
 ```
 
 
@@ -317,10 +317,10 @@ Contains an object representing the state of the widgets inside a list item when
 
 Contains an object representing the data of the list item that's selected when you click the list item card or when you interact with an widget (such as a button) inside the list item.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{List1.triggeredItem}}' }}
+{{ '{{List1.triggeredItem}}' }}
 ```
 
 
@@ -331,10 +331,10 @@ Contains an object representing the data of the list item that's selected when y
 
 Contains an object representing the state of the widgets inside a list item that's selected when you click the list item card or when you interact with a widget (such as a button) inside the list item.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{List1.triggeredItemView}}' }}
+{{ '{{List1.triggeredItemView}}' }}
 ```
 
 
@@ -374,10 +374,10 @@ Returns the data and state of the widgets present in the current list item. This
 
 This property is only available for nested lists where \* represents the level number (from 1 through 3, where 1 refers to the outermost list). It can be used to access the **currentItem**, **currentView** and **currentIndex** properties of the parent lists.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{level_1.currentItem.name}}' }}
+{{ '{{level_1.currentItem.name}}' }}
 ```
 
 
@@ -386,7 +386,7 @@ This property is only available for nested lists where \* represents the level n
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -395,7 +395,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 List1.setVisibility(true)
@@ -412,7 +412,7 @@ The **Items** property accepts data as an array of objects and can bind your dat
 
 You can display static JSON data in the **Items** property for generating the list items.
 
-**Example:** see the JSON snippet below; a collection of books has details like `bookId`, `bookName`, and `price`.
+** see the JSON snippet below; a collection of books has details like `bookId`, `bookName`, and `price`.
 
 ```json
 [
@@ -435,17 +435,17 @@ Add three Text widgets and one Image widget in the first list item to display th
 
 Follow the steps below to bind each JSON field to the widgets embedded in the List:
 
-* Select the Image widget and add  `{{ '{{ '{{ '{{currentItem.bookImage}}' }}` under **Image** property. **currentItem** refers to the data for a particular item. All the list items get populated based on the corresponding data in the JSON object.
+* Select the Image widget and add  `{{ '{{currentItem.bookImage}}' }}` under **Image** property. **currentItem** refers to the data for a particular item. All the list items get populated based on the corresponding data in the JSON object.
 * You can now see the image in the list item, as the image widget renders the image available on the URL supplied in JSON.
 
 Similarly, you can bind `bookName`, `bookId`, and `price` to the Text widgets in the first list item.
 
 ### Dynamic data mapping
 
-If you want to bind the response from a query or a JS function, then you can use mustache syntax `{{ '{{ }}' }}`. Use the format of `{{ '{{ '{{ '{{QUERY_NAME.data}}' }}` to bind the data returned by the query. For example, You a query `GetAllEmployees`, bind the response in the **Items** property as shown below:
+If you want to bind the response from a query or a JS function, then you can use mustache syntax `{{ '{{ }}' }}`. Use the format of `{{ '{{QUERY_NAME.data}}' }}` to bind the data returned by the query. For example, You a query `GetAllEmployees`, bind the response in the **Items** property as shown below:
 
 ```javascript
-{{ '{{ '{{ '{{GetAllEmployees.data}}' }}
+{{ '{{GetAllEmployees.data}}' }}
 ```
 
 To learn how to bind data from JS functions, see Display Data from JS function
@@ -453,7 +453,7 @@ To learn how to bind data from JS functions, see Display Data from JS function
 To display the data in individual widgets in the list item cards, use the **currentItem** property to bind the corresponding value from the object's fields in the widget as shown below. 
  
 ```javascript
-{{ '{{ '{{ '{{currentItem.<attribute_or_column_name>}}' }}
+{{ '{{currentItem.<attribute_or_column_name>}}' }}
 ```
 
 where `currentItem` for the first list item reflects the 0th object in the dataset. This can be used anywhere within a widget that's placed inside the List widget.
@@ -467,9 +467,9 @@ In the preceding example, the identifier `bookId` has a unique value in the data
 
 If no such unique identifier is present in the data, you can join multiple identifiers  to form a unique pattern by enabling the `JS` mode in the property.
 
-**Example:**
+**
 ```
-{{ '{{ '{{ '{{currentItem.bookName + "_" + currentItem.author}}' }}
+{{ '{{currentItem.bookName + "_" + currentItem.author}}' }}
 ```
 
 :::tip
@@ -483,14 +483,14 @@ Always set the **Data Identifier** property with a valid unique identifier to bo
 
   ```javascript
 
-  {{ '{{ '{{ '{{<listName>.selectedItem.<fieldName>}}' }}
+  {{ '{{<listName>.selectedItem.<fieldName>}}' }}
   ```
 
   **Example** - In the preceding example, if you want to display the book name of the selected item in a Text widget, bind it in the **Text** property of the Text widget as shown below 
 
   ```javascript
 
-  {{ '{{ '{{ '{{<listName>.selectedItem.bookName}}' }}
+  {{ '{{<listName>.selectedItem.bookName}}' }}
   ```
 
 * You can access the sibling widgets inside a list item card using the **currentView** property. 
@@ -498,9 +498,9 @@ Always set the **Data Identifier** property with a valid unique identifier to bo
   **Example** - If you have an Input widget and a Button widget inside the List and want to use the Input's **Text** property to show an alert message on button click. In the button widget's *onClick* event, you can access the input widget's value as shown below
 
   ```javascript
-  {{ '{{ '{{ '{{showAlert(currentView.<inputName>.text)}}' }}
+  {{ '{{showAlert(currentView.<inputName>.text)}}' }}
   ```
-  The **currentView** property should always be used to access sibling data instead of referencing it directly Eg: `{{ '{{ '{{ '{{Input1.text}` may seem to work in the app's Edit mode but won't work when deployed.   
+  The **currentView** property should always be used to access sibling data instead of referencing it directly Eg: `{{ '{{Input1.text}` may seem to work in the app's Edit mode but won't work when deployed.   
 
 * The **currentItemsView** helps you to view the data and the state of the widgets present in all the items of the List widget and is an *array* of *objects* with each widget's state represented as an object. The *array* of *objects* is limited to the number of items visible on the page rather than the number list items present. If there are 300 objects in the list data, but the List widget is showing 5 items per page, then the **currentItemsView** property shows an *array* of only 5 *objects*.
 

@@ -23,15 +23,15 @@ Sets the text to be displayed. The text remains unchanged until manually updated
 
 You can dynamically change text by fetching data from queries or JS functions and binding the response to the **Text** property. For instance, when a row in a Table widget is clicked, the Text widget dynamically displays the specific name associated with that row.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Table1.selectedRow.name}}' }}
+{{ '{{Table1.selectedRow.name}}' }}
 ```
 
 You have the option to use HTML code within the **Text** property to customize the appearance of the displayed text. Note that the Text field supports only inline CSS. If you need to use external CSS, it is recommended to use the [Iframe widget](/reference/widgets/iframe).
 
-*Example:*
+
 
 ```js
 <p style="color:blue;">Hello World</p>
@@ -49,7 +49,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -166,9 +166,9 @@ Reference properties are properties that are not available in the property pane 
 The `text` property retrieves the current text value of the widget.
 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Text1.text}}' }}
+{{ '{{Text1.text}}' }}
 ```
 
 
@@ -181,9 +181,9 @@ The `text` property retrieves the current text value of the widget.
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Text1.isVisible}}' }}
+{{ '{{Text1.isVisible}}' }}
 ```
 
 
@@ -193,7 +193,7 @@ Reflects whether the widget is visible or not.
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -202,7 +202,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Text1.setVisibility(true)
@@ -218,7 +218,7 @@ Text1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 Text1.setDisabled(false)
@@ -232,7 +232,7 @@ Text1.setDisabled(false)
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 Text1.setRequired(true)
@@ -247,7 +247,7 @@ Text1.setRequired(true)
 
 Sets the text value of the widget.
 
-*Example*:
+
 
 ```js
 Text1.setText('Hello, world!')
@@ -262,7 +262,7 @@ Text1.setText('Hello, world!')
 
 Sets the selected option of the Select widget.
 
-*Example*:
+
 
 ```js
 Text1.setTextColor('#FF0000')

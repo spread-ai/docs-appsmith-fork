@@ -20,7 +20,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -126,10 +126,10 @@ These properties are not available in the property pane, but can be accessed usi
 Indicates the widget's Cap style property, shows whether the divider line is capped with a Dot, an Arrow, or No cap. 
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.capType}}' }}
+{{ '{{Divider1.capType}}' }}
 ```
 
 
@@ -146,10 +146,10 @@ Reflects the widget's Cap Position style property, indicating the sides of the d
 * `0` for both sides
 * `1` for the right or bottom side only
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.capSide}}' }}
+{{ '{{Divider1.capSide}}' }}
 ```
 
 
@@ -162,10 +162,10 @@ Reflects the widget's Cap Position style property, indicating the sides of the d
 Reflects the color value of the divider line, presented in the form of a hexadecimal color code.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.dividerColor}}' }}
+{{ '{{Divider1.dividerColor}}' }}
 ```
 
 
@@ -179,10 +179,10 @@ Reflects the color value of the divider line, presented in the form of a hexadec
 Reflects the **Orientation** of the widget, values are strings either `horizontal` or `vertical`.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.orientation}}' }}
+{{ '{{Divider1.orientation}}' }}
 ```
 
 
@@ -195,10 +195,10 @@ Reflects the **Orientation** of the widget, values are strings either `horizonta
 Reflects the widget's **Dash Style** property as a string with value either `solid`, `dashed`, or `dotted`.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.strokeStyle}}' }}
+{{ '{{Divider1.strokeStyle}}' }}
 ```
 
 
@@ -212,10 +212,10 @@ Reflects the widget's **Dash Style** property as a string with value either `sol
 Reflects the thickness of the divider line as a number of pixels.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.thickness}}' }}
+{{ '{{Divider1.thickness}}' }}
 ```
 
 
@@ -227,10 +227,10 @@ Reflects the thickness of the divider line as a number of pixels.
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Divider1.isVisible}}' }}
+{{ '{{Divider1.isVisible}}' }}
 ```
 
 
@@ -239,7 +239,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -248,7 +248,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Divider1.setVisibility(true)

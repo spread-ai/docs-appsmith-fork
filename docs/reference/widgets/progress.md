@@ -42,7 +42,7 @@ Allows you to select the desired format for the progress bar.
 
  
 
-Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{ '{{ '{{ '{{}}' }}`.
+Specify the value of the progress indicator (in percentage). You can also use values retrieved from queries or JavaScript functions within the mustache operator `{{ '{{}}' }}`.
 
 
 
@@ -66,7 +66,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -111,10 +111,10 @@ These properties are not available in the property pane, but can be accessed usi
 
 Indicates the current progress of the progress bar as a percentage.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Progress1.progress}}' }}
+{{ '{{Progress1.progress}}' }}
 ```
 
 
@@ -125,10 +125,10 @@ Indicates the current progress of the progress bar as a percentage.
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Progress1.isVisible}}' }}
+{{ '{{Progress1.isVisible}}' }}
 ```
 
 
@@ -138,7 +138,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 The methods provided by the widget allow users to dynamically update and manipulate its properties, facilitating the creation of dynamic and interactive applications without the need for manual property modifications. 
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 
@@ -148,7 +148,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Progress1.setVisibility(true)
@@ -163,7 +163,7 @@ Progress1.setVisibility(true)
 
 Sets the progress value of the Progress widget.
 
-*Example*:
+
 
 ```js
 Progress1.setProgress(50)

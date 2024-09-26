@@ -25,7 +25,7 @@ These properties are customizable options present in the property pane of the wi
 
 Sets the default location that the map focuses on when it is displayed for the first time to the user. 
 
-*Example*: if you want to show New York City as the initial location on the Map widget, you can either select it from Google's autocomplete suggestions or define its location using JavaScript, like:
+ if you want to show New York City as the initial location on the Map widget, you can either select it from Google's autocomplete suggestions or define its location using JavaScript, like:
 
 ```js
 {
@@ -45,7 +45,7 @@ Sets the default location that the map focuses on when it is displayed for the f
 Allows you to display precise locations or display multiple locations at once. To add markers to the Map widget, define an array of markers with latitude, longitude, title and color keys, and set it in the **Default markers** property. 
 
 
-*Example:*
+
 
 ```js
 [
@@ -60,10 +60,10 @@ Allows you to display precise locations or display multiple locations at once. T
 
 You can display dynamic data from queries or JS functions by binding the response to the **Default markers** property.
 
-*Example*:  suppose you want to display multiple markers on a Map using the locations from the users' database:
+  suppose you want to display multiple markers on a Map using the locations from the users' database:
 
 ```js
-{{ '{{ '{{ '{{fetchUserData.data.map(loc  => {
+{{ '{{fetchUserData.data.map(loc  => {
 	return {
 		lat: parseFloat(loc.latitude),
 		long: parseFloat(loc.longitude),
@@ -78,8 +78,8 @@ If you want to display the live location, you can use the **Default Marker** pro
 
 ```js
 [{
-"lat":{{ '{{ '{{ '{{appsmith.geolocation.currentPosition.coords.latitude || ""}}' }}, 
-"long":{{ '{{ '{{ '{{appsmith.geolocation.currentPosition.coords.longitude || ""}}' }}
+"lat":{{ '{{appsmith.geolocation.currentPosition.coords.latitude || ""}}' }}, 
+"long":{{ '{{appsmith.geolocation.currentPosition.coords.longitude || ""}}' }}
 }]
 ```
 
@@ -108,7 +108,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -159,7 +159,7 @@ To access the searched location, use the ``center`` reference property. This ret
 
 ```js
 [
-  {{ '{{ '{{ '{{Map1.center}}' }}
+  {{ '{{Map1.center}}' }}
 ]
 ```
 
@@ -236,9 +236,9 @@ Reference properties are properties that are not available in the property pane 
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Map1.isVisible}}' }}
+{{ '{{Map1.isVisible}}' }}
 ```
 
 
@@ -249,9 +249,9 @@ Reflects whether the widget is visible or not.
 
 Contains title, latitude, and longitude coordinates of the location.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Map1.center}}' }}
+{{ '{{Map1.center}}' }}
 ```
 
 
@@ -262,9 +262,9 @@ Contains title, latitude, and longitude coordinates of the location.
 
 Contains the marker object that the user has selected.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Map1.selectedMarker}}' }}
+{{ '{{Map1.selectedMarker}}' }}
 ```
 
 
@@ -275,13 +275,13 @@ Contains the marker object that the user has selected.
 
 This contains the list of markers on the map
 
-*Example:*
+
 ```js
 // Access the entire array of markers
-{{ '{{ '{{ '{{Map1.markers}}' }}
+{{ '{{Map1.markers}}' }}
 
 // Access the title of the first marker in the array
-{{ '{{ '{{ '{{Map1.markers[0].title}}' }}
+{{ '{{Map1.markers[0].title}}' }}
 
 // here [0] represents the index of the first marker
 ```
@@ -293,7 +293,7 @@ This contains the list of markers on the map
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -302,7 +302,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 MapChart1.setVisibility(true)

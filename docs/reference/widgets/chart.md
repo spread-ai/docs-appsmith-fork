@@ -67,14 +67,14 @@ Allows you to display data in the built-in charts, provide the data in the follo
 
 In this format, **`x`** denotes the **label**, and **`y`** denotes the **value**. Additionally, you can display dynamic data from queries or JS functions by binding the response to the **Series Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
-*Example:*
+
 ```js
 {{fetchData.data}}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
-*Example:*
+
 ```js
 {{fetchUserData.data.map( p => ({x: p.gender, y: p.count}))}}
 ```
@@ -230,7 +230,7 @@ Determines the scaling behavior of the y-axis.
 
 
 
-Specifies an [action](/reference/appsmith-framework/widget-actions) to be performed when a user clicks on a data point in the chart.
+Specifies an [action](/reference/framework/global-functions.md) to be performed when a user clicks on a data point in the chart.
 
 
 
@@ -269,7 +269,7 @@ Reference properties are properties that are not available in the property pane 
 
 Contains the text of the x-axis Label setting of the chart.
 
-*Example*:
+
 
 ```js
 {{Chart1.xAxisName}}
@@ -283,7 +283,7 @@ Contains the text of the x-axis Label setting of the chart.
 
 Contains the text of the y-axis Label setting of the chart.
 
-*Example*:
+
 
 ```js
 {{Chart1.yAxisName}}
@@ -296,7 +296,7 @@ Contains the text of the y-axis Label setting of the chart.
 
 Displays all the data related to the chart.
 
-*Example*:
+
 
 ```js
 {{Chart1.chartData}}
@@ -309,7 +309,7 @@ Displays all the data related to the chart.
 
 Contains an object which represents the data point that the user has most recently clicked `(object containing: x, y, seriesTitle)`.
 
-*Example*:
+
 
 ```js
 //To access all the details of the selected data point:
@@ -329,7 +329,7 @@ Contains an object which represents the data point that the user has most recent
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
 {{Chart1.isVisible}}
 ```

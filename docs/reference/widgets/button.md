@@ -47,7 +47,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the button visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -60,7 +60,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to click the button, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -216,9 +216,9 @@ Reference properties enable you to access the widget's data and state using the 
 
 Returns the value of the button's label property.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Button1.text}}' }}
+{{ '{{Button1.text}}' }}
 ```
 
 
@@ -228,9 +228,9 @@ Returns the value of the button's label property.
 
 Indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Button1.isVisible}}' }}
+{{ '{{Button1.isVisible}}' }}
 ```
 
 
@@ -241,9 +241,9 @@ Indicates the visibility state of a widget, with true indicating it is visible a
 
 It reflects the state of the widget's **Disabled** setting. It is represented by a boolean value, where true indicates that the widget is disabled, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Button1.isDisabled}}' }}
+{{ '{{Button1.isDisabled}}' }}
 ```
 
 
@@ -253,7 +253,7 @@ It reflects the state of the widget's **Disabled** setting. It is represented by
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -262,7 +262,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Button1..setVisibility(true)
@@ -278,7 +278,7 @@ Button1..setVisibility(true)
 
 Sets the `disabled` state of the widget.
 
-*Example*:
+
 
 ```js
 Button1.setDisabled(false)
@@ -293,7 +293,7 @@ Button1.setDisabled(false)
 
 Sets the background color of the button widget.
 
-*Example*:
+
 
 ```js
 Button1.setColor('#FF0000')
@@ -307,7 +307,7 @@ Button1.setColor('#FF0000')
 
 Sets the label of the button widget.
 
-*Example*:
+
 
 ```js
 Button1.setLabel('Click me!')

@@ -20,7 +20,7 @@ These properties are customizable options present in the property pane of the wi
 
 Allows you to set the video source to be played, supporting both URL and IPv4-based addresses:
 
-*Example*:
+
 
 * **IP Based:** `127.0.0.10:8080/path/to/video.mp4`
 * **URL Based:** `https://assets.appsmith.com/widgets/bird.mp4`
@@ -28,10 +28,10 @@ Allows you to set the video source to be played, supporting both URL and IPv4-ba
 
 You can display dynamic data by binding the response from a query or a JavaScript function to the **URL** property. For instance, if you have a table with a column containing video URLs, clicking on a specific row plays the corresponding video:
 
-*Example*:
+
 
 ```js
-{{ '{{ '{{ '{{Table1.selectedRow.videoURL}}' }}
+{{ '{{Table1.selectedRow.videoURL}}' }}
 ```
 
 
@@ -55,7 +55,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -74,7 +74,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
 
 
 #### onPlay
@@ -142,9 +142,9 @@ Reference properties are properties that are not available in the property pane 
 
 Indicates the current state of the widget's **Auto Play** setting.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Video1.autoPlay}}' }}
+{{ '{{Video1.autoPlay}}' }}
 ```
 
 
@@ -160,9 +160,9 @@ Indicates the current state of the Video widget's playback. It is represented by
 * PAUSED: Indicates that the video is paused.
 * ENDED: Represents the state when the video playback has ended.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Video1.playState}}' }}
+{{ '{{Video1.playState}}' }}
 ```
 
 
@@ -174,9 +174,9 @@ Indicates the current state of the Video widget's playback. It is represented by
 
 Indicates the current playing state of the widget. When the value is `true`, it means the video is playing.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Video1.playing}}' }}
+{{ '{{Video1.playing}}' }}
 ```
 
 
@@ -187,7 +187,7 @@ Indicates the current playing state of the widget. When the value is `true`, it 
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -196,7 +196,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Video1.setVisibility(true)
@@ -211,7 +211,7 @@ Video1.setVisibility(true)
 
 Sets the URL of the video to be displayed in the widget.
 
-*Example*:
+
 
 ```js
 Video1.setURL('<https://example.com/video.mp4>')
@@ -226,7 +226,7 @@ Video1.setURL('<https://example.com/video.mp4>')
 
 Sets the playing state of the Video widget.
 
-*Example*:
+
 ```js
 Video1.setPlaying(true)
 ```

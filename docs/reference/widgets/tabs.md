@@ -44,7 +44,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -165,10 +165,10 @@ Reference properties are properties that are not available in the property pane 
 
 Contains the name of the tab currently selected.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Tabs1.selectedTab}}' }}
+{{ '{{Tabs1.selectedTab}}' }}
 ```
 
 
@@ -179,9 +179,9 @@ Contains the name of the tab currently selected.
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Tabs1.isVisible}}' }}
+{{ '{{Tabs1.isVisible}}' }}
 ```
 
 
@@ -190,7 +190,7 @@ Reflects whether the widget is visible or not.
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -199,7 +199,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Tabs1.setVisibility(true)

@@ -25,7 +25,7 @@ You can also use the built-in [**Moment.js**](https://momentjs.com/docs/) librar
 For example, If you want to convert the selected date and time to the IST timezone (Asia/Kolkata), click the **JS** button and add the following code:
 
 ```js
-{{ '{{ '{{ '{{
+{{ '{{
   moment(datePickerName.selectedDate).tz("Asia/Kolkata").format()
 }}' }}
 ```
@@ -111,7 +111,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Datepicker widget:
 
 ```js
-{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 
@@ -124,7 +124,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Datepicker widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -168,7 +168,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 ### Events 
 
-When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/appsmith-framework/widget-actions).
+When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onDateSelected
 
@@ -253,10 +253,10 @@ Reference properties enable you to access the widget's data and state using the 
 
 Contains the formatted date value currently selected within the Datepicker widget. This value changes if the default value is updated or the user inputs a new value. The format depends on the **Date Format** property set for the widget.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Datepicker1.formattedDate}}' }}
+{{ '{{Datepicker1.formattedDate}}' }}
 ```
 
 
@@ -267,10 +267,10 @@ Contains the formatted date value currently selected within the Datepicker widge
 
 Contains the ISO date string value selected in the Datepicker widget. This value changes if the default value is updated or the user inputs a new value.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Datepicker1.selectedDate}}' }}
+{{ '{{Datepicker1.selectedDate}}' }}
 ```
 
 
@@ -281,10 +281,10 @@ Contains the ISO date string value selected in the Datepicker widget. This value
 
 It reflects the state of the widget's Disabled setting. It is represented by a boolean value, where `true` indicates that the widget is disabled, and `false` indicates that it is enabled for user interaction.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Datepicker1.isDisabled}}' }}
+{{ '{{Datepicker1.isDisabled}}' }}
 ```
 
 
@@ -295,9 +295,9 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Datepicker1.isVisible}}' }}
+{{ '{{Datepicker1.isVisible}}' }}
 ```
 
 
@@ -306,7 +306,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -315,7 +315,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 DatePicker1.setVisibility(true)
@@ -330,7 +330,7 @@ DatePicker1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 DatePicker1.setDisabled(false)
@@ -344,7 +344,7 @@ DatePicker1.setDisabled(false)
 
 Allows you to dynamically set the value of the widget.
 
-*Example*:
+
 
 ```js
 DatePicker1.setValue('11-01-1994')
@@ -359,7 +359,7 @@ DatePicker1.setValue('11-01-1994')
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 DatePicker1.setRequired(true)

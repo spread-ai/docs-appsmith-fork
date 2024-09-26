@@ -54,7 +54,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects Yes from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -67,7 +67,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -99,7 +99,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onChange
 
-Allows you to define a set of [actions](/reference/appsmith-framework/widget-actions) that would be executed in response to the switch state change.
+Allows you to define a set of [actions](/reference/framework/global-functions.md) that would be executed in response to the switch state change.
 
 
 ## Style properties
@@ -145,10 +145,10 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `isSwitchedOn` property retrieves a boolean value that indicates whether the switch is turned on. It returns `true` if the switch is `on` and `false` if it is `off`.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Switch1.isSwitchedOn}}' }}
+{{ '{{Switch1.isSwitchedOn}}' }}
 ```
 
 
@@ -161,10 +161,10 @@ The `isSwitchedOn` property retrieves a boolean value that indicates whether the
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Switch1.isDisabled}}' }}
+{{ '{{Switch1.isDisabled}}' }}
 ```
 
 
@@ -175,10 +175,10 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Switch1.isVisible}}' }}
+{{ '{{Switch1.isVisible}}' }}
 ```
 
 
@@ -188,7 +188,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -197,7 +197,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Switch1.setVisibility(true)
@@ -212,7 +212,7 @@ Switch1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 Switch1.setDisabled(false)
@@ -229,7 +229,7 @@ Switch1.setDisabled(false)
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 Switch1.setRequired(true)
@@ -243,7 +243,7 @@ Switch1.setRequired(true)
 
 Sets the value to be displayed in the widget.
 
-*Example*:
+
 
 ```js
 Switch1.setValue(true)
@@ -259,7 +259,7 @@ Switch1.setValue(true)
 
 Sets the background color of the widget.
 
-*Example*:
+
 
 ```js
 Switch1.setColor('#FF0000')

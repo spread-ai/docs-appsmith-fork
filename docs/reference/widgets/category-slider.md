@@ -49,16 +49,16 @@ Allows you to set the labels and unique values for the items. You can add these 
 
 Additionally, you can display dynamic data from queries or JS functions by binding the response to the **Options** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
+{{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
 ```
 
 
@@ -149,7 +149,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -162,7 +162,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to select the option, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -179,7 +179,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
 
 #### onChange
 
@@ -254,9 +254,9 @@ Reference properties are properties that are not available in the property pane 
 
 Allows you to access the value that has been selected with the slider. 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{CategorySlider1.value}}' }}
+{{ '{{CategorySlider1.value}}' }}
 ```
 
 
@@ -267,9 +267,9 @@ Allows you to access the value that has been selected with the slider.
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{CategorySlider1.isVisible}}' }}
+{{ '{{CategorySlider1.isVisible}}' }}
 ```
 
 
@@ -279,7 +279,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 #### setDisabled (param: boolean): Promise
 
@@ -287,7 +287,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 CategorySlider1.setDisabled(false)
@@ -302,7 +302,7 @@ CategorySlider1.setDisabled(false)
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 CategorySlider1.setVisibility(true)
@@ -319,7 +319,7 @@ CategorySlider1.setVisibility(true)
 
 Allows you to dynamically set the value of the widget.
 
-*Example*:
+
 
 ```js
 CategorySlider1.setValue('xl')

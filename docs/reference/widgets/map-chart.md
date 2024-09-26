@@ -68,16 +68,16 @@ Each **Map Type** has different configurations. To learn more about these charts
 
 Additionally, you can display dynamic data from queries or JS functions by binding the response to the **Chart data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchUserData.data.map( p => ({id: p.label, value: val.count}))}}' }}
+{{ '{{fetchUserData.data.map( p => ({id: p.label, value: val.count}))}}' }}
 ```
 
 
@@ -100,7 +100,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -196,17 +196,17 @@ Reference properties are properties that are not available in the property pane 
 
 Contains an object which represents the data point that the user has most recently clicked.
 
-*Example*:
+
 
 ```js
 //To access all the details of the selected data point:
-{{ '{{ '{{ '{{MapChart1.selectedDataPoint}}' }}
+{{ '{{MapChart1.selectedDataPoint}}' }}
 
 //To access the label of the selected data point:
-{{ '{{ '{{ '{{MapChart1.selectedDataPoint.id}}' }}
+{{ '{{MapChart1.selectedDataPoint.id}}' }}
 
 //To access the value of the selected data point:
-{{ '{{ '{{ '{{MapChart1.selectedDataPoint.value}}' }}
+{{ '{{MapChart1.selectedDataPoint.value}}' }}
 ```
 
 
@@ -217,9 +217,9 @@ Contains an object which represents the data point that the user has most recent
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{MapChart1.isVisible}}' }}
+{{ '{{MapChart1.isVisible}}' }}
 ```
 
 
@@ -228,7 +228,7 @@ Reflects whether the widget is visible or not.
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -237,7 +237,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 MapChart1.setVisibility(true)

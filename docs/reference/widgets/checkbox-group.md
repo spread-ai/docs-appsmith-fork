@@ -42,7 +42,7 @@ Ensure that the values assigned to each option are unique. Additionally, you can
 
 
 ```js
-{{ '{{ '{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -184,7 +184,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-This event defines the action that would be executed when the user selects or deselects multiple or single items in the checkbox group. It allows you to specify a list of [supported actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the checkbox state change.
+This event defines the action that would be executed when the user selects or deselects multiple or single items in the checkbox group. It allows you to specify a list of [supported actions](/reference/framework/global-functions.md) that can be triggered in response to the checkbox state change.
 
 
 
@@ -289,7 +289,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -298,7 +298,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 CheckboxGroup1.setVisibility(true)
@@ -313,7 +313,7 @@ CheckboxGroup1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 CheckboxGroup1.setDisabled(false)
@@ -328,7 +328,7 @@ CheckboxGroup1.setDisabled(false)
 
 Allows you to dynamically set the value of the widget.
 
-*Example*:
+
 
 ```js
 CheckboxGroup1.setValue({ label: 'Option 2', value: 'option2' })
@@ -343,7 +343,7 @@ CheckboxGroup1.setValue({ label: 'Option 2', value: 'option2' })
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 CheckboxGroup1.setRequired(true)

@@ -125,7 +125,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -140,7 +140,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -205,23 +205,23 @@ Reference properties are properties that are not available in the property pane 
 
 The `files` property stores file objects that the user has selected. Each file object contains the file data, which can be accessed through its `data` property.
 
-*Example:*
+
 
 ```js
 // Accessing the file data
 {{ '{{ FilePicker1.files[0].data }}' }}
 
 // Accessing the data format
-{{ '{{ '{{ '{{FilePicker1.files[0].dataFormat}}' }}
+{{ '{{FilePicker1.files[0].dataFormat}}' }}
 
 // Accessing the file name
-{{ '{{ '{{ '{{FilePicker1.files[0].name}}' }}
+{{ '{{FilePicker1.files[0].name}}' }}
 
 // Accessing multiple files
-{{ '{{ '{{ '{{FilePicker1.files}}' }}
+{{ '{{FilePicker1.files}}' }}
 
 // Accessing metadata and data
-{{ '{{ '{{ '{{FilePicker1.files[0]}}' }} 
+{{ '{{FilePicker1.files[0]}}' }} 
 
 
 //here [0] represents index of the file.
@@ -241,7 +241,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 Example:
 
 ```js
-{{ '{{ '{{ '{{FilePicker1.isValid}}' }}
+{{ '{{FilePicker1.isValid}}' }}
 ```
 
 
@@ -255,7 +255,7 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 Example:
 
 ```js
-{{ '{{ '{{ '{{FilePicker1.isDisabled}}' }}
+{{ '{{FilePicker1.isDisabled}}' }}
 ```
 
 
@@ -270,7 +270,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 Example:
 
 ```js
-{{ '{{ '{{ '{{FilePicker1.isVisible}}' }}
+{{ '{{FilePicker1.isVisible}}' }}
 ```
 
 
@@ -284,7 +284,7 @@ Indicates whether the FilePicker has been used by the end user during the sessio
 Example:
 
 ```js
-{{ '{{ '{{ '{{FilePicker1.isDirty}}' }}
+{{ '{{FilePicker1.isDirty}}' }}
 ```
 
 
@@ -296,7 +296,7 @@ Example:
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility(param: boolean): Promise
@@ -305,7 +305,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 FilePicker1.setVisibility(true)
@@ -320,7 +320,7 @@ FilePicker1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 FilePicker1.setDisabled(false)

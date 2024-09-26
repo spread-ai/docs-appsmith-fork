@@ -101,11 +101,11 @@ The logic of your application determines what happens when the user enters data,
 	<figcaption>The contextual menu for the onClick event in SPREAD Studio</figcaption>
 </figure>
 
-JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [AppSmith object](https://docs.appsmith.com/reference/appsmith-framework/context-object), and Global Functions, such as [storeValue](https://docs.appsmith.com/reference/appsmith-framework/widget-actions/store-value), are available to use in your code.
+JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [AppSmith object](https://docs.appsmith.com/reference/appsmith-framework/context-object), and Global Functions, such as [storeValue](https://docs.appsmith.com/reference/framework/global-functions.md/store-value), are available to use in your code.
 
 !!! info "More Global Objects and Global Functions"
 
-    For a complete reference of the Global Objects available in Studio, see the [AppSmith documentation on Global Objects](https://docs.appsmith.com/write-code/reference). Likewise for Global Functions, see the [AppSmith documentation on Global Functions](https://docs.appsmith.com/reference/appsmith-framework/widget-actions).
+    For a complete reference of the Global Objects available in Studio, see the [AppSmith documentation on Global Objects](https://docs.appsmith.com/write-code/reference). Likewise for Global Functions, see the [AppSmith documentation on Global Functions](https://docs.appsmith.com/reference/framework/global-functions.md).
 
 For complex implementations, you can install additional JavaScript libraries by selecting the Box icon in the bottom-left corner. The default libraries are [lodash.js](https://lodash.com/) for modularity and performance, [moment.js](https://momentjs.com/) for date and time handling, and [forge.js](https://github.com/digitalbazaar/forge) for managing cryptographic tools.
 

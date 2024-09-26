@@ -22,7 +22,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Container widget:
 
 ```js
-{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 
@@ -105,9 +105,9 @@ Reference properties enable you to access the widget's data and state using the 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Container1.isVisible}}' }}
+{{ '{{Container1.isVisible}}' }}
 ```
 
 
@@ -118,10 +118,10 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Represents the widget's **Background Color** setting as a [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Container1.backgroundColor}}' }}
+{{ '{{Container1.backgroundColor}}' }}
 ```
 
 
@@ -130,7 +130,7 @@ Represents the widget's **Background Color** setting as a [CSS color](https://de
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -139,7 +139,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Container1.setVisibility(true)

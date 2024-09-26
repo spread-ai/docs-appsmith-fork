@@ -23,7 +23,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects Yes from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -112,10 +112,10 @@ As the Stats Box widget works as a container, you can access the values of other
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Statsbox1.isVisible}}' }}
+{{ '{{Statsbox1.isVisible}}' }}
 ```
 
 
@@ -133,7 +133,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Statbox1.setVisibility(true)

@@ -22,11 +22,11 @@ Polling is a communication technique used to retrieve real-time data by periodic
 
 2. Drop a Switch widget to enable the toggling of updates at regular intervals.
 
-3. Create a new *JSObject* and configure the function using the [setInterval()](/reference/appsmith-framework/widget-actions/intervals-time-events) function  to implement polling:
+3. Create a new *JSObject* and configure the function using the [setInterval()](/reference/framework/global-functions.md/intervals-time-events) function  to implement polling:
 
  
 
-*Example:* When the switch is turned on, the query is executed every 5 seconds. If the switch is turned off, use the [clearInterval()](/reference/appsmith-framework/widget-actions/clear-interval) function to stop the polling process:
+*Example:* When the switch is turned on, the query is executed every 5 seconds. If the switch is turned off, use the [clearInterval()](/reference/framework/global-functions.md/clear-interval) function to stop the polling process:
 
 ```js
 export default {

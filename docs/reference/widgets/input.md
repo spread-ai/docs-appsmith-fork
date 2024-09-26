@@ -186,7 +186,7 @@ For instance, you can use this property to validate a Create Password field, mak
 
 
 ```js
-{{ '{{ '{{ '{{
+{{ '{{
   !["password", "123", "admin"].some(subStr => {
     return Input1.text.toLowerCase().includes(subStr)
   })
@@ -206,11 +206,11 @@ For example,  If you want to add password validation, ensuring it is greater tha
 
 ```js
 //Valid property
-{{ '{{ '{{ '{{Input1.text.length > 10 && /\d/.test(Input1.text) ? true : false}}' }}
+{{ '{{Input1.text.length > 10 && /\d/.test(Input1.text) ? true : false}}' }}
 
 
 //Error message property
-{{ '{{ '{{ '{{Input1.text.length > 10 || !/\d/.test(Input1.text) ? "Error: Length should be at least 10 characters and contain at least one digit" : ""}}' }}
+{{ '{{Input1.text.length > 10 || !/\d/.test(Input1.text) ? "Error: Length should be at least 10 characters and contain at least one digit" : ""}}' }}
 ```
 
 This code checks the length of Input is exactly 10 characters and if it contains at least one digit. If not, it returns the error message
@@ -262,7 +262,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -277,7 +277,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -326,7 +326,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
 
 
 
@@ -445,9 +445,9 @@ Reference properties are properties that are not available in the property pane 
 
 The `text` property retrieves the input value of the widget. 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Input1.text}}' }}
+{{ '{{Input1.text}}' }}
 ```
 
 
@@ -459,9 +459,9 @@ The `text` property retrieves the input value of the widget.
 
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Input1.isValid}}' }}
+{{ '{{Input1.isValid}}' }}
 ```
 
 
@@ -472,9 +472,9 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 The `isDisabled` property reflects the state of the widget's **Disabled** setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Input1.isDisabled}}' }}
+{{ '{{Input1.isDisabled}}' }}
 ```
 
 
@@ -486,9 +486,9 @@ The `isDisabled` property reflects the state of the widget's **Disabled** settin
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Input1.isVisible}}' }}
+{{ '{{Input1.isVisible}}' }}
 ```
 
 
@@ -498,7 +498,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -507,7 +507,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Input1.setVisibility(true)
@@ -523,7 +523,7 @@ Input1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 Input1.setDisabled(false)
@@ -538,7 +538,7 @@ Input1.setDisabled(false)
 
 Allows you to dynamically set the value of the widget.
 
-*Example*:
+
 
 ```js
 Input1.setValue("Hello123")
@@ -553,7 +553,7 @@ Input1.setValue("Hello123")
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 Input1.setRequired(true)

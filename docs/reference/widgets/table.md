@@ -52,15 +52,15 @@ Additionally, you can use JavaScript by clicking on **JS** to write bindings for
 
 You can **dynamically generate** a table by fetching data from queries or JavaScript functions and binding the response to the **Table Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the Table widget, like:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{fetchData.data.users.map((user) => {
+{{ '{{fetchData.data.users.map((user) => {
   return {
     name: user.name,
     email: user.email
@@ -144,9 +144,9 @@ It is a number value that is displayed in the table header to inform the user ab
 
 For instance, you can create a Count query to retrieve the total number of records from your datasource. You can then call this query in the **Total Records** property using the, like:
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Total_record_query.data[0].count}}' }}
+{{ '{{Total_record_query.data[0].count}}' }}
 ```
 
 
@@ -155,7 +155,7 @@ For instance, you can create a Count query to retrieve the total number of recor
 
  
 
-Sets the [actions](/reference/appsmith-framework/widget-actions) that would be triggered whenever the user navigates to a different page of the table, either by clicking on the pagination buttons.
+Sets the [actions](/reference/framework/global-functions.md) that would be triggered whenever the user navigates to a different page of the table, either by clicking on the pagination buttons.
 
 
 
@@ -163,7 +163,7 @@ Sets the [actions](/reference/appsmith-framework/widget-actions) that would be t
 
  
 
-Sets the [actions](/reference/appsmith-framework/widget-actions) to be executed when the height of the table is changed. This event is typically triggered by developers working on the app and not by end users. It can be useful, for example, to dynamically set a limit in your query based on the new table height.
+Sets the [actions](/reference/framework/global-functions.md) to be executed when the height of the table is changed. This event is typically triggered by developers working on the app and not by end users. It can be useful, for example, to dynamically set a limit in your query based on the new table height.
 
 
 
@@ -224,7 +224,7 @@ Sets which rows are selected in the table by default. When **Enable multi-row se
 
  
 
-Enables the selection of multiple rows in a table simultaneously. When enabled, the selected rows can be accessed through the `{{ '{{ '{{ '{{Table1.selectedRows}}' }}` reference property.
+Enables the selection of multiple rows in a table simultaneously. When enabled, the selected rows can be accessed through the `{{ '{{Table1.selectedRows}}' }}` reference property.
 
 
 
@@ -232,7 +232,7 @@ Enables the selection of multiple rows in a table simultaneously. When enabled, 
 
  
 
-Sets the [action](/reference/appsmith-framework/widget-actions) to be executed when the user selects one or more rows in the table.
+Sets the [action](/reference/framework/global-functions.md) to be executed when the user selects one or more rows in the table.
 
 
 
@@ -252,7 +252,7 @@ Controls whether the columns in the table can be sorted by the user. When enable
 
  
 
-Allows you to specify the [action](/reference/appsmith-framework/widget-actions) to be executed when the user sorts the data in the table.
+Allows you to specify the [action](/reference/framework/global-functions.md) to be executed when the user sorts the data in the table.
 
 
 
@@ -299,7 +299,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -409,7 +409,7 @@ Sets the background color of the table cells. Additionally, the cell color can b
 For example, lets say you have a column named `status` that reflects `approved` and `pending` values. You can set the color for these values using the following expression in the **Cell Background** property:
 
 ```js
-{{ '{{ '{{ '{{currentRow.status === "approved" ? "#22c55e" : "#facc15"}}' }}
+{{ '{{currentRow.status === "approved" ? "#22c55e" : "#facc15"}}' }}
 ```
 
 If you want to keep the same background color for an entire row, you can use the same custom style expression in each column **Cell Background** property.
@@ -500,13 +500,13 @@ Reference properties are properties that are not available in the property pane 
  
 Contains the data of the row selected by the user. It's an empty object if no row is selected. 
 
-*Example*:
+
 ```js
 //To access the entire selected row:
-{{ '{{ '{{ '{{Table1.selectedRow}}' }}
+{{ '{{Table1.selectedRow}}' }}
 
 //To access a specific cell value, such as the email field:
-{{ '{{ '{{ '{{Table1.selectedRow.email}}' }}
+{{ '{{Table1.selectedRow.email}}' }}
 ```
 
 
@@ -516,14 +516,14 @@ Contains the data of the row selected by the user. It's an empty object if no ro
 
 Contains an array of rows selected by the user when multi-select is enabled. It's `[null]` if no row is selected.
 
-*Example:*
+
 
 ```js
 //To access the array of selected rows:
-{{ '{{ '{{ '{{Table1.selectedRows}}' }}
+{{ '{{Table1.selectedRows}}' }}
 
 //To access a specific cell value in the selected rows, such as the email field of the first selected row:
-{{ '{{ '{{ '{{Table1.selectedRows[0].email}}' }}
+{{ '{{Table1.selectedRows[0].email}}' }}
 ```
 
 
@@ -534,14 +534,14 @@ Contains an array of rows selected by the user when multi-select is enabled. It'
 
 When a user interacts with an actionable item *(like a button)* in a row, `triggeredRow` fetches the data of that column.
 
-*Example:*
+
 
 ```js
 //To access the entire triggered row:
-{{ '{{ '{{ '{{Table1.triggeredRow}}' }}
+{{ '{{Table1.triggeredRow}}' }}
 
 //To access a specific cell value, such as the email field:
-{{ '{{ '{{ '{{Table1.triggeredRow.email}}' }}
+{{ '{{Table1.triggeredRow.email}}' }}
 ```
 
 
@@ -556,9 +556,9 @@ For example, when using Datepicker if the date is in `ISO` format and you want t
 
 Reflects whether the widget is visible or not.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.isVisible}}' }}
+{{ '{{Table1.isVisible}}' }}
 ```
 
 
@@ -571,9 +571,9 @@ Reflects whether the widget is visible or not.
 Reflects the current column sort criteria. For example, if table rows are being sorted by the value of column `id` in ascending order, this property contains `{"column": "id", "order": "asc"}`.
 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.sortOrder}}' }}
+{{ '{{Table1.sortOrder}}' }}
 ```
 
 
@@ -584,9 +584,9 @@ Reflects the current column sort criteria. For example, if table rows are being 
 
 Contains all the table data in JSON format.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.tableData}}' }}
+{{ '{{Table1.tableData}}' }}
 ```
 
 
@@ -597,9 +597,9 @@ Contains all the table data in JSON format.
 
 Contains the index of the row selected by the user. Not applicable when multiple rows are selected.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.selectedRowIndex}}' }}
+{{ '{{Table1.selectedRowIndex}}' }}
 ```
 
 
@@ -610,9 +610,9 @@ Contains the index of the row selected by the user. Not applicable when multiple
 
 Contains an array of the index of the rows selected by the user. Not applicable when multi-row selection is turned off.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.selectedRowIndices}}' }}
+{{ '{{Table1.selectedRowIndices}}' }}
 ```
 
 
@@ -623,9 +623,9 @@ Contains an array of the index of the rows selected by the user. Not applicable 
 
 Contains the data of the rows left after applying any selected filters, sort rule, or search terms.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.filteredTableData}}' }}
+{{ '{{Table1.filteredTableData}}' }}
 ```
 
 
@@ -636,9 +636,9 @@ Contains the data of the rows left after applying any selected filters, sort rul
 
 Contains the current page number that the user is on. APIs can use it for pagination.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.pageNo}}' }}
+{{ '{{Table1.pageNo}}' }}
 ```
 
 
@@ -649,9 +649,9 @@ Contains the current page number that the user is on. APIs can use it for pagina
 
 Contains a calculated value to represent how many records to skip when using Server-side pagination. Use this value in your query to fetch the correct set of results.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.pageOffset}}' }}
+{{ '{{Table1.pageOffset}}' }}
 ```
 
 
@@ -662,9 +662,9 @@ Contains a calculated value to represent how many records to skip when using Ser
 
 Contains the number of rows that can fit inside a page of the table. Changes along with the height & row height of the table.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.pageSize}}' }}
+{{ '{{Table1.pageSize}}' }}
 ```
 
 
@@ -675,9 +675,9 @@ Contains the number of rows that can fit inside a page of the table. Changes alo
 
 Contains the search text entered by the user in the Table.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.searchText}}' }}
+{{ '{{Table1.searchText}}' }}
 ```
 
 
@@ -688,9 +688,9 @@ Contains the search text entered by the user in the Table.
 
 Indicates whether a new row is currently being added to the table.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.isAddRowInProgress}}' }}
+{{ '{{Table1.isAddRowInProgress}}' }}
 ```
 
 
@@ -702,9 +702,9 @@ Indicates whether a new row is currently being added to the table.
 Contains data related to the newly added row.
 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.newRow}}' }}
+{{ '{{Table1.newRow}}' }}
 ```
 
 
@@ -714,9 +714,9 @@ Contains data related to the newly added row.
 
 Indicates whether the next page of data has been visited by the user.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.nextPageVisited}}' }}
+{{ '{{Table1.nextPageVisited}}' }}
 ```
 
 
@@ -728,9 +728,9 @@ Indicates whether the next page of data has been visited by the user.
 Indicates whether the previous page of data has been visited by the user.
 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.previousPageVisited}}' }}
+{{ '{{Table1.previousPageVisited}}' }}
 ```
 
 
@@ -743,9 +743,9 @@ Indicates whether the table headers are visible.
 
 
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.tableHeaders}}' }}
+{{ '{{Table1.tableHeaders}}' }}
 ```
 
 
@@ -755,11 +755,11 @@ Indicates whether the table headers are visible.
 
 Indicates the number of pages in server-side pagination.
 
-*Example:*
+
 
 
 ```js
-{{ '{{ '{{ '{{Table1.totalRecordsCount}}' }}
+{{ '{{Table1.totalRecordsCount}}' }}
 ```
 
 
@@ -769,9 +769,9 @@ Indicates the number of pages in server-side pagination.
 
 Contains data related to the recently updated added row.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.updatedRow}}' }}
+{{ '{{Table1.updatedRow}}' }}
 ```
 
 
@@ -781,9 +781,9 @@ Contains data related to the recently updated added row.
 
 Contains data related to updated rows.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.updatedRows}}' }}
+{{ '{{Table1.updatedRows}}' }}
 ```
 
 
@@ -793,9 +793,9 @@ Contains data related to updated rows.
 
 An index property that indicates the row index of the table that has been triggered.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Table1.triggeredRowIndex}}' }}
+{{ '{{Table1.triggeredRowIndex}}' }}
 ```
 
 
@@ -805,11 +805,11 @@ An index property that indicates the row index of the table that has been trigge
 
 Refers to an array of indices corresponding to the rows that have been updated.
 
-*Example:*
+
 
 
 ```js
-{{ '{{ '{{ '{{Table1.updatedRowIndices}}' }}
+{{ '{{Table1.updatedRowIndices}}' }}
 ```
 
 
@@ -817,7 +817,7 @@ Refers to an array of indices corresponding to the rows that have been updated.
 
 Widget property setters enables you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 
@@ -827,7 +827,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Table1.setVisibility(true)
@@ -842,7 +842,7 @@ Table1.setVisibility(true)
 
 Sets the data to be displayed in the Table widget.
 
-*Example*:
+
 
 ```js
 Table1.setData([{ name: 'John', age: 36 }, { name: 'Jane', age: 28 }])
@@ -859,7 +859,7 @@ Table1.setData([{ name: 'John', age: 36 }, { name: 'Jane', age: 28 }])
 
 This method allows you to programmatically select a single row in the Table.
 
-*Example*:
+
 
 ```js
 Table1.setSelectedRowIndex(2)
@@ -873,10 +873,10 @@ Table1.setSelectedRowIndex(2)
 
 This method allows you to programmatically select multiple rows in the Table. It is available when the [**Enable multi-row selection**](/reference/widgets/table#enable-multi-row-selection-boolean) property is enabled.
 
-*Example*:
+
 
 ```js
-{{ '{{ '{{ '{{Table1.setSelectedRowIndices([1,2,5,8])}}' }}
+{{ '{{Table1.setSelectedRowIndices([1,2,5,8])}}' }}
 ```
 
 

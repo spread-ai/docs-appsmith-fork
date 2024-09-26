@@ -3,7 +3,7 @@ description: This page shows you steps to build an app to navigate between pages
 ---
 
 # Navigate Between Pages
-Appsmith provides the [navigateTo](/reference/appsmith-framework/widget-actions/navigate-to) function that lets you navigate between pages within your app. This guide shows you how to implement page navigation.
+Appsmith provides the [navigateTo](/reference/framework/global-functions.md/navigate-to) function that lets you navigate between pages within your app. This guide shows you how to implement page navigation.
 
 ## Set up page navigation
 

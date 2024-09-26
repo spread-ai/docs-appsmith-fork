@@ -48,7 +48,7 @@ Displays a list of available menu items. You can rearrange the items and configu
 It is used to provide the datasource for dynamic menus. It accepts an array of values, which can be obtained from queries. You can directly reference your query in the **Source Data** property, like: 
 
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the data retrieved from the query is not in the desired format, you can use JavaScript to **transform** it before passing it to the widget. For instance, if you have a list of product names and you want to display only the unique names in a Menu Button, you can use:
@@ -83,7 +83,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -96,7 +96,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to select menu item, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -213,9 +213,9 @@ Reference properties are properties that are not available in the property pane 
  
 Returns the value of the label associated with the widget.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{MenuButton1.label}}' }}
+{{ '{{MenuButton1.label}}' }}
 ```
 
 
@@ -226,9 +226,9 @@ Returns the value of the label associated with the widget.
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{MenuButton1.isVisible}}' }}
+{{ '{{MenuButton1.isVisible}}' }}
 ```
 
 
@@ -246,7 +246,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 MenuButton1.setVisibility(true).then(() => {
@@ -264,7 +264,7 @@ MenuButton1.setVisibility(true).then(() => {
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 MenuButton1.setDisabled(false).then(() => {

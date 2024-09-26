@@ -75,7 +75,7 @@ Watch the following videos to learn how to generate PDF reports using [Apitempla
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -84,7 +84,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 DocumentViewer1.setVisibility(true)
@@ -99,7 +99,7 @@ DocumentViewer1.setVisibility(true)
 
 Updates the URL of the document to be displayed in the Document Viewer widget. 
 
-*Example*:
+
 
 ```js
 DocumentViewer1.setURL('<https://example.com/file.txt>')

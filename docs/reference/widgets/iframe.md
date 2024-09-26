@@ -123,7 +123,7 @@ This property controls whether the widget is displayed with a loading animation.
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
 
 
 
@@ -219,9 +219,9 @@ Reference properties are properties that are not available in the property pane 
 
 Indicates the visibility state of a widget, with `true` indicating it is visible and `false` indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Iframe1.isVisible}}' }}
+{{ '{{Iframe1.isVisible}}' }}
 ```
 
 
@@ -232,9 +232,9 @@ Indicates the visibility state of a widget, with `true` indicating it is visible
 
 Contains the URL of the embedded page. Doesn't reflect the content set in the **srcDoc** property.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Iframe1.source}}' }}
+{{ '{{Iframe1.source}}' }}
 ```
 
 
@@ -246,9 +246,9 @@ Contains the URL of the embedded page. Doesn't reflect the content set in the **
 
 Contains the title of the Iframe as set in the widget's **Title** property.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Iframe1.title}}' }}
+{{ '{{Iframe1.title}}' }}
 ```
 
 
@@ -261,9 +261,9 @@ Contains the title of the Iframe as set in the widget's **Title** property.
 
 The `message` property contains a message received from the embedded page via the JavaScript `postMessage()` method. This message can be of any type and is `undefined` before a message is received. Learn more about [postMessage().](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Iframe1.message}}' }}
+{{ '{{Iframe1.message}}' }}
 ```
 
 
@@ -275,9 +275,9 @@ The `message` property contains a message received from the embedded page via th
 
 The `messageMetadata` property contains metadata related to the message received from the embedded page through the JavaScript `postMessage()` method.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Iframe1.messageMetadata}}' }}
+{{ '{{Iframe1.messageMetadata}}' }}
 ```
 
 
@@ -285,7 +285,7 @@ The `messageMetadata` property contains metadata related to the message received
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 #### setVisibility (param: boolean): Promise
 
@@ -293,7 +293,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 ```js
 Iframe1.setVisibility(true)
 ```
@@ -306,7 +306,7 @@ Iframe1.setVisibility(true)
 
 Allows you to dynamically change the content of the iFrame by providing a new URL. 
 
-*Example*:
+
 ```js
 Iframe1.setURL('<https://example.com>')
 ```

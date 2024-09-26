@@ -56,12 +56,12 @@ Use to set options in the list of the TreeSelect widget. Options must be specifi
 You can dynamically generate options by fetching data from queries or JS functions by binding the response to the **Options** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Options** property in the TreeSelect widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
 
-*Example*:
+
 
 ```js
 {{ '{{ getdata.data.reduce((acc, cur) => {
@@ -168,7 +168,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -181,7 +181,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -312,10 +312,10 @@ Reference properties enable you to access the widget's data and state using the 
 The `options` property contains the values available for selection in a TreeSelect widget.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{TreeSelect1.options}}' }}
+{{ '{{TreeSelect1.options}}' }}
 ```
 
 
@@ -326,10 +326,10 @@ The `options` property contains the values available for selection in a TreeSele
 
 Returns the label of the option selected in the TreeSelect widget. It changes if the default value of the widget changes or the user selects an option.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{TreeSelect1.selectedOptionLabel}}' }}
+{{ '{{TreeSelect1.selectedOptionLabel}}' }}
 ```
 
 
@@ -340,10 +340,10 @@ Returns the label of the option selected in the TreeSelect widget. It changes if
 
 Returns the value of the option selected in the TreeSelect widget. It changes if the default value of the widget changes or the user selects an option.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{TreeSelect1.selectedOptionValue}}' }}
+{{ '{{TreeSelect1.selectedOptionValue}}' }}
 ```
 
 
@@ -355,10 +355,10 @@ Returns the value of the option selected in the TreeSelect widget. It changes if
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{TreeSelect1.isDisabled}}' }}
+{{ '{{TreeSelect1.isDisabled}}' }}
 ```
 
 
@@ -369,10 +369,10 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{TreeSelect1.isVisible}}' }}
+{{ '{{TreeSelect1.isVisible}}' }}
 ```
 
 
@@ -384,10 +384,10 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{TreeSelect1.isValid}}' }}
+{{ '{{TreeSelect1.isValid}}' }}
 ```
 
 
@@ -397,7 +397,7 @@ The `isValid` property indicates the validation status of a widget, providing in
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setDisabled (param: boolean): Promise
@@ -406,7 +406,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 TreeSelect1.setDisabled(false)
@@ -420,7 +420,7 @@ TreeSelect1.setDisabled(false)
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 TreeSelect1.setRequired(true)

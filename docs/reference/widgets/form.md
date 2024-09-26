@@ -21,7 +21,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects _Yes_ from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -106,13 +106,13 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `data` property contains the data of the widgets embedded in the form. 
 
-*Example:*
+
 ```js
 //Access all data
-{{ '{{ '{{ '{{Form1.data}}' }}
+{{ '{{Form1.data}}' }}
 
 //Access data from a Specific Widget
-{{ '{{ '{{ '{{Form1.data.<widget_name>}}' }}
+{{ '{{Form1.data.<widget_name>}}' }}
 ```
 
 For instance, if you have a Select widget `OrderStatus` inside Form, its value can be accessed as shown:
@@ -126,7 +126,7 @@ For instance, if you have a Select widget `OrderStatus` inside Form, its value c
 ```
 ```js
 //Access the widget values
-{{ '{{ '{{ '{{Form1.data.OrderStatus}}' }}
+{{ '{{Form1.data.OrderStatus}}' }}
 ```
 
 
@@ -138,9 +138,9 @@ For instance, if you have a Select widget `OrderStatus` inside Form, its value c
 
 The `hasChanges` property indicates whether the user has made any modifications to the form fields.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Form1.hasChanges}}' }}
+{{ '{{Form1.hasChanges}}' }}
 ```
 
 
@@ -150,9 +150,9 @@ The `hasChanges` property indicates whether the user has made any modifications 
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Form1.isVisible}}' }}
+{{ '{{Form1.isVisible}}' }}
 ```
 
 
@@ -161,7 +161,7 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 #### setVisibility(param: boolean): Promise
 
@@ -169,7 +169,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 Form1.setVisibility(true)

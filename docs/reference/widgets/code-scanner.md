@@ -56,7 +56,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Code Scanner widget:
 
 ```js
-{{ '{{ '{{ '{{Checkbox1.isChecked}}' }}
+{{ '{{Checkbox1.isChecked}}' }}
 ```
 
 
@@ -69,7 +69,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to interact with the Code Scanner widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -93,7 +93,7 @@ Sets a tooltip that appears when the user hovers over the widget. It enables you
 
 ### Events
 
-When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/appsmith-framework/widget-actions).
+When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onCodeDetected
 
@@ -187,10 +187,10 @@ Reference properties enable you to access the widget's data and state using the 
 
 It reflects the state of the widget's Disabled setting. It is represented by a boolean value, where `true` indicates that the widget is disabled, and `false` indicates that it is enabled for user interaction.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{Select1.isDisabled}}' }}
+{{ '{{Select1.isDisabled}}' }}
 ```
 
 
@@ -201,9 +201,9 @@ It reflects the state of the widget's Disabled setting. It is represented by a b
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 ```js
-{{ '{{ '{{ '{{Select1.isVisible}}' }}
+{{ '{{Select1.isVisible}}' }}
 ```
 
 
@@ -214,10 +214,10 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 
 Retrieves the scanned code value from the widget.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{CodeScanner1.value}}' }}
+{{ '{{CodeScanner1.value}}' }}
 ```
 
 
@@ -227,7 +227,7 @@ Retrieves the scanned code value from the widget.
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
 
 
 #### setVisibility (param: boolean): Promise
@@ -236,7 +236,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 CodeScanner1.setVisibility(true)
@@ -251,7 +251,7 @@ CodeScanner1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 CodeScanner1.setDisabled(false)

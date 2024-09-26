@@ -44,7 +44,7 @@ Additionally, you can dynamically display data from a query using JavaScript. Fo
 
 
 ```js
-{{ '{{ '{{ '{{getCountry.data.map( p => ({label: p.country, value: p.country}))}}' }}
+{{ '{{getCountry.data.map( p => ({label: p.country, value: p.country}))}}' }}
 ```
 
 
@@ -57,7 +57,7 @@ Additionally, you can dynamically display data from a query using JavaScript. Fo
 
 Allows you to set default options in a widget. These options are initially selected when the widget is loaded, representing the user's default input unless modified. Multiple default options can be added by providing them as an array of values. 
 
-*Example*:
+
 
 ```js
 [
@@ -200,7 +200,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-This event defines the action that would be executed when the user selects or deselects multiple or single options in the switch group. It allows you to specify a list of [actions](/reference/appsmith-framework/widget-actions) that can be triggered in response to the switch state change.
+This event defines the action that would be executed when the user selects or deselects multiple or single options in the switch group. It allows you to specify a list of [actions](/reference/framework/global-functions.md) that can be triggered in response to the switch state change.
 
 
 
@@ -264,10 +264,10 @@ These properties are not available in the property pane, but can be accessed usi
 
 The `selectedValues` property holds an array of values that represents the options selected by the user.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{SwitchGroup1.selectedValues}}' }}
+{{ '{{SwitchGroup1.selectedValues}}' }}
 ```
 
 
@@ -280,7 +280,7 @@ The `selectedValues` property holds an array of values that represents the optio
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/core-concepts/writing-code/javascript-promises#using-promises-in-appsmith). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
 
 
 
@@ -290,7 +290,7 @@ These methods are asynchronous and return a [Promise](/core-concepts/writing-cod
 
 Sets the visibility of the widget.
 
-*Example*:
+
 
 ```js
 SwitchGroup1.setVisibility(true)
@@ -306,7 +306,7 @@ SwitchGroup1.setVisibility(true)
 
 Sets the disabled state of the widget.
 
-*Example*:
+
 
 ```js
 SwitchGroup1.setDisabled(false)
@@ -321,7 +321,7 @@ SwitchGroup1.setDisabled(false)
 
 Sets whether the widget is required or not.
 
-*Example*:
+
 
 ```js
 SwitchGroup1.setRequired(true)

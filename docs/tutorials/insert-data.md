@@ -66,7 +66,7 @@ To insert data in a new page, follow these steps:
 
 4. Set the `Submit` Button's **onClick** event to execute the insert query, and the **onSuccess** callback to navigate back to your home page and fetch the updated data.
 5. Add a Button widget to your home page and set its **onClick** event to navigate to the insert data page created in Step 1. 
-   For more information, see [navigateTo](/reference/appsmith-framework/widget-actions/navigate-to).
+   For more information, see [navigateTo](/reference/framework/global-functions.md/navigate-to).
 
 :::info
 To insert the ID value, choose a UUID generator or let your data source auto-generate the ID.

@@ -56,7 +56,7 @@ You can **dynamically generate** options by fetching data from queries or JavaSc
 
 You can construct a query that retrieves the relevant data and formats it to be used as options, something like:
 
-*Example:*
+
 ```sql
 SELECT 
   type AS label,
@@ -75,12 +75,12 @@ ORDER BY label;
 In the **Options** property, display the data using:
 
 ```js
-{{ '{{ '{{ '{{fetchData.data}}' }}
+{{ '{{fetchData.data}}' }}
 ```
 
 If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
 
-*Example:*
+
 ```js
 {{ '{{ fetchData.data.reduce((acc, cur) => {
   const group = acc.find(item => item.value === cur.type);
@@ -215,7 +215,7 @@ Controls the visibility of the widget. If you turn off this property, the widget
 
 For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
+{{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
 
@@ -228,7 +228,7 @@ Prevents users from selecting the widget. Even though the widget remains visible
 
 For example, if you want to allow only a specific user to fill the input, you can use the following JavaScript expression: 
 ```js
-{{ '{{ '{{ '{{appsmith.user.email=="john@appsmith.com"?false:true}}' }}
+{{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
 
@@ -279,7 +279,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/appsmith-framework/widget-actions).
+When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
 
 
 
@@ -369,10 +369,10 @@ These properties are not available in the property pane, but can be accessed usi
 The `options` property contains the values available for selection in a Multi TreeSelect widget.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{MultiTreeSelect1.options}}' }}
+{{ '{{MultiTreeSelect1.options}}' }}
 ```
 
 
@@ -383,10 +383,10 @@ The `options` property contains the values available for selection in a Multi Tr
 
 The `selectedOptionLabels` property represents an array of labels for the selected options. The labels updates dynamically if the default values of the dropdown change or if the user modifies their option selection.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{MultiTreeSelect1.selectedOptionLabels}}' }}
+{{ '{{MultiTreeSelect1.selectedOptionLabels}}' }}
 ```
 
 
@@ -398,10 +398,10 @@ The `selectedOptionLabels` property represents an array of labels for the select
 The `selectedOptionValues` property represents an array of values for the selected options. The values updates dynamically if the default values of the dropdown change or if the user modifies their option selection.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{MultiTreeSelect1.selectedOptionValues}}' }}
+{{ '{{MultiTreeSelect1.selectedOptionValues}}' }}
 ```
 
 
@@ -413,10 +413,10 @@ The `selectedOptionValues` property represents an array of values for the select
 
 The `isDisabled` property reflects the state of the widget's Disabled setting. It is represented by a boolean value, where true indicates that the widget is not available, and false indicates that it is enabled for user interaction.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{MultiTreeSelect1.isDisabled}}' }}
+{{ '{{MultiTreeSelect1.isDisabled}}' }}
 ```
 
 
@@ -427,10 +427,10 @@ The `isDisabled` property reflects the state of the widget's Disabled setting. I
 
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{MultiTreeSelect1.isVisible}}' }}
+{{ '{{MultiTreeSelect1.isVisible}}' }}
 ```
 
 
@@ -442,10 +442,10 @@ The `isVisible` property indicates the visibility state of a widget, with true i
 The `isValid` property indicates the validation status of a widget, providing information on whether the widget's current value is considered valid or not.
 
 
-*Example:*
+
 
 ```js
-{{ '{{ '{{ '{{MultiTreeSelect1.isValid}}' }}
+{{ '{{MultiTreeSelect1.isValid}}' }}
 ```
 
 

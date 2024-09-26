@@ -62,7 +62,7 @@ GET https://mock-api.appsmith.com/users?limit={{ '{{ '{{ '{{this.params.limit}}'
 *Example:*
 
 - Create a function that retrieves user data in batches of 100 rows from a database, continuously appending each batch to a `usersData` array until the entire dataset is retrieved.
-- Use the [download()](/reference/appsmith-framework/widget-actions/download) function to download the data to your local machine.
+- Use the [download()](/reference/framework/global-functions.md/download) function to download the data to your local machine.
 - Upon successfully fetching and downloading all data, it resets the `usersData` array to clear the data.
 
 
@@ -178,5 +178,5 @@ The code fetches the file content from this URL, and then triggers `download()` 
 
 ## See also
 
-* [Download PDF File](/reference/appsmith-framework/widget-actions/download)
+* [Download PDF File](/reference/framework/global-functions.md/download)
 * [Download file using authenticated URL](/connect-data/how-to-guides/how-to-download-files-using-api#download-file-using-public-url)
