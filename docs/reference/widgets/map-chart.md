@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 Allows you to choose between world maps or individual continent maps for visualizing your data.
 
-*Options:*
+Options:
 * World
 * World with Antarctica
 * Europe

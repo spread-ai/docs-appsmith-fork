@@ -101,7 +101,7 @@ Learn more about [Inline editing](/reference/widgets/table/inline-editing).
 
 Determines how edited cells are saved in the table.
 
-*Options:*
+Options:
 * **Single row**: Cells can be saved using the **Save/Discard** column buttons.
 * **Multi row**: Cells can be saved by using an **onSubmit** event of the column or through an external button widget.
  

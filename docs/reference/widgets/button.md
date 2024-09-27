@@ -1,9 +1,13 @@
 ---
-description: >-
-  Button widget reference
+Title: Button
+Description: Button widget reference
 ---
 
-# Button
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
 This page provides information on the button widget, enabling you to trigger actions or perform specific tasks with a simple click. 
 
@@ -80,7 +84,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
  
 
-Add a Google reCAPTCHA [site key](https://cloud.google.com/recaptcha-enterprise/docs/create-key) here to enable Google reCAPTCHA check to the button. The token is accessible from the API pane with the `recaptchaToken` key (see the [Google reCAPTCHA](https://www.google.com/recaptcha/about/) docs). Read more about using [Google reCAPTCHA Keys in Appsmith](/reference/widgets/button/google-recaptcha/).
+Add a Google reCAPTCHA [site key](https://cloud.google.com/recaptcha-enterprise/docs/create-key) here to enable Google reCAPTCHA check to the button. The token is accessible from the API pane with the `recaptchaToken` key (see the [Google reCAPTCHA](https://www.google.com/recaptcha/about/) docs). For more information, see [Google reCAPTCHA](google-recaptcha.md).
 
 
 
@@ -94,7 +98,7 @@ Sets the Google reCAPTCHA version to use for the button, either v2 or v3.
 
 ### Form settings
 
-Buttons can have some special behaviors when they're located within the boundaries of a [Form widget](/reference/widgets/form). Its form-specific behavior is controlled by two of the button's properties:
+Buttons can have some special behaviors when they're located within the boundaries of a [Form widget](form.md). Its form-specific behavior is controlled by two of the button's properties:
 
 #### Disabled invalid forms 
 
@@ -126,7 +130,7 @@ Style properties allow you to change the look and feel of the button.
 
 Specifies the style type of the button to indicate its significance.
 
-*Options:*
+Options:
 
 * **Primary**: Fills the button with color.
 * **Secondary**: Adds a colored border to the button while keeping the button itself white.
@@ -152,7 +156,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 This property allows you to configure the **Icon**'s placement.
 
-*Options:*
+Options:
 * **Left**: Aligns the icon to the left side of the Label.
 * **Right**: Aligns the icon to the right side of the Label.
 
@@ -165,7 +169,7 @@ This property allows you to configure the **Icon**'s placement.
 
 Determines the spacing between the **Icon** and the **Label**.
 
-*Options:*
+Options:
 * **Start**: The icon and label appear on the leftmost side of the button.
 * **Between**: The icon and label appear at opposite ends of the button's space.
 * **Center**: The icon and label appear in the center of the button space.

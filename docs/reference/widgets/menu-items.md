@@ -66,7 +66,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 This property allows you to configure the **Icon**'s placement.
 
-*Options:*
+Options:
 * **Left**: Aligns the Icon to the left side of the Label.
 * **Right**: Aligns the Icon to the right side of the Label.
 

@@ -25,7 +25,7 @@ Sets the text on the widget.
 
 Allows you to specify the source of the menu items.
 
-*Options:*
+Options:
 * **Static**: When the Static option is selected, the **Menu Items** property would be visible, allowing you to add and manage the menu items directly from UI. You can click on the ⚙️ gear icon to access the configuration options. 
 * **Dynamic**: With Dynamic source, the menu items are populated dynamically by binding the query to **Source data**. To configure the properties of the menu items, click on the **Configure Menu Item** button. The menu items would not be displayed until you configure them using the `currentItem` or `currentIndex` property. 
 
@@ -129,7 +129,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Specifies the style type of the button to indicate its significance.
 
-*Options:*
+Options:
 
 * **Primary**: Fills the button with color.
 * **Secondary**: Adds a colored border to the button while keeping the button itself white.
@@ -154,7 +154,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 This property allows you to configure the **Icon**'s placement.
 
-*Options:*
+Options:
 * **Left**: Aligns the Icon to the left side of the Label.
 * **Right**: Aligns the Icon to the right side of the Label.
 
@@ -167,7 +167,7 @@ This property allows you to configure the **Icon**'s placement.
 
 Determines the spacing between the **Icon** and the **Label**.
 
-*Options:*
+Options:
 * Start
 * Center
 * Between

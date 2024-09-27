@@ -17,7 +17,7 @@ These properties are customizable options present in the property pane of the wi
 Specifies the type of buttons to be included in the button group.
 
 
-*Options:*
+Options:
 * **Simple**: You can add text buttons to the group. Each button can be customized with different labels, colors, and actions.
 * **Menu**: You can add menu items to a button in the group. This allows you to create a dropdown menu with multiple items. For information on configuring menu items in the button group, refer to [Menu Items](/reference/widgets/menu/menu-items).
 
@@ -73,7 +73,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 This property allows you to configure the **Icon**'s placement.
 
-*Options:*
+Options:
 * **Left**: Aligns the Icon to the left side of the Label.
 * **Right**: Aligns the Icon to the right side of the Label.
 
@@ -85,7 +85,7 @@ This property allows you to configure the **Icon**'s placement.
 
 Determines the spacing between the **Icon** and the **Label**.
 
-*Options:*
+Options:
 * Start
 * Center
 * Between

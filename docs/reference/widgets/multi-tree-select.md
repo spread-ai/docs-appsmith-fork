@@ -189,7 +189,7 @@ Enables you to add hints or provide additional information to guide the user reg
 
 Displays the item on the widget, there are three options:
 
-*Options:*
+Options:
 
 * **Display only parent item**: This option displays only the parent items, excluding any child items.
 

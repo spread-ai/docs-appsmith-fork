@@ -30,7 +30,7 @@ These properties are customizable options present in the property pane of the wi
 
 Determines the visual appearance and behavior of the code scanner widget.
 
-*Options:*
+Options:
 
 - **Always On**:  The code scanner widget is always active and ready for scanning.
 - **Click to Scan**: The code scanner widget acts as a button that is activated only when clicked by the user.
@@ -125,7 +125,7 @@ Specifies the icon to be displayed on the widget. Additionally, you can use **JS
 
 This property allows you to configure the **Icon**'s placement.
 
-*Options:*
+Options:
 * **Left**: Aligns the icon to the left side of the Text.
 * **Right**: Aligns the icon to the right side of the Text.
 
@@ -138,7 +138,7 @@ This property allows you to configure the **Icon**'s placement.
 
 Determines the spacing between the **Icon** and the **Text**.
 
-*Options:*
+Options:
 * **Start**: The icon and text appear on the leftmost side of the button.
 * **Between**: The icon and text appear at opposite ends of the button's space.
 * **Center**: The icon and text appear in the center of the button space.

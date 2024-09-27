@@ -55,7 +55,7 @@ Sets a default image that would be displayed if no image is rendered via the **I
 
 Sets how the image should be resized to fit its container.
 
-*Options:*
+Options:
 
 - **Contain**: The image keeps its aspect ratio, but is resized to fit within the widget dimension.
 - **Cover**: The image keeps its aspect ratio and fills the widget dimension, which means the image is clipped to fill the widget.

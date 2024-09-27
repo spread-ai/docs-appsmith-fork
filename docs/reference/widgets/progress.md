@@ -31,7 +31,7 @@ Enables the widget to enter an infinite loading state, which is beneficial when 
 
 Allows you to select the desired format for the progress bar.
 
-*Options:*
+Options:
 * Circular
 * Linear
 

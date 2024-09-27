@@ -217,7 +217,7 @@ When enabled, this feature displays the dropdown in an expanded state by default
 
 This property determines how the widget's height adjusts to changes in its content.
 
-*Options:*
+Options:
 
 * **Fixed**: Maintains a constant height for the widget, allowing you to adjust it by dragging or using the resize handle.
 * **Auto Height**: The widget's height adjusts dynamically in response to changes in its content.

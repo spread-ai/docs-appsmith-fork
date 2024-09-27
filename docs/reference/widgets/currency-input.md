@@ -74,7 +74,7 @@ Sets the label on the widget.
 
 This property allows you to configure the label's placement.
 
-*Options:*
+Options:
 * **Auto**: Automatically positions the label based on the widget type and layout.
 * **Left**: Aligns the label to the left side of the widget.
 * **Top**: Positions the label above the widget.
@@ -226,7 +226,7 @@ When enabled, automatically places the user's cursor in the input box upon page 
  
 This property determines how the widget's height adjusts to changes in its content. 
 
-*Options:*
+Options:
 * **Fixed**: Maintains a constant height for the widget, allowing you to adjust it by dragging or using the resize handle.
 * **Auto Height**: The widget's height adjusts dynamically in response to changes in its content.
 * **Auto Height with limits**: Same as **Auto height**, with a configurable option to set the minimum and maximum number of rows the widget can occupy.

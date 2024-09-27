@@ -96,7 +96,7 @@ Sets the label on the widget.
 
 This property allows you to configure the label's placement.
 
-*Options:*
+Options:
 * **Left**: Aligns the label to the left side of the widget.
 * **Top**: Positions the label above the widget.
 

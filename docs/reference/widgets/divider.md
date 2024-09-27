@@ -67,7 +67,7 @@ Specify the color of the divider. It accepts [CSS color values](https://develope
 
 Sets the type of line used for the divider.
 
-*Options:*
+Options:
 * Solid: A continuous and unbroken line.
 * Dashed: A line composed of short, evenly spaced dashes.
 * Dotted: A line made up of small, distinct dots.
@@ -94,7 +94,7 @@ Sets the thickness of the divider line in pixels.
 
 Sets the design of the cap to be added to the end of the divider line.
 
-*Options:*
+Options:
 * No Cap
 * Arrow
 * Dot
@@ -107,7 +107,7 @@ Sets the design of the cap to be added to the end of the divider line.
 
 Determines the placement of caps on the sides of the divider line. 
 
-*Options:*
+Options:
 
 * Left
 * Both

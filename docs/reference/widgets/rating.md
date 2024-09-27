@@ -141,7 +141,7 @@ Style properties allow you to change the look and feel of the widget.
 
 Allows you to control the size of the star icons.
 
-*Options:*
+Options:
 
 * Small
 * Medium
