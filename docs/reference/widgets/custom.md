@@ -181,7 +181,7 @@ The `updateModel` property allows you to dynamically update the model properties
 ```js
 document.getElementById("saveBtn").addEventListener("click", function () {
   var dataURL = signaturePad.toDataURL();
-  // Implement logic to save the signature data (e.g., send to server)
+  // Implement logic to save the signature data (for example, send to server)
   appsmith.updateModel({ signatureImage: dataURL });
 });
 ```
