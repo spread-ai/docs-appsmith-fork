@@ -472,9 +472,9 @@ If no such unique identifier is present in the data, you can join multiple ident
 {{ '{{currentItem.bookName + "_" + currentItem.author}}' }}
 ```
 
-:::tip
+tip
 Always set the **Data Identifier** property with a valid unique identifier to boost performance.
-:::
+
 
 
 ## Access list items

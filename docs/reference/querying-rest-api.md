@@ -87,9 +87,9 @@ Appsmith supports a variety of encoding types for sending data in API queries. T
 `}</pre>
 <p>Above, values of multiple types are pulled from widgets and added to the query, including file data from a <a href="/reference/widgets/filepicker">Filepicker widget</a>.</p>
 
-:::tip
+tip
 When uploading file data, check that your Filepicker widget's **Data Format** property is set correctly. When uploading as multipart/form-data, this should usually be set to `Binary`.
-:::
+
 
 
 <ul>
@@ -107,9 +107,9 @@ When uploading file data, check that your Filepicker widget's **Data Format** pr
 `}</pre>
 <p>Use <b>RAW</b> if your endpoint can't accept multipart-encoded data and requires raw body binary instead. Above, the <code>data</code> property of the file is passed to the query instead of the file object itself because the endpoint expects only raw binary data.</p>
 
-:::caution tip
+caution tip
 Be sure to turn off **JSON Smart Substitution** for this query in the [query settings](/connect-data/reference/query-settings). This option usually helps cast data into correct JSON, but it is problematic when used with RAW binary.
-:::
+
 
 
 

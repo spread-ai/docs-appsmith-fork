@@ -29,9 +29,9 @@ Options:
 * **Static**: When the Static option is selected, the **Menu Items** property would be visible, allowing you to add and manage the menu items directly from UI. You can click on the ⚙️ gear icon to access the configuration options. 
 * **Dynamic**: With Dynamic source, the menu items are populated dynamically by binding the query to **Source data**. To configure the properties of the menu items, click on the **Configure Menu Item** button. The menu items would not be displayed until you configure them using the `currentItem` or `currentIndex` property. 
 
-:::note
+note
 The dynamic menu option supports a maximum of 10 menu items. 
-:::
+
 
 
 

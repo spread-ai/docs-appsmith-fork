@@ -6,9 +6,9 @@ description: This page explains how to use the Iframe widget to embed third-part
 
 This page provides information on using the Iframe widget to embed third-party applications and websites into your Appsmith application.
 
-:::info
+info
 The Iframe widget is safe from XSS attacks from v1.8.6 onwards. If you have a self-hosted Appsmith and are on an older version, see [Sandboxing Iframe widgets](/product/security#sandboxing-iframe-widgets) to enable this.
-:::
+
 
 ## Content properties
 
@@ -94,10 +94,10 @@ In addition to static HTML, you can display data generated dynamically from quer
 
 
 
-:::info
+info
 * If the Iframe widget has a value in the **srcDoc** property, it overrides the **URL** property.
 * If [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) is set to DENY on the external page or website, the Iframe widget fails to load.
-:::
+
 
 See how to [create custom widgets](/build-apps/how-to-guides/Create-Custom-Widgets-Using-Iframe) using Iframe.
 

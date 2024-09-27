@@ -151,9 +151,9 @@ The following section provides a detailed view of essential as well as optional 
 
 <ZoomImage src="/img/restapi-datasource-config.png" alt="Configuring an Authenticated API datasource" caption="Configuring an Authenticated API datasource" />
 
-:::caution
+caution
 The datasource configuration fields do not accept JavaScript code or bindings using mustache `{{ '{{}}' }}` syntax.
-:::
+
 
 ### URL
 

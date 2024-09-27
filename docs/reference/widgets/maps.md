@@ -6,9 +6,9 @@ Description: This page explains how to use the Map widget(powered by Google Maps
 This page provides information on using the Map widget (powered by [Google Maps API](https://developers.google.com/maps/documentation)) to display location data and enable users to add markers, search, and select locations on the map.
 
 
-:::info IMPORTANT
+info IMPORTANT
 If you want to use the Map widget on your self-hosted instance, it's essential to have Google Maps configured on your instance. See [Google Maps](/getting-started/setup/instance-configuration/google-maps).
-:::
+
 
 <ZoomImage src="/img/map-img.png" alt="Download image" caption="Display Map" />
 

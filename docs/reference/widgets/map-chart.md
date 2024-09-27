@@ -32,9 +32,9 @@ Options:
 * Africa
 * USA
 
-:::info
+info
 If you want to display a different Map type not listed above, like specific locations, countries, or cities, please contact the support team using the chat widget at the bottom right of this page.
-:::
+
 
 
 

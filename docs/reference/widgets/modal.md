@@ -128,9 +128,9 @@ The Modal widget can be used to view and edit data in a table. By displaying the
 
 3.  Set Table's `onRowSelected` event to open a Modal widget, you can create a new Modal widget or select an existing one
 
-:::note
+note
 Modal widget remains hidden on the canvas and becomes visible only when an event is triggered. You can access and edit the Modal widget from the entity explorer. 
-:::
+
 
 5. Next,  add [JSON form](/reference/widgets/json-form) inside the Modal widget, and edit the fields. For instance, if you plan to modify a user's `Date of Birth` and `Email`, you can edit the JSON Form widget accordingly.
 
