@@ -317,7 +317,7 @@ This boolean indicates whether the user has given consent to use Intercom, a mes
 
 #### idToken `object`
 
-An ID token serves as a verified confirmation of a user's identity and includes essential information such as their name, picture, email address etc. According to the OpenID Connect (OIDC) specifications, when a user successfully logs in, Studio receives an ID token.
+An ID token serves as a verified confirmation of a user's identity and includes essential information such as their name, picture, email address and so on According to the OpenID Connect (OIDC) specifications, when a user successfully logs in, Studio receives an ID token.
 
 Studio provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{}}' }}` as shown below:
 

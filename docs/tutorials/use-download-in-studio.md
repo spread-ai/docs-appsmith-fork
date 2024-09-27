@@ -19,7 +19,7 @@ The `download()` function is a powerful and flexible tool that allows users to e
 
 - [x] Basic understanding of how to [build Studio applications](../creating-studio-applications.md).
 - [x] Access to a SPREAD Studio environment.
-- [x] Data structured in a format that can be downloaded (for example, JSON, text, etc.).
+- [x] Data structured in a format that can be downloaded (for example, JSON, text, and so on).
 
 ## How the `download()` function works
 

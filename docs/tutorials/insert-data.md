@@ -15,7 +15,7 @@ This guide shows you how to insert data into a datasource using the Form widget 
 ## Use Modal
 To insert data using a Modal, follow these steps:
 1. Drop a Modal widget onto the canvas, and then add the relevant widgets and configure their properties.
-2. To validate data before inserting, scroll to the **Validation** section in the property pane of each widget within the Modal. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, etc. The `Save` button on the Modal remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](/reference/widgets/input#regex-string).
+2. To validate data before inserting, scroll to the **Validation** section in the property pane of each widget within the Modal. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, and so on The `Save` button on the Modal remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](/reference/widgets/input#regex-string).
 3. Configure the query to insert data.
 
    Example:
@@ -45,7 +45,7 @@ To insert data using a Modal, follow these steps:
 ## Use new page
 To insert data in a new page, follow these steps:
 1. Create a new page and then drop a Form widget on the page. Add the relevant widgets into the Form widget and configure their properties.
-2. To validate data before inserting, scroll to the **Validation** section in the property pane of the Form widget. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, etc. The Form widget's `Submit` button remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](/reference/widgets/input#regex-string).
+2. To validate data before inserting, scroll to the **Validation** section in the property pane of the Form widget. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, and so on The Form widget's `Submit` button remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](/reference/widgets/input#regex-string).
 3. Configure the query to insert data using [data](/reference/widgets/form#data-object) reference property of the Form.
 
    Example:
