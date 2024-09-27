@@ -25,7 +25,7 @@ The following section is a reference guide that provides a description of the pa
 #### Headers
 
  Sets key/value pairs to send in the request header.
- <em>To learn how to set up dynamic headers, visit and fork this <a href="https://app.appsmith.com/applications/6200ac292cd3d95ca414dc4f/pages/624eda0551a8863d6c406760">sample app</a></em>.
+ <em>To learn how to set up dynamic headers, visit and fork this <a href="https://app.docs.spread.ai/applications/6200ac292cd3d95ca414dc4f/pages/624eda0551a8863d6c406760">sample app</a></em>.
 
 #### Params
 
@@ -39,8 +39,8 @@ Studio supports a variety of encoding types for sending data in API queries. The
  
   <i>Options:</i>
   <ul>
-    <li><b>None:</b> Omits a body from the request.</li>
-    <li><b>JSON:</b> Expects a JSON object to send as the body.</li>
+    <li>**None:** Omits a body from the request.</li>
+    <li>**JSON:** Expects a JSON object to send as the body.</li>
   </ul>
  
   <pre>
@@ -55,7 +55,7 @@ Studio supports a variety of encoding types for sending data in API queries. The
   In the example above, values are collected from a Table widget and passed into a JSON object.
 
   <ul>
-    <li><b>FORM_URLENCODED:</b> Expects key/value pairs to be encoded into FORM_URLENCODED format as the body.</li>
+    <li>**FORM_URLENCODED:** Expects key/value pairs to be encoded into FORM_URLENCODED format as the body.</li>
   </ul>
 
  
@@ -69,10 +69,10 @@ Studio supports a variety of encoding types for sending data in API queries. The
   <pre>{`// result
   "query=arjun&limit=10&offset=20"
   `}</pre>
-  <p>Selecting <b>FORM_URLENCODED</b> (for <code>application/x-www-form-urlencoded</code>) automatically encodes your key/value pairs for sending in the request body.</p>
+  <p>Selecting **FORM_URLENCODED** (for <code>application/x-www-form-urlencoded</code>) automatically encodes your key/value pairs for sending in the request body.</p>
 
 <ul>
-  <li><b>MULTIPART_FORM_DATA:</b> Expects key/value pairs with a data type to be encoded into MULTIPART_FORM_DATA format as the body. Multipart requests can include several different types of data within them, such as a file along with some other related metadata.</li>
+  <li>**MULTIPART_FORM_DATA:** Expects key/value pairs with a data type to be encoded into MULTIPART_FORM_DATA format as the body. Multipart requests can include several different types of data within them, such as a file along with some other related metadata.</li>
 </ul>
  
 
@@ -93,7 +93,7 @@ When uploading file data, check that your Filepicker widget's **Data Format** pr
 
 
 <ul>
-  <li><b>BINARY:</b> For any Base64 upload, including text files, images, videos, and more, ensure that you include the file data in the body. If you're using Binary to upload files, remember to set the [Data Format](/reference/widgets/filepicker#data-format-string) property of the Filepicker widget to `Base64`. This ensures that the file data is encoded correctly before transmission. Moreover, if the API you are connecting with expects additional key/value pairs, you can include them along with file data in the body.</li>
+  <li>**BINARY:** For any Base64 upload, including text files, images, videos, and more, ensure that you include the file data in the body. If you're using Binary to upload files, remember to set the [Data Format](/reference/widgets/filepicker#data-format-string) property of the Filepicker widget to `Base64`. This ensures that the file data is encoded correctly before transmission. Moreover, if the API you are connecting with expects additional key/value pairs, you can include them along with file data in the body.</li>
 </ul>
  
 <pre>`{{ '{{ imgFilepicker.files[0].data }}' }}`</pre>
@@ -101,11 +101,11 @@ When uploading file data, check that your Filepicker widget's **Data Format** pr
 
 
 <ul>
-  <li><b>RAW:</b> Expects raw binary file data to be sent as the body.</li>
+  <li>**RAW:** Expects raw binary file data to be sent as the body.</li>
 </ul>
    <pre>{`{{ '{{ Filepicker1.files[0]?.data }}' }}
 `}</pre>
-<p>Use <b>RAW</b> if your endpoint can't accept multipart-encoded data and requires raw body binary instead. Above, the <code>data</code> property of the file is passed to the query instead of the file object itself because the endpoint expects only raw binary data.</p>
+<p>Use **RAW** if your endpoint can't accept multipart-encoded data and requires raw body binary instead. Above, the <code>data</code> property of the file is passed to the query instead of the file object itself because the endpoint expects only raw binary data.</p>
 
 caution tip
 Be sure to turn off **JSON Smart Substitution** for this query in the [query settings](/connect-data/reference/query-settings). This option usually helps cast data into correct JSON, but it is problematic when used with RAW binary.
@@ -120,9 +120,9 @@ Be sure to turn off **JSON Smart Substitution** for this query in the [query set
  
   <i>Options:</i>
   <ul>
-    <li><b>None:</b> Doesn't use any pagination.</li>
-    <li><b>Paginate with Table Page No:</b> Use when your API expects an offset or increment value to determine which set of records to return. Follow the instructions that appear on the platform, or see <a href="/build-apps/how-to-guides/Server-side-pagination-in-table">Offset-based pagination</a> for more information.</li>
-    <li><b>Paginate with Response URL:</b> Use when your API returns cursor values to page through data. The <b>Previous URL</b> and <b>Next URL</b> fields expect the cursor values from the query response. For more information, see <a href="/build-apps/how-to-guides/Server-side-pagination-in-table">Cursor-based pagination</a>.</li>
+    <li>**None:** Doesn't use any pagination.</li>
+    <li>**Paginate with Table Page No:** Use when your API expects an offset or increment value to determine which set of records to return. Follow the instructions that appear on the platform, or see <a href="/build-apps/how-to-guides/Server-side-pagination-in-table">Offset-based pagination</a> for more information.</li>
+    <li>**Paginate with Response URL:** Use when your API returns cursor values to page through data. The **Previous URL** and **Next URL** fields expect the cursor values from the query response. For more information, see <a href="/build-apps/how-to-guides/Server-side-pagination-in-table">Cursor-based pagination</a>.</li>
   </ul>
 
 
@@ -162,7 +162,7 @@ fetch("https://63772c9a5c477765121615ba.mockapi.io/users", {
   },
   body: JSON.stringify({
     name: "Alex",
-    email: "alex@appsmith.com",
+    email: "alex@docs.spread.ai",
   }),
 }).then((response) => {
     console.log("Success:", response.json());

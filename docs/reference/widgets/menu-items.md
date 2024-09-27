@@ -9,7 +9,7 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-These properties provide options to customize the formatting of menu items. For **Static** menu items, you can click on the ⚙️ gear icon to access the configuration options. For **Dynamic** menu items, you can click on the **Configure Menu Item** button to configure the properties.
+These properties provide options to customize the formatting of menu items. For **Static** menu items, you can click on the **⚙**️ gear icon to access the configuration options. For **Dynamic** menu items, you can click on the **Configure Menu Item** button to configure the properties.
 
 ## Content properties
 

@@ -1,7 +1,6 @@
 ---
-title: Studio Widget Reference
+title: SPREAD widget Reference
 description: A reference of the widgets available to use when creating your Studio application.
-subtitle: The library of widgets available to use in your Studio application
 ---
 
 <!--
@@ -10,21 +9,16 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-# Studio Widget reference
-
-This reference diocuments widgets that built in SPREAD Studio. Widgets are divided into [SPREAD Widgets](#spread-widgets) and Default Widgets.
-
-## SPREAD widgets
-In the reference below:
+This reference documents SPREAD widgets that are built into Studio. In the reference below:
 
 * **Content** properties denote the content properties you can set in the widget.
 * **Event** properties denote the events that you can attach actions and logic to.
 * **Style** properties denote the styling that you can set for the widget.
 * **Reference** properties return the values of a widget property.
-* **Methods** modify the values of widget properties at runtime using JavaScript [promises](https://docs.appsmith.com/writing-code-in-studio/using-js-promises.md).
-
+* **Methods** modify the values of widget properties at runtime using JavaScript [promises](/writing-code-in-studio/using-js-promises.md).
 
 ### Badge
+
 The badge widget is a visual element to highlight important information or status updates. The badge widget is used to indicate new or unread messages, notifications, statuses, or other important information.
 
 <figure markdown="span">
@@ -32,7 +26,7 @@ The badge widget is a visual element to highlight important information or statu
 	<figcaption>The Badge widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -48,6 +42,7 @@ The badge widget is a visual element to highlight important information or statu
 | Methods | `setVisibility (param: boolean): Promise`​ | | Sets the visibility of the widget. |
 
 ### Graph
+
 The graph widget is a visual element to create node diagrams.
 
 <figure markdown="span">
@@ -55,7 +50,7 @@ The graph widget is a visual element to create node diagrams.
 	<figcaption>The Graph widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -71,8 +66,8 @@ The graph widget is a visual element to create node diagrams.
 | Style | Size | integer | Sets the size of the node diameter, node text size, node border size, and the selected node border size. |
 | Style | Color |  | Sets the color of the background, node text, node color, node border, edge, selected node background, and selected node border. |
 
-
 ### Guided Event Chain
+
 The Guided Event Chain widget is a visual element to display the flow of guided events.
 
 <figure markdown="span">
@@ -80,7 +75,7 @@ The Guided Event Chain widget is a visual element to display the flow of guided 
 	<figcaption>The Guided Event Chain widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -110,7 +105,7 @@ The Legend widget is designed to display a list of items with labels and optiona
 	<figcaption>The Legend widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -124,8 +119,8 @@ The Legend widget is designed to display a list of items with labels and optiona
 | Style | Border radius | string | Rounds the corners of the widget's outer border edge. |
 | Style | Box shadow | string | Enables you to cast a drop shadow from the frame of the widget. |
 
-
 ### Precedence Graph
+
 The Precedence Graph widget is a visual element that represents the precedence of items in a concurrent system.
 
 <figure markdown="span">
@@ -133,7 +128,7 @@ The Precedence Graph widget is a visual element that represents the precedence o
 	<figcaption>The Precedence Graph widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -155,6 +150,7 @@ The Precedence Graph widget is a visual element that represents the precedence o
 | Content | Card Item Delete Button | string  | Tooltip for the delete button on the card item. |
 
 ### Renderer
+
 The Renderer widget is a visual element that renders 3D objects.
 
 <figure markdown="span">
@@ -162,7 +158,7 @@ The Renderer widget is a visual element that renders 3D objects.
 	<figcaption>The Renderer Graph widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -193,6 +189,7 @@ The Renderer widget is a visual element that renders 3D objects.
 | Style | Unselected marker scale | integer  | Changes the scale of the unselected marker. |
 
 ### Stepper
+
 The Stepper widget displays a step-by-step process or workflow. It visually guides users through a sequence of tasks or stages in a concise, ordered manner. Stepper is implemented as a horizontal list of steps, with each step indicating the current, completed, or upcoming stage in the process.
 
 <figure markdown="span">
@@ -200,7 +197,7 @@ The Stepper widget displays a step-by-step process or workflow. It visually guid
 	<figcaption>The Stepper widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -215,8 +212,8 @@ The Stepper widget displays a step-by-step process or workflow. It visually guid
 | Style | Border radius | | Rounds the corners of the icon buttons. |
 | Style | Box shadow |  | Enables you to cast a drop shadow from the frame of the widget. |
 
-
 ### Topology Viewer
+
 The Topology Viewer widget displays the graph with nodes and edges oriented as a tree. It helps visualize the communication between nodes (for example, components exchanging signals) and any other type of topology.
 
 <figure markdown="span">
@@ -224,14 +221,15 @@ The Topology Viewer widget displays the graph with nodes and edges oriented as a
 	<figcaption>The Topology Viewer widget in SPREAD Studio</figcaption>
 </figure>
 
-**Supported features**
+### Supported features
+
 * Auto layout and ability to drag the nodes to the desired location, with no permanent coordinates saving.
 * Nodes can be grouped, where the group can have a name, orientation, and background color. The group can also be a part of another group.
 * Highlighting connections when selecting the node. All neighbors and all inbound connections recurse to the root.
 * Links are connected to different ports on the node based on the color of the link. Edges with the same color go to the same port.
 * Graph may contain cycles, and edges can be bi-directional.
-* 
-**Widget properties**
+
+### Widget properties
 
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
@@ -255,6 +253,7 @@ The Topology Viewer widget displays the graph with nodes and edges oriented as a
 | Methods | `setSelectedNodeIds (param: string[]): Promise`​ | | Sets the selected nodes using an array of ids as input param. |
 
 ### Wiring Harness
+
 The Wiring Harness widget displays a 2D view of the wiring harness.
 
 <figure markdown="span">
@@ -262,61 +261,6 @@ The Wiring Harness widget displays a 2D view of the wiring harness.
 	<figcaption>The Wiring Harness widget in SPREAD Studio</figcaption>
 </figure>
 
-**Widget properties**
+### Widget properties
 
 Missing descriptions.
-
-## Default widgets
-Default widgets are documented in the following pages:
-
-* ### [Audio](default-widgets/audio.md)
-* ### [Audio Recorder](default-widgets/audio-recorder.md)
-* ### [Button](default-widgets/button.md)
-* ### [Button Group](default-widgets/button-group.md)
-* ### [Buttons for Button Group](default-widgets/buttons.md)
-* ### [Camera](default-widgets/camera.md)
-* ### [Category Slider](default-widgets/category-slider.md)
-* ### [Chart](default-widgets/chart.md)
-* ### [Checkbox Group](default-widgets/checkbox-group.md)
-* ### [Checkbox](default-widgets/checkbox.md)
-* ### [Code Scanner](default-widgets/code-scanner.md)
-* ### [Column Settings](default-widgets/column-settings.md)
-* ### [Container](default-widgets/container.md)
-* ### [Currency Input](default-widgets/currency-input.md)
-* ### [Custom](default-widgets/custom.md)
-* ### [Date Picker](default-widgets/datepicker.md)
-* ### [Divider](default-widgets/divider.md)
-* ### [Document Viewer](default-widgets/document-viewer.md)
-* ### [File Picker](default-widgets/filepicker.md)
-* ### [Form](default-widgets/form.md)
-* ### [Icon Button](default-widgets/icon-button.md)
-* ### [iFrame](default-widgets/iframe.md)
-* ### [Image](default-widgets/image.md)
-* ### [Inline Editing](default-widgets/inline-editing.md)
-* ### [Input](default-widgets/input.md)
-* ### [JSON Form](default-widgets/json-form.md)
-* ### [List](default-widgets/list.md)
-* ### [Map Chart](default-widgets/map-chart.md)
-* ### [Maps](default-widgets/maps.md)
-* ### [Menu](default-widgets/menu.md)
-* ### [Menu Items](default-widgets/menu-items.md)
-* ### [Modal](default-widgets/modal.md)
-* ### [Multitree Select](default-widgets/multi-tree-select.md)
-* ### [Multiselect](default-widgets/multiselect.md)
-* ### [Number Slider](default-widgets/number-slider.md)
-* ### [Phone Input](default-widgets/phone-input.md)
-* ### [Progress](default-widgets/progress.md)
-* ### [Radio Group](default-widgets/radio-group.md)
-* ### [Range Slider](default-widgets/range-slider.md)
-* ### [Rating](default-widgets/rating.md)
-* ### [Rich Text Editor](default-widgets/rich-text-editor.md)
-* ### [Select](default-widgets/select.md)
-* ### [Stat Box](default-widgets/stat-box.md)
-* ### [Switch Group](default-widgets/switch-group.md)
-* ### [Switch](default-widgets/switch.md)
-* ### [Table](default-widgets/table.md)
-* ### [Table Inline Editing](default-widgets/table-inline-editing.md)
-* ### [Tabs](default-widgets/tabs.md)
-* ### [Text](default-widgets/text.md)
-* ### [Tree Select](default-widgets/tree-select.md)
-* ### [Video](default-widgets/video.md)

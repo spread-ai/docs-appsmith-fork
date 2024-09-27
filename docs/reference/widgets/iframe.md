@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### URL `string`
 
-Allows you to specify the URL of the page or application you want to display within the iFrame. For instance, by adding `https://docs.appsmith.com/` to the **URL** property, you can display the Studio docs in your Studio application.
+Allows you to specify the URL of the page or application you want to display within the iFrame. For instance, by adding `https://docs.docs.spread.ai/` to the **URL** property, you can display the Studio docs in your Studio application.
 
 <ZoomImage src="/img/iframe-website.png" alt="Display external website" caption="Display external website" />
 

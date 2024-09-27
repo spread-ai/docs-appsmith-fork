@@ -27,12 +27,12 @@ Allows you to specify the source of the menu items.
 
 Options:
 
-* **Static**: When the Static option is selected, the **Menu Items** property would be visible, allowing you to add and manage the menu items directly from UI. You can click on the ⚙️ gear icon to access the configuration options.
+* **Static**: When the Static option is selected, the **Menu Items** property would be visible, allowing you to add and manage the menu items directly from UI. You can click on the **⚙**️ gear icon to access the configuration options.
 * **Dynamic**: With Dynamic source, the menu items are populated dynamically by binding the query to **Source data**. To configure the properties of the menu items, click on the **Configure Menu Item** button. The menu items would not be displayed until you configure them using the `currentItem` or `currentIndex` property. The dynamic menu option supports a maximum of 10 menu items.
 
 #### Menu items `string`
 
-Displays a list of available menu items. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. See the [Menu Items](menu-items.md) reference guide for configuring menu items.
+Displays a list of available menu items. You can rearrange the items and configure them by clicking on the **⚙**️ gear icon. See the [Menu Items](menu-items.md) reference guide for configuring menu items.
 
 #### Source data `array`
 
@@ -48,11 +48,11 @@ If the data retrieved from the query is not in the desired format, you can use J
 {
     {
         fetchData.data.reduce((acc, cur) => {
-            const existingItem = acc.find((item) => item.value === cur.name);
-            if (!existingItem) {
-                acc.push({ label: cur.name, value: cur.name });
-            }
-            return acc;
+               const existingItem = acc.find((item) => item.value === cur.name);
+               if (!existingItem) {
+                    acc.push({ label: cur.name, value: cur.name });
+               }
+               return acc;
         }, []);
     }
 }

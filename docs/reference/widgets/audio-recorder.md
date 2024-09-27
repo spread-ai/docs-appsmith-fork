@@ -21,7 +21,7 @@ These properties are customizable options present in the property pane of the wi
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
-For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Audio Recorder widget:
+For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Audio Recorder widget:
 
 ```js
 {{ '{{Checkbox1.isChecked}}' }}

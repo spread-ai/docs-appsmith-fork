@@ -45,7 +45,7 @@ Specifies the label text displayed alongside the scanning widget. This property 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
-For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Code Scanner widget:
+For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Code Scanner widget:
 
 ```js
 {{ '{{Checkbox1.isChecked}}' }}
@@ -71,7 +71,7 @@ Sets a tooltip that appears when the user hovers over the widget. It enables you
 
 ### Events
 
-When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
+When an event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onCodeDetected
 

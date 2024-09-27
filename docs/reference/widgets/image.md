@@ -68,7 +68,7 @@ Sets the maximum allowable zoom level for the image view. Th available options a
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
-For example,  if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Image widget:
+For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Image widget:
 
 ```js
 {{ '{{Checkbox1.isChecked}}' }}
@@ -94,7 +94,7 @@ Alternatively, you can use the built-in [Download](/reference/framework/global-f
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onClick
 

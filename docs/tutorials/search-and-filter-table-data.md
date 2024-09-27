@@ -22,7 +22,7 @@ To filter data using the built-in search feature, follow these steps:
    {{ '{{ '{{ '{{fetch_trip_details.run()}}' }}
    ```
 
-For more information, see this [sample app](https://app.appsmith.com/applications/6548a90af1da8d53d9d538f0/pages/6548a90af1da8d53d9d53902/edit/queries/6548a90af1da8d53d9d53928).
+For more information, see this [sample app](https://app.docs.spread.ai/applications/6548a90af1da8d53d9d538f0/pages/6548a90af1da8d53d9d53902/edit/queries/6548a90af1da8d53d9d53928).
 
 ## Using date range
 To filter data based on a date range, follow these steps:
@@ -89,6 +89,6 @@ To sort data in the Table widget, follow these steps:
    ```
 
 ## See also
-- [Sample apps](https://docs.appsmith.com/learning-and-resources/sample-apps)
+- [Sample apps](https://docs.docs.spread.ai/learning-and-resources/sample-apps)
 - [Set up Table Inline Editing](/reference/widgets/table/inline-editing)
 - [Refresh Table Data After Updates](/build-apps/how-to-guides/refresh-table-data)

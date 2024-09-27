@@ -45,7 +45,7 @@ const fetchData = async (limit = 50, offset = 0) => {
 * In Appsmith, configure the API query to fetch data using `limit` and `offset` parameters:
 
 ```js
-GET https://mock-api.appsmith.com/users?limit={{ '{{ '{{ '{{this.params.limit}}' }}&offset={{ '{{ '{{ '{{this.params.offset}}' }}
+GET https://mock-api.docs.spread.ai/users?limit={{ '{{ '{{ '{{this.params.limit}}' }}&offset={{ '{{ '{{ '{{this.params.offset}}' }}
 ```
 
 

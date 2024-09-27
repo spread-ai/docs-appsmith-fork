@@ -36,7 +36,7 @@ OFFSET {{ '{{ (List1.pageNo - 1) * List1.pageSize }}' }}
 * For the REST API, the page number can be passed as a query parameter to retrieve the corresponding subset of data, like:
 
 ```api
-https://mock-api.appsmith.com/users?page={{ '{{ '{{ '{{List1.pageNo}}' }}
+https://mock-api.docs.spread.ai/users?page={{ '{{ '{{ '{{List1.pageNo}}' }}
 ```
 
 You can refer to the [datasource reference](https://appsmith-docs-9z74fyp29-get-appsmith.vercel.app/connect-data/reference) for specific instructions on setting up pagination for your selected datasource.

@@ -76,9 +76,9 @@ When the **Auto Generate Form** property is disabled, this button becomes visibl
 
 #### Field Configuration `list`
 
-Contains all the generated form fields. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. Alternatively, the eye icon allows you to hide specific fields.
+Contains all the generated form fields. You can rearrange the items and configure them by clicking on the **⚙**️ gear icon. Alternatively, the eye icon allows you to hide specific fields.
 
-Clicking the gear icon ⚙︎ enables you to customize each form field extensively. You can select any one of the following options from the **Field Type** property to update the widget type for that field on the JSON Form:
+Clicking the gear icon **⚙**︎ enables you to customize each form field extensively. You can select any one of the following options from the **Field Type** property to update the widget type for that field on the JSON Form:
 
 - Array
 - Checkbox

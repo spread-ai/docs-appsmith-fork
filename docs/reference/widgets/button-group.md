@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Buttons `string`
 
-Specify the buttons available in the group. You can rearrange the buttons and configure them by clicking the gear icon ⚙️. See the [Buttons](buttons.md) reference guide for configuring individual buttons in the group.
+Specify the buttons available in the group. You can rearrange the buttons and configure them by clicking the gear icon **⚙**️. See the [Buttons](buttons.md) reference guide for configuring individual buttons in the group.
 
 ### General
 

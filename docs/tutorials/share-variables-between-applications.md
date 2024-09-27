@@ -74,7 +74,7 @@ This gets the current URL in the receiving application and filters for the query
 
 !!! info "More about the `appsmith` global object"
 
-    The appsmith global object contains information about the application, including the current URL. For more about the information you can get from the object, see [appsmith global object](https://docs.appsmith.com/reference/appsmith-framework/context-object).
+    The appsmith global object contains information about the application, including the current URL. For more about the information you can get from the object, see [appsmith global object](https://docs.docs.spread.ai/reference/appsmith-framework/context-object).
 
 Now you can run the sending application, enter a value, submit, and see it reflected in the receiving application.
 
@@ -82,10 +82,10 @@ Now you can run the sending application, enter a value, submit, and see it refle
 
 [Download the sending application (3kb) :material-download:](../src/sending-app.json.zip){ .md-button .md-button--primary }
 
-<figcaption style='text-align: left; max-width: none'>Unzip the file, and import the JSON inside the Studio application: <b>Create New</b> > <b>Import</b> from the Studio landing page. Change the URL of the receiving application.</figcaption>
+<figcaption style='text-align: left; max-width: none'>Unzip the file, and import the JSON inside the Studio application: **Create New** > **Import** from the Studio landing page. Change the URL of the receiving application.</figcaption>
 
 <br>
 
 [Download the receiving application (2kb) :material-download:](../src/receiving-app.json.zip){ .md-button .md-button--primary }
 
-<figcaption style='text-align: left; max-width: none'>Unzip the file, and import the JSON inside the Studio application: <b>Create New</b> > <b>Import</b> from the Studio landing page.</figcaption>
+<figcaption style='text-align: left; max-width: none'>Unzip the file, and import the JSON inside the Studio application: **Create New** > **Import** from the Studio landing page.</figcaption>

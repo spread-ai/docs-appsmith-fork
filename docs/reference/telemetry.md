@@ -124,10 +124,10 @@ The client captures anonymous behavioral data around navigation and clicks. This
     "locale": "en-US",
     "page": {
       "path": "/applications",
-      "referrer": "https://dev.appsmith.com/applications",
+      "referrer": "https://dev.docs.spread.ai/applications",
       "search": "",
       "title": "Editor | Studio",
-      "url": "https://dev.appsmith.com/applications"
+      "url": "https://dev.docs.spread.ai/applications"
     },
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
   },

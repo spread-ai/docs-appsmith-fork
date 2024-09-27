@@ -357,7 +357,7 @@ If you have an Input widget and a Button widget inside the List and want to use 
 [
      {
           "Image1": {
-               "image": "https://assets.appsmith.com/widgets/default.png",
+               "image": "https://assets.docs.spread.ai/widgets/default.png",
                "isVisible": true
           },
           "Text2": {
@@ -371,7 +371,7 @@ If you have an Input widget and a Button widget inside the List and want to use 
      },
      {
           "Image1": {
-               "image": "https://assets.appsmith.com/widgets/default.png",
+               "image": "https://assets.docs.spread.ai/widgets/default.png",
                "isVisible": true
           },
           "Text2": {
@@ -385,7 +385,7 @@ If you have an Input widget and a Button widget inside the List and want to use 
      },
      {
           "Image1": {
-               "image": "https://assets.appsmith.com/widgets/default.png",
+               "image": "https://assets.docs.spread.ai/widgets/default.png",
                "isVisible": true
           },
           "Text2": {

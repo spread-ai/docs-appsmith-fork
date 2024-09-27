@@ -60,7 +60,7 @@ This SQL query retrieves data from the `users` table with pagination based on th
 
 
 ```
-https://mock-api.appsmith.com/users?page={{ '{{ '{{ '{{Table1.pageNo}}' }}
+https://mock-api.docs.spread.ai/users?page={{ '{{ '{{ '{{Table1.pageNo}}' }}
 ```
 
 

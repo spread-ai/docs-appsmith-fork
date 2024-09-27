@@ -74,7 +74,7 @@ Once the API is set up, click the **button** to trigger the validation. On succe
 {
      "success": true,
      "challenge_ts": "2022-08-09T12:55:40Z",
-     "hostname": "app.appsmith.com",
+     "hostname": "app.docs.spread.ai",
      "score": 0.9,
      "action": "submit"
 }

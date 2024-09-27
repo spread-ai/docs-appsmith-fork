@@ -41,7 +41,7 @@ The solution to this is to bind the array inside the response object or transfor
 
 ```javascript
 {
- "next": "https://mock-api.appsmith.com/users?page=2&pageSize=10",
+ "next": "https://mock-api.docs.spread.ai/users?page=2&pageSize=10",
  "previous": null,
  "users": [
    {
@@ -326,7 +326,7 @@ To fix this problem, you can use debugger statements in Appsmith to halt the exe
 6. Save the changes and test the app again to ensure the infinite loop issue has been resolved.
 
 
-If you can't find what you are looking for and need help debugging an error, please raise your issue on [Discord Server](https://discord.com/invite/rBTTVJp) or email at support@appsmith.com.
+If you can't find what you are looking for and need help debugging an error, please raise your issue on [Discord Server](https://discord.com/invite/rBTTVJp) or email at support@docs.spread.ai.
 
 
 

@@ -47,7 +47,7 @@ Enabling this property mirrors the camera preview and the resulting captured ima
 
 ### Events
 
-When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
+When an event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onImageSave
 

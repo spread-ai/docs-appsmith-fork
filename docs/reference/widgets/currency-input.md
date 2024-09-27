@@ -137,7 +137,7 @@ Options:
 
 ### Events
 
-When the event is triggered, these event handlers can run queries, JS code, or other [supported actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can run queries, JavaScript code, or other [supported actions](/reference/framework/global-functions.md).
 
 #### onTextChanged
 

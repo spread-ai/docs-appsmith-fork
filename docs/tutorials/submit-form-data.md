@@ -23,7 +23,7 @@ In some case it makes sense to update table data using a form and modal. The ins
 
 ### 1. Open modal
 
-To open a Modal based on Table row selection, select **Add a new column** and then click on the gear icon **⚙️** from the column's properties pane.
+To open a Modal based on Table row selection, select **Add a new column** and then click on the gear icon ****⚙**️** from the column's properties pane.
 
 ### 2. Set the column types
 

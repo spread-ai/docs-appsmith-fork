@@ -230,7 +230,7 @@ download(UsersTable.selectedRow.documentUrl, UsersTable.selectedRow.id + '.pdf')
 
 #### Format and download data
 
-If you have data in one format and need to convert it to another format before downloading, you can use JSObject to transform the data and then download it. For example, if you want to convert JSON data into a CSV file, you can create JS code like:
+If you have data in one format and need to convert it to another format before downloading, you can use JSObject to transform the data and then download it. For example, if you want to convert JSON data into a CSV file, you can create JavaScript code like:
 
 ```js
 const jsonData = userdata.data; 
@@ -278,7 +278,7 @@ navigateTo(pageNameOrUrl: string, params?: {}, target: "SAME_WINDOW" | "NEW_WIND
 
 #### pageNameOrUrl
 
-The name of the page or URL you want to navigate to. For widget events, you can use the action selector to select a page name or add a URL. If you want to call the `navigateTo()` function inside the JS code, use:
+The name of the page or URL you want to navigate to. For widget events, you can use the action selector to select a page name or add a URL. If you want to call the `navigateTo()` function inside the JavaScript code, use:
 
 * For application pages: `{{ '{{navigateTo('NewPage', {}, 'SAME_WINDOW');}}' }}`
 * For external URLs: `{{ '{{navigateTo('www.spread.ai', {}, 'SAME_WINDOW');}}' }}`
@@ -307,7 +307,7 @@ To access these values on the destination page, use:
 
 #### target
 
-This parameter allows you to configure whether to open the page or URL in the same browser window or a new window. The default value is `SAME_WINDOW`, and you can select it from the action selector. If you are using it inside JS code, you can use:
+This parameter allows you to configure whether to open the page or URL in the same browser window or a new window. The default value is `SAME_WINDOW`, and you can select it from the action selector. If you are using it inside JavaScript code, you can use:
 
 ```js
 {{ '{{navigateTo('NextPage', { "key": "value" }, 'SAME_WINDOW');}}' }}
