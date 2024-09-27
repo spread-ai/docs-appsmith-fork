@@ -121,7 +121,7 @@ For example, if you want to make the widget visible only when the user selects "
 
  
 
-This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property. Default value is set to `true`.
+This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property. Default value is set to `true`.
 
 
 

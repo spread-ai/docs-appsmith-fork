@@ -46,7 +46,7 @@ If you want to display a different Map type not listed above, like specific loca
 
 Allows you to display data in the chart.
 
-*Expected data structure:*
+Expected data structure:
 
 ```js
 [
@@ -145,7 +145,7 @@ Allows you to manage the color of a collection of regions based on the assigned 
 * `displayValue`: Display string values, overriding the numeric range.
 * `alpha`: Indicates the transparency level, with a maximum value of 100.
 
-*Expected data structure:*
+Expected data structure:
 ```js
 [
   {

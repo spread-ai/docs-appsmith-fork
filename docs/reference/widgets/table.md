@@ -29,7 +29,7 @@ If you don't have a query, you can choose your datasource, select the desired ta
 
 Additionally, you can use JavaScript by clicking on **JS** to write bindings for the table data. The data should be specified as an array of objects, where each object in the array represents a row, and the properties of the object represent the columns in the table. In the given example format, the table has three columns: `step`, `task`, and `status`. 
 
-*Expected data structure:*
+Expected data structure:
 ```js
 [
   {
@@ -312,7 +312,7 @@ For example, if you want to make the widget visible only when the user selects "
 
  
 
-This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
+This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
 
 

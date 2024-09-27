@@ -49,7 +49,7 @@ _Expected data structure:_
 
 You can display dynamic data by binding the response from a query or a JavaScript function to the **Source Data** property. For instance, to display a master-detail form when a user selects a row in a Table widget, you can add the below code in the **Source Data** property:
 
-_Example_:
+
 
 ```
 {{ '{{ tbluserData.selectedRow; }}' }}
@@ -155,7 +155,7 @@ For example, if you want to make the widget visible only when the user selects `
 
  
 
-This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the <code>JS</code> next to the property.
+This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
 
 
@@ -414,7 +414,7 @@ These methods are asynchronous, and you can use the `.then()` block to ensure ex
 
 Sets the visibility of the widget.
 
-_Example_:
+
 
 ```js
 JSONForm1.setVisibility(true);
@@ -428,7 +428,7 @@ JSONForm1.setVisibility(true);
 
 Sets the data to be displayed in the widget.
 
-_Example_:
+
 
 ```js
 JSONForm1.setSourceData(<data>)

@@ -1,13 +1,15 @@
 ---
-description: >-
-  Camera widget reference
+Title: Camera
+Description: Camera widget reference
 ---
 
-# Camera
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
 This page describes the properties of the camera widget, which is used for capturing images and videos.
-
-<ZoomImage src="/img/cam-image.png" alt="Camera widget" caption="Using the Camera widget" />
 
 ## Content properties
 
@@ -17,15 +19,9 @@ These properties are customizable options present in the property pane of the wi
 
 #### Mode `button`
 
- 
-
 Toggles the camera between Image and Video mode.
 
-
-
 #### Visible `boolean`
-
- 
 
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
@@ -35,48 +31,31 @@ For example,  If you want to make the widget visible only when the user checks a
 {{ '{{Checkbox1.isChecked}}' }}
 ```
 
-
-
 #### Disabled `boolean`
-
- 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the `Disabled` property to control the widget's disabled state conditionally.
 
-For example, if you want to allow only a specific user to interact with the Camera widget, you can use the following JavaScript expression: 
+For example, if you want to allow only a specific user to interact with the Camera widget, you can use the following JavaScript expression:
+
 ```js
 {{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
-
-
 #### Mirrored `boolean`
-
- 
 
 Enabling this property mirrors the camera preview and the resulting captured image or video. Additionally, you can use JavaScript by clicking on **JS** next to the `Mirrored` property to control the mirroring conditionally.
 
-
-
-### Events 
+### Events
 
 When an event is triggered, these event handlers can execute queries, JS code, or other supported [actions](/reference/framework/global-functions.md).
 
 #### onImageSave
 
- 
-
 Triggered when the user captures an image. This event is only available when the camera widget is in Image mode.
-
-
 
 #### onVideoSave
 
- 
-
 Triggered when the user saves a video. This event is only available when the camera widget is in Video mode.
-
-
 
 ### Style properties
 
@@ -86,144 +65,86 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Border radius `string`
 
- 
-
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-
-
 #### Box Shadow `string`
- 
-
- 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
 
-
-
-### Reference properties 
+### Reference properties
 
 Reference properties enable you to access the widget's data and state using the dot operator in other widgets or JavaScript functions. They provide additional information or allow interaction with the widget programmatically. For instance, to retrieve the visibility status of a Camera widget, you can use `Camera1.isVisible`.
 
 #### imageBlobURL `string`
 
- 
-
 Returns a binary URL that stores the captured image for future use.
-
-
 
 ```js
 {{ '{{Camera1.imageBlobURL}}' }}
 ```
 
-
-
 #### imageDataURL `string`
 
- 
-
-Stores the captured image in Data URL format (Base64). You can use it to embed the image inline within different applications. 
-
-
+Stores the captured image in Data URL format (Base64). You can use it to embed the image inline within different applications.
 
 ```js
 {{ '{{Camera1.imageDataURL}}' }}
 ```
 
-You can use this property to upload an image to Amazon S3. For more information, see [Upload Images to and from S3](/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images).
-
-
+You can use this property to upload an image to Amazon S3.
 
 #### imageRawBinary `string`
 
- 
-
 Returns the image file in binary format, suitable for storing the image for future use.
-
-
 
 ```js
 {{ '{{Camera1.imageRawBinary}}' }}
 ```
 
-
-
 #### videoBlobURL `string`
 
- 
-
 Returns a binary URL that stores the captured video for future use.
-
-
 
 ```js
 {{ '{{Camera1.videoBlobURL}}' }}
 ```
 
-
-
 #### videoDataURL `string`
 
- 
-
 Stores the recorded video in Data URL format (Base64). You can use it to embed the video inline within different applications.
-
-
 
 ```js
 {{ '{{Camera1.videoDataURL}}' }}
 ```
 
-You can use this property to upload a video to Amazon S3. For more information, see [Upload Images to and from S3](/connect-data/how-to-guides/how-to-use-the-camera-image-widget-to-upload-download-images)
-
-
+You can use this property to upload a video to Amazon S3.
 
 #### videoRawBinary `string`
 
- 
-
 Returns the video file in binary format, suitable for storing the video for future use.
-
-
 
 ```js
 {{ '{{Camera1.videoRawBinary}}' }}
 ```
 
-
-
 ## Methods
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
-
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Studio.
 
 #### setVisibility (param: boolean): Promise
 
- 
-
 Sets the visibility of the widget.
-
-
 
 ```js
 Camera1.setVisibility(true)
 ```
 
-
-
-
 #### setDisabled (param: boolean): Promise
 
- 
-
 Sets the disabled state of the widget.
-
-
 
 ```js
 Camera1.setDisabled(false)
 ```
-

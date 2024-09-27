@@ -18,7 +18,7 @@ These properties are customizable options present in the property pane of the wi
 
 The **Options** property allows you define the options available in the Multi TreeSelect widget. It is represented as an array of objects, where each object contains properties such as `label`, `value`, and optionally `children`.
 
-*Expected data structure:*
+Expected data structure:
 ```js
 [
   {

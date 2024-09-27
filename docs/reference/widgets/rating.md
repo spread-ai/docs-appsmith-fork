@@ -35,7 +35,7 @@ Sets the default value of the widget when users see it for the first time. The d
 
 Sets the tooltip content for the stars by providing an array of strings that describe the values of each star.
 
-*Expected data structure:*
+Expected data structure:
 
 ```js
 [

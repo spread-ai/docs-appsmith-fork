@@ -124,7 +124,7 @@ When enabled, this property displays the labels below the slider element within 
 
 Sets the label and corresponding values for the marks located below the slider.
 
-*Expected data structure:*
+Expected data structure:
 
 ```js
 [

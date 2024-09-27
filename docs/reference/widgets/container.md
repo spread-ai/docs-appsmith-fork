@@ -1,9 +1,13 @@
 ---
-description: >-
-  Container widget reference
+Title: Container
+Description: Container widget reference
 ---
 
-# Container
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
 This page describes how to use Container widgets to group multiple widgets. You can either drop the widgets inside a Container widget or select the widgets and use `cmd+g` to create a Container widget.
 
@@ -15,8 +19,6 @@ These properties are customizable options present in the property pane of the wi
 
 #### Visible `boolean`
 
- 
-
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
 For example, if you want to make the widget visible only when the user checks an item in a Checkbox widget, you can use the following JavaScript expression in the visible property of the Container widget:
@@ -25,27 +27,17 @@ For example, if you want to make the widget visible only when the user checks an
 {{ '{{Checkbox1.isChecked}}' }}
 ```
 
-
-
 #### Animate Loading `boolean`
-
- 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-
-
 #### Height `string`
-
- 
 
 This property determines how the widget's height adjusts to changes in its content. There are three available options:
 
 - **Fixed:** The height of the widget remains as set using drag and resize.
 - **Auto Height:** The widget's height adjusts dynamically in response to changes in its content.
 - **Auto Height with limits:** Same as Auto height, with a configurable option to set the minimum and maximum number of rows the widget can occupy.
-
-
 
 ## Style properties
 
@@ -55,45 +47,25 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background color `string`
 
- 
-
 Sets the background color of the widget. If JavaScript is enabled, you can specify a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value to adjust the background color.
-
-
 
 #### Border color `string`
 
- 
-
 Sets the border color of the widget. If JavaScript is enabled, you can specify a valid [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value to adjust the border color.
-
-
 
 ### Border and shadow
 
 #### Border width `string`
 
- 
-
 Sets the width of the widget's border.
-
-
 
 #### Border radius `string`
 
- 
-
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-
-
 #### Box Shadow `string`
- 
- 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
-
-
 
 ## Reference properties
 
@@ -101,47 +73,30 @@ Reference properties enable you to access the widget's data and state using the 
 
 #### isVisible `boolean`
 
- 
-
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
-
 
 ```js
 {{ '{{Container1.isVisible}}' }}
 ```
 
-
-
 #### backgroundColor `string`
 
- 
-
 Represents the widget's **Background Color** setting as a [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color) value.
-
-
 
 ```js
 {{ '{{Container1.backgroundColor}}' }}
 ```
 
-
-
 ## Methods
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Appsmith.
-
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure the execution and sequencing of subsequent lines of code in Studio.
 
 #### setVisibility (param: boolean): Promise
 
- 
-
 Sets the visibility of the widget.
-
-
 
 ```js
 Container1.setVisibility(true)
 ```
-
