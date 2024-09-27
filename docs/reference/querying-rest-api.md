@@ -1,5 +1,5 @@
 ---
-description: Query a REST API from Appsmith.
+description: Query a REST API from Studio.
 ---
 
 # REST API
@@ -34,7 +34,7 @@ The following section is a reference guide that provides a description of the pa
 #### Body
 
  
-Appsmith supports a variety of encoding types for sending data in API queries. The encoding type can be selected via the Body dropdown on the API editor. For step-by-step instructions on uploading files using an API, see <a href="/build-apps/how-to-guides/Send-Filepicker-Data-with-API-Requests">Upload Files using API</a> guide.<br/>
+Studio supports a variety of encoding types for sending data in API queries. The encoding type can be selected via the Body dropdown on the API editor. For step-by-step instructions on uploading files using an API, see <a href="/build-apps/how-to-guides/Send-Filepicker-Data-with-API-Requests">Upload Files using API</a> guide.<br/>
 
  
   <i>Options:</i>

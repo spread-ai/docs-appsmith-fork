@@ -56,7 +56,7 @@ Style properties allow you to change the look and feel of the widget.
 
  
 
-Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Appsmith utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
+Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. Studio utilizes the icons from the [Blueprintjs](https://blueprintjs.com/docs/#icons) library.
 
 
 

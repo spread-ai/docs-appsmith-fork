@@ -25,7 +25,7 @@ These properties are customizable options present in the property pane of the wi
 
 Allows you to connect the Table widget to your datasource. To connect your datasource to the Table widget, click on **Connect data** and select your datasource or query. 
 
-If you don't have a query, you can choose your datasource, select the desired table or collection, and specify the searchable property. Appsmith would automatically generate a query for you, enabling features such as server-side pagination, search capability, and the ability to edit and add new rows in the table.
+If you don't have a query, you can choose your datasource, select the desired table or collection, and specify the searchable property. Studio would automatically generate a query for you, enabling features such as server-side pagination, search capability, and the ability to edit and add new rows in the table.
 
 Additionally, you can use JavaScript by clicking on **JS** to write bindings for the table data. The data should be specified as an array of objects, where each object in the array represents a row, and the properties of the object represent the columns in the table. In the given example format, the table has three columns: `step`, `task`, and `status`. 
 
@@ -130,7 +130,7 @@ Determines whether the pagination feature is displayed in the table header, allo
 
 Allows you to implement pagination by limiting the number of results fetched per query request. 
 
-Appsmith can handle query responses of up to 5 MB. To display large datasets and optimise performance, use server-side pagination. It can be implemented using Offset-based-pagination or Cursor-based pagination.
+Studio can handle query responses of up to 5 MB. To display large datasets and optimise performance, use server-side pagination. It can be implemented using Offset-based-pagination or Cursor-based pagination.
 
 See how to guide on [Server-side Pagination](/build-apps/how-to-guides/Server-side-pagination-in-table).
 
@@ -817,7 +817,7 @@ Refers to an array of indices corresponding to the rows that have been updated.
 
 Widget property setters enables you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Studio.
 
 
 

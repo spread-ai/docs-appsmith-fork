@@ -162,7 +162,7 @@ The `name` attribute holds the full name of the user. To access the name, use th
 
 #### useCase `string`
 
-This attribute describes the use case that the user has specified, giving insight into what they intend to achieve with Appsmith. To access the `useCase`, use the following code:
+This attribute describes the use case that the user has specified, giving insight into what they intend to achieve with Studio. To access the `useCase`, use the following code:
 
 ```javascript
 {{ '{{appsmith.user.useCase}}' }}
@@ -170,7 +170,7 @@ This attribute describes the use case that the user has specified, giving insigh
 
 #### enableTelemetry `boolean`
 
-This boolean flag indicates if the user has consented to send telemetry data to Appsmith. Telemetry data typically includes usage statistics and error reports that help improve the platform. To access the `enableTelemetry`, use the following code:
+This boolean flag indicates if the user has consented to send telemetry data to Studio. Telemetry data typically includes usage statistics and error reports that help improve the platform. To access the `enableTelemetry`, use the following code:
 
 ```javascript
 {{ '{{appsmith.user.enableTelemetry}}' }}
@@ -277,7 +277,7 @@ The `isAnonymous` attribute reflects whether the current user is anonymous (not 
 
 #### isEnabled `boolean`
 
-This attribute indicates if the user's account is currently enabled. An enabled account can log in and interact with Appsmith applications, while disabled ones cannot. To access the `isEnabled`, use the following code:
+This attribute indicates if the user's account is currently enabled. An enabled account can log in and interact with Studio applications, while disabled ones cannot. To access the `isEnabled`, use the following code:
 
 ```javascript
 {{ '{{appsmith.user.isEnabled}}' }}
@@ -285,7 +285,7 @@ This attribute indicates if the user's account is currently enabled. An enabled 
 
 #### isSuperUser `boolean`
 
-The `isSuperUser` flag shows whether the user has superuser status. Superusers typically have elevated privileges and access to all parts of the Appsmith application. To access the `isSuperUser`, use the following code:
+The `isSuperUser` flag shows whether the user has superuser status. Superusers typically have elevated privileges and access to all parts of the Studio application. To access the `isSuperUser`, use the following code:
 
 ```javascript
 {{ '{{appsmith.user.isSuperUser}}' }}
@@ -293,7 +293,7 @@ The `isSuperUser` flag shows whether the user has superuser status. Superusers t
 
 #### isConfigurable `boolean`
 
-This attribute denotes whether the user has the ability to configure or alter settings within the Appsmith platform. To access the `isConfigurable`, use the following code:
+This attribute denotes whether the user has the ability to configure or alter settings within the Studio platform. To access the `isConfigurable`, use the following code:
 
 ```javascript
 {{ '{{appsmith.user.isConfigurable}}' }}
@@ -309,7 +309,7 @@ The `adminSettingsVisible` attribute states if the user is able to see and possi
 
 #### isIntercomConsentGiven `boolean`
 
-This boolean indicates whether the user has given consent to use Intercom, a messaging tool that might be used in Appsmith for support and communication purposes. To access the `isIntercomConsentGiven`, use the following code:
+This boolean indicates whether the user has given consent to use Intercom, a messaging tool that might be used in Studio for support and communication purposes. To access the `isIntercomConsentGiven`, use the following code:
 
 ```javascript
 {{ '{{appsmith.user.isIntercomConsentGiven}}' }}
@@ -317,9 +317,9 @@ This boolean indicates whether the user has given consent to use Intercom, a mes
 
 #### idToken `object`
 
-An ID token serves as a verified confirmation of a user's identity and includes essential information such as their name, picture, email address etc. According to the OpenID Connect (OIDC) specifications, when a user successfully logs in, Appsmith receives an ID token.
+An ID token serves as a verified confirmation of a user's identity and includes essential information such as their name, picture, email address etc. According to the OpenID Connect (OIDC) specifications, when a user successfully logs in, Studio receives an ID token.
 
-Appsmith provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{}}' }}` as shown below:
+Studio provides the `idToken` parameter on the client side, allowing you to incorporate it into various operations like JavaScript functions, APIs, or queries as needed. You can read the value of an ID token in your APIs/Queries by using the mustache syntax `{{ '{{}}' }}` as shown below:
 
 ```js
 {{ '{{appsmith.user.idToken}}' }}

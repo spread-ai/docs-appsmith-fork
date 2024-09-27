@@ -1,11 +1,18 @@
-# JSON Form
+---
+Title: JSON Form
+Description: JSON Form widget reference
+---
+
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
 This page provides information on how to use the JSON form widget, which efficiently generates forms from JSON data, eliminating the need for manual form creation.
 
 The submit button on the JSON form is always visible and cannot be disabled or hidden.
 
-
-<VideoEmbed host="youtube" videoId="Zk6df9mOtQA" title="Configure JSON Form Widget" caption="Configure JSON Form Widget"/>
 
 ## Content properties
 
@@ -19,7 +26,7 @@ These properties are customizable options present in the property pane of the wi
 
 Connects the JSON Form to your datasource or widget, allowing you to add new records or edit existing ones. To bind data to the JSON Form, click on **Generate Form** and select either a datasource, query, or widget.
 
-If you don't have a query, you can choose your datasource, select the desired table or collection, and specify the identifiable property. Appsmith automatically generates a customized JSON form for your datasource and creates an insert or update query connected to the **onSubmit** event.
+If you don't have a query, you can choose your datasource, select the desired table or collection, and specify the identifiable property. Studio automatically generates a customized JSON form for your datasource and creates an insert or update query connected to the **onSubmit** event:
 
 - **Select table/collection:** enables the selection of the relevant table or collection type corresponding to the datasource.
 
@@ -32,18 +39,23 @@ If you don't have a query, you can choose your datasource, select the desired ta
 
 - **Data Identifier:** serves as an attribute for the unique identification of a datasource object. By default, it's set to the primary column of the datasource. This option is available when the **Form Type** is set to Edit Records.
 
- <ZoomImage src="/img/edit-json-form-one.gif" alt="Create records" caption="Edit records" />
+
+
+ <figure markdown="span">
+     ![Editing a JSON Form](../../src/edit-json-form.gif)
+     <figcaption>Editing a JSON Form</figcaption>
+</figure>
 
 Additionally, you can use JavaScript by clicking on JS to write bindings for the **Source Data** property. To populate the JSON Form with data, you need to provide the data in a structured JSON format like this:
 
-_Expected data structure:_
+Expected data structure:
 
 ```json
 {
-  "name": "John",
-  "date_of_birth": "20/02/1990",
-  "age": 29,
-  "employee_id": 1001
+     "name": "John",
+     "date_of_birth": "20/02/1990",
+     "age": 29,
+     "employee_id": 1001
 }
 ```
 
@@ -51,11 +63,11 @@ You can display dynamic data by binding the response from a query or a JavaScrip
 
 
 
-```
+```js
 {{ '{{ tbluserData.selectedRow; }}' }}
 ```
 
-You can click on an individual row in the Table and update data in the form fields.
+You can click on an individual row in the table and update data in the form fields.
 
 Based on the JSON data provided, the JSON Form automatically identifies the appropriate field type for each value. For example, if the data contains the field `age`, the form sets the field type to a `Number Input`. Additionally, you have the flexibility to add or customize field types using the **Field Configuration property**.
 
@@ -141,11 +153,11 @@ For instance, suppose you have a registration form where the `Date of Birth` fie
 
  
 
-Controls the visibility of the widget. If you turn off this property, the widget would not be visible in _View Mode_. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
+Controls the visibility of the widget. If you turn off this property, the widget would not be visible in **View Mode**. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to conditionally control the widget's visibility.
 
 For example, if you want to make the widget visible only when the user selects `Yes` from a Select widget, you can use the following JavaScript expression:
 
-```
+```js
 {{ '{{ Select1.selectedOptionValue === "Yes" }}' }}
 ```
 
@@ -277,7 +289,7 @@ Represents the color of the button, specified as a [CSS color value](https://dev
 
 Specifies the style type of the button to indicate its significance.
 
-_Options:_
+Options:
 
 - **Primary**: Fills the button with color.
 - **Secondary**: Adds a colored border to the button while keeping the button itself white.
@@ -317,7 +329,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 This property allows you to configure the **Icon**'s placement.
 
-_Options:_
+Options:
 
 - **Left**: Aligns the Icon to the left side of the Label.
 - **Right**: Aligns the Icon to the right side of the Label.
@@ -330,7 +342,7 @@ _Options:_
 
 Determines the spacing between the **Icon** and the **Label**.
 
-_Options:_
+Options:
 
 - Start
 - Center
@@ -350,7 +362,7 @@ Contains a JSON object with the field names and their current values in the form
 
 
 
-```
+```js
 {{ '{{ JSONForm1.object }}' }}
 ```
 
@@ -364,13 +376,15 @@ A JSON object describing the state of each field in the form. State data include
 
 Example:
 
-```
-// To access the object:
-{{ '{{ JSONForm1.fieldState; }}' }}
+```js
+{{ '{{ JSONForm1.fieldState; }}' }} // (1)!
 
-// To get state for a particular field (e.g., "name"):
 {{ '{{ JSONForm1.fieldState.name; }}' }}
 ```
+
+1. To access the object.
+2. To get state for a particular field (e.g., "name"):
+
 
 
 
@@ -406,7 +420,7 @@ Example:
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous, and you can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Appsmith.
+These methods are asynchronous, and you can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Studio.
 
 #### setVisibility(`:boolean`)
 
