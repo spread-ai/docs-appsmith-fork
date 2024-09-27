@@ -53,13 +53,13 @@ Use to set options in the list of the TreeSelect widget. Options must be specifi
 ]
 
 ```
-You can dynamically generate options by fetching data from queries or JS functions by binding the response to the **Options** property. For example, if you have a query named `fetchData`, you can bind its response using:
+You can dynamically generate options by fetching data from queries or JS functions by binding the response to the *Options* property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
-If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Options** property in the TreeSelect widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
+If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the *Options* property in the TreeSelect widget. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description. To transform this data, use:
 
 
 
@@ -109,7 +109,7 @@ Sets the label of the widget.
 
 Sets the placement of the **Label** in the widget.
 
-*Options*:
+Options:
 - **Left**: The label is placed on the left of the widget.
 - **Top**: The label gets placed at the top of the widget.
 - **Auto**: The label position is determined based on the height of the widget itself. 

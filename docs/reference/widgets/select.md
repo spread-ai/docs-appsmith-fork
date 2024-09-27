@@ -104,7 +104,7 @@ Sets the label of the widget.
 
 Sets the placement of the **Label** in the widget.
 
-*Options*:
+Options:
 - **Left**: The label is placed on the left of the widget.
 - **Top**: The label gets placed at the top of the widget.
 - **Auto**: The label position is determined based on the height of the widget itself. 

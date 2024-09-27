@@ -46,7 +46,7 @@ Allows you to set the labels and unique values for the items. You can add these 
 ]
 ```
 
-Additionally, you can display dynamic data from queries or JS functions by binding the response to the **Options** property. For example, if you have a query named `fetchData`, you can bind its response using:
+Additionally, you can display dynamic data from queries or JS functions by binding the response to the *Options* property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
 {{ '{{fetchData.data}}' }}
@@ -62,7 +62,7 @@ If the query data is not in the expected format, you can use the `map()` functio
 
 Enables you to set a default option. This option is initially selected when the widget is loaded, representing the user's default input unless modified.
 
-To set this property, assign it a value that corresponds to the value attribute of the desired option from the **Options** property.
+To set this property, assign it a value that corresponds to the value attribute of the desired option from the *Options* property.
 
 ### Label
 

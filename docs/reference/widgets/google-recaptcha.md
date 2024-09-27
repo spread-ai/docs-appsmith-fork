@@ -25,10 +25,10 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 5. Configure the server-side integration on your back-end.
 
-
 The exact steps depend on your back-end, see [Google's reference](https://developers.google.com/recaptcha/docs/verify) for detailed instructions.
 
 ## Validating recaptcha
+
 The user's reCAPTCHA response can be obtained in the **API** Pane with the `recaptchaToken` key.
 
 Make a `POST` request to [Google Site Verify](`https://www.google.com/recaptcha/api/siteverify) with the secret key and response parameters to retrieve the score in a JSON format:
@@ -54,39 +54,28 @@ Make a `POST` request to [Google Site Verify](`https://www.google.com/recaptcha/
 
 Now that you have registered the site with [Google Recaptcha](https://www.google.com/recaptcha/about/), you can validate if it is working by using a [button widget](/button.md) and adding an API. Follow these steps to validate the reCAPTCHA:
 
-1. Drag and drop a [button widget](button.md) onto the canvas
-2. Add the **site key** to the [button's `Google reCAPTCHA Key` ](button.md#validation)property. To get the key, navigate to [Google reCAPTCHA v3 Admin Console](https://www.google.com/recaptcha/admin), select **Settings** for your site, expand **reCAPTCH Keys** section, and select **Copy Site Key**.
+1. Drag and drop a [button widget](button.md) onto the canvas.
+2. Add the **site key** to the [button's `Google reCAPTCHA Key`](button.md#validation)property. To get the key, navigate to [Google reCAPTCHA v3 Admin Console](https://www.google.com/recaptcha/admin), select **Settings** for your site, expand **reCAPTCH Keys** section, and select **Copy Site Key**.
 3. Navigate to **Explorer**, add **New Blank API**, and then add details as below:
      * Add **Header** `content-type` as `multipart/form-data`.
      * Select the HTTP Method as `POST`.
      * Add URL `https://www.google.com/recaptcha/api/siteverify`.
 
-![Add header, HTTP Method, and URL to validate reCaptcha](</img/Widgets__Button__reCAPTCHA__Validate_API__Content_Type_.png>)
+4. Select **Body** tab and add details as below:
+     * Select `MULTIPART_FORM`_`_`_`DATA`.
+     * Add key as **response** and bind the button's recaptchaToken property by using `{{ '{{<<BUTTON_NAME.recaptchaToken>>}}' }}`.
+     * Add key as **secret** and add your site's **Recaptcha secret key**.
 
-<figure markdown="span">
-     ![The canvas of SPREAD Studio](src/blank-canvas-spread-studio.png)
-     <figcaption>The canvas of SPREAD Studio</figcaption>
-</figure>
-
-* Select **Body** tab >> Add details as below:
-  * Select `MULTIPART_FORM`_`_`_`DATA`.
-  * Add key as **response** and bind the button's recaptchaToken property by using `{{ '{{<<BUTTON_NAME.recaptchaToken>>}}' }}`.
-  * Add key as **secret** and add your site's **Recaptcha secret key**.
-
-info
-Navigate to  [Google reCAPTCHA v3 Admin Console](https://www.google.com/recaptcha/admin) >> Select **Settings** for your site>> expand **reCAPTCH Keys** section >> click **Copy Secret Key**
-
-
-![Add response and secret to Body - Multipart form data.](</img/Widgets__Button__reCAPTCHA__Validate_API__Add_reCaptchToken_and_Secret_to_Body_.png>)
+To get secret keys, navigate to  [Google reCAPTCHA v3 Admin Console](https://www.google.com/recaptcha/admin), select **Settings** for your site, expand the **reCAPTCH Keys** section, and select **Copy Secret Key**.
 
 Once the API is set up, click the **button** to trigger the validation. On successful validation, you'll see the response generated as below in the API response tab:
 
-```
+```js
 {
-  "success": true,
-  "challenge_ts": "2022-08-09T12:55:40Z",
-  "hostname": "app.appsmith.com",
-  "score": 0.9,
-  "action": "submit"
+     "success": true,
+     "challenge_ts": "2022-08-09T12:55:40Z",
+     "hostname": "app.appsmith.com",
+     "score": 0.9,
+     "action": "submit"
 }
 ```

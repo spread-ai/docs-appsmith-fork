@@ -20,7 +20,7 @@ These properties are customizable options present in the property pane of the wi
 
 Allows you to specify the input type for the **Default Value** property in the widget. You can choose:
 
-*Options*:
+Options:
 * **Markdown**: This format enables you to use Markdown syntax for styling and formatting the text within the input.
 * **HTML**: This format enables you to use HTML markup to structure and style the text within the input.
 
@@ -83,7 +83,7 @@ Sets the label on the widget.
 
 This property allows you to configure the label's placement.
 
-*Options*:
+Options:
 
 * **Auto**: Automatically positions the label based on the widget type and layout.
 * **Left**: Aligns the label to the left side of the widget.

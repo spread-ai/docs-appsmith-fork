@@ -128,7 +128,7 @@ Sets the color for the text, and when JS is enabled, you can dynamically modify 
 
 Sets the horizontal alignment of the text within the cells.
 
-*Options*:
+Options:
 * Left
 * Center
 * Right

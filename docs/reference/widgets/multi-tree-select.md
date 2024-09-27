@@ -16,7 +16,7 @@ These properties are customizable options present in the property pane of the wi
 
  
 
-The **Options** property allows you define the options available in the Multi TreeSelect widget. It is represented as an array of objects, where each object contains properties such as `label`, `value`, and optionally `children`.
+The *Options* property allows you define the options available in the Multi TreeSelect widget. It is represented as an array of objects, where each object contains properties such as `label`, `value`, and optionally `children`.
 
 Expected data structure:
 ```js
@@ -52,7 +52,7 @@ Expected data structure:
 ]
 ```
 
-You can **dynamically generate** options by fetching data from queries or JavaScript functions and binding the response to the **Options** property. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description.
+You can **dynamically generate** options by fetching data from queries or JavaScript functions and binding the response to the *Options* property. For example, you have a database that includes a column for product categories (type), as well as other product details such as its name and description.
 
 You can construct a query that retrieves the relevant data and formats it to be used as options, something like:
 
@@ -72,7 +72,7 @@ GROUP BY type
 ORDER BY label;
 ```
 
-In the **Options** property, display the data using:
+In the *Options* property, display the data using:
 
 ```js
 {{ '{{fetchData.data}}' }}
@@ -134,7 +134,7 @@ Sets the label on the widget.
 
 This property allows you to configure the label's placement.
 
-*Options*:
+Options:
 
 * **Auto**: Automatically positions the label based on the widget type and layout.
 * **Left**: Aligns the label to the left side of the widget.

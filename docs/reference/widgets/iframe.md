@@ -1,46 +1,35 @@
 ---
-description: This page explains how to use the Iframe widget to embed third-party applications and websites into your Appsmith application.
+Title: iFrame
+Description: iFrame widget reference
 ---
 
-# Iframe
+<!--
+README
 
-This page provides information on using the Iframe widget to embed third-party applications and websites into your Appsmith application.
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
-info
-The Iframe widget is safe from XSS attacks from v1.8.6 onwards. If you have a self-hosted Appsmith and are on an older version, see [Sandboxing Iframe widgets](/product/security#sandboxing-iframe-widgets) to enable this.
-
+This page provides information on using the Iframe widget to embed third-party applications and websites into your Studio application.
 
 ## Content properties
 
 These properties are customizable options present in the property pane of the widget, allowing users to modify the widget according to their preferences.
 
-
 ### Data
 
 #### URL `string`
 
- 
-
-Allows you to specify the URL of the page or application you want to display within the Iframe. For instance, by adding `https://docs.appsmith.com/` to the **URL** property, you can display the Appsmith docs in your Appsmith application.
+Allows you to specify the URL of the page or application you want to display within the Iframe. For instance, by adding `https://docs.appsmith.com/` to the **URL** property, you can display the Studio docs in your Studio application.
 
 <ZoomImage src="/img/iframe-website.png" alt="Display external website" caption="Display external website" />
 
-
-
-
-
 #### srcDoc `string`
-
-
- 
 
 Allows you to embed HTML and CSS within `<style>` tags to render in the Iframe. When this property has a value, it overrides the URL property.
 
 In addition to static HTML, you can display data generated dynamically from queries or JavaScript functions in the **srcDoc** property using the mustache syntax `{{ '{{ }}' }}`.
 
-
-**Example**: suppose you want to create a simple time-picker: 
-
+For example, suppose you want to create a simple time-picker:
 
 ```html
 <!DOCTYPE html>
@@ -92,66 +81,38 @@ In addition to static HTML, you can display data generated dynamically from quer
 
 <ZoomImage src="/img/iframe-time-pick.png" alt="Custom Time-picker" caption="Custom Time-picker" />
 
-
-
 info
+
 * If the Iframe widget has a value in the **srcDoc** property, it overrides the **URL** property.
 * If [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) is set to DENY on the external page or website, the Iframe widget fails to load.
 
-
 See how to [create custom widgets](/build-apps/how-to-guides/Create-Custom-Widgets-Using-Iframe) using Iframe.
-
 
 ### General
 
 #### Title `string`
 
- 
-
 Set a title for the content displayed within the Iframe.
-
-
 
 #### Animate Loading `boolean`
 
-
- 
-
 This property controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property. The default value for the property is `true`.
-
-
 
 ### Events
 
 When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
 
-
-
 #### onURLChanged
-
- 
 
 Specifies the action to be performed when the widget's **URL** property is changed.
 
-
-
 #### onSrcDocChanged
-
- 
 
 Specifies the action to be performed when the **srcDoc** property of the widget is changed.
 
-
-
-
 #### onMessageReceived
 
- 
-
 Specifies the action to be performed when a `postMessage` event is received from the embedded page.
-
-
-
 
 ## Style properties
 
@@ -161,53 +122,25 @@ Style properties allow you to change the look and feel of the widget.
 
 #### Background Color `string`
 
- 
-
 Sets a color for the Iframe's border, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). It can also be manipulated programmatically using the JavaScript functions.
-
-
-
 
 ### Border and shadow
 
-
-
 #### Border Width `number`
-
- 
 
 Specifies the width of the widget's border, accepting only numerical values in pixels (px). The default value is `1`.
 
-
-
 #### Border Opacity	`number`
-
- 
 
 This property controls the opacity level of the widget's border. The maximum value is 100, which represents full opacity. Default value is `100`.
 
-
-
-
-
 #### Border radius `string`
-
- 
 
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-
-
 #### Box Shadow `string`
- 
-
- 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
-
-
-
-
 
 ## Reference properties
 
@@ -215,71 +148,43 @@ Reference properties are properties that are not available in the property pane 
 
 #### isVisible `boolean`
 
- 
-
 Indicates the visibility state of a widget, with `true` indicating it is visible and `false` indicating it is hidden.
-
 
 ```js
 {{ '{{Iframe1.isVisible}}' }}
 ```
 
-
-
 #### source `string`
 
- 
-
 Contains the URL of the embedded page. Doesn't reflect the content set in the **srcDoc** property.
-
 
 ```js
 {{ '{{Iframe1.source}}' }}
 ```
 
-
-
-
 #### title `string`
 
- 
-
 Contains the title of the Iframe as set in the widget's **Title** property.
-
 
 ```js
 {{ '{{Iframe1.title}}' }}
 ```
 
-
-
-
 #### message `string`
 
-
- 
-
 The `message` property contains a message received from the embedded page via the JavaScript `postMessage()` method. This message can be of any type and is `undefined` before a message is received. Learn more about [postMessage().](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
-
 
 ```js
 {{ '{{Iframe1.message}}' }}
 ```
 
-
-
 #### messageMetadata `string`
 
-
- 
-
 The `messageMetadata` property contains metadata related to the message received from the embedded page through the JavaScript `postMessage()` method.
-
 
 ```js
 {{ '{{Iframe1.messageMetadata}}' }}
 ```
-
 
 ## Methods
 
@@ -289,36 +194,21 @@ These methods are asynchronous and return a [Promise](/writing-code-in-studio/us
 
 #### setVisibility (param: boolean): Promise
 
- 
-
 Sets the visibility of the widget.
-
 
 ```js
 Iframe1.setVisibility(true)
 ```
 
-
-
 #### setURL (param: string): Promise
 
- 
-
-Allows you to dynamically change the content of the iFrame by providing a new URL. 
-
+Allows you to dynamically change the content of the iFrame by providing a new URL.
 
 ```js
 Iframe1.setURL('<https://example.com>')
 ```
 
-
-
-
-
 Learn how to [Communicate Between an App and Iframe](/build-apps/how-to-guides/Communicate-Between-an-App-and-Iframe)
- 
-
-
 
 ### Limitations
 
@@ -328,13 +218,11 @@ You cannot create custom widgets using Iframe that rely on underlying platform c
 * Widgets that act as a _Modal_ or _Drawer_ on top of the existing canvas.
 * Cannot use auto-height or responsiveness features for widgets within the Iframe.
 
-
-Appsmith currently does not support HTML formatting and error parsing. As a result, Appsmith cannot identify any HTML or CSS errors in the **srcDoc** property.
+Studio currently does not support HTML formatting and error parsing. As a result, Studio cannot identify any HTML or CSS errors in the **srcDoc** property.
 
 For complex widgets with frequent updates, it is advisable to utilize an external service like CodeSandbox or host your own code to maintain your solution more efficiently.
 
 ## See also
+
 - [Communicate with Iframe Widget](/build-apps/how-to-guides/Communicate-Between-an-App-and-Iframe)
-- [Create Custom Widgets Using Iframe](/build-apps/how-to-guides/Create-Custom-Widgets-Using-Iframe)
-
-
+* [Create Custom Widgets Using Iframe](/build-apps/how-to-guides/Create-Custom-Widgets-Using-Iframe)

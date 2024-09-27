@@ -111,7 +111,7 @@ Sets the label of the widget.
 
 Sets the placement of the **Label** in the widget.
 
-*Options*:
+Options:
 - **Left**: The label is placed on the left of the widget.
 - **Top**: The label gets placed at the top of the widget.
 - **Auto**: The label position is determined based on the height of the widget itself. 
@@ -239,7 +239,7 @@ Controls the visibility of **Select all** option in the dropdown. When enabled, 
 
 This property determines how the widget's height adjusts to changes in its content. 
 
-*Options*:
+Options:
 
 - **Fixed:** The height of the widget remains as set using drag and resize.
 - **Auto Height:** The widget's height adjusts dynamically in response to changes in its content.

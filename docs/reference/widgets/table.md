@@ -352,7 +352,7 @@ Style properties allow you to change the look and feel of the widget.
  
 Sets the height of the row in the table.
 
-*Options*:
+Options:
 * Short
 * Default
 * Tall
@@ -378,7 +378,7 @@ Enables you to select a font style for the widget, such as bold or italic. Addit
  
 Sets the horizontal alignment of the text within the cells.
 
-*Options*:
+Options:
 * Left
 * Center
 * Right
@@ -391,7 +391,7 @@ Sets the horizontal alignment of the text within the cells.
 
 Sets the vertical alignment of the cell contents within the cells.
 
-*Options*:
+Options:
 * Top
 * Center
 * Bottom
@@ -448,7 +448,7 @@ Sets a color for the border, specified as a CSS color value. It can also be mani
  
 Sets the border configuration for the cells of the table.
 
-*Options*:
+Options:
 * Default
 * No borders
 * Horizontal borders only
