@@ -53,7 +53,7 @@ Use to set options in the list of the TreeSelect widget. Options must be specifi
 ]
 
 ```
-You can dynamically generate options by fetching data from queries or JS functions by binding the response to the *Options* property. For example, if you have a query named `fetchData`, you can bind its response using:
+You can dynamically generate options by fetching data from queries or JavaScript functions by binding the response to the *Options* property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
 {{ '{{fetchData.data}}' }}
@@ -231,7 +231,7 @@ Options:
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
 
 
@@ -239,7 +239,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
 
 
@@ -248,7 +248,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state. You can also write custom JavaScript logic for this event by clicking on the **JS** button next to the property.
 
 
 

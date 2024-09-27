@@ -25,7 +25,7 @@ These properties are customizable options present in the property pane of the wi
 
 This property allows you to set the labels and values for the options. Ensure that the values assigned to each option are unique. 
 
-You can add these labels and values options in JSON format, like:
+You can add these labels and values options in JSON format:
 
 
 ```js
@@ -40,7 +40,7 @@ You can add these labels and values options in JSON format, like:
  }..
 ]
 ```
-Additionally, you can dynamically display data from a query using JavaScript. For instance, you can use the `.map()` function to transform the data to the desired format, like:
+Additionally, you can dynamically display data from a query using JavaScript. For instance, you can use the `.map()` function to transform the data to the desired format:
 
 
 ```js

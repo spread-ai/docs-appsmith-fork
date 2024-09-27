@@ -45,11 +45,11 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 #### onRecordingStart
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the recording starts.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the recording starts.
 
 #### onRecordingComplete
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the recording ends.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the recording ends.
 
 ## Style properties
 

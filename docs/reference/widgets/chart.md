@@ -51,13 +51,13 @@ Expected data structure:
 ]
 ```
 
-In this format, **`x`** denotes the **label**, and **`y`** denotes the **value**. Additionally, you can display dynamic data from queries or JS functions by binding the response to the **Series Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
+In this format, **`x`** denotes the **label**, and **`y`** denotes the **value**. Additionally, you can display dynamic data from queries or JavaScript functions by binding the response to the **Series Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
-If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
+If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget:
 
 ```js
 {{ '{{fetchUserData.data.map( p => ({x: p.gender, y: p.count}))}}' }}
@@ -74,7 +74,7 @@ Allows you to add multiple chart series. With this you can populate the chart wi
 
 [ECharts](https://echarts.apache.org/handbook/en/get-started/) is a JavaScript chart library by Apache that provides a wide range of chart types.
 
-To display an ECharts in Studio, you can integrate it by embedding the ECharts code using mustache syntax, `{{ '{{<your-chart-data>}}' }}` in the **Custom EChart Configuration** property, like:
+To display an ECharts in Studio, you can integrate it by embedding the ECharts code using mustache syntax, `{{ '{{<your-chart-data>}}' }}` in the **Custom EChart Configuration** property:
 
 Expected data structure:
 

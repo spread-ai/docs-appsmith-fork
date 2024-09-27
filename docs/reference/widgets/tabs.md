@@ -92,7 +92,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-Specifies the action (Framework functions, queries, or JS functions) to be performed when the user selects a tab.
+Specifies the action (Framework functions, queries, or JavaScript functions) to be performed when the user selects a tab.
 
 
 

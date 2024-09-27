@@ -40,7 +40,7 @@ Expected data structure:
 ]
 ```
 
-You can add dynamic data to your list by fetching data from queries or JS functions and binding the response to the **Items** property. For example, if you have a query named `fetchData`, you can bind its response to the list by adding the following snippet in the Items property:
+You can add dynamic data to your list by fetching data from queries or JavaScript functions and binding the response to the **Items** property. For example, if you have a query named `fetchData`, you can bind its response to the list by adding the following snippet in the Items property:
 
 ```js
 {{ '{{fetchData.data}}' }}
@@ -74,7 +74,7 @@ This field displays the number of records in the source data for a list. This va
 
 #### onPageChange
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the List's page changes. You can chain multiple actions together, and all the nested actions would run simultaneously.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the List's page changes. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 ### Item selection
 
@@ -84,7 +84,7 @@ Allows you to specify which item should be selected by default when a user first
 
 #### onitemClick
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when a list item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when a list item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 ### General
 

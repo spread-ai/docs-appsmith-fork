@@ -56,7 +56,7 @@ You can **dynamically generate** a table by fetching data from queries or JavaSc
 ```js
 {{ '{{fetchData.data}}' }}
 ```
-If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the Table widget, like:
+If the retrieved data is not in the desired format, you can use JavaScript to **transform** it before passing it to the Table widget:
 
 
 ```js
@@ -142,7 +142,7 @@ See how to guide on [Server-side Pagination](/build-apps/how-to-guides/Server-si
 
 It is a number value that is displayed in the table header to inform the user about the total number of records in the table. This property is only visible when Server Side Pagination is enabled.
 
-For instance, you can create a Count query to retrieve the total number of records from your datasource. You can then call this query in the **Total Records** property using the, like:
+For instance, you can create a Count query to retrieve the total number of records from your datasource. You can then call this query in the **Total Records** property using the:
 
 
 ```js

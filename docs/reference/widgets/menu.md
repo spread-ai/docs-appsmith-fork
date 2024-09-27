@@ -1,58 +1,48 @@
-# Menu Button
+---
+Title: Menu Button
+Description: Menu Button widget reference
+---
+
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
 
 This page provides information on using the Menu Button, which allows you to create customizable dropdown menus with a range of options for user selection.
-
-<ZoomImage src="/img/menu-btn.png" alt="Display images on table row selection" caption="Display Menu Button" />
-
 
 ## Content properties
 
 These properties are customizable options present in the property pane of the widget, allowing users to modify the widget according to their preferences.
 
-
 ### Basic
 
 #### Label `string`
 
- 
 Sets the text on the widget.
 
-
-
 #### Menu items source `string`
-
- 
 
 Allows you to specify the source of the menu items.
 
 Options:
-* **Static**: When the Static option is selected, the **Menu Items** property would be visible, allowing you to add and manage the menu items directly from UI. You can click on the ⚙️ gear icon to access the configuration options. 
-* **Dynamic**: With Dynamic source, the menu items are populated dynamically by binding the query to **Source data**. To configure the properties of the menu items, click on the **Configure Menu Item** button. The menu items would not be displayed until you configure them using the `currentItem` or `currentIndex` property. 
 
-note
-The dynamic menu option supports a maximum of 10 menu items. 
-
-
-
+* **Static**: When the Static option is selected, the **Menu Items** property would be visible, allowing you to add and manage the menu items directly from UI. You can click on the ⚙️ gear icon to access the configuration options.
+* **Dynamic**: With Dynamic source, the menu items are populated dynamically by binding the query to **Source data**. To configure the properties of the menu items, click on the **Configure Menu Item** button. The menu items would not be displayed until you configure them using the `currentItem` or `currentIndex` property. The dynamic menu option supports a maximum of 10 menu items.
 
 #### Menu items `string`
 
- 
-Displays a list of available menu items. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. See the <a href="/reference/widgets/menu/menu-items">Menu Items</a> reference guide for configuring menu items.
-
+Displays a list of available menu items. You can rearrange the items and configure them by clicking on the ⚙️ gear icon. See the [Menu Items](menu-items.md) reference guide for configuring menu items.
 
 #### Source data `array`
 
- 
-
-It is used to provide the datasource for dynamic menus. It accepts an array of values, which can be obtained from queries. You can directly reference your query in the **Source Data** property, like: 
+It is used to provide the datasource for dynamic menus. It accepts an array of values, which can be obtained from queries. You can directly reference your query in the **Source Data** property:
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
 If the data retrieved from the query is not in the desired format, you can use JavaScript to **transform** it before passing it to the widget. For instance, if you have a list of product names and you want to display only the unique names in a Menu Button, you can use:
-
 
 ```js
 {
@@ -70,62 +60,43 @@ If the data retrieved from the query is not in the desired format, you can use J
 
 The code filters the data to create a new array with unique items based on the `type` property.
 
-
-
-
 ### General
 
 #### Visible `boolean`
 
- 
-
 Controls the visibility of the widget. If you turn off this property, the widget is not visible in View Mode. Additionally, you can use JavaScript by clicking on **JS** next to the **Visible** property to control the widget's visibility conditionally.
 
-For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression: 
+For example, if you want to make the widget visible only when the user selects "Yes" from a Select widget, you can use the following JavaScript expression:
+
 ```js
 {{ '{{Select1.selectedOptionValue === "Yes"}}' }}
 ```
 
-
-
 #### Disabled `boolean`
-
- 
 
 Prevents users from selecting the widget. Even though the widget remains visible, user input is not permitted. Additionally, you can use JavaScript by clicking on **JS** next to the **Disabled** property to control the widget's disable state conditionally.
 
-For example, if you want to allow only a specific user to select menu item, you can use the following JavaScript expression: 
+For example, if you want to allow only a specific user to select menu item, you can use the following JavaScript expression:
+
 ```js
 {{ '{{appsmith.user.email=="john@spread.ai"?false:true}}' }}
 ```
 
-
-
-
 #### Animate Loading `boolean`
-
-
- 
 
 Controls whether the widget is displayed with a loading animation. When enabled, the widget shows a skeletal animation during the loading process. Additionally, you can control it through JavaScript by clicking on the **JS** next to the property.
 
-
-
 #### Compact `boolean`
 
- 
 When enabled, the widget is displayed in compact mode, occupying less space on the page. Compact mode is ideal for tight layouts where space optimization is necessary.
 
-
-
 ## Style properties
+
 Style properties allow you to change the look and feel of the widget.
 
 ### General
 
 #### Button variant `string`
-
- 
 
 Specifies the style type of the button to indicate its significance.
 
@@ -137,72 +108,46 @@ Options:
 
 This property can be dynamically set using JavaScript by providing a string value of `PRIMARY`, `SECONDARY`, or `TERTIARY`.
 
-
 ### Icon
 
 #### Icon `string`
 
- 
-
 Specifies the icon to be displayed on the button. Additionally, you can use **JS** to dynamically set the icon. You can refer to the documentation of [blueprintjs](https://blueprintjs.com/docs/#icons) to explore a wide range of available icons.
 
-
-
 #### Position `string`
-
- 
 
 This property allows you to configure the **Icon**'s placement.
 
 Options:
+
 * **Left**: Aligns the Icon to the left side of the Label.
 * **Right**: Aligns the Icon to the right side of the Label.
 
-
-
-
 #### Placement `string`
-
- 
 
 Determines the spacing between the **Icon** and the **Label**.
 
 Options:
+
 * Start
 * Center
 * Between
-
-
 
 ### Color
 
 #### Button color `string`
 
- 
-
 Represents the color of the button, specified as a [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color). Additionally, the font color can be programmatically modified using JavaScript functions.
-
-
 
 ### Border and shadow
 
 #### Border radius `string`
 
- 
-
 Applies rounded corners to the outer edge of the widget. If JavaScript is enabled, you can specify valid [CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to adjust the radius of the corners.
 
-
-
 #### Box Shadow `string`
- 
-
- 
 
 This property adds a drop shadow effect to the frame of the widget. If JavaScript is enabled, you can specify valid [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) values to customize the appearance of the shadow.
-
-
-
 
 ## Reference properties
 
@@ -210,28 +155,19 @@ Reference properties are properties that are not available in the property pane 
 
 #### Label
 
- 
 Returns the value of the label associated with the widget.
-
 
 ```js
 {{ '{{MenuButton1.label}}' }}
 ```
 
-
-
 #### isVisible `boolean`
 
- 
-
 The `isVisible` property indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden.
-
 
 ```js
 {{ '{{MenuButton1.isVisible}}' }}
 ```
-
-
 
 ## Methods
 
@@ -239,36 +175,23 @@ Widget property setters enable you to modify the values of widget properties at 
 
 These methods are asynchronous, and you can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Studio.
 
-
 #### setVisibility `boolean`
-
- 
 
 Sets the visibility of the widget.
 
-
-
 ```js
 MenuButton1.setVisibility(true).then(() => {
-  // code to be executed after visibility is set
+     // code to be executed after visibility is set
 })
 
 ```
-
-
-
 
 #### setDisabled `boolean`
 
- 
-
 Sets the disabled state of the widget.
-
-
 
 ```js
 MenuButton1.setDisabled(false).then(() => {
-  // code to be executed after disabled state is set
+     // code to be executed after disabled state is set
 })
 ```
-

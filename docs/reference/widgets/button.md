@@ -23,7 +23,7 @@ Sets the text that appears on the button.
 
 #### onClick
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the button is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the button is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 ### General
 

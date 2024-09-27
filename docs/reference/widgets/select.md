@@ -38,13 +38,13 @@ Specify data as an array of objects to display options in the widget. For exampl
 ];
 ```
 
-You can dynamically generate options by fetching data from queries or JS functions and binding the response to the **Source Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
+You can dynamically generate options by fetching data from queries or JavaScript functions and binding the response to the **Source Data** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
-If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Source Data** property, like:
+If the retrieved data is not in the desired format, you can use JavaScript to transform the data by adding it to the **Source Data** property:
 
 ```js
 {{ '{{fetchData.data.map( p => ({label: p.country, value: p.country}))}}' }}
@@ -149,7 +149,7 @@ Enables server-side filtering via a query request. Use this property when the Se
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when you update the filter text. 
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when you update the filter text. 
 
 
 
@@ -219,7 +219,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the user selects an option in the dropdown list. It enables you to capture the user's input and perform specific actions in response.
 
 
 
@@ -227,7 +227,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the user opens the dropdown list. For example, you could use the **onDropdownOpen** event to retrieve data from a database, populate the options in the dropdown list, or display additional information to the user.
 
 
 
@@ -236,7 +236,7 @@ Allows you to configure one or multiple actions (Framework functions, queries, o
 
  
 
-Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state.
+Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the user closes the dropdown list. For example, you could use the **onDropdownClose** event to store the selected option in a database, hide additional information, or reset the widget to its original state.
 
 
 

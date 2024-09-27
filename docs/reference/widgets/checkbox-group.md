@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Options `String`
 
-This property allows you to set the labels and values for the items. You can add these labels and values directly from the user interface or use JavaScript by providing options in JSON format, like:
+This property allows you to set the labels and values for the items. You can add these labels and values directly from the user interface or use JavaScript by providing options in JSON format:
 
 ```js
 [
@@ -35,7 +35,7 @@ This property allows you to set the labels and values for the items. You can add
 ]
 ```
 
-Ensure that the values assigned to each option are unique. Additionally, you can dynamically display data by using JavaScript. For instance, you can use the `.map()` function to transform the data to the desired format, like:
+Ensure that the values assigned to each option are unique. Additionally, you can dynamically display data by using JavaScript. For instance, you can use the `.map()` function to transform the data to the desired format:
 
 ```js
 {{ '{{getdata.data.map( p => ({label: p.country, value: p.country}))}}' }}

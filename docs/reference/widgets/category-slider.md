@@ -19,7 +19,7 @@ These properties are customizable options present in the property pane of the wi
 
 #### Options `array<object>`
 
-Allows you to set the labels and unique values for the items. You can add these labels and values directly from the user interface or use JavaScript by providing options in JSON format, like:
+Allows you to set the labels and unique values for the items. You can add these labels and values directly from the user interface or use JavaScript by providing options in JSON format:
 
 ```js
 [
@@ -46,13 +46,13 @@ Allows you to set the labels and unique values for the items. You can add these 
 ]
 ```
 
-Additionally, you can display dynamic data from queries or JS functions by binding the response to the *Options* property. For example, if you have a query named `fetchData`, you can bind its response using:
+Additionally, you can display dynamic data from queries or JavaScript functions by binding the response to the *Options* property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
-If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
+If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget:
 
 ```js
 {{ '{{fetchData.data.map( p => ({label: p.size, value: p.size}))}}' }}
@@ -123,7 +123,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](/reference/framework/global-functions.md).
 
 #### onChange
 

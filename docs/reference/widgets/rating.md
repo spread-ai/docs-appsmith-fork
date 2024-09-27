@@ -125,7 +125,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
  
 
-Sets the action (Framework functions, queries, or JS functions) to be executed when the rate is changed.
+Sets the action (Framework functions, queries, or JavaScript functions) to be executed when the rate is changed.
 
 
 

@@ -39,7 +39,7 @@ The badge widget is a visual element to highlight important information or statu
 | Content | Label | string | Sets the text that appears on the badge. |
 | Content | Visible | boolean | Controls the visibility of the widget. |
 | Content | Height | | Set how the badge height behaves. Options are `Auto Height`, `Auto Height withy limits`, and `Fixed`. The height can be set in the canvas by resizing the widget. |
-| Events | onClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the badge is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the badge is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously. |
 | Style | Color | | Sets the background color of the badge. Available values together with their respective CSS color value:<br> * Neutral (#d4d4d8)<br> * Danger (#fca5a5)<br>* Warning (#fcd34d)<br>* Success (#6ee7b7)<br> * Custom (allows you to input a custom value). |
 | Reference | `label` | string | Returns the value of the badge's label property. |
 | Reference | `isVisible` | boolean | Indicates the visibility state of a widget, with true indicating it is visible and false indicating it is hidden. |
@@ -63,8 +63,8 @@ The graph widget is a visual element to create node diagrams.
 | Content | Nodes | object | Defines nodes of graph. |
 | Content | Selected nodes | array  | Defines selected nodes indices of graph. |
 | Content | Hidden node ids | array  | Defines nodes that are hidden in the graph. |
-| Events | onSelectionChange | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the selection is changed. You can chain multiple actions together, and all the nested actions would run simultaneously. |
-| Events | onRightChange | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the right-click mouse action is used. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onSelectionChange | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the selection is changed. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onRightChange | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the right-click mouse action is used. You can chain multiple actions together, and all the nested actions would run simultaneously. |
 | Style | Node figure | | Sets the shape of nodes. Can be `Rounded rectangle` or `circle`. |
 | Style | Toolbar | boolean | Hide or show the toolbar, which has zoom and focus options. |
 | Style | Mode | | Sets the type of node diagram. Can be `Force directed` or `Hierarchical`. Hierarchical has options for direction. |
@@ -87,12 +87,12 @@ The Guided Event Chain widget is a visual element to display the flow of guided 
 | Content | Clusters | array | Defines clusters. |
 | Content | Clusters Cards | array | Defines clusters cards. |
 | Content | Links | array  | Defines links. |
-| Events | onAddClusterClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an add button on cluster is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously. |
-| Events | onEditOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an edit button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onAddOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an add button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onDeleteOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when a delete button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onEditOnCardItemClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an edit button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onDeleteOnCardItem | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an delete button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onAddClusterClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an add button on cluster is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onEditOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an edit button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onAddOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an add button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onDeleteOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when a delete button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onEditOnCardItemClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an edit button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onDeleteOnCardItem | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an delete button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
 | Content | Linked Filter Placeholder | string  | Placeholder for the linked filter on the cluster. |
 | Content | Cluster Add Button Tooltip | string  | Tooltip for the add button on the cluster. |
 | Content | Card Edit Button Tooltip | string  | Tooltip for the edit button on the card. |
@@ -140,12 +140,12 @@ The Precedence Graph widget is a visual element that represents the precedence o
 | Content | Clusters | array | Defines clusters. |
 | Content | Clusters Cards | array | Defines clusters cards. |
 | Content | Links | array  | Defines links. |
-| Events | onAddClusterClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an add button on cluster is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously. |
-| Events | onEditOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an edit button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onAddOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an add button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onDeleteOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when a delete button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onEditOnCardItemClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an edit button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
-| Events | onDeleteOnCardItem | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when an delete button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onAddClusterClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an add button on cluster is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onEditOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an edit button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onAddOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an add button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onDeleteOnCardClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when a delete button on card is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onEditOnCardItemClick | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an edit button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
+| Events | onDeleteOnCardItem | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when an delete button on card item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.  |
 | Content | Linked Filter Placeholder | string  | Placeholder for the linked filter on the cluster. |
 | Content | Cluster Add Button Tooltip | string  | Tooltip for the add button on the cluster. |
 | Content | Card Edit Button Tooltip | string  | Tooltip for the edit button on the card. |
@@ -167,9 +167,9 @@ The Renderer widget is a visual element that renders 3D objects.
 | Property Type | Name | Type | Description |
 | --- | --- | --- | --- |
 | Content | Model |  | Defines the URL to the model scene directory. |
-| Events | onModelLoaded | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when the model is loaded. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onModelLoaded | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when the model is loaded. You can chain multiple actions together, and all the nested actions would run simultaneously. |
 | Content | Selected nodes IDs | array | Defines default selected nodes and groups. Group IDs take precedence over node IDs. |
-| Events | onSelectionChange | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed when node selection changes. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onSelectionChange | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed when node selection changes. You can chain multiple actions together, and all the nested actions would run simultaneously. |
 | Content | Hide nodes IDs | array | Defines default hidden nodes. |
 | Content | Markers | array  | Defines a list of markers. |
 | Content | Selected marker ID | string  | Defines selected marker ID. |
@@ -209,7 +209,7 @@ The Stepper widget displays a step-by-step process or workflow. It visually guid
 | Content | Visible | boolean | Controls the visibility of the widget. |
 | Content | Show steps | boolean | Hides the steps so that different widgets can be displayed based on the default step. |
 | Content | Height | | Set how the badge height behaves. Options are `Auto Height`, `Auto Height withy limits`, and `Fixed`. The height can be set in the canvas by resizing the widget. |
-| Events | onStepSelected | | Allows you to configure one or multiple actions (Framework functions, queries, or JS functions) to be executed on the selected step change. You can chain multiple actions together, and all the nested actions would run simultaneously. |
+| Events | onStepSelected | | Allows you to configure one or multiple actions (Framework functions, queries, or JavaScript functions) to be executed on the selected step change. You can chain multiple actions together, and all the nested actions would run simultaneously. |
 | Style | Border color |  | Sets the color of the border. |
 | Style | Border width | integer | Sets the width of the border. |
 | Style | Border radius | | Rounds the corners of the icon buttons. |

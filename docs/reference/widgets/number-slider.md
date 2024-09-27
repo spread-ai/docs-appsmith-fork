@@ -143,14 +143,14 @@ Expected data structure:
 ]
 ```
 
-Additionally, you can display dynamic data from queries or JS functions by binding the response to the **Marks** property. For example, if you have a query named `fetchData`, you can bind its response using:
+Additionally, you can display dynamic data from queries or JavaScript functions by binding the response to the **Marks** property. For example, if you have a query named `fetchData`, you can bind its response using:
 
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
-If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget, like:
+If the query data is not in the expected format, you can use the `map()` function to transform it before passing it to the widget:
 
 
 ```js
@@ -208,7 +208,7 @@ Maintains the constant visibility of a tooltip containing the current value.
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](/reference/framework/global-functions.md).
 
 #### onChange
 

@@ -106,7 +106,7 @@ The name of the Modal widget you want to close.
 
 #### Successful query execution
 
-If you want to close the modal after a user submits a form, you can do so using the `closeModal()` function, like:
+If you want to close the modal after a user submits a form, you can do so using the `closeModal()` function:
 
 ```js
 {{ "{{updateUsers.run().then(() => {
@@ -151,7 +151,7 @@ Here are a few examples of how to copy content to the clipboard in different sit
 
 #### Copy JSON Data
 
-If you need to copy JSON data, use the `copyToClipboard()` function with the MIME type `application/json`, like:
+If you need to copy JSON data, use the `copyToClipboard()` function with the MIME type `application/json`:
 
 ```js
 function copyJsonData(data) {
@@ -603,7 +603,7 @@ Here are a few examples to show Modals in different situations:
 
 #### Show Modal using JS
 
-If you want to use JavaScript instead of the action selector, you can enable _JS_ button next to the event and add your code, like:
+If you want to use JavaScript instead of the action selector, you can enable _JS_ button next to the event and add your code:
 
 ```javascript
 {{ '{{ showModal(ProductDetailsModal.name) }}' }}

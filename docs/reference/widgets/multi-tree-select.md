@@ -279,7 +279,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JS functions, or other [supported actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](/reference/framework/global-functions.md).
 
 
 
