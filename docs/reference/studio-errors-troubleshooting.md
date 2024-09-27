@@ -1,8 +1,316 @@
 ---
-description: >-
- You'll learn about common JS errors and how to resolve them on Appsmith.
+title: Troubleshooting Studio
+description: An overview of how to fix and debug Studio applications.
 ---
 
+<!--
+README
+
+For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
+-->
+
+Understanding how to effectively troubleshoot errors in Studio can save you time and help maintain a smooth development process. Studio errors fall into the following categories. For more on each type, select the relevant section:
+
+* [Datasource errors](#datasource-errors)
+* [Query errors](#query-errors)
+* [Widget errors](#widget-errors)
+* [JavaScript errors](#javascript-errors)
+* [Access errors](#access-control-errors)
+* [Git errors](#git-errors)
+
+## Access control errors
+
+Access control errors happen when a user cannot access a Studio application or a developer cannot edit an application. This page shows how to troubleshoot some of the most common access control errors you might encounter. Resolving some of these error may require super administrator access.
+
+### Common access control errors
+
+#### 404 - page not found
+
+> The **404 - Page Not Found** error occurs when you do not have access to the requested page. In this case, access to the Home page is not provided, resulting in the error.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+	A **404 - Page Not Found** error page.
+
+!!! success "Solution"
+
+     Verify if the custom role access is provided by checking the groups and role mapping or user and role assignment. If not, add users to groups that have access or assign roles to the appropriate users.
+
+	Contact your instance administrator and request access to application, and maybe the Studio environment. For more information, see [User Management](/platform/user-management/user-management-and-permissions).
+
+</div>
+
+#### Make application public toggle is not available
+
+> The **Make Application Public** toggle is controlled by the **Make Public** permission. If you do not have this permission, the toggle is disabled.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+	The **Make Application Public** toggle in the invite users modal is disabled, preventing you from making an application public.
+
+!!! success "Solution"
+
+     You must contact your instance administrator and request that they provide you with the appropriate access. Alternatively, reach out to users who have the necessary permissions to make an application public.
+
+</div>
+
+## Datasource errors
+
+Studio provides the ability to connect to a variety of data sources, including both databases and APIs. However, when setting up a new datasource or modifying an existing one, you may encounter connectivity errors. This guide aims to help you troubleshoot and resolve common datasource connectivity errors.
+
+### Testing the data source
+
+1. Navigate to your Studio application's datasource page.
+2. Find the datasource in question and click on the **Test** button.
+3. If the **Test Configuration** option indicates failure, proceed to troubleshoot the datasource connectivity.
+
+### Troubleshooting datasource connectivity
+
+* Ensure that your datasource URL, authentication credentials, and other settings are correctly configured.
+
+* Verify that any IP whitelisting or firewall rules allow traffic from Studio's servers.
+* Review any error messages returned by the Test Configuration for clues to the problem.
+
+### Common datasource errors
+
+#### SSL connection error
+
+> This error message indicates that the database server that you are trying to connect to does not support SSL.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+	<Message messageContainerClassName="error" 
+     messageContent="dev.miku.r2dbc.mysql.client.MySqlConnectionClosedException: Connection unexpectedly closed. Error was received while reading the incoming data. The connection will be closed."/>
+     ```
+
+!!! success "Solution"
+
+     This error can be resolved by editing the SSL field in the datasource and setting it to `Disabled`.
+
+</div>
+
+#### Error connecting to local database or API
+
+> If you are trying to connect to a local database from Studio and see an error message. When running Studio inside a Docker container, it may have its own network namespace and won't be able to access services running on the host machine using the `localhost` or `127.0.0.1` addresses. This is because these addresses points to the container's local network, which is different from that of the host machine.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+	<Message messageContainerClassName="error" 
+     messageContent="Connection refused. Server logs - 'io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /172.17.0.1:3306'"/>
+     <Message messageContainerClassName="error" 
+     messageContent="dev.miku.r2dbc.mysql.client.MySqlConnectionClosedException: Connection unexpectedly closed. Error was received while reading the incoming data. The connection will be closed."/>
+     ```
+
+!!! success "Solution"
+
+     Use the hostname `host.docker.internal` on Windows and macOS hosts, and `172.17.0.1` on Linux hosts, to access services running on the host machine from within the container.
+
+</div>
+
+#### Secret key required error
+
+>When the data source returns an error about the secret key. This message indicates that `Send Studio signature header` field has been marked as `Yes` but the `Session Details Signature Key` field is left empty
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+	<Message messageContainerClassName="error" 
+     messageContent="Secret key is required when sending session details is switched on, and should be at least 32 characters in length."/>
+     ```
+
+!!! success "Solution"
+
+     This error can be resolved by filling in the `Session Details Signature Key` field or by disabling the `Send Studio signature header` field by selecting `No`.
+
+</div>
+
+#### Missing URL Error
+
+>This message indicates that the REST API's URL field in the API editor form has been left empty.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```
+	DEFAULT_REST_DATASOURCE is not correctly configured. Please fix the following and then re-run: \n[Missing URL.]
+     ```
+
+!!! success "Solution"
+
+     This error can be fixed by editing the REST API form and providing a URL.
+
+</div>
+
+#### Missing Client Secret / Client ID / Access Token Error
+
+>This message indicates that the mentioned parameter fields - `Client Secret`, `Client ID`, or  `Access Token URL` have been left empty. These fields are nested in the `Authentication` sub-section which becomes visible if the `Authentication Type` field has been chosen as OAuth 2.0.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```
+     DEFAULT_REST_DATASOURCE is not correctly configured. Please fix the following and then re-run: \n[Missing Client Secret, Missing Client ID, Missing Access Token URL]
+     ```
+
+!!! success "Solution"
+
+     This error can be fixed by filling in all the parameter fields.
+
+</div>
+
+#### Secret key required error
+
+>This error message indicates that `Send Studio signature header` field has been marked as `Yes` but the `Session Details Signature Key` field is left empty.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```
+     Secret key is required when sending session details is switched on, and should be at least 32 characters in length.
+     ```
+
+!!! success "Solution"
+
+     This error can be resolved by filling in the `Session Details Signature Key` field or by disabling the `Send Studio signature header` field by selecting `No`.
+
+</div>
+
+## Git errors
+
+Studio allows you to manage changes in your applications using git. The errors below may occur when your git setup is misconfigured or when collaborative editing introduces complexity.
+
+### Common git errors
+
+### Invalid Git repo
+
+>This error message indicates that the SSH address provided is incorrect or access rules prevent connection to the repository.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName='error'
+     messageContent='Invalid Git repo'></Message>
+     ```
+
+!!! success "Solution"
+
+     Verify that the SSH address is correct and functional, check connection rules on the platform where the application is deployed, and if issues persist, contact support for assistance.
+
+</div>
+
+#### Invalid GitConfig
+
+>This error message indicates that there is a Redis cache issue with user profiling, which causes an invalid Git configuration.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName='error'
+     messageContent='Invalid Git repo'></Message>
+     ```
+
+!!! success "Solution"
+
+     Logout from the application, and then login again to refresh the user profile and Git configuration. If issues persist, contact support for assistance.
+
+</div>
+
+#### Conflicts while merging
+
+>This error message indicates that conflicts arose during the merging process when the same file has been edited on both branches. Git cannot automatically resolve these conflicts.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName='error'
+     messageContent='Conflicts while merging branch b <= a'></Message>
+     ```
+
+!!! success "Solution"
+
+     If you are facing conflicts in the Studio UI while merging branch `A` into branch `B`, raise a pull request targeting branch `B` on your Git provider, and manually resolve the conflicts. For more information, see [Resolve merge conflicts in Git](/version-control.md#resolve-merge-conflicts-in-git).
+
+</div>
+
+#### Git push failed for pending upstream changes
+
+ >If you're working on branch `A` and someone else pushes changes to the remote counterpart of the same branch, you may encounter conflicts if both have edited the same files.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName='error'
+     messageContent='Looks like there are pending upstream changes. To prevent you from losing history, we will pull the changes and push them to your repo.'></Message>
+     ```
+
+!!! success "Solution"
+
+     Create a new branch from your local branch `A`, naming it branch `A-fix`. Raise a pull request from branch `A-fix` against the original branch `A`. Resolve conflicts within the pull request interface or locally before merging. In Studio, discard and pull the changes into branch `A`. For more information, see [Resolve merge conflicts in Git](/version-control.md#resolve-merge-conflicts-in-git).
+
+</div>
+
+#### Maximum call size exceeded error
+
+>This error is due to the size limit on the merge operation being exceeded, possibly from large files or too many changes.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName='error'
+     messageContent='Maximum call size exceeded'></Message>
+     ```
+
+!!! success "Solution"
+
+     Split the merge operation into smaller chunks and remove any unnecessary large files from the repository.
+
+</div>
+
+#### Private repo limit error
+
+>This error occurs due to restrictions on the number of private repositories that can be connected.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName='error'
+     messageContent='Private Repo Limit Error'></Message>
+     ```
+
+!!! success "Solution"
+
+     In Studio, you may only connect to three private repositories.
+
+</div>
+
+## JavaScript errors
 
 While writing JavaScript in Studio, you may encounter the following errors in your code.
 
