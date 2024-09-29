@@ -11,7 +11,6 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 Polling is a communication technique used to retrieve real-time data by periodically fetching the data. This page shows you how to establish a data polling mechanism for your applications.
 
-
 <figure markdown="span">
      ![Auto updating data within an application](../src/polling-data-updates.gif)
      <figcaption>Auto updating data within an application</figcaption>
@@ -35,22 +34,24 @@ For example, to display real-time delivery status updates from a query, add the 
 {{ '{{delivery_data.data}}' }}
 ```
 
-2. Drop a Switch widget to enable the toggling of updates at regular intervals.
+### 2. Add a Switch widget
 
-3. Create a new *JSObject* and configure the function using the [setInterval()](/reference/framework/global-functions.md/intervals-time-events) function  to implement polling:
+Drop a [Switch](/reference/widgets/switch.md) widget onto the canvas to enable the toggling of updates at regular intervals.
 
-For example, When the switch is turned on, the query is executed every 5 seconds. If the switch is turned off, use the [clearInterval()](/reference/framework/global-functions.md/clear-interval) function to stop the polling process:
+## 3. Create the JSObject
+
+Create a new JSObject and use the [setInterval()](/reference/framework/global-functions.md#setInterval) function to implement polling. For example, when the switch is turned on, the query is executed every five seconds. If the switch is turned off, use the [clearInterval()](/reference/framework/global-functions.md#clearInterval) function to stop the polling process:
 
 ```js
 export default {
-    startAutoRefresh() {
-        if (Switch1.isSwitchedOn) {
-            setInterval(() => delivery_data.run(), 5000, "autorefresh");
-        } else {
-             clearInterval("autorefresh");
-        }
-    }
+     startAutoRefresh() {
+          if (Switch1.isSwitchedOn) {
+               setInterval(() => delivery_data.run(), 5000, "autorefresh");
+          } else {
+               clearInterval("autorefresh");
+          }
+     }
 }
 ```
 
-3. Set the **onChange** event of the Switch widget to execute the JS function.
+### 4. Set the **onChange** event of the Switch widget to execute the JS function

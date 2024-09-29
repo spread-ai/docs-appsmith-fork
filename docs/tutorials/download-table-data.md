@@ -22,8 +22,8 @@ To fetch user data using dynamic `limit` and `offset` values, create a query lik
 
  ```sql
 SELECT * FROM public."users" 
-LIMIT {{ '{{ '{{ '{{this.params.limit}}' }} 
-OFFSET {{ '{{ '{{ '{{this.params.offset}}' }}
+LIMIT {{ '{{this.params.limit}}' }} 
+OFFSET {{ '{{this.params.offset}}' }}
 ```
 
 
@@ -45,7 +45,7 @@ const fetchData = async (limit = 50, offset = 0) => {
 * In Appsmith, configure the API query to fetch data using `limit` and `offset` parameters:
 
 ```js
-GET https://mock-api.docs.spread.ai/users?limit={{ '{{ '{{ '{{this.params.limit}}' }}&offset={{ '{{ '{{ '{{this.params.offset}}' }}
+GET https://mock-api.docs.spread.ai/users?limit={{ '{{this.params.limit}}' }}&offset={{ '{{this.params.offset}}' }}
 ```
 
 

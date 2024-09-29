@@ -23,10 +23,10 @@ To insert data using a Modal, follow these steps:
    INSERT INTO person (first_name, last_name, email, phone)
    VALUES 
    (
-      {{ '{{ '{{ '{{inp_addFirstName.text}}' }},
-      {{ '{{ '{{ '{{inp_addLastName.text}}' }}, 
-      {{ '{{ '{{ '{{inp_addEmail.text}}' }}, 
-      {{ '{{ '{{ '{{inp_addPhone.text}}' }}
+      {{ '{{inp_addFirstName.text}}' }},
+      {{ '{{inp_addLastName.text}}' }}, 
+      {{ '{{inp_addEmail.text}}' }}, 
+      {{ '{{inp_addPhone.text}}' }}
    );
    ```
 4. Create a JS Object to run the insert query, close the Modal, and fetch the updated data from the datasource.   
@@ -54,10 +54,10 @@ To insert data in a new page, follow these steps:
       (first_name, last_name, email, phone)
       VALUES 
       (
-         {{ '{{ '{{ '{{frm_new_customer.data.first_name}}' }},
-         {{ '{{ '{{ '{{frm_new_customer.data.last_name}}' }},
-         {{ '{{ '{{ '{{frm_new_customer.data.email}}' }},
-         {{ '{{ '{{ '{{frm_new_customer.data.phone}}' }}
+         {{ '{{frm_new_customer.data.first_name}}' }},
+         {{ '{{frm_new_customer.data.last_name}}' }},
+         {{ '{{frm_new_customer.data.email}}' }},
+         {{ '{{frm_new_customer.data.phone}}' }}
       );
    ```
    :::info

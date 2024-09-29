@@ -9,13 +9,13 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-This page shows you how to set up server-side pagination on the List widget, which allows you to manage and display large datasets within your application. It involves fetching and displaying only a portion of data from the server at a time, which enhances performance.
+This page shows you how to set up server-side pagination on the [List](/reference/widgets/list.md) widget, which allows you to manage and display large datasets within your application. It involves fetching and displaying only a portion of data from the server at a time, which enhances performance.
 
 ## Prerequisite knowledge
 
 - [x] Basic understanding of how to [build Studio applications](../creating-studio-applications.md).
 - [x] Access to a SPREAD Studio environment.
-- [x] A [List](/reference/widgets/list.md) widget to use in the Studio canvas.
+- [x] A List widget to use in the Studio canvas.
 
 ## Instructions
 
@@ -50,9 +50,7 @@ For example:
 
 To provide the user with information about the number of records in the List, you can configure the [**Total records**](/reference/widgets/list.md#total-records-number) property. The record count is displayed as part of the page number at the bottom of the list.
 
-1. Create a query to fetch the total record count.
-
-For example, with PostgreSQL:
+1. Create a query to fetch the total record count. For example, with PostgreSQL:
 
 ```sql
 SELECT COUNT(*) FROM users;

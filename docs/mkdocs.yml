@@ -13,7 +13,9 @@ nav:
             - Using JSObjects: writing-code-in-studio/using-jsobjects.md
             - Using external libraries: writing-code-in-studio/using-external-js-libraries.md
      - Tutorials:
-            - Set up server-side pagination in a List: tutorials/setup-server-side-pagination-on-list.md
+            - Data polling updates: tutorial/setup-polling.md
+            - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
+            - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
             - Share variables between applications: tutorials/share-variables-between-applications.md
             - Submit Form data: tutorials/submit-form-data.md
             - Update list data: tutorials/update-list-data.md

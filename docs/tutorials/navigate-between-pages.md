@@ -19,19 +19,19 @@ To set up page navigation using an Icon button, follow these steps:
    - Using the **JS** button and using the following code to navigate to a page within the app where `page_name` is the name of the target page:
 
     ```jsx
-    {{ '{{ '{{ '{{navigateTo("page_name")}}' }}
+    {{ '{{navigateTo("page_name")}}' }}
     ```
     To navigate to an external URL, pass a full URL instead of a page name. 
    
     Example:
     ```jsx
-    {{ '{{ '{{ '{{navigateTo('https://www.example.com')}}' }}
+    {{ '{{navigateTo('https://www.example.com')}}' }}
     ```
 2.  To open the linked page in a new browser tab or window, use the third parameter.
 
     Example:
     ```jsx
-    {{ '{{ '{{ '{{navigateTo('page_name', { }, 'NEW_WINDOW') }}' }}
+    {{ '{{navigateTo('page_name', { }, 'NEW_WINDOW') }}' }}
     ```
 ## See also
 - [Create Custom Navigation Bar](/build-apps/how-to-guides/create-custom-nav-bar)
