@@ -710,138 +710,96 @@ Query errors occur when querying data sources. To troubleshoot these erors:
 
 ## Widget errors
 
-This section helps you troubleshoot common widget errors on the Appsmith platform.
+This section helps you troubleshoot common widget errors in Studio. To troubleshoot widget errors, first ensure that any data bound to the widget is in the format expected by the property.Most errors stem from this.
 
-### Validation errors
+### Common widget errors
 
-* Ensure that any data bound to widgets is in the format expected by the property. For example, a Table widget expects an array of objects.
-* You may need to transform or access nested arrays differently if they do not match the expected input.
+#### Validation error
 
-**Example:** a Table widget is bound to the result of an API that returns a JSON object instead of an array of objects, which the Table widget expects for its data source.
+>The error indicates that the ected by the widget is not in the expected format.
 
-**Solution:** Transform the JSON object into an array of objects using JavaScript within the query or within a JS Object. You can use the `.map()` function to achieve the desired transformation if the data contains an array nested within the object.
+<div class='grid' markdown>
 
-## Binding errors
+!!! failure "Error"
 
-You may see below errors when binding data to widgets from an API, Query, or [JS object](/core-concepts/writing-code/javascript-editor-beta/).
+     For example, a Table widget is bound to the result of an API that returns a JSON object instead of an array of objects, which the Table widget expects for its data source.
 
-### Troubleshoot mustache bindings
+!!! success "Solution"
 
-* Verify the syntax of your mustache bindings. Incorrect bindings can lead to errors when the query attempts to execute.
-* If the binding syntax is correct, check whether the widgets referenced in the bindings are configured correctly on the page.
+     Transform the JSON object into an array of objects using JavaScript within the query or within a JS Object. You can use the `.map()` function to achieve the desired transformation if the data contains an array nested within the object.
 
-### Sync field error
+</div>
 
-You may see this error when executing an API, Query, JS Object in a widget property that expects data, and can't be used to trigger an action.
+#### Sync field error
 
-![Error action can't be triggered](/img/Troubleshooting-Widget-errors-action-cannot-be-triggered.png)
+>You may see this error when executing an API, Query, JS Object in a widget property that expects data, and can't be used to trigger an action. Action refers to the execution of an API, Query, or JS object. You can only perform an action by binding it to an asynchronous field. When you bind an action to a sync field that only expects data, it throws an error.
 
-#### Error message
+>For example, if you are executing a storeValue() function in a `TableData` property of a table. The `TableData` property expects data and can't execute a function, and this results in an error. Similarly, if you try to execute a JS Object function `<JSOBJECT_NAME.FUNCTION_NAME>` in the `TableData` property, it throws an error.
 
-<Message
-messageContainerClassName="error"
-messageContent="Found a reference to {{ '{{ '{{ '{{action}}' }} during evaluation. Sync fields cannot execute async framework actions. Please remove any direct/indirect references to {{ '{{ '{{ '{{action}}' }} and try again."></Message>
+<div class='grid' markdown>
 
-<p align="center">Or </p>
+!!! failure "Error"
 
-<Message
-messageContainerClassName="error"
-messageContent="Found a Promise() during evaluation. Sync fields cannot execute asynchronous code."></Message>
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="Found a reference to {{ '{{action}}' }} during evaluation. Sync fields cannot execute async framework actions. Please remove any direct/indirect references to {{ '{{action}}' }} and try again."></Message>
+     ```
 
-#### Cause
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="Found a Promise() during evaluation. Sync fields cannot execute asynchronous code."></Message>
+     ```
 
-Action refers to the execution of an API, Query, or JS object. You can only perform an action by binding it to an async field. When you bind an action to a sync field that only expects data, it throws an error.
+!!! success "Solution"
 
-Example: if you are executing a `storeValue()` function in a `TableData` property of a table. The `TableData` property expects data and can't execute a function, and results in an error. Similarly, if you try to execute a JS Object function `<JSOBJECT_NAME.FUNCTION_NAME>` in the `TableData` property, it throws an error.
+     Invoke the data property of an API, Query or JS object. For example, you have a JS Object `getLoggedInUserInfo`, which has a function `getFullNameOfLoggedInUser`. The function returns the full name of the logged-in user. You wish to add the full name and create a welcome text, `Welcome! <LOGGED_IN_USER_NAME>`. Bind the response of `getFullNameOfLoggedInUser` function to a text widget by calling the `.data` property. To bind the response, add this code:
 
-#### Solution
+     ```
+     {{ '{{ getLoggedInUserInfo.getFullNameOfLoggedInUser.data }}' }}
+     ```
 
-Invoke the data property of an API, Query or JS object.
+</div>
 
-For example, you have a JS Object `getLoggedInUserInfo`, which has a function ```getFullNameOfLoggedInUser```. The function returns the full name of the logged-in user. You wish to add the full name and create a welcome text, `Welcome! <LOGGED_IN_USER_NAME>`. Bind the response of ```getFullNameOfLoggedInUser``` function to a text widget by calling the `.data` property. To bind the response, add the below code snippet in a mustache (`{{ '{{ '{{ '{{}}' }}`) sign.
+#### JSON form errors
 
-```
- getLoggedInUserInfo.getFullNameOfLoggedInUser.data
-```
+>You may see an error message when you try to bind a large query or API response to the source data property of the JSON Form widget. The problem can be caused when you are trying to bind: a large array of multiple JSON objects, a JSON object with many fields, or the whole query data rather than a selected row or triggered row in a table.
 
-## JSON form errors
+!!! failure "Error"
 
-You may see the below errors when working with a [JSON Form](../../reference/widgets/json-form)widget.
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="Found a reference to {{ '{{action}}' }} during evaluation. Sync fields cannot execute async framework actions. Please remove any direct/indirect references to {{ '{{action}}' }} and try again."></Message>
+     ```
 
-### Source data exceeds 50 fields
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="Source data exceeds 50 fields. Please update the source data."></Message>
+     ```
 
-You may see an error message when you try to bind a large query/API response to the [source data](../../reference/widgets/json-form#source-data)property of the JSON Form widget.
+!!! success "Solution"
 
-#### Error message
+     To determine if the problem is caused by:
 
-<Message
-messageContainerClassName="error"
-messageContent="Source data exceeds 50 fields. Please update the source data."></Message>
+     * **A large array or a huge JSON object**: Check the data and evaluate the need to display all the data on UI, as it would be painful for your users to navigate more than 50 fields.
+     * **The whole query response that you bound to the source data**: Recheck the source data field you are trying to bind and select either the selected row or triggered row to bind.
 
-#### Cause
+     Once you have figured out the new structure for the data, make changes in the source data field.
 
-The problem can be caused when you are trying to bind:
+</div>
 
-* A large array of multiple JSON objects
-* A huge JSON object which has a lot of fields
-* The whole query data rather than a selected row or triggered row in a table
+#### Default value is missing in options
 
-![When the data had more than 50 fields](</img/Troubleshooting__Widget_Errors__JSON_Form_Errors__Source_Exceeds_50_Fields.png>)
+>This error occurs when the `Default Selected Value` doesn't match any of the values specified in the options property of the widget.
 
-#### Solution
+!!! failure "Error"
 
-To determine if the problem is caused due to:
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="Default value is missing in options. Please update the value."></Message>
+     ```
 
-* **A large array or a huge JSON object** - You can re-look at the data and evaluate the need to display all the data on UI, as it would be painful for your users to navigate more than 50 fields.
-* **The whole query response that you bound to the source data** - You recheck the source data field you are trying to bind and select either the selected row / triggered row to bind.
+!!! success "Solution"
 
-Once you have figured out the new structure for the data, head to the [source data](../../reference/widgets/json-form#source-data) field to make changes.
+     To fix this error, either change the value in the options property to match the selected value, or change the selected value to match an option listed in the options property. This ensures that the value selected is valid and prevents the error from appearing.
 
-If you still need help debugging an error, please raise a request on [Discord Server](https://discord.com/invite/rBTTVJp) or email <support@docs.spread.ai>.
-
-## Default value is missing in options
-
-You may encounter an error message "Default value is missing in options. Please update the value." while using the Select widget.
-
-#### Error message
-
-<Message
-messageContainerClassName="error"
-messageContent="Default value is missing in options. Please update the value."></Message>
-
-#### Cause
-
-This error occurs when the Default Selected Value doesn't match any of the values specified in the options property of the widget.
-
-#### Solution
-
-To fix this error, either change the value in the options property to match the selected value, or change the selected value to match an option listed in the options property. This ensures that the value selected is valid and prevents the error from appearing.
-
-## Duplicate values found
-
-You may encounter an error message "Duplicate values found for the following properties" while using the Select widget.
-
-#### Error message
-
-<Message
-messageContainerClassName="error"
-messageContent="Duplicate values found for the following properties, in the array entries, that must be unique -- value."></Message>
-
-#### Cause
-
-This error occurs when there are duplicate values in the options property of the Select widget. For example,
-
-```js
- {
-    "label": "Blue",
-    "value": "BLUE"
-  },
-  {
-    "label": "Green",
-    "value": "BLUE"
-  },
-```
-
-#### Solution
-
-To resolve this error, ensure that each value in the options property of the Select widget is unique. You can do this by checking the values and making sure that there are no duplicates.
+</div>
