@@ -18,6 +18,7 @@ nav:
      - Reference:
             Querying GraphQL: reference/querying-graphql.md
             Querying REST APIs: reference/querying-rest-api.md
+            Troubleshooting Studio errors: reference/studio-errors-troubleshooting.md
             Telemetry: reference/telemetry.md
             Framework:
                  - Console object: reference/framework/console-object.md

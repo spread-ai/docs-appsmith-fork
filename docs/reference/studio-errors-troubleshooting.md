@@ -11,12 +11,12 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 Understanding how to effectively troubleshoot errors in Studio can save you time and help maintain a smooth development process. Studio errors fall into the following categories. For more on each type, select the relevant section:
 
+* [Access errors](#access-control-errors)
 * [Datasource errors](#datasource-errors)
+* [Git errors](#git-errors)
 * [Query errors](#query-errors)
 * [Widget errors](#widget-errors)
 * [JavaScript errors](#javascript-errors)
-* [Access errors](#access-control-errors)
-* [Git errors](#git-errors)
 
 ## Access control errors
 

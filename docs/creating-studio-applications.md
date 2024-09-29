@@ -9,7 +9,7 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-Studio allows you to visualize, manage, and interact with the product knowledge [imported](../data-import/data-import-overview.md) into the SPREAD platform. With Studio you can supplement the Core Applications from SPREAD, such as [Connectivity Analyzer](../../applications/using-connectivity-analyzer/connectivity-analyzer-overview.md) and [Circuit Diagram Creator](../../applications/using-circuit-diagram-creator/circuit-diagram-creator-overview.md), with custom applications to suit your needs. The Studio canvas offers a low-code visual environment to create application screens and can be integrated with [Flows](../using-flows/using-flows-overview.md) to further refine and transform the data you use in the application.
+Studio allows you to visualize, manage, and interact with the product knowledge imported into the SPREAD platform. With Studio you can supplement the Core Applications from SPREAD, such as [Connectivity Analyzer](/applications/using-connectivity-analyzer/connectivity-analyzer-overview.md) and [Circuit Diagram Creator](/applications/using-circuit-diagram-creator/circuit-diagram-creator-overview.md), with custom applications to suit your needs. The Studio canvas offers a low-code visual environment to create application screens and can be integrated with [Flows](/platform-tools/using-flows/using-flows-overview.md) to further refine and transform the data you use in the application.
 
 ## Organizing workspaces
 
@@ -61,7 +61,7 @@ Applications fall into two types: ones that read data flows from a data source a
 
 ---
 
-To create multi-page applications go to the **Pages** section underneath the app title and select **+**. Interactions between pages will need to be built into each page.
+{{ snippets.multipageApps }}
 
 ---
 
@@ -80,19 +80,17 @@ In the **Theme** submenu in the App settings, you can configure font, primary co
 
 To set data sources select **Data** in the left-hand side panel. This opens a settings window to connect your data from API services, integrations, or databases. You can save queries and mutations done in API services to use later in the logic of your application.
 
-For more on connecting data sources, see [AppSmith Datasources](https://docs.docs.spread.ai/connect-data/reference). Please be aware that not all data sources in AppSmith are supported by SPREAD Studio.
-
 ### Build the UI
 
 In the **Editor** view (from the options in the left-hand side panel) you can drag and drop widgets from the **Widgets** tab to start building your user interface. Widgets are resizable and can be moved around the canvas. Each widget opens a property window in right-hand side of the screen, where you to set details for that widget and style it individually.
 
-For example, the **DatePicker** widget has options for setting the date format, the default date, the label position and text, and other settings associated with dates. The **Style** tab is where you can set font, color, and border options. You can delete or copy a widget by selecting the icons at the top of the properties window.
+For example, the [DatePicker](/reference/widgets/datepicker.md) widget has options for setting the date format, the default date, the label position and text, and other settings associated with dates. The **Style** tab is where you can set font, color, and border options. You can delete or copy a widget by selecting the icons at the top of the properties window.
 
-Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ '{{ app1.myVariable }}' }}`. For more on widgets and their options, see the [Widget Reference](reference/studio-widget-reference.md).
+Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ '{{ app1.myVariable }}' }}`.
 
 ### Write the logic
 
-Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ "{{ app1.myVariable }}" }}`. For more on widgets and their options, see the [Widget Reference](reference/studio-widget-reference.md).
+Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ "{{ app1.myVariable }}" }}`.
 
 The logic of your application determines what happens when the user enters data, clicks on a button, or performs any action in your application. In many cases the logic will be attached to events that the user may perform on a widget. For example, an **onClick** event for a button could trigger a JavaScript function, execute a query, or change the contents of the screen.
 
@@ -101,11 +99,7 @@ The logic of your application determines what happens when the user enters data,
 	<figcaption>The contextual menu for the onClick event in SPREAD Studio</figcaption>
 </figure>
 
-JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [AppSmith object](https://docs.docs.spread.ai/reference/appsmith-framework/context-object), and Global Functions, such as [storeValue](https://docs.docs.spread.ai/reference/framework/global-functions.md/store-value), are available to use in your code.
-
-!!! info "More Global Objects and Global Functions"
-
-    For a complete reference of the Global Objects available in Studio, see the [AppSmith documentation on Global Objects](https://docs.docs.spread.ai/write-code/reference). Likewise for Global Functions, see the [AppSmith documentation on Global Functions](https://docs.docs.spread.ai/reference/framework/global-functions.md).
+JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [Global object](/reference/framework/context-object.md), and Global Functions, such as [storeValue](/reference/framework/global-functions.md#storevalue), are available to use in your code.
 
 For complex implementations, you can install additional JavaScript libraries by selecting the Box icon in the bottom-left corner. The default libraries are [lodash.js](https://lodash.com/) for modularity and performance, [moment.js](https://momentjs.com/) for date and time handling, and [forge.js](https://github.com/digitalbazaar/forge) for managing cryptographic tools.
 
@@ -123,4 +117,4 @@ Once your application is complete, you can preview it by selecting the Play icon
     If there are errors in your application a notification will appear in the bottom bar. Selecting the notification opens an application inspector with tabs for logging, inspecting entities, and seeing errors.
     ![The debug console in Studio](src/debugging-errors-in-studio.png)
 
-If everything works as it should you can publish your application by selecting the **Publish** button the top-right corner. Once published, your new application will appear on the Launcher page as a tile. We recommend using version control by selecting **Connect Git** in the bottom bar and following the instructions in the modals to connect send your changes to a remote repo on GitHub, GitLab, or Bitbucket.
+If everything works as it should you can publish your application by selecting the **Publish** button the top-right corner. Once published, your new application will appear on the Launcher page as a tile. We recommend [using version control](version-control.md) by selecting **Connect Git** in the bottom bar and following the instructions in the modals to connect send your changes to a remote repo on GitHub, GitLab, or Bitbucket.

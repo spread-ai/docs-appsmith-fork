@@ -26,16 +26,11 @@ With Studio you can create applications that:
 
 ## Accessing SPREAD Studio
 
-There are staging areas for internal use that you may use to work in Studio, depending on your use case:
-
-- [Development environment](https://dev.stage.spread.ai): The development environment is the workspace to make rapid changes and do development work.
-- [Staging environment](https://stage.stage.spread.ai): The staging area for preparing for deployments and testing.
-- [Demo environment](https://demo.stage.spread.ai): The demo environment is a more stable environment used  for client demos.
-- [Production environment](https://prod.stage.spread.ai): The production environment is the live version of the SPREAD platform.
+{{ snippets.tile }}
 
 ---
 
-This resource can only be accessed when you are connected to the `spread-restricted` or `spread-open` VPN. For more information on setting up access to the VPN, see [VPN Access](https://solveit.atlassian.net/wiki/spaces/DEV/pages/1267531777/Common+Setup+MacBook#VPN-Access).
+{{ snippets.vpn }}
 
 ---
 
@@ -56,10 +51,10 @@ For more on getting started with GraphQL, see the [Introduction to GraphQL](http
 
 ---
 
-This resource can only be accessed when you are connected to the `spread-restricted` or `spread-open` VPN. For more information on setting up access to the VPN, see [VPN Access](https://solveit.atlassian.net/wiki/spaces/DEV/pages/1267531777/Common+Setup+MacBook#VPN-Access).
+{{ snippets.vpn }}
 
 ---
 
 For applications that receive and manage information from databases, you may also need a basis in PostgreSQL or MongoDB. A working knowledge of Git may be necessary if you want to maintain version control of your applications. For more on getting started in Git, see [About Git](https://docs.github.com/en/get-started/using-git/about-git).
 
-JavaScript is the programming language used in Studio. Studio supports writing code in widget properties, event listeners, and you can use JavaScript libraries in your application.
+JavaScript is the programming language used in Studio. Studio supports writing code in widget properties, event listeners, and you can use [JavaScript libraries](writing-code-in-studio/using-external-js-libraries.md) in your application.

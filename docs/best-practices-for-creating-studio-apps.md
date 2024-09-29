@@ -29,7 +29,7 @@ The code window in SPREAD Studio is not suitable for writing extensive code, as 
 
 Use containers where you have widget groups that function together. This allows you to control properties, like visibility, at the container level and not in individual widgets. Much like <div\> container tags, these containers give you more broad controls and help sort a busy screens into logical segments.
 
-For more on the Container widget settings, see the [Container reference](reference/default-widgets/container.md) page.
+For more on the Container widget settings, see the [Container](/reference/widgets/container.md) reference page.
 
 !!! info "Padding around containers"
 
@@ -41,7 +41,7 @@ For complex Studio apps you may want to create a multi-page app. In this way you
 
 ---
 
-To create multi-page applications go to the **Pages** section underneath the app title and select **+**. Interactions between pages will need to be built into each page.
+{{ snippets.multipageApps }}
 
 ---
 
@@ -59,4 +59,4 @@ As your Studio app grows in complexity having an easy-to-understand naming conve
 	<figcaption>Examples of badly named widgets in Studio</figcaption>
 </figure>
 
-Likewise when naming queries, we recommend that you prefix the query with the action it applies - such as `Update_SystemObject` - and descriptively name the query; especially in situations where the Studio app has multiple queries.
+Likewise when naming queries, we recommend that you prefix the query with the action it applies - such as `Update_SystemObject`. Also descriptively name the query; especially in situations where the Studio app has multiple queries.
