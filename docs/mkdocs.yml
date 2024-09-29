@@ -13,12 +13,19 @@ nav:
             - Using JSObjects: writing-code-in-studio/using-jsobjects.md
             - Using external libraries: writing-code-in-studio/using-external-js-libraries.md
      - Tutorials:
+            - Connect and query datasources: tutorials/connect-query-datasource.md
             - Create multi-step forms: tutorials/create-multi-step-forms.md
+            - Create a custom navigation bar: tutorials/create-custom-nav-bar.md
             - Data polling updates: tutorials/setup-polling.md
+            - Download table dta: tutorials/download-table-data.md
+            - Get container logs: tutorials/get-container-logs.md
             - Insert data into a data source: tutorials/insert-data.md
             - Navigate between pages: tutorials/navigate-between-pages.md
             - Pass parameters to an API: tutorials/pass-parameters-to-an-api.md
+            - Reuse application entities: tutorials/reuse-application-entities.md
+            - Run code on page load: tutorials/run-code-pageload.md
             - Search and filter table data: tutorials/search-and-filter-table-data.md
+            - Sending messages between application and iFrame: tutorials/communication-between-app-iframe.md
             - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
             - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
             - Share variables between applications: tutorials/share-variables-between-applications.md
