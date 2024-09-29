@@ -488,13 +488,7 @@ For more informtion on what you can print to tye console, see the [Console objec
 
 </div>
 
-
-
-
-
-
-
-#### Date sring error
+#### Date format error
 
 >The date picker expects its default date in the standard [ISO format](https://www.iso.org/iso-8601-date-and-time-format.html). If the date you provided doesn't match this, you'll see this error.
 
@@ -517,82 +511,81 @@ For more informtion on what you can print to tye console, see the [Console objec
 
 </div>
 
+#### Boolean type error
 
-#### Error message
+>This error typically occurs in the `isVisible` and `isDisabled` properties and indicates that the value in the property doesn't match a `boolean` type.
 
+<div class='grid' markdown>
 
+!!! failure "Error"
 
-#### Cause
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="This value does not evaluate to type `boolean"></Message>
+     ```
 
+!!! success "Solution"
 
+     You can solve this by using a comparison operator.
 
-#### Solution
+     ```js
+     {{ '{{ Dropdown1.selectedOptionValue === "RED" }}' }}
 
+     ```
 
+</div>
 
-#### Error message
+#### String value error
 
-<Message
-messageContainerClassName="error"
-messageContent="This value does not evaluate to type `boolean"></Message>
+>When working with widgets, you may come across an error where the data property is expecting a string value that doesn't match the data type of the query response.
 
-#### Cause
+<div class='grid' markdown>
 
-This error typically occurs in the `isVisible` and `isDisabled` properties and indicates that the value in the property doesn't match a `boolean` type.
+!!! failure "Error"
 
-#### Solution
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="This value does not evaluate to type string"></Message>
+     ```
 
-You can solve this by using a comparison operator.
+!!! success "Solution"
 
-```
+     The solution is to convert the data type of the API response to a string. This can be done using JavaScript methods. Additionally, make sure that the data being passed to the widget is in the correct format. For example:
 
-{{ '{{ Dropdown1.selectedOptionValue === "RED" }}' }}
+     ```js
+     {{ '{{Text1.text}}' }} // (1) !
+     {{ '{{Image1.image}}' }} // (2)!
+     ```
 
-```
+     1. To return text.
+     2. To return an image.
 
-#### Error message
+     If this doesn't work, you can also check the **EVALUATED VALUE** section to make sure that it's returning a string value and not an object or other data type.
 
-<Message
-messageContainerClassName="error"
-messageContent="This value does not evaluate to type string"></Message>
+</div>
 
-#### Cause
+#### Nuemric value error
 
-When working with widgets, you may come across an error where the data property is expecting a string value that doesn't match the data type of the query response.
+>You may come across an error where the data property is expecting a numeric value that doesn't match the data type of the API response.
 
-#### Solution
+<div class='grid' markdown>
 
-The solution to this issue is to convert the data type of the API response to a string. This can be done using JavaScript methods. Additionally, make sure that the data being passed to the widget is in the correct format. For example:
+!!! failure "Error"
 
-```
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="This value must be number"></Message>
+     ```
 
-To get text,
-{{ '{{ '{{ '{{Text1.text}}' }}
+!!! success "Solution"
 
-To get image,
-{{ '{{ '{{ '{{Image1.image}}' }}
+     It's important to ensure that the data being passed to the widget's data property matches the expected data type. One solution to this issue is to use JavaScript to convert the API response to the correct data type, or to access the correct data type from the API response.
 
-```
+     You can also check the **EVALUATED VALUE** section to make sure that it's returning a numeric value and not an object or other data type.
 
-In case the preceding doesn't work, you can also check the EVALUATED VALUE section to make sure that it's returning a string value and not an object or other data type.
+</div>
 
-#### Error message
-
-<Message
-messageContainerClassName="error"
-messageContent="This value must be number"></Message>
-
-#### Cause
-
-You may come across an error where the data property is expecting a numeric value that doesn't match the data type of the API response.
-
-#### Solution
-
-It's important to ensure that the data being passed to the widget's data property matches the expected data type. One solution to this issue is to use JavaScript to convert the API response to the correct data type, or to access the correct data type from the API response.
-
-You can also check the EVALUATED VALUE section to make sure that it's returning a numeric value and not an object or other data type.
-
-## Syntax error
+#### Syntax error
 
 This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line](../../core-concepts/writing-code/#multi-line-javascript)code.
 
@@ -600,61 +593,35 @@ In the example below, fetch isn't defined anywhere in the application
 
 ![](/img/syntax_error.png)
 
-## Cyclic dependency error
+#### Cyclic dependency error
 
-An app gets a cyclic dependency error when a node is directly or indirectly dependent on itself.
+>The cyclic dependency error happens when a node is directly or indirectly dependent on itself. All user-editable fields are defined as nodes, and to provide reactivity, a dependency map is created between these nodes to find the optimal evaluation order of these nodes. For example, when you would refer to `{{ '{{Api1.data}}' }}` in a Table1's `tableData` field, there is a dependency created between `Api1.data` and `Table1.tableData`. So every time `Api1.data` updates, `Table1.tableData` needs to be updated.
 
-#### Reactivity and dependency map
+>Similarly, all parent nodes are implicitly dependent on the child nodes to ensure updates are propagated up an entity object. A more straightforward way to understand this is that if a child node updates, the parent node, and its dependencies should also be updated.
 
-In Appsmith, all user-editable fields are defined as nodes, and to provide reactivity, a dependency map is created between these nodes to find the optimal evaluation order of these nodes. For example, when you would refer to `{{ '{{ '{{ '{{Api1.data}}' }}` in a Table1's `tableData` field, there is a dependency created between `Api1.data` and `Table1.tableData`. So every time `Api1.data` updates, `Table1.tableData` needs to be updated.
+!!! success "Solution"
 
-```
+     The most common scenario where a cycle occurs is when you would try to bind a node to its parent node. Since it's impossible to evaluate an app with a cyclic dependency, you have to exit out and be in an error state until the cycle is resolved.
 
-// Table1.tableData depends on Api1.data
-Api1.data -> Table1.tableData
+#### Infinite loop error
 
-```
+>An infinite loop error occurs when a function or code block repeats indefinitely, causing the app or function to become unresponsive, and can even prevent users from accessing certain features of the app.
 
-Similarly, all parent nodes are implicitly dependent on the child nodes to ensure updates are propagated up an entity object. A more straightforward way to understand this is that if a child node updates, the parent node, and its dependencies should also be updated.
+<div class='grid' markdown>
 
-```
+!!! failure "Error"
 
-// Implicit. Parent depends on children
-Api1.data -> Api1
-Table1.tableData -> Table1
+     The problem may be due to a page load function that is stuck in a loop. This can happen if you have added code that uses the `navigateTo` function and is executed on `onPageLoad`, which can cause the page to become inaccessible or cause the app to get stuck in a loop and constantly routing to the destination page.
 
-// Explicit. Table1.tableData depends on Api1.data
-Api1.data -> Table1.tableData
+!!! success "Solution"
 
-```
+     To fix this problem, you can use [debugger statements](#using-the-debugger-statement) to halt the execution of the code and identify the source of the infinite loop. Here are the steps to do this:
 
-The most common scenario where a cycle occurs is when you would try to bind a node to its parent node. Since it's impossible to evaluate an app with a cyclic dependency, you have to exit out and be in an error state till the cycle is resolved.
+     1. Open the app and go to the page where the infinite loop is occurring.
+     2. Locate the function or code block that's causing the infinite loop.
+     3. Insert a debugger statement at the beginning of the function or code block that pauses the execution of the code and allows you to inspect its state. 
+     4. Use the debugger console of the browser to step through the code and identify the cause of the infinite loop.
+     5. Once you have identified the issue, make the necessary changes to the code to fix it.
+     6. Save the changes and test the app again to ensure the infinite loop issue has been resolved.
 
-```
-
-// A cycle is formed
-Table1 -> Table1.tableData
-Table1.isVisible -> Table1
-
-```
-
-## Infinite loop error
-
-An infinite loop error occurs when a function or code block repeats indefinitely, causing the app or function to become unresponsive, and can even prevent users from accessing certain features of the app.
-
-#### Cause
-
-The problem may be due to a page load function that's stuck in a loop. This can happen if you have added code that uses the `navigateTo` function and is executed on `onPageLoad`, which can cause the page to become inaccessible or cause the app to get stuck in a loop and constantly routing to the destination page.
-
-#### Solution
-
-To fix this problem, you can use debugger statements in Appsmith to halt the execution of the code and identify the source of the infinite loop. Here are the steps to do this:
-
-1. Open the app in Appsmith and go to the page where the infinite loop is occurring.
-2. Locate the function or code block that's causing the infinite loop.
-3. Insert a debugger statement at the beginning of the function or code block that pauses the execution of the code and allows you to inspect its state. For more information, see [debugging statement and how to use it](/core-concepts/writing-code/javascript-editor-beta/#debugger-statements).
-4. Use the debugger console of the browser to step through the code and identify the cause of the infinite loop.
-5. Once you have identified the issue, make the necessary changes to the code to fix it.
-6. Save the changes and test the app again to ensure the infinite loop issue has been resolved.
-
-
+</div>
