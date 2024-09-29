@@ -13,8 +13,13 @@ nav:
             - Using JSObjects: writing-code-in-studio/using-jsobjects.md
             - Using external libraries: writing-code-in-studio/using-external-js-libraries.md
      - Tutorials:
+            - Set up server-side pagination in a List: tutorials/setup-server-side-pagination-on-list.md
             - Share variables between applications: tutorials/share-variables-between-applications.md
+            - Submit Form data: tutorials/submit-form-data.md
+            - Update list data: tutorials/update-list-data.md
+            - Use the download function in Studio: tutorials/use-download-in-studio.md
             - Using Flows in Studio: tutorials/use-flows-in-studio.md
+            - Work with data in the UI: tutorials/work-with-data-in-ui.md
      - Reference:
             Querying GraphQL: reference/querying-graphql.md
             Querying REST APIs: reference/querying-rest-api.md

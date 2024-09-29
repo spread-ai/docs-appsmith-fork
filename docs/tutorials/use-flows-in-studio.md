@@ -46,9 +46,7 @@ mutation executeFlow($executeFlowId: ID!) {
 ```
 
 ``` json title='Object to provide as a variable for the mutation'
-{
-  "executeFlowId": "the-flow-id-from-step-1"
-}
+{ "executeFlowId": "the-flow-id-from-step-1" }
 ```
 
 <figure markdown="span">

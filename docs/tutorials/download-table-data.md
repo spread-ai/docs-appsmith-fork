@@ -59,7 +59,7 @@ GET https://mock-api.docs.spread.ai/users?limit={{ '{{ '{{ '{{this.params.limit}
 
 
 
-*Example:*
+For example,
 
 - Create a function that retrieves user data in batches of 100 rows from a database, continuously appending each batch to a `usersData` array until the entire dataset is retrieved.
 - Use the [download()](/reference/framework/global-functions.md/download) function to download the data to your local machine.
@@ -141,7 +141,7 @@ To directly download a file from the datasource instead of fetching data in chun
 
  
 
-*Example:*
+For example,
 
 
 ```js
@@ -155,7 +155,7 @@ http://api.example.com/export-data-to-file
 
  
 
-*Example:* If the API provides a file URL, you can download the data by using the following code:
+For example, If the API provides a file URL, you can download the data by using the following code:
 
 
 ```js

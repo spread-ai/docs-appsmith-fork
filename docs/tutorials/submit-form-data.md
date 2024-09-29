@@ -46,24 +46,28 @@ For example, to display the user's name, add the following code in the **Default
 
 ### 5. Validate data
 
-To validate user inputs, use properties like Regex, Valid, and Required. The submit button remains disabled until all widgets meet the defined validation criteria. For more, see [validation examples](../reference/widgets/input#regex-string) for the Input widget.
+To validate user inputs, use properties like Regex, Valid, and Required. The submit button remains disabled until all widgets meet the defined validation criteria. For more, see [validation examples](/reference/widgets/input.md#regex-string) for the Input widget.
 
 ### 6. Create an update query
 
 Create an update query using the `data` reference property of the Form widget and triggered row property of the Table widget. For example, if you have a `user` table and want to update a record based on the user's ID, you can use the following query:
 
 ```sql
--- For JSON Form: {{ '{{JSONForm1.formData.name}}' }} 
+-- (3)!
 
 UPDATE public.users
 SET 
-  phone = {{ '{{Form1.data.PhoneInput1}}' }},
-  email = {{ '{{Form1.data.Input1}}' }}
-  dob = {{ '{{DatePicker1.formattedDate}}' }}, -- To get formatted Date
-  gender = {{ '{{ Form1.data.SelectGender }}' }},
-  image = {{ '{{ Form1.data.InputImageURL }}' }} -- To add image from Filepicker widget use: {FilePicker1.files[0].data}}' }}
+     phone = {{ '{{Form1.data.PhoneInput1}}' }},
+     email = {{ '{{Form1.data.Input1}}' }}
+     dob = {{ '{{DatePicker1.formattedDate}}' }}, -- (1)!
+     gender = {{ '{{ Form1.data.SelectGender }}' }},
+     image = {{ '{{ Form1.data.InputImageURL }}' }} -- (2)!
 WHERE id = {{ '{{Table1.triggeredRow.id}}' }};
 ```
+
+1. To get the formatted date.
+2. To add an image from the Filepicker widget use: `{{ '{{FilePicker1.files[0].data}}' }}`.
+3. For JSON Forms use `{{ '{{JSONForm1.formData.name}}' }}`.
 
 Set the Submit Button's **onClick** event to execute the update query.
 
@@ -75,4 +79,4 @@ Set the Submit Button's **onSuccess** callback to trigger the fetch query, which
 
 ### 9. Create a new **onSuccess** callback to show the success alert
 
-To update data directly from the Table, see [Table Inline Editing](../reference/widgets/table-inline-editing).
+To update data directly from the Table, see the [Table](/reference/widgets/table.md##table-inline-editing) widget reference.

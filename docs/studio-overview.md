@@ -14,8 +14,8 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 SPREAD Studio is a tool to create applications that build on your product knowledge. Studio allows you to visualize, manage, and interact with the product knowledge and create applications for your unique needs.
 
 <figure markdown="span">
-  ![The canvas of SPREAD Studio](src/blank-canvas-spread-studio.png)
-  <figcaption>The canvas of SPREAD Studio</figcaption>
+     ![The canvas of SPREAD Studio](src/blank-canvas-spread-studio.png)
+     <figcaption>The canvas of SPREAD Studio</figcaption>
 </figure>
 
 With Studio you can create applications that:

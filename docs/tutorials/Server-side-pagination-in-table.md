@@ -42,7 +42,7 @@ Create a query to fetch data from the database/API using `pageSize`, `pageNo`, a
  
 
 
-*Example:*
+For example,
 
 
 * For PostgreSQL, you can configure the query as follows:
@@ -82,7 +82,7 @@ Create a query to fetch data from the database/API using `previousPageVisited` a
  
 
 
-*Example:*
+For example,
 
 
 * For PostgreSQL, you can configure the query as follows:
@@ -124,7 +124,7 @@ Follow these steps to configure the Table widget to display fetched data, and im
 
  
 
-*Example*: 
+Example: 
 
 ```js
 {{ '{{ '{{ '{{fetchData.data}}' }}

@@ -11,7 +11,7 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 ## Synopsis
 
-The `download()` function is a versatile tool within Studio applications that allows users to download data in different formats directly to their local devices. It integrates seamlessly with the `downloadjs` library to facilitate the downloading process, providing flexibility in exporting various data formats, such as text, CSV, JSON, images, and more.
+The [download](/reference/framework/global-functions.md#download) function is a versatile tool within Studio applications that allows users to download data in different formats directly to their local devices. It integrates seamlessly with the `downloadjs` library to facilitate the downloading process, providing flexibility in exporting various data formats, such as text, CSV, JSON, images, and more.
 
 The `download()` function is a powerful and flexible tool that allows users to export and download various types of data. Whether you are exporting JSON data as CSV or downloading images and PDFs, this function provides a seamless method for managing file downloads in Studio applications. With support for multiple formats and customizable file names, it’s an essential function for delivering data to users in a flexible way.
 
@@ -86,34 +86,34 @@ The `download()` function also supports exporting data in XLSX format. Here’s 
 
 ```json title="Array of objects"
 [
-  { "Name": "John", "Age": 30 },
-  { "Name": "Jane", "Age": 25 }
+     { "Name": "John", "Age": 30 },
+     { "Name": "Jane", "Age": 25 }
 ]
 ```
 
 ```json title="Pages object with defined column names"
 {
-  "Sheet1": {
-    "columns": [
-      { "header": "Name", "key": "name" },
-      { "header": "Age", "key": "age" },
-      { "header": "City", "key": "city" }
-    ],
-    "data": [
-      { "name": "Alice", "age": 30, "city": "New York" },
-      { "name": "Bob", "age": 25, "city": "Los Angeles" }
-    ]
-  },
-  "Sheet2": {
-    "columns": [
-      { "header": "Product", "key": "product" },
-      { "header": "Price", "key": "price" },
-      { "header": "Quantity", "key": "quantity" }
-    ],
-    "data": [
-      { "product": "Laptop", "price": 1200, "quantity": 5 },
-      { "product": "Phone", "price": 800, "quantity": 10 }
-    ]
-  }
+     "Sheet1": {
+          "columns": [
+               { "header": "Name", "key": "name" },
+               { "header": "Age", "key": "age" },
+               { "header": "City", "key": "city" }
+          ],
+          "data": [
+               { "name": "Alice", "age": 30, "city": "New York" },
+               { "name": "Bob", "age": 25, "city": "Los Angeles" }
+          ]
+          },
+          "Sheet2": {
+          "columns": [
+               { "header": "Product", "key": "product" },
+               { "header": "Price", "key": "price" },
+               { "header": "Quantity", "key": "quantity" }
+          ],
+          "data": [
+               { "product": "Laptop", "price": 1200, "quantity": 5 },
+               { "product": "Phone", "price": 800, "quantity": 10 }
+          ]
+     }
 }
 ```
