@@ -32,42 +32,43 @@ Imagine having to delete a set of user records identified by their unique IDs. W
 
 Begin by writing a query named `DeleteUserById` that deletes a user record based on the passed ID:
 
-   ```sql
-   DELETE FROM users WHERE id = {{ '{{this.params.userId}}' }}
-   ```
+```sql
+DELETE FROM users WHERE id = {{ '{{this.params.userId}}' }}
+```
 
 
 ### 2. Create a JavaScript object
 Create a JavaScript object that will contain the utility function for bulk deletion. In the entity explorer, create a new JS Object named `UserDeletionUtils`:
 
-   ```javascript
-   export default {
-     bulkDeleteUsers: async (userIds) => { # (1)
-       // Array to store the promises from the delete operations
-       const deletePromises = userIds.map((userId) => {
-         // Executing the delete query with the current userId
-         return DeleteUserById.run({ userId });
-       });
+```javascript
+export default {
+     bulkDeleteUsers: async (userIds) => { // (1)!
+          const deletePromises = userIds.map((userId) => {
+               return DeleteUserById.run({ userId }); // (2)!
+          });
 
-       try {
-         // Wait for all delete operations to complete
-         const results = await Promise.all(deletePromises);
-         // Optional: Handle the results, such as updating the UI or notifying success
-         return results;
-       } catch (error) {
-         // Optional: Error handling logic
-         console.error("Bulk delete operation failed", error);
-         throw error;
-       }
+          try { // (3)!
+               const results = await Promise.all(deletePromises);
+               // Optional: Handle the results, such as updating the UI or notifying success
+               return results;
+          } catch (error) {
+               // Optional: Error handling logic
+               console.error("Bulk delete operation failed", error);
+               throw error;
+          }
      },
-   };
-   ```
+};
+```
+
+1. Array to store the promises from the delete operations.
+2. Executing the delete query with the current `userId`.
+3. Wait for all delete operations to complete.
 
 ### 3. Trigger the process
 To start the bulk deletion process, trigger `UserDeletionUtils.bulkDeleteUsers` from an event in your application (like a button click):
 
    ```
-   {{ UserDeletionUtils.bulkDeleteUsers([12, 34, 56, 78, 90]) }}
+   {{ '{{ UserDeletionUtils.bulkDeleteUsers([12, 34, 56, 78, 90]) }}' }}
    ```
 
    This snippet executes the `bulkDeleteUsers` function with an array of user IDs to be deleted.

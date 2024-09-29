@@ -17,7 +17,7 @@ The `appsmith` object has the following properties.
 
 ### Store `object`
 
-This object lets you access any app-level data or temporary state that is stored on the user's browser. You can add or update data using the [storeValue()](/reference/framework/global-functions.md/store-value) method. You can access saved data by referencing their keys:
+This object lets you access any app-level data or temporary state that is stored on the user's browser. You can add or update data using the [storeValue()](/reference/framework/global-functions.md#store-value) method. You can access saved data by referencing their keys:
 
 ```javascript
 {{ '{{ appsmith.store.KEY_NAME }}' }}

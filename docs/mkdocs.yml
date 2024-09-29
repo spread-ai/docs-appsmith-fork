@@ -13,7 +13,12 @@ nav:
             - Using JSObjects: writing-code-in-studio/using-jsobjects.md
             - Using external libraries: writing-code-in-studio/using-external-js-libraries.md
      - Tutorials:
-            - Data polling updates: tutorial/setup-polling.md
+            - Create multi-step forms: tutorials/create-multi-step-forms.md
+            - Data polling updates: tutorials/setup-polling.md
+            - Insert data into a data source: tutorials/insert-data.md
+            - Navigate between pages: tutorials/navigate-between-pages.md
+            - Pass parameters to an API: tutorials/pass-parameters-to-an-api.md
+            - Search and filter table data: tutorials/search-and-filter-table-data.md
             - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
             - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
             - Share variables between applications: tutorials/share-variables-between-applications.md

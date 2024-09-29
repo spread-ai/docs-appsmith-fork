@@ -46,7 +46,7 @@ For example, to display the user's name, add the following code in the **Default
 
 ### 5. Validate data
 
-To validate user inputs, use properties like Regex, Valid, and Required. The submit button remains disabled until all widgets meet the defined validation criteria. For more, see [validation examples](/reference/widgets/input.md#regex-string) for the Input widget.
+To validate user inputs, use properties like **Regex**, **Valid**, and **Required**. The submit button remains disabled until all widgets meet the defined validation criteria. For more, see [validation examples](/reference/widgets/input.md#regex-string) for the Input widget.
 
 ### 6. Create an update query
 
