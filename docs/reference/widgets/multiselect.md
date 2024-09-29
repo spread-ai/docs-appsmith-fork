@@ -219,7 +219,7 @@ Reference properties enable you to access the widget's data and state using the 
 
 #### filterText `string`
 
-Returns the text entered in the search filter of the Multiselect widget. For more information, see [Server side filtering](/reference/widgets/select#server-side-filtering).
+Returns the text entered in the search filter of the Multiselect widget. For more information, see [Server side filtering](../../reference/widgets/select#server-side-filtering).
 
 ```js
 {{ '{{Multiselect1.filterText}}' }}

@@ -86,7 +86,7 @@ Enables control over image rotation. When enabled, hover over the image and clic
 
 Enables users to control whether the image is allowed to be downloaded. When enabled, hover over the image and click the download icon.
 
-Alternatively, you can use the built-in [Download](/reference/framework/global-functions.md#download) function and set it to run on the [**onClick**](#onclick) event of the Image widget as shown below:
+Alternatively, you can use the built-in [Download](../../reference/framework/global-functions.md#download) function and set it to run on the [**onClick**](#onclick) event of the Image widget as shown below:
 
 ```js
 {{ '{{download(Image1.image,'my-image-name','image/png')}}' }}
@@ -94,7 +94,7 @@ Alternatively, you can use the built-in [Download](/reference/framework/global-f
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](../../reference/framework/global-functions.md).
 
 #### onClick
 

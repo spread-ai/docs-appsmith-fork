@@ -81,4 +81,4 @@ Determines the color of the button displayed for each item in the button group.
 
 #### onClick
 
-Allows you to configure [actions](/reference/framework/global-functions.md) to be executed when the button is clicked.
+Allows you to configure [actions](../../reference/framework/global-functions.md) to be executed when the button is clicked.

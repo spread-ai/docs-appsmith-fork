@@ -9,7 +9,7 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-This page shows you how to set up server-side pagination on a [Table](/reference/widgets/table.md) widget, which allows you to manage and display large datasets within your application. It involves fetching and displaying only a portion of data from the server at a time, which enhances performance.
+This page shows you how to set up server-side pagination on a [Table](../reference/widgets/table.md) widget, which allows you to manage and display large datasets within your application. It involves fetching and displaying only a portion of data from the server at a time, which enhances performance.
 
 If you are using the one-click binding feature to connect data, Studio automatically generates server-side pagination queries for you. However, if you prefer to manually configure the server-side setup, you can do so by following the instructions in this guide.
 
@@ -51,19 +51,19 @@ The `pageDirection` serves as a query parameter within the API.
 
 Follow these steps to configure the Table widget to display fetched data, and implement server-side pagination:
 
-1. Bind the query data into the [**Table data**](/reference/widgets/table#table-data-arrayobject) property of the Table widget.
+1. Bind the query data into the [**Table data**](../reference/widgets/table#table-data-arrayobject) property of the Table widget.
 
 ```js
 {{ '{{fetchData.data}}' }}
 ```
 
-2. Enable the [**Server-side pagination**](/reference/widgets/table#server-side-pagination-boolean) property in the table.
+2. Enable the [**Server-side pagination**](../reference/widgets/table#server-side-pagination-boolean) property in the table.
 
-3. Set the Table widget's [**onPageChange**](/reference/widgets/table#onpagechange) event to run the pagination query. With this setup, users can paginate through data, ensuring an efficient browsing experience.
+3. Set the Table widget's [**onPageChange**](../reference/widgets/table#onpagechange) event to run the pagination query. With this setup, users can paginate through data, ensuring an efficient browsing experience.
 
 ### 3. Configure total records
 
-To provide the user with information about the number of records in the table, you can configure the [**Total records**](/reference/widgets/table#total-records-number) property to be displayed in the table header.
+To provide the user with information about the number of records in the table, you can configure the [**Total records**](../reference/widgets/table#total-records-number) property to be displayed in the table header.
 
 1. Create a query to fetch the total record count. For example, with PostgreSQL:
 

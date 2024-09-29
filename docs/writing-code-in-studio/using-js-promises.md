@@ -21,7 +21,7 @@ To understand the difference between callbacks and promise implementation, consi
 
 ```javascript
 // Using Callbacks
-{{ '{{ '{{ '{{
+{{ '{{
     MockApi.run(() => {
         MockApi1.run(() => {
             MockApi2.run(() => {
@@ -35,7 +35,7 @@ To understand the difference between callbacks and promise implementation, consi
 Using promise for the same example makes the implementation more manageable and readable.
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
     MockApi.run()
         .then(() => MockApi1.run())
         .then(() => MockApi2.run())
@@ -45,10 +45,10 @@ Using promise for the same example makes the implementation more manageable and 
 
 ### Promise methods
 
-JavaScript promises have several built-in methods. When passing a function to `.then()` or `.catch()` always remember to pass it as a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback\_function) function, as shown below:
+JavaScript promises have several built-in methods. When passing a function to `.then()` or `.catch()` always remember to pass it as a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) function, as shown below:
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
   (function() {
     ❌ MockApi.run().then(showAlert(`Success`))
     //highlight-next-line
@@ -61,9 +61,9 @@ JavaScript promises have several built-in methods. When passing a function to `.
 #### Promise.any()
 
 [Promise.any()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any) takes an iterable array of promises as input and returns a single promise. When one of the promises first fulfil, it returns a single promise that resolves to the value of the fulfilled promise. If you want only one action/promise to finish for further execution, you can use `Promise.any()` method.
- 
+
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
 (function(){
     
   return Promise.any([
@@ -80,10 +80,10 @@ In this example, the function calls multiple API queries passes and parameters t
 
 #### Promise.race()
 
-It waits for the first settled promise, fulfilled, or rejected, to get its result. You can use `Promise.race()` when you want only one action/promise to finish the execution. 
+It waits for the first settled promise, fulfilled, or rejected, to get its result. You can use `Promise.race()` when you want only one action/promise to finish the execution.
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
 (function(){
     return  Promise.race([
             MockApi.run({ name: 1 }),
@@ -102,7 +102,7 @@ In the example the function calls multiple API queries passes and parameters to 
 It takes an array of promises - technically any iterable but usually an array - and returns a new Promise. The array of results of the Promises becomes the result of the new Promise. If one of the promises fails (reject state), the new Promise immediately rejects and returns the same error. You can use `Promise.all()` when you want all the actions successfully finish execution.
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
 (function(){
     let employeeNames = ["Employee 1","Employee 2"];
     // Start a bunch of calls running in parallel and store returned promise
@@ -117,14 +117,14 @@ It takes an array of promises - technically any iterable but usually an array - 
 }}' }}
 ```
 
-In the example the function runs the API with the employee names passed as parameters. The `calls` array stores the returned promise for each API call.An alert message appears according to the success or failure case in `Promise.all()`.
+In the example the function runs the API with the employee names passed as parameters. The `calls` array stores the returned promise for each API call. An alert message appears according to the success or failure case in `Promise.all()`.
 
 #### Promise.allSettled()
 
 It waits for all the promises to settle, regardless of the result (resolved or rejected). You can use `Promise.allSettled()` when you want all the actions to finish first.
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
 (function(){
   let employeeNames = ["Employee 1","Employee 2"];
   // Start a bunch of calls running in parallel and store returned promise
@@ -150,7 +150,7 @@ Here are some general guidelines for using Promises in Appsmith:
 * Return promise with `.then()` attached to it, as shown below:
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
   (function() {
         // the .then only runs if a promise is returned
         return MockApi.run()
@@ -158,10 +158,11 @@ Here are some general guidelines for using Promises in Appsmith:
     })()
 }}' }}
 ```
+
 * Parameters are not passed in the `.then()` argument of the `action.run()`. Only the response is passed, as shown below:
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
   (function() {
         // define params on top so that you can use them in the later calls
         const params = { name: "Appsmith" }
@@ -175,16 +176,18 @@ Here are some general guidelines for using Promises in Appsmith:
 
 ## Async/Await
 
-The `async` and `await` keywords enable the [asynchronous](/core-concepts/writing-code/javascript-editor-beta) workflow to be written in a cleaner style, avoiding the need to configure promise chains explicitly.
+The `async` and `await` keywords enable the asynchronous workflow to be written in a cleaner style, avoiding the need to configure promise chains explicitly.
 
 ### Async
+
 Adding the `async` keyword before a function always returns a promise. Other values are wrapped in a resolved promise automatically.
 
 ### Await
-The keyword `await` makes JavaScript wait until that Promise settles and returns its result. 
+
+The keyword `await` makes JavaScript wait until that Promise settles and returns its result.
 
 ```javascript
-{{ '{{ '{{ '{{
+{{ '{{
     (async function(){ 
         const response = await MockApi.run({ name: 'Appsmith' }); 
         await storeValue( "name", response.args.name ); 

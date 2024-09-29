@@ -24,7 +24,7 @@ Drop a Modal widget onto the canvas, and then add the relevant widgets and confi
 
 ### 2. Validate the data
 
-To validate data before inserting, scroll to the **Validation** section in the property pane of each widget within the Modal. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, and so on. The `Save` button on the Modal remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](/reference/widgets/input#regex-string).
+To validate data before inserting, scroll to the **Validation** section in the property pane of each widget within the Modal. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, and so on. The `Save` button on the Modal remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](../reference/widgets/input#regex-string).
 
 ### 3. Configure the query
 
@@ -62,8 +62,8 @@ insertData: async () => {
 To insert data in a new page, follow these steps:
 
 1. Create a new page and then drop a Form widget on the page. Add the relevant widgets into the Form widget and configure their properties.
-2. To validate data before inserting, scroll to the **Validation** section in the property pane of the Form widget. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, and so on. The Form widget's **Submit** button remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](/reference/widgets/input.md#regex-string).
-3. Configure the query to insert data using the [data](/reference/widgets/form.md#data-object) reference property of the Form. For example, with SQL:
+2. To validate data before inserting, scroll to the **Validation** section in the property pane of the Form widget. Enter the validation criteria, such as **Required**, **Max Characters**, **Regex**, and so on. The Form widget's **Submit** button remains disabled until all widgets meet the defined validation criteria. For more information, see [Validation](../reference/widgets/input.md#regex-string).
+3. Configure the query to insert data using the [data](../reference/widgets/form.md#data-object) reference property of the Form. For example, with SQL:
 
 ```sql
 INSERT INTO person 
@@ -78,7 +78,7 @@ VALUES
 ```
 
 1. Set the **Submit** Button's **onClick** event to execute the insert query, and the **onSuccess** callback to navigate back to your home page and fetch the updated data.
-2. Add a Button widget to your home page and set its **onClick** event to navigate to the insert data page created in Step 1. For more information, see [navigateTo](/reference/framework/global-functions.md#navigateto). To insert the ID value, choose a UUID generator or let your data source auto generate the ID.
+2. Add a Button widget to your home page and set its **onClick** event to navigate to the insert data page created in Step 1. For more information, see [navigateTo](../reference/framework/global-functions.md#navigateto). To insert the ID value, choose a UUID generator or let your data source auto generate the ID.
 
 ### 6.2 Insert data into a Table
 

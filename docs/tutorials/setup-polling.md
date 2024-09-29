@@ -26,7 +26,7 @@ Polling is a communication technique used to retrieve real-time data by periodic
 
 ### 1. Configure the query
 
-Configure the fetch query and connect it to a [Table](/reference/widgets/table.md) widget to display the data.
+Configure the fetch query and connect it to a [Table](../reference/widgets/table.md) widget to display the data.
 
 For example, to display real-time delivery status updates from a query, add the following code into the **Table data** property.
 
@@ -36,11 +36,11 @@ For example, to display real-time delivery status updates from a query, add the 
 
 ### 2. Add a Switch widget
 
-Drop a [Switch](/reference/widgets/switch.md) widget onto the canvas to enable the toggling of updates at regular intervals.
+Drop a [Switch](../reference/widgets/switch.md) widget onto the canvas to enable the toggling of updates at regular intervals.
 
 ## 3. Create the JSObject
 
-Create a new JSObject and use the [setInterval()](/reference/framework/global-functions.md#setInterval) function to implement polling. For example, when the switch is turned on, the query is executed every five seconds. If the switch is turned off, use the [clearInterval()](/reference/framework/global-functions.md#clearInterval) function to stop the polling process:
+Create a new JSObject and use the [setInterval()](../reference/framework/global-functions.md#setInterval) function to implement polling. For example, when the switch is turned on, the query is executed every five seconds. If the switch is turned off, use the [clearInterval()](../reference/framework/global-functions.md#clearInterval) function to stop the polling process:
 
 ```js
 export default {

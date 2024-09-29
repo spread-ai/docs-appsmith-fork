@@ -358,13 +358,13 @@ export default {
 
 1. This will log the string "user information: " followed by the value of the `userInfo` variable to the console.
 
-For more informtion on what you can print to tye console, see the [Console object](/reference/framework/console-object.md) page.
+For more informtion on what you can print to tye console, see the [Console object](../../reference/framework/console-object.md) page.
 
 ### Common JavaScript errors
 
 #### Data type evaluation errors
 
->This error occurs when the value in the property of the widget doesn't match the data type required by the property. When working with [Tables](/reference/widgets/table.md) or [Lists](/reference/widgets/list.md), you may encounter this error, as the data property expects an array of objects which might not match the data type of the API response.
+>This error occurs when the value in the property of the widget doesn't match the data type required by the property. When working with [Tables](../../reference/widgets/table.md) or [Lists](../../reference/widgets/list.md), you may encounter this error, as the data property expects an array of objects which might not match the data type of the API response.
 
 <div class='grid' markdown>
 
@@ -452,7 +452,7 @@ For more informtion on what you can print to tye console, see the [Console objec
 
 #### Value type error
 
->The image shows that there is an error in the `Chart Data field` of the [Chart](/reference/widgets/chart.md) widget. The Evaluated Value indicates the current value of the field, and in the image, you can see that the current value is an array while the error indicates that it must be an array.
+>The image shows that there is an error in the `Chart Data field` of the [Chart](../../reference/widgets/chart.md) widget. The Evaluated Value indicates the current value of the field, and in the image, you can see that the current value is an array while the error indicates that it must be an array.
 
 <figure markdown="span">
      ![A JavaScript error in the Chart widget](../src/chart-js-error.png)

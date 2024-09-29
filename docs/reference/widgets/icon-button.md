@@ -23,7 +23,7 @@ Specifies the icon to be displayed on the button. Additionally, you can use **JS
 
 #### onClick
 
-Specifies the [action](/reference/framework/global-functions.md) to be performed when the user clicks on the widget.
+Specifies the [action](../../reference/framework/global-functions.md) to be performed when the user clicks on the widget.
 
 ### General
 

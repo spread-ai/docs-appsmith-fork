@@ -11,7 +11,7 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 ## Synopsis
 
-This page will show you how to edit items in a [List](/reference/widgets/list.md) widget. You will learn how to edit, delete, and duplicate a List item using action buttons within the widget.
+This page will show you how to edit items in a [List](../reference/widgets/list.md) widget. You will learn how to edit, delete, and duplicate a List item using action buttons within the widget.
 
 ## Prerequisite knowledge
 
@@ -60,7 +60,7 @@ Add **Execute a JS function** action to the **onClick** event of the `Update` bu
 
 ### 5.1 Delete list item
 
-To delete a list item using an icon, follow these steps add a query to delete the list item based on the [triggeredItem](/reference/widgets/list.md#triggereditem-object) property.
+To delete a list item using an icon, follow these steps add a query to delete the list item based on the [triggeredItem](../reference/widgets/list.md#triggereditem-object) property.
 
 ```sql
 DELETE FROM product 

@@ -23,7 +23,7 @@ Cross-origin communication between a Studio app and an embedded [iFrame](../refe
 
 The iFrame widget serves as the communication bridge between Studio and the embedded app. To send messages from Studio to your embedded app follow these steps:
 
-1. Use the global function [postWindowMessage](/reference/framework/global-functions.md#post-message) in your [JSObject](../writing-code-in-studio/using-jsobjects.md) or configure a post message action for your widget in the Properties pane. For example, to send a message on the click of a button widget, select the **Post message** action for the **onClick** event, add the message details in the **Message** field, and set the **Target** as the name of the iFrame widget (`iFrame1`). Alternatively, use the `postWindowMessage()` by enabling the JS as shown below:
+1. Use the global function [postWindowMessage](../reference/framework/global-functions.md#postwindowmessage) in your [JSObject](../writing-code-in-studio/using-jsobjects.md) or configure a post message action for your widget in the Properties pane. For example, to send a message on the click of a button widget, select the **Post message** action for the **onClick** event, add the message details in the **Message** field, and set the **Target** as the name of the iFrame widget (`iFrame1`). Alternatively, use the `postWindowMessage()` by enabling the JS as shown below:
 
 ```js
 postWindowMessage("Message content", 'iFrame1', "<Studio_hosted_url>"); // (1)!
@@ -69,7 +69,7 @@ function sendMessage(message) { // (1)!
 ```
 
 1. `message` is the content of the message that you want to send to Studio.
-2. Send the message in postMessage. Replace the `<Studio_hosted_url>` with your Studio domain,
+2. Send the message in `postMessage`. Replace the `<Studio_hosted_url>` with your Studio domain,
 
 Call the `sendMessage()` function whenever you want to send a message. Alternatively, you can directly use `window.parent.postMessage(message, "<Studio_hosted_url>")` in your code.
 
@@ -80,4 +80,4 @@ Call the `sendMessage()` function whenever you want to send a message. Alternati
 ```
 
 1. `iFrame1` is the name of the iFrame widget. Replace it with the name of your iFrame widget.
-You may also choose to execute actions by adding callbacks to the [**onMessageReceived**](/reference/widgets/iframe#onmessagereceived) event, like showing a success or a failure message.
+You may also choose to execute actions by adding callbacks to the [**onMessageReceived**](../reference/widgets/iframe.md#onmessagereceived) event, like showing a success or a failure message.

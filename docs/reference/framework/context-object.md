@@ -17,7 +17,7 @@ The `appsmith` object has the following properties.
 
 ### Store `object`
 
-This object lets you access any app-level data or temporary state that is stored on the user's browser. You can add or update data using the [storeValue()](/reference/framework/global-functions.md#store-value) method. You can access saved data by referencing their keys:
+This object lets you access any app-level data or temporary state that is stored on the user's browser. You can add or update data using the [storeValue()](../../reference/framework/global-functions.md#storevalue) method. You can access saved data by referencing their keys:
 
 ```javascript
 {{ '{{ appsmith.store.KEY_NAME }}' }}
@@ -43,7 +43,7 @@ The host property of the URL is a string that consists of the hostname and the U
   
 #### hostname `string`
 
-The hostname property of the URL is a string that represents the URL's domain. In simpler terms, hostname is the [host](/reference/appsmith-framework/context-object#host) name (without the port number). To access the hostname, you can use the following code snippet:
+The hostname property of the URL is a string that represents the URL's domain. In simpler terms, hostname is the [host](#host-string) name (without the port number). To access the hostname, you can use the following code snippet:
 
 ```js
 {{ '{{appsmith.URL.host}}' }}

@@ -116,11 +116,11 @@ For instance, you can create a Count query to retrieve the total number of recor
 
 ##### onPageChange
 
-Sets the [actions](/reference/framework/global-functions.md) that would be triggered whenever the user navigates to a different page of the table, either by clicking on the pagination buttons.
+Sets the [actions](../../reference/framework/global-functions.md) that would be triggered whenever the user navigates to a different page of the table, either by clicking on the pagination buttons.
 
 ##### onPageSizeChange
 
-Sets the [actions](/reference/framework/global-functions.md) to be executed when the height of the table is changed. This event is typically triggered by developers working on the app and not by end users. It can be useful, for example, to dynamically set a limit in your query based on the new table height.
+Sets the [actions](../../reference/framework/global-functions.md) to be executed when the height of the table is changed. This event is typically triggered by developers working on the app and not by end users. It can be useful, for example, to dynamically set a limit in your query based on the new table height.
 
 #### Search & filters
 
@@ -156,7 +156,7 @@ Enables the selection of multiple rows in a table simultaneously. When enabled, 
 
 ##### onRowSelected
 
-Sets the [action](/reference/framework/global-functions.md) to be executed when the user selects one or more rows in the table.
+Sets the [action](../../reference/framework/global-functions.md) to be executed when the user selects one or more rows in the table.
 
 #### Sorting
 
@@ -166,7 +166,7 @@ Controls whether the columns in the table can be sorted by the user. When enable
 
 ##### onSort
 
-Allows you to specify the [action](/reference/framework/global-functions.md) to be executed when the user sorts the data in the table.
+Allows you to specify the [action](../../reference/framework/global-functions.md) to be executed when the user sorts the data in the table.
 
 #### Adding a row
 
@@ -550,7 +550,7 @@ Table1.setSelectedRowIndex(2)
 
 ##### setSelectedRowIndices (param: [?]): Promise
 
-This method allows you to programmatically select multiple rows in the Table. It is available when the [**Enable multi-row selection**](/reference/widgets/table#enable-multi-row-selection-boolean) property is enabled.
+This method allows you to programmatically select multiple rows in the Table. It is available when the [**Enable multi-row selection**](../../reference/widgets/table#enable-multi-row-selection-boolean) property is enabled.
 
 ```js
 {{ '{{Table1.setSelectedRowIndices([1,2,5,8])}}' }}
@@ -676,13 +676,13 @@ This property allows you to select the type of cell to use in the column. Curren
 | **Icon Button** | The Icon button column type is a clickable button with an icon instead of text. It triggers an `onClick` event and the `triggeredRow` reference property retrieves the data of the corresponding row.|
 | **Image** | The image column type displays an image by interpreting the cell value as an image source `URL` or `base64` data. It shows `Invalid Image` if the data is not valid.|
 | **Menu Button** | The menu button column type is a group of buttons that can be expanded into a menu. Menu items can be added dynamically using the Menu Items Source as Dynamic and the `{{ '{{currentRow}}' }}` referencing inside the Source Data property. However, for configuring the menu items, only the `{{ '{{currentItem}}' }}` and `{{ '{{currentIndex}}' }}` can be used. |
-| **Number** | The number column type is used for numeric data and supports [inline editing](/reference/widgets/table/inline-editing). It can be made editable by enabling the Editable property in the column settings.  |
-| **Plain Text**  | The plain text column type represents data with readable characters and supports [inline editing](/reference/widgets/table/inline-editing). It can be made editable by enabling the Editable property in the column settings.  |
-| **Table Column** | The Table Column column type allows users to toggle a single item on or off, using binary values. It supports [inline editing](/reference/widgets/table/inline-editing) and can be made editable by enabling the Editable property in the column settings. |
+| **Number** | The number column type is used for numeric data and supports [inline editing](../../reference/widgets/table/inline-editing). It can be made editable by enabling the Editable property in the column settings.  |
+| **Plain Text**  | The plain text column type represents data with readable characters and supports [inline editing](../../reference/widgets/table/inline-editing). It can be made editable by enabling the Editable property in the column settings.  |
+| **Table Column** | The Table Column column type allows users to toggle a single item on or off, using binary values. It supports [inline editing](../../reference/widgets/table/inline-editing) and can be made editable by enabling the Editable property in the column settings. |
 | **URL**  | The URL column type interprets the cell value as a hyperlink, allowing users to click on the cell and open the corresponding URL in a new browser tab. It requires including the domain and suffix of the URL, such as `example.com`.  |
 | **Video** | With the video column type, you can display videos within a table. To add a video to a cell, simply provide a source file path or URL from platforms such as YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, or DailyMotion as the cell value. |
-| **Date** | The Date column type allows you to set up custom formatting options for date and time information. You can format and display the date using the Date Format and Display Format properties. It supports [inline editing](/reference/widgets/table/inline-editing).    |
-| **Select** | The Select column type allows users to select an option from a predefined list of choices. The Options property should be an array of objects, with each object containing a  `label`  and a  `value`  property,  `[{ "label": "ABC", "value": "abc"}]` .   The select column type can only be displayed or edited when the [Editable](/reference/widgets/table/inline-editing) property is enabled in the column settings. |
+| **Date** | The Date column type allows you to set up custom formatting options for date and time information. You can format and display the date using the Date Format and Display Format properties. It supports [inline editing](../../reference/widgets/table/inline-editing).    |
+| **Select** | The Select column type allows users to select an option from a predefined list of choices. The Options property should be an array of objects, with each object containing a  `label`  and a  `value`  property,  `[{ "label": "ABC", "value": "abc"}]` .   The select column type can only be displayed or edited when the [Editable](../../reference/widgets/table/inline-editing) property is enabled in the column settings. |
 
 ### Style properties
 

@@ -123,7 +123,7 @@ Controls whether the widget is displayed with a loading animation. When enabled,
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](../../reference/framework/global-functions.md).
 
 #### onChange
 

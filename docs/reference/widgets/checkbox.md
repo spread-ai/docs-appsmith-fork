@@ -68,7 +68,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onCheckChange
 
-This event defines the action that would be executed when the user checks or unchecks a checkbox. It allows you to specify a list of [supported actions](/reference/framework/global-functions.md) that can be triggered in response to the checkbox state change.
+This event defines the action that would be executed when the user checks or unchecks a checkbox. It allows you to specify a list of [supported actions](../../reference/framework/global-functions.md) that can be triggered in response to the checkbox state change.
 
 ## Style properties
 

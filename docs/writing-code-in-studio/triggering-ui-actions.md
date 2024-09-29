@@ -14,14 +14,15 @@ This guide shows you how to initiate and manage UI actions, which allows you to 
 
 ## Execute actions in a specific order
 
-Eevery widget has an event listener that can be configured to perform various actions. To execute actions in a specific order, you can chain them using the action selector. You can create multiple **Events** and **OnSuccess** callbacks to trigger different actions in a series.
+Every widget has an event listener that can be configured to perform various actions. To execute actions in a specific order, you can chain them using the action selector. You can create multiple **Events** and **OnSuccess** callbacks to trigger different actions in a series.
 
-To execute an action: 
+To execute an action:
+
 1. In the event property section, select the **+** icon and select the action you want to execute. For instance, set the Submit Button's **onClick** event to execute a update query.
 2. Set the **onSuccess** callback to perform additional actions upon successful completion of the specified action. For instance, you can use the **onSuccess** callback to execute a fetch query or to close the Modal.
 3. To set up multiple **onSuccess** callbacks, select the **+** icon within the callback configuration, and select the desired actions.
 
-You can only execute two levels of **onSuccess** callbacks from the UI. To add additional callbacks, enable JS and and add your code, such as: 
+You can only execute two levels of **onSuccess** callbacks from the UI. To add additional callbacks, enable JS and and add your code, such as:
 
 ```javadscript title="Example additional code"
 {{ '{{update_query.run().then(() => {
@@ -34,7 +35,7 @@ To learn more about Global Functions, see the [Reference](../reference/framework
 
 ## Execute actions in parallel
 
-To execute actions in parallel, you can add multiple action selectors for a specific event: 
+To execute actions in parallel, you can add multiple action selectors for a specific event:
 
 1. In the event property, select the **+** icon and select the action you want to execute. For instance, set the Submit Button's **onClick** event to execute a status change query.
 2. Create a new **onClick** event by clicking the **+** icon and set it to execute another action. For instance, set it to run a query that logs the status change.
@@ -47,7 +48,8 @@ log_status.run();
 showAlert('Update Success', 'success');}}' }}
 ```
 
-You can create multiple **Events** and **OnSuccess** callbacks to trigger different actions in parallel. 
+You can create multiple **Events** and **OnSuccess** callbacks to trigger different actions in parallel.
+
 ## Execute actions conditionally
 
 This section covers conditional query execution, allowing queries to be executed based on user input or based on the results of previous queries. You can enable *JS* next to the event and add your code.
@@ -68,7 +70,7 @@ In the code, if the selected option is `Categories`, it triggers the `fetchCateg
 
 If you want to execute a action based on the response from another query, you can enable *JS* and add your JavaScript code. Alternatively, you can create a JSObject and define a JavaScript function for the desired logic.
 
-For example, when the user selects `Pending` from the status dropdown, the system triggers a `fetchPendingUsers`'query. Subsequently, it displays an alert based on whether there are pending users or not. 
+For example, when the user selects `Pending` from the status dropdown, the system triggers a `fetchPendingUsers`'query. Subsequently, it displays an alert based on whether there are pending users or not.
 
 ```javascript
 function fetchData() {
@@ -85,6 +87,7 @@ function fetchData() {
   }
 }
 ```
+
 In the event property, enable JS and call the JavaScript function:
 
 ```js
@@ -107,4 +110,4 @@ For example, if specific criteria are not met, you want to disable the Refund bu
 
 This code determines whether to disable the Refund button on the customer dashboard based on conditions related to payment method, delivery status, and refund amount.
 
-For more on how to pass parameters at runtime, see [Using dynamic queries](using-dynamic-queries#passing-parameters-at-runtime-using-run).
+For more on how to pass parameters at runtime, see [Using dynamic queries](using-dynamic-queries.md#passing-parameters-at-runtime-using-run).

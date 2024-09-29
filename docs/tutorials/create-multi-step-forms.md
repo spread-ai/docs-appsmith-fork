@@ -9,14 +9,14 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-This page shows you how to create a multi-step form using the [Tabs](/reference/widgets/tabs.md) widget, which allows you to collect user input over multiple steps.
+This page shows you how to create a multi-step form using the [Tabs](../reference/widgets/tabs.md) widget, which allows you to collect user input over multiple steps.
 
 ## Prerequisite knowledge
 
 - [x] Basic understanding of how to [build Studio applications](../creating-studio-applications.md).
 - [x] Access to a SPREAD Studio environment.
-- [x] Basic knowledge of how the [storeValue()](/reference/framework/global-functions.md#storevalue) function works.
-- [x] A [Tabs](/reference/widgets/tabs.md) widget.
+- [x] Basic knowledge of how the [storeValue()](../reference/framework/global-functions.md#storevalue) function works.
+- [x] A [Tabs](../reference/widgets/tabs.md) widget.
 
 ## Instructions
 
@@ -25,12 +25,12 @@ This page shows you how to create a multi-step form using the [Tabs](/reference/
 For example, if you want to set up a multi-step form with three tabs:
 
 1. Add and rename tabs as required. For example, rename them to `BasicInfo`, `LeadInfo`, and `CompanyInfo`.
-2. Drop a [Form](/reference/widgets/form.md) widget for each tab and add relevant widgets like **Input**, and **Select** inside the form.
-3. To validate user inputs, use properties like **Regex**, **Valid**, and **Required**. The submit Button remains disabled until all widgets meet the defined validation criteria. For more information, see [validation examples](/reference/widgets/input.md#regex-string) for the Input widget.
+2. Drop a [Form](../reference/widgets/form.md) widget for each tab and add relevant widgets like **Input**, and **Select** inside the form.
+3. To validate user inputs, use properties like **Regex**, **Valid**, and **Required**. The submit Button remains disabled until all widgets meet the defined validation criteria. For more information, see [validation examples](../reference/widgets/input.md#regex-string) for the Input widget.
 
 ### 2. Set up navigation
 
-Follow these steps to navigate between Tabs using [storeValue()](/reference/framework/global-functions.md#storevalue) and Button widgets:
+Follow these steps to navigate between Tabs using [storeValue()](../reference/framework/global-functions.md#storevalue) and Button widgets:
 
 1. To navigate to the next Tab, configure the **onClick** event of the Button within each Tab to trigger the **Store value** action and specify a unique key and Tab name.
 

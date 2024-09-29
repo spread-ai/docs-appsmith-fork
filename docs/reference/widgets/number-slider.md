@@ -131,7 +131,7 @@ Maintains the constant visibility of a tooltip containing the current value.
 
 ### Events
 
-When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](/reference/framework/global-functions.md).
+When the event is triggered, these event handlers can execute queries, JavaScript functions, or other [supported actions](../../reference/framework/global-functions.md).
 
 #### onChange
 

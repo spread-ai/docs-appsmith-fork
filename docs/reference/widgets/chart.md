@@ -139,7 +139,7 @@ Determines the scaling behavior of the y-axis.
 
 #### onDataPointClick
 
-Specifies an [action](/reference/framework/global-functions.md) to be performed when a user clicks on a data point in the chart.
+Specifies an [action](../../reference/framework/global-functions.md) to be performed when a user clicks on a data point in the chart.
 
 ## Style properties
 

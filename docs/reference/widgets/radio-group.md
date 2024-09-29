@@ -108,7 +108,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onSelectionChange
 
-This event defines the action that would be executed when the user selects or deselects item in the Radio Group. It allows you to specify a list of [actions](/reference/framework/global-functions.md) that can be triggered in response to the widget state change.
+This event defines the action that would be executed when the user selects or deselects item in the Radio Group. It allows you to specify a list of [actions](../../reference/framework/global-functions.md) that can be triggered in response to the widget state change.
 
 ## Style properties
 

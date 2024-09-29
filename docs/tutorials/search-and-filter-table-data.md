@@ -9,7 +9,7 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-This page shows you how to search and filter data in a [Table](/reference/widgets/table.md) widget based on a search text, date range, or dropdown list option.
+This page shows you how to search and filter data in a [Table](../reference/widgets/table.md) widget based on a search text, date range, or dropdown list option.
 
 ## Prerequisite knowledge
 
@@ -41,7 +41,7 @@ To filter data using the built-in search feature, follow these steps:
 
 To filter data based on a date range, follow these steps:
 
-1. Drag and drop two [Date picker](/reference/widgets/datepicker.md) widgets.
+1. Drag and drop two [Date picker](../reference/widgets/datepicker.md) widgets.
 2. Modify the `fetch_trip_details` query to fetch data using the **selectedDate** reference property of the widgets using the following code where `trip_start_date` and `trip_end_date` are the Date picker widgets:
 
    ```jsx
@@ -49,7 +49,7 @@ To filter data based on a date range, follow these steps:
    ```
 
    Use either the `formattedDate` or `selectedDate` property based on your preferred date formatting.
-3. Set the [onDateSelected](/reference/widgets/datepicker.md#ondateselected) event of the Date picker widgets to execute the query using the following code:
+3. Set the [onDateSelected](../reference/widgets/datepicker.md#ondateselected) event of the Date picker widgets to execute the query using the following code:
 
    ```jsx
    fetch_trip_details.run();
@@ -61,7 +61,7 @@ To filter data based on a date range, follow these steps:
 
 To filter data based on specific criteria using a Select widget, follow these steps:
 
-1. Drag and drop a [Select](/reference/widgets/select.md) widget.
+1. Drag and drop a [Select](../reference/widgets/select.md) widget.
 2. Create a query to populate the Select widget with the values you wish to filter by. For example, to populate all the vehicle numbers in the widget, use the following code:
 
    ```sql
@@ -80,7 +80,7 @@ To filter data based on specific criteria using a Select widget, follow these st
    fetch_trip_details.run();
    ```
 
-5. Set the **Default selected value** of the Select widget to set a default value and load the data corresponding to the default value. For more information, see [Default selected value](/reference/widgets/select.md#default-selected-value-string).
+5. Set the **Default selected value** of the Select widget to set a default value and load the data corresponding to the default value. For more information, see [Default selected value](../reference/widgets/select.md#default-selected-value-string).
 
 ### 4. Sort data
 

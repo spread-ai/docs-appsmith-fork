@@ -130,7 +130,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onTextChanged
 
-Enables you to specify [supported actions](/reference/framework/global-functions.md) that would be triggered whenever the user modifies the text input.
+Enables you to specify [supported actions](../../reference/framework/global-functions.md) that would be triggered whenever the user modifies the text input.
 
 ## Style properties
 

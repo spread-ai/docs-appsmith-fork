@@ -71,7 +71,7 @@ Sets a tooltip that appears when the user hovers over the widget. It enables you
 
 ### Events
 
-When an event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](/reference/framework/global-functions.md).
+When an event is triggered, these event handlers can execute queries, JavaScript code, or other supported [actions](../../reference/framework/global-functions.md).
 
 #### onCodeDetected
 

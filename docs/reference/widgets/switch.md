@@ -74,7 +74,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onChange
 
-Allows you to define a set of [actions](/reference/framework/global-functions.md) that would be executed in response to the switch state change.
+Allows you to define a set of [actions](../../reference/framework/global-functions.md) that would be executed in response to the switch state change.
 
 ## Style properties
 

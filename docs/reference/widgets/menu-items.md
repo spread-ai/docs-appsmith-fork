@@ -23,7 +23,7 @@ The Label property is used to set the text label for a menu item. It can be a st
 
 #### onClick
 
-Allows you to configure one or multiple [actions](/reference/framework/global-functions.md) to be executed when the menu item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
+Allows you to configure one or multiple [actions](../../reference/framework/global-functions.md) to be executed when the menu item is clicked. You can chain multiple actions together, and all the nested actions would run simultaneously.
 
 #### Visible `boolean`
 

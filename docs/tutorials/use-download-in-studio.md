@@ -11,7 +11,7 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 ## Synopsis
 
-The [download](/reference/framework/global-functions.md#download) function is a versatile tool within Studio applications that allows users to download data in different formats directly to their local devices. It integrates seamlessly with the `downloadjs` library to facilitate the downloading process, providing flexibility in exporting various data formats, such as text, CSV, JSON, images, and more.
+The [download](../reference/framework/global-functions.md#download) function is a versatile tool within Studio applications that allows users to download data in different formats directly to their local devices. It integrates seamlessly with the `downloadjs` library to facilitate the downloading process, providing flexibility in exporting various data formats, such as text, CSV, JSON, images, and more.
 
 The `download()` function is a powerful and flexible tool that allows users to export and download various types of data. Whether you are exporting JSON data as CSV or downloading images and PDFs, this function provides a seamless method for managing file downloads in Studio applications. With support for multiple formats and customizable file names, it’s an essential function for delivering data to users in a flexible way.
 

@@ -46,7 +46,7 @@ For example, to display the user's name, add the following code in the **Default
 
 ### 5. Validate data
 
-To validate user inputs, use properties like **Regex**, **Valid**, and **Required**. The submit button remains disabled until all widgets meet the defined validation criteria. For more, see [validation examples](/reference/widgets/input.md#regex-string) for the Input widget.
+To validate user inputs, use properties like **Regex**, **Valid**, and **Required**. The submit button remains disabled until all widgets meet the defined validation criteria. For more, see [validation examples](../reference/widgets/input.md#regex-string) for the Input widget.
 
 ### 6. Create an update query
 
@@ -79,4 +79,4 @@ Set the Submit Button's **onSuccess** callback to trigger the fetch query, which
 
 ### 9. Create a new **onSuccess** callback to show the success alert
 
-To update data directly from the Table, see the [Table](/reference/widgets/table.md##table-inline-editing) widget reference.
+To update data directly from the Table, see the [Table](../reference/widgets/table.md##table-inline-editing) widget reference.

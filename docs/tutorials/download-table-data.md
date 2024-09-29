@@ -40,7 +40,7 @@ GET https://mock-api.docs.spread.ai/users?limit={{ '{{this.params.limit}}' }}&of
 3. Create a new [JSObject](../writing-code-in-studio/using-jsobjects.md) and add a function to fetch the data in chunks to handle large datasets efficiently. For example:
 
 * Create a function that retrieves user data in batches of 100 rows from a database, continuously appending each batch to a `usersData` array until the entire dataset is retrieved.
-* Use the [download()](/reference/framework/global-functions.md#download) function to download the data to your local machine.
+* Use the [download()](../reference/framework/global-functions.md#download) function to download the data to your local machine.
 * Upon successfully fetching and downloading all data, it resets the `usersData` array to clear the data.
 
 ```js

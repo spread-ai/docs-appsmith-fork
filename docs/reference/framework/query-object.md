@@ -62,7 +62,7 @@ The `run()` function is an asynchronous function that returns a promise and thus
 ```
 
 1. Run after the query is successful.
-2. Run when the query is succesful.
+2. Run when the query is successful.
 
 In certain scenarios, such as when running a query inside a loop, it may be necessary to pass parameters to the query with values that are contextual to the execution.
 

@@ -9,7 +9,7 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-Studio provides the [navigateTo](/reference/framework/global-functions.md#navigateTo) function that lets you navigate between pages within your app. This guide shows you how to implement page navigation.
+Studio provides the [navigateTo](../reference/framework/global-functions.md#navigateTo) function that lets you navigate between pages within your app. This guide shows you how to implement page navigation.
 
 ## Prerequisite knowledge
 
@@ -18,7 +18,7 @@ Studio provides the [navigateTo](/reference/framework/global-functions.md#naviga
 
 ## Instructions
 
-You can use a [Text](/reference/widgets/text.md) widget or an [Icon Button](/reference/widgets/icon-button.md) to navigate between pages.
+You can use a [Text](../reference/widgets/text.md) widget or an [Icon Button](../reference/widgets/icon-button.md) to navigate between pages.
 
 ### 1. Add the widget
 
