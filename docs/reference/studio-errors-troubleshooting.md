@@ -625,3 +625,223 @@ In the example below, fetch isn't defined anywhere in the application
      6. Save the changes and test the app again to ensure the infinite loop issue has been resolved.
 
 </div>
+
+---
+
+## Query Errors
+
+Query errors occur when querying data sources. To troubleshoot these erors:
+
+* Remove any mustache bindings temporarily and use hard-coded parameters to test the basic query.
+* If the query fails to run, analyze the SQL or command errors, and adjust your query accordingly.
+* In Studio, inspect the evaluated value of the query to ensure that mustache parameters are being interpreted correctly.
+* Hover over parameters within your query to confirm they are present and formatted as expected.
+
+### Common query errors
+
+#### Timeout error
+
+>If your API or database Query times out, it could be due to one of the following reasons: the API or database is behind a Virtual Private Cloud (VPC) which is not accessible from Studio. This can be fixed by whitelisting Studio in your database or VPC, or your query is taking too long to respond. This can be fixed by fetching smaller data sets.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="Timed out on query execution"></Message>
+     ```
+
+!!! success "Solution"
+
+     You could resolve the error response by doing one of the following:
+
+     - Server-side pagination: Allows you to manage and display large datasets within your application. It involves fetching and displaying only a portion of data from the server at a time, enhancing performance.
+     - Timeout Configuration: The Studio server has a default internal timeout of 60 seconds. If your queries take longer than this, you can set a value greater than 60 seconds. You can set the `APPSMITH_SERVER_TIMEOUT` environment variable to a value greater than 60 seconds. For example, if you want a timeout of 80 seconds, use: `APPSMITH_SERVER_TIMEOUT=80`.
+
+</div>
+
+#### Base64 encoding error
+
+>This error message indicates that the query was expecting a base64 encoded value as content body, but the actual value passed to it was not base64 encoded.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```
+     File content is not base64 encoded
+     ```
+
+!!! success "Solution"
+
+     You could resolve this error  by setting the data format property of the filepicker to base64.
+
+</div>
+
+#### Execution failed with status 5009
+
+>The error response could be caused by API or query response sizes that exceed the allowed maximum limit of 5mb.
+
+<div class='grid' markdown>
+
+!!! failure "Error"
+
+     ```html
+     <Message messageContainerClassName="error"
+     messageContent="<QUERY_OR_API_NAME> action returned an error response. Response size exceeded the maximum supported size of <SIZE_SPECIFIED_IN_FILE> MB. Please use LIMIT to reduce the amount of data fetched."></Message>
+     ```
+
+!!! success "Solution"
+
+     You could resolve the error response by doing one of the following:
+
+     * Limit the data returned as part of query response by using limit in the query or enabling [pagination for table](/tutorials/server-side-pagination-in-table.md).
+     * Limit the data for an API by adding server-side pagination.
+     * Update the maximum allowed limit by changing the environment variable for size. For example, to modify the limit for docker-based installation, navigate to the `docker.env` file and modify the `APPSMITH_PLUGIN_MAX_RESPONSE_SIZE_MB` environment variable to the desired response size.
+
+     ```bash
+     APPSMITH_PLUGIN_MAX_RESPONSE_SIZE_MB=10
+     ```
+
+</div>
+
+---
+
+## Widget errors
+
+This section helps you troubleshoot common widget errors on the Appsmith platform.
+
+### Validation errors
+
+* Ensure that any data bound to widgets is in the format expected by the property. For example, a Table widget expects an array of objects.
+* You may need to transform or access nested arrays differently if they do not match the expected input.
+
+**Example:** a Table widget is bound to the result of an API that returns a JSON object instead of an array of objects, which the Table widget expects for its data source.
+
+**Solution:** Transform the JSON object into an array of objects using JavaScript within the query or within a JS Object. You can use the `.map()` function to achieve the desired transformation if the data contains an array nested within the object.
+
+## Binding errors
+
+You may see below errors when binding data to widgets from an API, Query, or [JS object](/core-concepts/writing-code/javascript-editor-beta/).
+
+### Troubleshoot mustache bindings
+
+* Verify the syntax of your mustache bindings. Incorrect bindings can lead to errors when the query attempts to execute.
+* If the binding syntax is correct, check whether the widgets referenced in the bindings are configured correctly on the page.
+
+### Sync field error
+
+You may see this error when executing an API, Query, JS Object in a widget property that expects data, and can't be used to trigger an action.
+
+![Error action can't be triggered](/img/Troubleshooting-Widget-errors-action-cannot-be-triggered.png)
+
+#### Error message
+
+<Message
+messageContainerClassName="error"
+messageContent="Found a reference to {{ '{{ '{{ '{{action}}' }} during evaluation. Sync fields cannot execute async framework actions. Please remove any direct/indirect references to {{ '{{ '{{ '{{action}}' }} and try again."></Message>
+
+<p align="center">Or </p>
+
+<Message
+messageContainerClassName="error"
+messageContent="Found a Promise() during evaluation. Sync fields cannot execute asynchronous code."></Message>
+
+#### Cause
+
+Action refers to the execution of an API, Query, or JS object. You can only perform an action by binding it to an async field. When you bind an action to a sync field that only expects data, it throws an error.
+
+Example: if you are executing a `storeValue()` function in a `TableData` property of a table. The `TableData` property expects data and can't execute a function, and results in an error. Similarly, if you try to execute a JS Object function `<JSOBJECT_NAME.FUNCTION_NAME>` in the `TableData` property, it throws an error.
+
+#### Solution
+
+Invoke the data property of an API, Query or JS object.
+
+For example, you have a JS Object `getLoggedInUserInfo`, which has a function ```getFullNameOfLoggedInUser```. The function returns the full name of the logged-in user. You wish to add the full name and create a welcome text, `Welcome! <LOGGED_IN_USER_NAME>`. Bind the response of ```getFullNameOfLoggedInUser``` function to a text widget by calling the `.data` property. To bind the response, add the below code snippet in a mustache (`{{ '{{ '{{ '{{}}' }}`) sign.
+
+```
+ getLoggedInUserInfo.getFullNameOfLoggedInUser.data
+```
+
+## JSON form errors
+
+You may see the below errors when working with a [JSON Form](../../reference/widgets/json-form)widget.
+
+### Source data exceeds 50 fields
+
+You may see an error message when you try to bind a large query/API response to the [source data](../../reference/widgets/json-form#source-data)property of the JSON Form widget.
+
+#### Error message
+
+<Message
+messageContainerClassName="error"
+messageContent="Source data exceeds 50 fields. Please update the source data."></Message>
+
+#### Cause
+
+The problem can be caused when you are trying to bind:
+
+* A large array of multiple JSON objects
+* A huge JSON object which has a lot of fields
+* The whole query data rather than a selected row or triggered row in a table
+
+![When the data had more than 50 fields](</img/Troubleshooting__Widget_Errors__JSON_Form_Errors__Source_Exceeds_50_Fields.png>)
+
+#### Solution
+
+To determine if the problem is caused due to:
+
+* **A large array or a huge JSON object** - You can re-look at the data and evaluate the need to display all the data on UI, as it would be painful for your users to navigate more than 50 fields.
+* **The whole query response that you bound to the source data** - You recheck the source data field you are trying to bind and select either the selected row / triggered row to bind.
+
+Once you have figured out the new structure for the data, head to the [source data](../../reference/widgets/json-form#source-data) field to make changes.
+
+If you still need help debugging an error, please raise a request on [Discord Server](https://discord.com/invite/rBTTVJp) or email <support@docs.spread.ai>.
+
+## Default value is missing in options
+
+You may encounter an error message "Default value is missing in options. Please update the value." while using the Select widget.
+
+#### Error message
+
+<Message
+messageContainerClassName="error"
+messageContent="Default value is missing in options. Please update the value."></Message>
+
+#### Cause
+
+This error occurs when the Default Selected Value doesn't match any of the values specified in the options property of the widget.
+
+#### Solution
+
+To fix this error, either change the value in the options property to match the selected value, or change the selected value to match an option listed in the options property. This ensures that the value selected is valid and prevents the error from appearing.
+
+## Duplicate values found
+
+You may encounter an error message "Duplicate values found for the following properties" while using the Select widget.
+
+#### Error message
+
+<Message
+messageContainerClassName="error"
+messageContent="Duplicate values found for the following properties, in the array entries, that must be unique -- value."></Message>
+
+#### Cause
+
+This error occurs when there are duplicate values in the options property of the Select widget. For example,
+
+```js
+ {
+    "label": "Blue",
+    "value": "BLUE"
+  },
+  {
+    "label": "Green",
+    "value": "BLUE"
+  },
+```
+
+#### Solution
+
+To resolve this error, ensure that each value in the options property of the Select widget is unique. You can do this by checking the values and making sure that there are no duplicates.
