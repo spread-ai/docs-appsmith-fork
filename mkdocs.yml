@@ -28,7 +28,7 @@ nav:
             - Search and filter table data: tutorials/search-and-filter-table-data.md
             - Sending messages between application and iFrame: tutorials/communication-between-app-iframe.md
             - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
-            - Server-side pagination in a List: tutorials/server-side-pagination-in-list.md
+            - Server-side pagination in a Table: tutorials/server-side-pagination-in-table.md
             - Share variables between applications: tutorials/share-variables-between-applications.md
             - Submit Form data: tutorials/submit-form-data.md
             - Update list data: tutorials/update-list-data.md
@@ -43,7 +43,7 @@ nav:
             Framework:
                  - Console object: reference/framework/console-object.md
                  - Context object: reference/framework/context-object.md
-                 - Global functions: reference/framework/cglobal-functions.md
+                 - Global functions: reference/framework/global-functions.md
                  - Query object: reference/framework/query-object.md
             Widgets:
                  - SPREAD widgets: reference/widgets/spread-widgets.md
