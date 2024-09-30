@@ -49,7 +49,7 @@ To resolve these conflicts:
 3. After resolving all conflicts in all files and ensuring that the changes are correctly edited, select on **Commit merge**, and Merge the pull request.
 4. Update your Studio app by pulling the changes.
 
-!! info "Resolving merge conflicts with different remote providers"
+!!! info "Resolving merge conflicts with different remote providers"
 
      For more information, see how to resolve a merge conflict on [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github), [GitLab](https://docs.gitlab.com/ee/user/project/merge_requests/conflicts.html#methods-of-resolving-conflicts), [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/resolve-merge-conflicts/).
 

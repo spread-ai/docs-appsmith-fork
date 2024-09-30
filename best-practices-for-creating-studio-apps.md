@@ -29,7 +29,7 @@ The code window in SPREAD Studio is not suitable for writing extensive code, as 
 
 Use containers where you have widget groups that function together. This allows you to control properties, like visibility, at the container level and not in individual widgets. Much like <div\> container tags, these containers give you more broad controls and help sort a busy screens into logical segments.
 
-For more on the Container widget settings, see the [Container](/reference/widgets/container.md) reference page.
+For more on the Container widget settings, see the [Container](reference/widgets/container.md) reference page.
 
 !!! info "Padding around containers"
 

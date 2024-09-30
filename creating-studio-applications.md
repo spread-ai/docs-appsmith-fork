@@ -9,7 +9,7 @@ README
 For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/contributor/guide.html. Contact Documentation when this document is ready for review.
 -->
 
-Studio allows you to visualize, manage, and interact with the product knowledge imported into the SPREAD platform. With Studio you can supplement the Core Applications from SPREAD, such as [Connectivity Analyzer](/applications/using-connectivity-analyzer/connectivity-analyzer-overview.md) and [Circuit Diagram Creator](/applications/using-circuit-diagram-creator/circuit-diagram-creator-overview.md), with custom applications to suit your needs. The Studio canvas offers a low-code visual environment to create application screens and can be integrated with [Flows](/platform-tools/using-flows/using-flows-overview.md) to further refine and transform the data you use in the application.
+Studio allows you to visualize, manage, and interact with the product knowledge imported into the SPREAD platform. With Studio you can supplement the Core Applications from SPREAD, such as [Connectivity Analyzer](../../applications/using-connectivity-analyzer/connectivity-analyzer-overview.md) and [Circuit Diagram Creator](../../applications/using-circuit-diagram-creator/circuit-diagram-creator-overview.md), with custom applications to suit your needs. The Studio canvas offers a low-code visual environment to create application screens and can be integrated with [Flows](../using-flows/using-flows-overview.md) to further refine and transform the data you use in the application.
 
 ## Organizing workspaces
 
@@ -84,7 +84,7 @@ To set data sources select **Data** in the left-hand side panel. This opens a se
 
 In the **Editor** view (from the options in the left-hand side panel) you can drag and drop widgets from the **Widgets** tab to start building your user interface. Widgets are resizable and can be moved around the canvas. Each widget opens a property window in right-hand side of the screen, where you to set details for that widget and style it individually.
 
-For example, the [DatePicker](/reference/widgets/datepicker.md) widget has options for setting the date format, the default date, the label position and text, and other settings associated with dates. The **Style** tab is where you can set font, color, and border options. You can delete or copy a widget by selecting the icons at the top of the properties window.
+For example, the [DatePicker](reference/widgets/datepicker.md) widget has options for setting the date format, the default date, the label position and text, and other settings associated with dates. The **Style** tab is where you can set font, color, and border options. You can delete or copy a widget by selecting the icons at the top of the properties window.
 
 Certain widgets allow you to use variables for their settings. In Studio, variables are enclosed by double curly braces. For example: `{{ '{{ app1.myVariable }}' }}`.
 
@@ -99,7 +99,7 @@ The logic of your application determines what happens when the user enters data,
 	<figcaption>The contextual menu for the onClick event in SPREAD Studio</figcaption>
 </figure>
 
-JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [Global object](/reference/framework/context-object.md), and Global Functions, such as [storeValue](/reference/framework/global-functions.md#storevalue), are available to use in your code.
+JavaScript code is enclosed with double curly braces. For example: `{{ '{{ SelectWidgetName.selectedOptionValue === "1" ? "Option 1" : "Option 2" }}' }}`. Global objects, such as the [Global object](reference/framework/context-object.md), and Global Functions, such as [storeValue](reference/framework/global-functions.md#storevalue), are available to use in your code.
 
 For complex implementations, you can install additional JavaScript libraries by selecting the Box icon in the bottom-left corner. The default libraries are [lodash.js](https://lodash.com/) for modularity and performance, [moment.js](https://momentjs.com/) for date and time handling, and [forge.js](https://github.com/digitalbazaar/forge) for managing cryptographic tools.
 
