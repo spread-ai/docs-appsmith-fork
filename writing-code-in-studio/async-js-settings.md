@@ -15,7 +15,7 @@ The asynchronous function allows you to choose when you want to execute code. Fo
 
 In the Studio environment, a function is termed as **async** if you are performing one of the below actions:
 
-* You have an `asyn` keyword that marks the asynchronous execution of the function.
+* You have an `async` keyword that marks the asynchronous execution of the function.
 
 ```js
 export default{
