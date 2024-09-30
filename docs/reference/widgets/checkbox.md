@@ -68,7 +68,7 @@ This property determines how the widget's height adjusts to changes in its conte
 
 #### onCheckChange
 
-This event defines the action that would be executed when the user checks or unchecks a checkbox. It allows you to specify a list of [supported actions](../../reference/framework/global-functions.md) that can be triggered in response to the checkbox state change.
+This event defines the action that would be executed when the user checks or un-checks a checkbox. It allows you to specify a list of [supported actions](../../reference/framework/global-functions.md) that can be triggered in response to the checkbox state change.
 
 ## Style properties
 
@@ -114,7 +114,7 @@ The `isVisible` property reflects the state of the widget's **Visible** setting.
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Studio.
+These methods are asynchronous and return a [Promise](../../writing-code-in-studio/using-js-promises.md). You can use the `.then()` block to ensure execution and sequencing of subsequent lines of code in Studio.
 
 #### setVisibility (param: boolean): Promise
 

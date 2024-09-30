@@ -317,7 +317,7 @@ Studio allows you to manage changes in your applications using git. The errors b
 While writing JavaScript in Studio, you may encounter the following errors in your code:
 
 * **Reference errors:** These occur when the code references an entity or variable that is not defined on the page. Review your bindings and the names of the entities to correct these errors.
-* **Lint errors:** Review the syntax of the mustache bindings for any syntax errors that could be causing issues. JavaScript written inside mustache bindings can only be single line code. Use [JSObjects](/writing-code-in-studio/using-jsobjects.md) for multi-line functions.
+* **Lint errors:** Review the syntax of the mustache bindings for any syntax errors that could be causing issues. JavaScript written inside mustache bindings can only be single line code. Use [JSObjects](../writing-code-in-studio/using-jsobjects.md) for multi-line functions.
 * **Type errors:** Check your JavaScript operations to ensure you are not performing unsupported operations on certain data types.
 
 ### Debugging techniques
@@ -358,7 +358,7 @@ export default {
 
 1. This will log the string "user information: " followed by the value of the `userInfo` variable to the console.
 
-For more informtion on what you can print to tye console, see the [Console object](../../reference/framework/console-object.md) page.
+For more information on what you can print to the console, see the [Console object](framework/console-object.md) page.
 
 ### Common JavaScript errors
 
@@ -452,7 +452,7 @@ For more informtion on what you can print to tye console, see the [Console objec
 
 #### Value type error
 
->The image shows that there is an error in the `Chart Data field` of the [Chart](../../reference/widgets/chart.md) widget. The Evaluated Value indicates the current value of the field, and in the image, you can see that the current value is an array while the error indicates that it must be an array.
+>The image shows that there is an error in the `Chart Data field` of the [Chart](widgets/chart.md) widget. The Evaluated Value indicates the current value of the field, and in the image, you can see that the current value is an array while the error indicates that it must be an array.
 
 <figure markdown="span">
      ![A JavaScript error in the Chart widget](../src/chart-js-error.png)
@@ -564,7 +564,7 @@ For more informtion on what you can print to tye console, see the [Console objec
 
 </div>
 
-#### Nuemric value error
+#### Numeric value error
 
 >You may come across an error where the data property is expecting a numeric value that doesn't match the data type of the API response.
 
@@ -587,11 +587,7 @@ For more informtion on what you can print to tye console, see the [Console objec
 
 #### Syntax error
 
-This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line](../../core-concepts/writing-code/#multi-line-javascript)code.
-
-In the example below, fetch isn't defined anywhere in the application
-
-![](/img/syntax_error.png)
+This error occurs when there is invalid JavaScript inside the handlebars `{{ '{{ }}' }}`. The evaluated value of the field is displayed as undefined in this case. Verify the number of braces in your code and consider re-writing your [JS as multi-line](../writing-code-in-studio/using-jsobjects.md)code.
 
 #### Cyclic dependency error
 
@@ -630,7 +626,7 @@ In the example below, fetch isn't defined anywhere in the application
 
 ## Query Errors
 
-Query errors occur when querying data sources. To troubleshoot these erors:
+Query errors occur when querying data sources. To troubleshoot these errors:
 
 * Remove any mustache bindings temporarily and use hard-coded parameters to test the basic query.
 * If the query fails to run, analyze the SQL or command errors, and adjust your query accordingly.
@@ -710,13 +706,13 @@ Query errors occur when querying data sources. To troubleshoot these erors:
 
 ## Widget errors
 
-This section helps you troubleshoot common widget errors in Studio. To troubleshoot widget errors, first ensure that any data bound to the widget is in the format expected by the property.Most errors stem from this.
+This section helps you troubleshoot common widget errors in Studio. To troubleshoot widget errors, first ensure that any data bound to the widget is in the format expected by the property. Most errors stem from this.
 
 ### Common widget errors
 
 #### Validation error
 
->The error indicates that the ected by the widget is not in the expected format.
+>The error indicates that the data expected by the widget is not in the expected format.
 
 <div class='grid' markdown>
 

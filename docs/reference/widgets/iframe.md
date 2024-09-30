@@ -195,7 +195,7 @@ The `messageMetadata` property contains metadata related to the message received
 
 Widget property setters enable you to modify the values of widget properties at runtime, eliminating the need to manually update properties in the editor.
 
-These methods are asynchronous and return a [Promise](/writing-code-in-studio/using-js-promises.md). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Studio.
+These methods are asynchronous and return a [Promise](../../writing-code-in-studio/using-js-promises.md). You can use the .then() block to ensure execution and sequencing of subsequent lines of code in Studio.
 
 #### setVisibility (param: boolean): Promise
 

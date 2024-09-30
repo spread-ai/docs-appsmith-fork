@@ -12,6 +12,7 @@ nav:
             - Using JavaScript Promises: writing-code-in-studio/using-js-promises.md
             - Using JSObjects: writing-code-in-studio/using-jsobjects.md
             - Using external libraries: writing-code-in-studio/using-external-js-libraries.md
+            - Asynchronous JavaScript settings: writing-code-in-studio/async-js-settings.md
      - Tutorials:
             - Connect and query datasources: tutorials/connect-query-datasource.md
             - Create multi-step forms: tutorials/create-multi-step-forms.md

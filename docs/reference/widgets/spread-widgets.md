@@ -15,7 +15,7 @@ This reference documents SPREAD widgets that are built into Studio. In the refer
 * **Event** properties denote the events that you can attach actions and logic to.
 * **Style** properties denote the styling that you can set for the widget.
 * **Reference** properties return the values of a widget property.
-* **Methods** modify the values of widget properties at runtime using JavaScript [promises](/writing-code-in-studio/using-js-promises.md).
+* **Methods** modify the values of widget properties at runtime using JavaScript [promises](../../writing-code-in-studio/using-js-promises.md).
 
 ### Badge
 
