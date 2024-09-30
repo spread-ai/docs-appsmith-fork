@@ -35,9 +35,9 @@ nav:
             - Use the download function in Studio: tutorials/use-download-in-studio.md
             - Using Flows in Studio: tutorials/use-flows-in-studio.md
             - Work with data in the UI: tutorials/work-with-data-in-ui.md
-     - Reference:
-            Querying GraphQL: reference/querying-graphql.md
-            Querying REST APIs: reference/querying-rest-api.md
+     # - Reference:
+     #        Querying GraphQL: reference/querying-graphql.md
+     #        Querying REST APIs: reference/querying-rest-api.md
             # Troubleshooting Studio errors: reference/studio-errors-troubleshooting.md
             # Telemetry: reference/telemetry.md
             # Framework:
