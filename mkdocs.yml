@@ -35,64 +35,64 @@ nav:
             - Use the download function in Studio: tutorials/use-download-in-studio.md
             - Using Flows in Studio: tutorials/use-flows-in-studio.md
             - Work with data in the UI: tutorials/work-with-data-in-ui.md
-     - Reference:
-            Querying GraphQL: reference/querying-graphql.md
-            Querying REST APIs: reference/querying-rest-api.md
-            Troubleshooting Studio errors: reference/studio-errors-troubleshooting.md
-            Telemetry: reference/telemetry.md
-            Framework:
-                 - Console object: reference/framework/console-object.md
-                 - Context object: reference/framework/context-object.md
-                 - Global functions: reference/framework/global-functions.md
-                 - Query object: reference/framework/query-object.md
-            Widgets:
-                 - SPREAD widgets: reference/widgets/spread-widgets.md
-                 - Audio: reference/widgets/audio.md
-                 - Audio Recorder: reference/widgets/audio-recorder.md
-                 - Button: reference/widgets/button.md
-                 - Button Group: reference/widgets/button-group.md
-                 - Buttons for Button Group: reference/widgets/buttons.md
-                 - Camera: reference/widgets/camera.md
-                 - Category Slider: reference/widgets/category-slider.md
-                 - Chart: reference/widgets/chart.md
-                 - Checkbox Group: reference/widgets/checkbox-group.md
-                 - Checkbox: reference/widgets/checkbox.md
-                 - Code Scanner: reference/widgets/code-scanner.md
-                 - Container: reference/widgets/container.md
-                 - Currency Input: reference/widgets/currency-input.md
-                 - Custom: reference/widgets/custom.md
-                 - Date Picker: reference/widgets/datepicker.md
-                 - Divider: reference/widgets/divider.md
-                 - Document Viewer: reference/widgets/document-viewer.md
-                 - File Picker: reference/widgets/filepicker.md
-                 - Form: reference/widgets/form.md
-                 - Google Recaptcha: reference/widgets/google-recaptcha.md
-                 - Icon Button: reference/widgets/icon-button.md
-                 - iFrame: reference/widgets/iframe.md
-                 - Image: reference/widgets/image.md
-                 - Input: reference/widgets/input.md
-                 - JSON Form: reference/widgets/json-form.md
-                 - List: reference/widgets/list.md
-                 - Map Chart: reference/widgets/map-chart.md
-                 - Maps: reference/widgets/maps.md
-                 - Menu: reference/widgets/menu.md
-                 - Menu Items: reference/widgets/menu-items.md
-                 - Modal: reference/widgets/modal.md
-                 - Multitree Select: reference/widgets/multi-tree-select.md
-                 - Multiselect: reference/widgets/multiselect.md
-                 - Number Slider: reference/widgets/number-slider.md
-                 - Phone Input: reference/widgets/phone-input.md
-                 - Progress: reference/widgets/progress.md
-                 - Radio Group: reference/widgets/radio-group.md
-                 - Range Slider: reference/widgets/range-slider.md
-                 - Rating: reference/widgets/rating.md
-                 - Rich Text Editor: reference/widgets/rich-text-editor.md
-                 - Select: reference/widgets/select.md
-                 - Stat Box: reference/widgets/stat-box.md
-                 - Switch Group: reference/widgets/switch-group.md
-                 - Switch: reference/widgets/switch.md
-                 - Table: reference/widgets/table.md
-                 - Tabs: reference/widgets/tabs.md
-                 - Text: reference/widgets/text.md
-                 - Tree Select: reference/widgets/tree-select.md
-                 - Video: reference/widgets/video.md
+     # - Reference:
+     #        Querying GraphQL: reference/querying-graphql.md
+     #        Querying REST APIs: reference/querying-rest-api.md
+     #        Troubleshooting Studio errors: reference/studio-errors-troubleshooting.md
+     #        Telemetry: reference/telemetry.md
+     #        Framework:
+     #             - Console object: reference/framework/console-object.md
+     #             - Context object: reference/framework/context-object.md
+     #             - Global functions: reference/framework/global-functions.md
+     #             - Query object: reference/framework/query-object.md
+     #        Widgets:
+     #             - SPREAD widgets: reference/widgets/spread-widgets.md
+     #             - Audio: reference/widgets/audio.md
+     #             - Audio Recorder: reference/widgets/audio-recorder.md
+     #             - Button: reference/widgets/button.md
+     #             - Button Group: reference/widgets/button-group.md
+     #             - Buttons for Button Group: reference/widgets/buttons.md
+     #             - Camera: reference/widgets/camera.md
+     #             - Category Slider: reference/widgets/category-slider.md
+     #             - Chart: reference/widgets/chart.md
+     #             - Checkbox Group: reference/widgets/checkbox-group.md
+     #             - Checkbox: reference/widgets/checkbox.md
+     #             - Code Scanner: reference/widgets/code-scanner.md
+     #             - Container: reference/widgets/container.md
+     #             - Currency Input: reference/widgets/currency-input.md
+     #             - Custom: reference/widgets/custom.md
+     #             - Date Picker: reference/widgets/datepicker.md
+     #             - Divider: reference/widgets/divider.md
+     #             - Document Viewer: reference/widgets/document-viewer.md
+     #             - File Picker: reference/widgets/filepicker.md
+     #             - Form: reference/widgets/form.md
+     #             - Google Recaptcha: reference/widgets/google-recaptcha.md
+     #             - Icon Button: reference/widgets/icon-button.md
+     #             - iFrame: reference/widgets/iframe.md
+     #             - Image: reference/widgets/image.md
+     #             - Input: reference/widgets/input.md
+     #             - JSON Form: reference/widgets/json-form.md
+     #             - List: reference/widgets/list.md
+     #             - Map Chart: reference/widgets/map-chart.md
+     #             - Maps: reference/widgets/maps.md
+     #             - Menu: reference/widgets/menu.md
+     #             - Menu Items: reference/widgets/menu-items.md
+     #             - Modal: reference/widgets/modal.md
+     #             - Multitree Select: reference/widgets/multi-tree-select.md
+     #             - Multiselect: reference/widgets/multiselect.md
+     #             - Number Slider: reference/widgets/number-slider.md
+     #             - Phone Input: reference/widgets/phone-input.md
+     #             - Progress: reference/widgets/progress.md
+     #             - Radio Group: reference/widgets/radio-group.md
+     #             - Range Slider: reference/widgets/range-slider.md
+     #             - Rating: reference/widgets/rating.md
+     #             - Rich Text Editor: reference/widgets/rich-text-editor.md
+     #             - Select: reference/widgets/select.md
+     #             - Stat Box: reference/widgets/stat-box.md
+     #             - Switch Group: reference/widgets/switch-group.md
+     #             - Switch: reference/widgets/switch.md
+     #             - Table: reference/widgets/table.md
+     #             - Tabs: reference/widgets/tabs.md
+     #             - Text: reference/widgets/text.md
+     #             - Tree Select: reference/widgets/tree-select.md
+     #             - Video: reference/widgets/video.md
