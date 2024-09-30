@@ -93,11 +93,11 @@ To sort data in the Table widget, follow these steps:
    SELECT * FROM 
           trip_details 
    ORDER BY 
-          "{{ '{{trip_details_table.sortOrder.column || 'id'}}' }}" {{ '{{trip_details_table.sortOrder.order !== "desc" ? "" : "DESC"}}' }}
+          {{ "{{trip_details_table.sortOrder.column || 'id'}}" }} {{ "{{trip_details_table.sortOrder.order !== 'desc' ? '' : 'DESC'}}" }}
    LIMIT
-          {{ '{{trip_details_table.pageSize}}' }}
+          {{ "{{trip_details_table.pageSize}}" }}
    OFFSET 
-          {{ '{{trip_details_table.pageOffset}}' }}
+          {{ "{{trip_details_table.pageOffset}}" }}
    ```
 
 3. In the property pane of the Table widget, enable **Column sorting**.

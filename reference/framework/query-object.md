@@ -19,8 +19,8 @@ The query object has the following properties that you can use to reference the 
 
 `data` is a read-only property that has the response body from the last successful execution of this query.
 
-```
-{{Query1.data}}
+```js
+{{ "{{Query1.data}}" }}
 ```
 
 If this property is referenced in a widget's property field, the query is automatically run on page load. You can manually enable a query to run on page load from the query settings.
@@ -29,8 +29,8 @@ If this property is referenced in a widget's property field, the query is automa
 
 The `responseMeta` object has details about the response, such as the status code, headers, and other relevant information related to the query's execution and the server's response.
 
-```
-{{Query1.responseMeta}}
+```js
+{{ "{{Query1.responseMeta}}" }}
 ```
 
 ## Methods
@@ -49,16 +49,15 @@ run(params: Object): Promise<data>
 
 | Argument | Description |
 | --- | --- |
-| **params** | An object containing key-value pairs to pass into the query. You can access it using the key: `{{ this.params.KEY_NAME }}`. |
+| **params** | An object containing key-value pairs to pass into the query. You can access it using the key: `{{ "{{ this.params.KEY_NAME }}" }}`. |
 
 The `run()` function is an asynchronous function that returns a promise and thus sequential code may not have the updated response of the query. Sequential code can be executed using the `.then()` and `.catch()` methods or the `async/await` syntax. The run function can't be invoked inside widget data properties but can be invoked from event handlers such as onClick.
 
 ```javascript title="Using promise syntax to chain actions in sequence"
-{{
-    Query1.run(params)
-        .then((response) => {...}) // (1)!
-        .catch(() => {...}) // (2)!
-}}
+{{ "{{Query1.run(params)
+      .then((response) => {...}) // (1)!
+      .catch(() => {...}) // (2)!
+}}" }}
 ```
 
 1. Run after the query is successful.
@@ -70,6 +69,6 @@ In certain scenarios, such as when running a query inside a loop, it may be nece
 
 This function clears all data from the query's `data` property.
 
-```
-{{Query1.clear()}}
+```js
+{{ "{{ Query1.clear()}}" }}
 ```

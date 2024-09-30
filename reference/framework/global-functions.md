@@ -99,7 +99,7 @@ closeModal(modalName: string): Promise
 The name of the Modal widget you want to close.
 
 ```javascript
-{{ '{{ closeModal(UserDetailsModal.name) }}' }}
+{{ "{{ closeModal(UserDetailsModal.name) }}" }}
 ```
 
 ### Usage
@@ -133,7 +133,7 @@ copyToClipboard(data: string, { debug: boolean, format: string }): Promise
 
 #### data
 
-The string contains the text data copied to the clipboard. This parameter can be a static string or dynamically generated content. For dynamic data, you can use mustache double curly braces`{{ '{{}}' }}`.
+The string contains the text data copied to the clipboard. This parameter can be a static string or dynamically generated content. For dynamic data, you can use mustache double curly braces`{{ "{{}}" }}`.
 
 #### debug
 
@@ -188,11 +188,11 @@ download(data: any, fileName: string, fileType?: string): Promise
 
 #### data
 
- This parameter specifies the data you want to download, which can be a URL, Query data, Blob, or any String. You can pass the data using `{{ '{{}}' }}` Mustache binding, for example `{{ '{{Userquery.data}}' }}`.
+ This parameter specifies the data you want to download, which can be a URL, Query data, Blob, or any String. You can pass the data using `{{ "{{}}" }}` Mustache binding, for example `{{ "{{Userquery.data}}" }}`.
 
 #### fileName
 
-This property allows you to set the name of the file. You can specify a name or dynamically set it based on query or user data. For example, you can use Mustache binding to create a dynamic file name like `{{ '{{Table1.selectedRow.id}}' }}`. If there is no filename or extension specified, the download will fail.
+This property allows you to set the name of the file. You can specify a name or dynamically set it based on query or user data. For example, you can use Mustache binding to create a dynamic file name like `{{ "{{Table1.selectedRow.id}}" }}`. If there is no filename or extension specified, the download will fail.
 
 #### fileType
 
@@ -250,10 +250,10 @@ This code retrieves PDF data, creates a Blob from it, generates a temporary URL 
 
 ```javascript
 downloadPDF: async () => {
-	let data = getPdf.data
-	const blob = new Blob([data], {type: 'application/pdf'});
-	const url = URL.createObjectURL(blob);
-	await download(url, "sample.pdf", "application/pdf")
+     let data = getPdf.data
+     const blob = new Blob([data], {type: 'application/pdf'});
+     const url = URL.createObjectURL(blob);
+     await download(url, "sample.pdf", "application/pdf")
 }
 ```
 
@@ -280,8 +280,8 @@ navigateTo(pageNameOrUrl: string, params?: {}, target: "SAME_WINDOW" | "NEW_WIND
 
 The name of the page or URL you want to navigate to. For widget events, you can use the action selector to select a page name or add a URL. If you want to call the `navigateTo()` function inside the JavaScript code, use:
 
-* For application pages: `{{ '{{navigateTo('NewPage', {}, 'SAME_WINDOW');}}' }}`
-* For external URLs: `{{ '{{navigateTo('www.spread.ai', {}, 'SAME_WINDOW');}}' }}`
+* For application pages: `navigateTo('NewPage', {}, 'SAME_WINDOW');`
+* For external URLs: `navigateTo('www.spread.ai', {}, "SAME_WINDOW");`
 
 #### params
 
@@ -290,19 +290,19 @@ This property allows you to pass data across pages or external URLs. It uses the
 To pass data using the Action selector, use:
 
 ```js
-{{ '{{ { "key": "value" } }}' }}
+{{ "{{ { 'key': 'value' } }}" }}
 ```
 
 To pass data using JS, use:
 
 ```js
-{{ '{{navigateTo('NextPage', { "key": "value" }, 'SAME_WINDOW');}}' }}
+{{ "{{navigateTo('NextPage', { 'key': 'value' }, 'SAME_WINDOW');}}" }}
 ```
 
 To access these values on the destination page, use:
 
 ```js
-{{ '{{appsmith.URL.queryParams.key}}' }}
+{{ "{{appsmith.URL.queryParams.key}}" }}
 ```
 
 #### target
@@ -310,7 +310,7 @@ To access these values on the destination page, use:
 This parameter allows you to configure whether to open the page or URL in the same browser window or a new window. The default value is `SAME_WINDOW`, and you can select it from the action selector. If you are using it inside JavaScript code, you can use:
 
 ```js
-{{ '{{navigateTo('NextPage', { "key": "value" }, 'SAME_WINDOW');}}' }}
+{{ "{{navigateTo('NextPage', { 'key': 'value' }, 'SAME_WINDOW');}}" }}
 ```
 
 ### Usage
@@ -320,10 +320,11 @@ This parameter allows you to configure whether to open the page or URL in the sa
 If you need to navigate conditionally, based on user roles or status, you can achieve this by implementing logic that evaluates user attributes. For example, create a new custom column in the Table widget, change the Column type to a button, and set its **onClick** event to:
 
 ```js title="Enable JS next to the event and add the code"
-  currentRow.status === 'pending' 
-  ? navigateTo('OrderDetailsPage', {}, 'SAME_WINDOW') 
-  : navigateTo('OrderHistoryPage', {}, 'SAME_WINDOW');
-}}' }}
+{{ 
+"{{currentRow.status === 'pending' 
+     ? navigateTo('OrderDetailsPage', {}, 'SAME_WINDOW') 
+     : navigateTo('OrderHistoryPage', {}, 'SAME_WINDOW');
+}}" }}
 ```
 
 #### Share data across pages
@@ -398,7 +399,7 @@ resetWidget(widgetName: string, resetChildren?: boolean = true) -> Promise
 
 #### widgetName
 
-This property specifies the name of the widget you want to reset, given as a string. For example, to reset an input widget named userInput, you can use: `{{ '{{resetWidget("userInput");}}' }}`.
+This property specifies the name of the widget you want to reset, given as a string. For example, to reset an input widget named userInput, you can use: `{{ "{{resetWidget('userInput');}}" }}`.
 
 #### resetChildren
 
@@ -414,7 +415,7 @@ An optional boolean value that determines whether all child widgets of the speci
 If you want to reset a Container widget and all the widgets contained within it, you can use the following code.
 
 ```javascript
-{{ '{{ resetWidget("Container1") }}' }}
+{{ "{{ resetWidget('Container1') }}" }}
 ```
 
 #### Reset a widget without affecting its child inputs
@@ -422,7 +423,7 @@ If you want to reset a Container widget and all the widgets contained within it,
  If you want to reset a List widget but keep the state of Input widgets contained within the list items unchanged, you can use this approach.
 
 ```javascript
-{{ '{{ resetWidget("List1", false) }}' }}
+{{ "{{ resetWidget('List1', false) }}" }}
 ```
 
 ## setInterval()
@@ -502,8 +503,6 @@ setTimeout(() => { showAlert("5 seconds have passed") }, 5000);
 
 The `showAlert()` function allows you to display a temporary toast-style alert message to the user for precisely 5 seconds. The duration of the alert message can't be modified.
 
-<ZoomImage src="/img/alert-fun.png" alt="showAlert()" caption="showAlert()" />
-
 ### Signature
 
 ```javascript
@@ -519,7 +518,7 @@ Below are the parameters required by the `showAlert()` function to execute:
 The `message` parameter is a string that contains the text displayed in the alert message. This message is shown to the user in a temporary toast alert. You can also pass dynamic data using JS.
 
 ```js
-{{ '{{showAlert('Welcome! ' + appsmith.user.username, 'info');}}' }}
+{{ "{{showAlert('Welcome! ' + appsmith.user.username, 'info');}}" }}
 ```
 
 #### Type
@@ -532,7 +531,7 @@ The `type` is an optional parameter that allows you to configure the type of the
 * `warning`
 
 ```javascript
-{{ '{{showAlert('Data submitted successfully', 'success');}}' }}
+{{ "{{showAlert('Data submitted successfully', 'success');}}" }}
 ```
 
 ### Usage
@@ -606,7 +605,7 @@ Here are a few examples to show Modals in different situations:
 If you want to use JavaScript instead of the action selector, you can enable _JS_ button next to the event and add your code:
 
 ```javascript
-{{ '{{ showModal(ProductDetailsModal.name) }}' }}
+{{ "{{ showModal(ProductDetailsModal.name) }}" }}
 ```
 
 #### Show Modal on page load
@@ -629,7 +628,7 @@ export default {
 If you need to display Modals conditionally, based on user roles or status, you can achieve this by implementing logic that evaluates user attributes. For example, create a new custom column, change **Column type** to a button, and set its **onClick** event to:
 
 ```js title="Enable JS next to the event and add the code"
-{{ '{{currentRow.role === 'admin' ? showModal(adminModal.name) : showModal(userModal.name)}}' }}
+{{ "{{currentRow.role === 'admin' ? showModal(adminModal.name) : showModal(userModal.name)}}" }}
 ```
 
 This code shows either the `adminModal` or `userModal` based on the role of the selected row in the `userTable`.
@@ -661,7 +660,7 @@ Accepts a boolean value. The default value is `true`, which ensures the persiste
 If you want to store the text of an input widget, you can use `storeValue()` as shown below:
 
 ```javascript
-{{ '{{storeValue('email',input1.text)}}' }}
+{{ "{{storeValue('email',input1.text)}}" }}
 ```
 
 Here, `email` is the key where the value is stored, and `input1.text` is the value in the input widget that's saved in the storage object.
@@ -671,12 +670,12 @@ You can save any data type with `storeValue()`. The code snippet below shows how
 ```javascript
 
 export default {
-	writeToStore: () => {
-		storeValue("isActive", true)
-		storeValue("name", "Robert")
-		storeValue("pin", 9929)
-	
-	}
+     writeToStore: () => {
+          storeValue("isActive", true)
+          storeValue("name", "Robert")
+          storeValue("pin", 9929)
+     
+     }
 }
 ```
 
@@ -687,13 +686,13 @@ You can access the values from the store by referencing the key inside the store
 #### Signature
 
 ```javascript
-{{ '{{ appsmith.store.KEY_NAME }}' }}
+{{ "{{ appsmith.store.KEY_NAME }}" }}
 ```
 
 If you have stored a value with the key `email`, you can access this value anywhere in the application using the code snippet given below:
 
 ```javascript
-{{ '{{appsmith.store.email}}' }}
+{{ "{{appsmith.store.email}}" }}
 ```
 
 ## Modify value
@@ -704,10 +703,10 @@ If you have stored a boolean value with the key `isActive`, you can update the b
 
 ```javascript
 export default {
-	updateStore: () => {
-		if(appsmith.store.isActive === true)
-			storeValue("isActive", false) 
-	}
+     updateStore: () => {
+          if(appsmith.store.isActive === true)
+               storeValue("isActive", false) 
+     }
 }
 ```
 
@@ -725,25 +724,25 @@ The below example shows how to access the name of the employee that you have sto
 
 /
     export default {
-	userName: () => {
-		let user = appsmith.store.user.name
-		return user
-	}
+     userName: () => {
+          let user = appsmith.store.user.name
+          return user
+     }
 }
 
-{{ '{{appsmith.store.user.name}}' }}
+{{ "{{appsmith.store.user.name}}" }}
 ```
 
 You can update the saved employee data in the storage as shown below:
 
 ```javascript title="Access store using a JSobject"
 export default {
-	complexUpdate: () => {
-		let user = appsmith.store.user
-		user.email = "barty.crouch@spread.ai"
-		user.city = "Bangalore"
-		storeValue("user", user)
-	}
+     complexUpdate: () => {
+          let user = appsmith.store.user
+          user.email = "barty.crouch@spread.ai"
+          user.city = "Bangalore"
+          storeValue("user", user)
+     }
 }
 ```
 
@@ -758,7 +757,7 @@ If you store value in the persistent state, it remains in the store across diffe
 If you don't define the value for persist argument, the value is saved in the persistent state by default.
 
 ```
-{{ '{{storeValue('one',Input1.text)}}' }}
+{{ "{{storeValue('one',Input1.text)}}" }}
 ```
 
 The persistent state is cleared out when the user logs out.
@@ -768,7 +767,7 @@ The persistent state is cleared out when the user logs out.
 You can use the session state to store the value you wish to hold until the page reloads or a user closes the window. To save data in this way, add `false` to the `persist` argument in the `storeValue()` function.
 
 ```javascript
-{{ '{{storeValue('two',Input2.text, false)}}' }}
+{{ "{{storeValue('two',Input2.text, false)}}" }}
 ```
 
 Session state (`persist=false`) is only available till the user exits the app or refreshes a page. If the same key is available in the session and persisted states, the session value has preference.
@@ -853,7 +852,7 @@ A callback function to be called whenever a message is received from the target 
 
 ```javascript
 windowMessageListener(
-	"https://your-site.github.io", 
-	(message) => { showAlert(message) }
+     "https://your-site.github.io", 
+     (message) => { showAlert(message) }
 )
 ```

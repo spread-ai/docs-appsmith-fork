@@ -32,13 +32,13 @@ Access control errors happen when a user cannot access a Studio application or a
 
 !!! failure "Error"
 
-	A **404 - Page Not Found** error page.
+     A **404 - Page Not Found** error page.
 
 !!! success "Solution"
 
      Verify if the custom role access is provided by checking the groups and role mapping or user and role assignment. If not, add users to groups that have access or assign roles to the appropriate users.
 
-	Contact your instance administrator and request access to application, and maybe the Studio environment. For more information, see [User Management](/platform/user-management/user-management-and-permissions).
+     Contact your instance administrator and request access to application, and maybe the Studio environment. For more information, see [User Management](/platform/user-management/user-management-and-permissions).
 
 </div>
 
@@ -50,7 +50,7 @@ Access control errors happen when a user cannot access a Studio application or a
 
 !!! failure "Error"
 
-	The **Make Application Public** toggle in the invite users modal is disabled, preventing you from making an application public.
+     The **Make Application Public** toggle in the invite users modal is disabled, preventing you from making an application public.
 
 !!! success "Solution"
 
@@ -86,7 +86,7 @@ Studio provides the ability to connect to a variety of data sources, including b
 !!! failure "Error"
 
      ```html
-	<Message messageContainerClassName="error" 
+     <Message messageContainerClassName="error" 
      messageContent="dev.miku.r2dbc.mysql.client.MySqlConnectionClosedException: Connection unexpectedly closed. Error was received while reading the incoming data. The connection will be closed."/>
      ```
 
@@ -105,7 +105,7 @@ Studio provides the ability to connect to a variety of data sources, including b
 !!! failure "Error"
 
      ```html
-	<Message messageContainerClassName="error" 
+     <Message messageContainerClassName="error" 
      messageContent="Connection refused. Server logs - 'io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /172.17.0.1:3306'"/>
      <Message messageContainerClassName="error" 
      messageContent="dev.miku.r2dbc.mysql.client.MySqlConnectionClosedException: Connection unexpectedly closed. Error was received while reading the incoming data. The connection will be closed."/>
@@ -126,7 +126,7 @@ Studio provides the ability to connect to a variety of data sources, including b
 !!! failure "Error"
 
      ```html
-	<Message messageContainerClassName="error" 
+     <Message messageContainerClassName="error" 
      messageContent="Secret key is required when sending session details is switched on, and should be at least 32 characters in length."/>
      ```
 
@@ -145,7 +145,7 @@ Studio provides the ability to connect to a variety of data sources, including b
 !!! failure "Error"
 
      ```
-	DEFAULT_REST_DATASOURCE is not correctly configured. Please fix the following and then re-run: \n[Missing URL.]
+     DEFAULT_REST_DATASOURCE is not correctly configured. Please fix the following and then re-run: \n[Missing URL.]
      ```
 
 !!! success "Solution"
@@ -324,7 +324,7 @@ While writing JavaScript in Studio, you may encounter the following errors in yo
 
 #### Using the debugger statement
 
-To invoke the debugger, insert th `debugger` keyword in your code where you want to pause, and then run your app. The code execution pauses on the debugger statement. It works like a `breakpoint`. You can then use the debugger tools to step through your code, inspect variables, and see how your code is executing.
+To invoke the debugger, insert the `debugger` keyword in your code where you want to pause, and then run your app. The code execution pauses on the debugger statement. It works like a `breakpoint`. You can then use the debugger tools to step through your code, inspect variables, and see how your code is executing.
 
 ```js title="Debugger example" hl_lines="4"
 export default {
@@ -760,6 +760,7 @@ This section helps you troubleshoot common widget errors in Studio. To troublesh
 
 >You may see an error message when you try to bind a large query or API response to the source data property of the JSON Form widget. The problem can be caused when you are trying to bind: a large array of multiple JSON objects, a JSON object with many fields, or the whole query data rather than a selected row or triggered row in a table.
 
+<div class='grid' markdown>
 !!! failure "Error"
 
      ```html
@@ -787,6 +788,7 @@ This section helps you troubleshoot common widget errors in Studio. To troublesh
 
 >This error occurs when the `Default Selected Value` doesn't match any of the values specified in the options property of the widget.
 
+<div class='grid' markdown>
 !!! failure "Error"
 
      ```html

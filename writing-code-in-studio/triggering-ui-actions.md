@@ -22,16 +22,18 @@ To execute an action:
 2. Set the **onSuccess** callback to perform additional actions upon successful completion of the specified action. For instance, you can use the **onSuccess** callback to execute a fetch query or to close the Modal.
 3. To set up multiple **onSuccess** callbacks, select the **+** icon within the callback configuration, and select the desired actions.
 
-You can only execute two levels of **onSuccess** callbacks from the UI. To add additional callbacks, enable JS and and add your code, such as:
+You can only execute two levels of **onSuccess** callbacks from the UI. To add additional callbacks, enable JS and add your code, such as:
 
-```javadscript title="Example additional code"
-{{ '{{update_query.run().then(() => {
-  fetch_query.run();
-  closeModal('Modal1');
-});}}' }}
+```javascript title="Example additional code"
+update_query.run().then(() => {
+fetch_query.run();
+closeModal('Modal1');
+}); // (1)!
 ```
 
-To learn more about Global Functions, see the [Reference](../reference/framework/widget-actions).
+1. Remember to enclose this in mustache syntax.
+
+To learn more about Global Functions, see the [Reference](../reference/framework/global-functions.md).
 
 ## Execute actions in parallel
 
@@ -43,10 +45,12 @@ To execute actions in parallel, you can add multiple action selectors for a spec
 Additionally, you can enable *JS* next to events and add your code, such as:
 
 ```js title="Sample additional code"
-{{ '{{update_status.run();
+update_status.run();
 log_status.run();
-showAlert('Update Success', 'success');}}' }}
+showAlert('Update Success', 'success'); // (1)!
 ```
+
+1. Remember to enclose this in mustache syntax.
 
 You can create multiple **Events** and **OnSuccess** callbacks to trigger different actions in parallel.
 
@@ -58,13 +62,9 @@ This section covers conditional query execution, allowing queries to be executed
 
 For example, if you want to conditionally queries execute based on the option selected in the Select widget:
 
-```javascript
-{{ '{{
-  Select_Category.selectedOptionValue === 'Categories' ? fetchCategories.run() : fetchProducts.run();
-}}' }}
-```
+`Select_Category.selectedOptionValue === 'Categories' ? fetchCategories.run() : fetchProducts.run()`
 
-In the code, if the selected option is `Categories`, it triggers the `fetchCategories` query; otherwise, it runs the `fetchProducts` query.
+In the code, if the selected option is `Categories`, it triggers the `fetchCategories` query, otherwise, it runs the `fetchProducts` query.
 
 ### Based on query response
 
@@ -101,12 +101,12 @@ To disable an action based on specific criteria, you can use *JS* in the **Disab
 For example, if specific criteria are not met, you want to disable the Refund button on the customer dashboard. Enable *JS* for **Disabled** property, and add:
 
 ```js
-{{ '{{
-  lst_orderHistory.triggeredItem.payment_method === 'Cash On Delivery' ||
-  lst_orderHistory.triggeredItem.delivery_status === "Canceled" ||
-  lst_orderHistory.triggeredItem.refund >= lst_orderHistory.triggeredItem.amount
-}}' }}
+lst_orderHistory.triggeredItem.payment_method === 'Cash On Delivery' ||
+lst_orderHistory.triggeredItem.delivery_status === "Canceled" ||
+lst_orderHistory.triggeredItem.refund >= lst_orderHistory.triggeredItem.amount // (1)!
 ```
+
+1. Remember to enclose this in mustache syntax.
 
 This code determines whether to disable the Refund button on the customer dashboard based on conditions related to payment method, delivery status, and refund amount.
 

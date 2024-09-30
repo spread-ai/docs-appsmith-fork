@@ -90,10 +90,12 @@ The above code dynamically constructs a JSON object with optional properties, se
 2. Following the initial data insertion, use the `storeValue` function to save the data's unique identifier or `ID`. For example, To save the `ID` upon the successful execution of the API, add the following code in the **onClick** event of the Next button:
 
 ```js
-{{ '{{user_api.run().then(() => {
+user_api.run().then(() => {
      storeValue('userid', Api1.data.id);
-});}}' }}
+}); // (1)!
 ```
+
+1. Remember to enclose this in mustache syntax
 
 3. Create a new API to update the existing record with additional data as the user advances through the form. Trigger this API execution when the user clicks on the **Next** buttons. For example, consider using the `PATCH` method, which is designed for partial updates:
 

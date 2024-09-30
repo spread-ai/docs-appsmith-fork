@@ -31,9 +31,8 @@ For more information, see [Lodash](https://lodash.com/docs/4.17.15)
 
 Simplifies working with dates and times in JavaScript by providing functions for parsing, validating, manipulating, and displaying dates and times.
 
-```
-{{ '{{ moment(datePicker1.selectedDate.format('DD MMM')) }}' }}
-```
+`moment(datePicker1.selectedDate.format('DD MMM'))`
+
 For more information, see [Moment](https://momentjs.com/docs/)
 
 ### Forge
@@ -64,8 +63,8 @@ Studio provides a set of recommended libraries. To install a recommended library
 Follow these steps if you want to install a specific library that you found online:
 
 <figure markdown="span">
-	![Install external JavaScript libraries](src/appsmith-install-external-libraries.png)
-	<figcaption>Install external JavaScript libraries</figcaption>
+     ![Install external JavaScript libraries](src/appsmith-install-external-libraries.png)
+     <figcaption>Install external JavaScript libraries</figcaption>
 </figure>
 
 1. Copy the URL to its index file. For example: `https://cdn.jsdelivr.net/npm/exceljs@4.3.0/dist/exceljs.min.js`

@@ -22,8 +22,8 @@ This reference documents SPREAD widgets that are built into Studio. In the refer
 The badge widget is a visual element to highlight important information or status updates. The badge widget is used to indicate new or unread messages, notifications, statuses, or other important information.
 
 <figure markdown="span">
-	![The Badge widget in SPREAD Studio](../src/badge-widget-on-spread-studio.png)
-	<figcaption>The Badge widget in SPREAD Studio</figcaption>
+     ![The Badge widget in SPREAD Studio](../../src/badge-widget-on-spread-studio.png)
+     <figcaption>The Badge widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -46,8 +46,8 @@ The badge widget is a visual element to highlight important information or statu
 The graph widget is a visual element to create node diagrams.
 
 <figure markdown="span">
-	![The Graph widget in SPREAD Studio](../src/graph-widget-on-spread-studio.png){height="250px"}
-	<figcaption>The Graph widget in SPREAD Studio</figcaption>
+     ![The Graph widget in SPREAD Studio](../../src/graph-widget-on-spread-studio.png){height="250px"}
+     <figcaption>The Graph widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -71,8 +71,8 @@ The graph widget is a visual element to create node diagrams.
 The Guided Event Chain widget is a visual element to display the flow of guided events.
 
 <figure markdown="span">
-	![The Guided Event Chain widget in SPREAD Studio](../src/guided-event-chain-widget-on-spread-studio.png){height="250px"}
-	<figcaption>The Guided Event Chain widget in SPREAD Studio</figcaption>
+     ![The Guided Event Chain widget in SPREAD Studio](../../src/guided-event-chain-widget-on-spread-studio.png){height="250px"}
+     <figcaption>The Guided Event Chain widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -101,8 +101,8 @@ The Guided Event Chain widget is a visual element to display the flow of guided 
 The Legend widget is designed to display a list of items with labels and optional icons. It allows users to visually interpret and manage a collection of entries with various properties such as color and icon. The orientation of the legend can be set to auto, horizontal, or vertical.
 
 <figure markdown="span">
-	![The Legend widget in SPREAD Studio](../src/legend-widget-on-spread-studio.png)
-	<figcaption>The Legend widget in SPREAD Studio</figcaption>
+     ![The Legend widget in SPREAD Studio](../../src/legend-widget-on-spread-studio.png)
+     <figcaption>The Legend widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -124,8 +124,8 @@ The Legend widget is designed to display a list of items with labels and optiona
 The Precedence Graph widget is a visual element that represents the precedence of items in a concurrent system.
 
 <figure markdown="span">
-	![The Precedence Graph widget in SPREAD Studio](../src/precedence-graph-on-spread-studio.png){heigh="250px"}
-	<figcaption>The Precedence Graph widget in SPREAD Studio</figcaption>
+     ![The Precedence Graph widget in SPREAD Studio](../../src/precedence-graph-on-spread-studio.png){heigh="250px"}
+     <figcaption>The Precedence Graph widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -154,8 +154,8 @@ The Precedence Graph widget is a visual element that represents the precedence o
 The Renderer widget is a visual element that renders 3D objects.
 
 <figure markdown="span">
-	![The Renderer widget in SPREAD Studio](../src/renderer-widget-on-spread-studio.png)
-	<figcaption>The Renderer Graph widget in SPREAD Studio</figcaption>
+     ![The Renderer widget in SPREAD Studio](../../src/renderer-widget-on-spread-studio.png)
+     <figcaption>The Renderer Graph widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -193,8 +193,8 @@ The Renderer widget is a visual element that renders 3D objects.
 The Stepper widget displays a step-by-step process or workflow. It visually guides users through a sequence of tasks or stages in a concise, ordered manner. Stepper is implemented as a horizontal list of steps, with each step indicating the current, completed, or upcoming stage in the process.
 
 <figure markdown="span">
-	![The Stepper widget in SPREAD Studio](../src/stepper-widget-on-spread-studio.png)
-	<figcaption>The Stepper widget in SPREAD Studio</figcaption>
+     ![The Stepper widget in SPREAD Studio](../../src/stepper-widget-on-spread-studio.png)
+     <figcaption>The Stepper widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties
@@ -217,8 +217,8 @@ The Stepper widget displays a step-by-step process or workflow. It visually guid
 The Topology Viewer widget displays the graph with nodes and edges oriented as a tree. It helps visualize the communication between nodes (for example, components exchanging signals) and any other type of topology.
 
 <figure markdown="span">
-	![The Topology Viewer widget in SPREAD Studio](../src/topology-viewer-widget-on-spread-studio.png)
-	<figcaption>The Topology Viewer widget in SPREAD Studio</figcaption>
+     ![The Topology Viewer widget in SPREAD Studio](../../src/topology-viewer-widget-on-spread-studio.png)
+     <figcaption>The Topology Viewer widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Supported features
@@ -257,8 +257,8 @@ The Topology Viewer widget displays the graph with nodes and edges oriented as a
 The Wiring Harness widget displays a 2D view of the wiring harness.
 
 <figure markdown="span">
-	![The Wiring Harness widget in SPREAD Studio](../src/wiring-harness-widget-on-spread-studio.png)
-	<figcaption>The Wiring Harness widget in SPREAD Studio</figcaption>
+     ![The Wiring Harness widget in SPREAD Studio](../../src/wiring-harness-widget-on-spread-studio.png)
+     <figcaption>The Wiring Harness widget in SPREAD Studio</figcaption>
 </figure>
 
 ### Widget properties

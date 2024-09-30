@@ -11,7 +11,7 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 This page provides information on using the Modal widget to create a dialog in your app for displaying various types of content, such as alerts, confirmation pop-ups, forms, and more. It acts as a container used to group and handle related user inputs , and can be opened using actions such as setting a Button widget's onClick event.
 
-!! info "Modal visibility"
+!!! info "Modal visibility"
 
      Modal widget remains hidden on the canvas and becomes visible only when an event is triggered. You can access and edit the Modal widget from the entity explorer. 
 

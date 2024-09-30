@@ -11,11 +11,11 @@ For guidance on how to write documenation, see https://dev.stage.spread.ai/docs/
 
 ## Synopsis
 
-In Studio, you can pass static parameters to queries using mustache bindings {{ `{{}}` }}. But, if you need to execute a query multiple times with dynamic parameters - such as iterating through an array of IDs and running a query to delete each record - then you will need to pass them in the `run()` function of the query.
+In Studio, you can pass static parameters to queries using mustache bindings `{{ "{{ }}" }}`. But, if you need to execute a query multiple times with dynamic parameters - such as iterating through an array of IDs and running a query to delete each record - then you will need to pass them in the `run()` function of the query.
 
 The `run()` function in Studio empowers developers to perform dynamic and complex database operations. By passing runtime parameters and processing responses, one can create robust applications capable of handling batch processing tasks seamlessly. Always remember to handle errors gracefully and test the system under different scenarios to ensure reliability.
 
-To pass different parameters every time a query is executed, you can leverage the [run()](../reference/framework/query-object.md#queryrun) function's `params` argument. Within the query, you can access the passed parameters by using the Mustache notation {{ `{{this.params.key}}` }}.
+To pass different parameters every time a query is executed, you can leverage the [run()](../reference/framework/query-object.md#queryrun) function's `params` argument. Within the query, you can access the passed parameters by using the Mustache notation `{{ "{{this.params.key}}" }}`.
 
 ## Prerequisite knowledge
 

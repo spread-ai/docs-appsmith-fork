@@ -34,13 +34,17 @@ Drop an Icon button widget and set it's **onClick** property to navigate to anot
 To navigate to an external URL, pass a full URL instead of a page name.
 
 ```js
-{{ '{{navigateTo('https://www.example.com')}}' }}
+navigateTo('https://www.example.com') // (1)!
 ```
+
+1. Remember to enclose this in mustache syntax.
 
 ### 2. Open link in new window or tab
 
 To open the linked page in a new browser tab or window, use the third parameter.
 
 ```js
-{{ '{{navigateTo('page_name', { }, 'NEW_WINDOW') }}' }}
+navigateTo('page_name', { }, 'NEW_WINDOW') // (1)!
 ```
+
+1. Remember to enclose this in mustache syntax.
